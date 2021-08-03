@@ -1,0 +1,32 @@
+.navbar{
+position: fixed;
+width: 1140px;
+height: 90px;
+left: 0px;
+top: 0px;
+background-color: #243379;
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 0.8rem;
+line-height: 18px;
+color: #FFFFFF;
+}
+.navbar a {
+    color: #FFFFFF;
+}
+
+.DCILogo {
+position: absolute;
+left: 7.89%;
+right: 83.33%;
+top: 2;
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 0.8rem;
+line-height: 18px;
+color: #FFFFFF;
+}
+
+
