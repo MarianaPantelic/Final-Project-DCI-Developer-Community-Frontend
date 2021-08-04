@@ -1,8 +1,8 @@
-import React, {  } from "react";
-import { Col, Nav } from "react-bootstrap";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./pages/navbar";
 import About from "./pages/about";
 import Blog from "./pages/blog";
 import Forum from "./pages/forum";
@@ -58,38 +58,7 @@ const App = () => {
           </Route>
         </Switch>
       </Router>
-
-      <Nav className="d-flex justify-content-center navbar">
-        <div className="DCILogo">DCI Developer Community</div>
-        <div className="">
-          <Col className=" d-flex justify-content-center mx-5">
-            <Nav.Item>
-              <Nav.Link href="/">Home</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/about">About</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/forum">Forum</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/blog">Blog</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/news">News</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/resources">Resources</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/jobs">Jobs</Nav.Link>
-            </Nav.Item>
-          </Col>
-        </div>
-        <div>
-          <img src="./images/user-solid.svg" />
-        </div>
-      </Nav>
+      <Navbar />
     </div>
   );
 };

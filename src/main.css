@@ -1,21 +1,3 @@
-.navbar{
-position: fixed;
-width: 1140px;
-height: 90px;
-left: 0px;
-top: 0px;
-background-color: #243379;
-font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-font-size: 0.8rem;
-line-height: 18px;
-color: #FFFFFF;
-}
-.navbar a {
-    color: #FFFFFF;
-}
-
 .DCILogo {
 position: absolute;
 left: 7.89%;
@@ -28,5 +10,65 @@ font-size: 0.8rem;
 line-height: 18px;
 color: #FFFFFF;
 }
+#user {
+  color: black 
+}
+.SignInNavBtn {
+  border-radius: 4px;
+  background: #256ce1;
+  padding: 10px 22px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  /* Second Nav */
+  margin-left: 24px;
+}
+  .SignInNavBtn :hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #010606;
+}
 
+.bars {
+  display: none;
+  color: #fff;
+  @media screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 75%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }  
+}
+.navMenu {
+    display: flex;
+  align-items: center;
+  margin-right: -24px;
+  /* Second Nav */
+  /* margin-right: 24px; */
+  /* Third Nav */
+  /* width: 100vw;
+  white-space: nowrap; */
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+.nav {
+  background-color: #243379;
+  color: #FFFFFF;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem calc((100vw - 1000px) / 2);
+  z-index: 10;
+
+}
+.nav a {
+    color: #FFFFFF;
+}
 
