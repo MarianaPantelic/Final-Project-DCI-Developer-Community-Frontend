@@ -1,16 +1,7 @@
-.DCILogo {
-position: absolute;
-left: 7.89%;
-right: 83.33%;
-top: 2;
-font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-font-size: 0.8rem;
-line-height: 18px;
-color: #FFFFFF;
-}
-#user {
-  color: black 
-}
 
+body {
+    background: rgb(65, 65, 43);
+}
+#shownavbar {
+    margin-top: 2.5rem;
+}

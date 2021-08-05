@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Nav,
   NavLink,
@@ -6,16 +6,35 @@ import {
   NavMenu,
   NavBtn,
   NavBtnLink,
+  CloseSideBarMenu,
 } from "./NavbarElements";
 
+
+
+
 const Navbar = () => {
+
+ const showSidebar = () => {
+  document.getElementById("burger").style.display="none";
+  document.getElementById("close").style.display = "block";
+  document.getElementById("shownavbar").style.display = "block";
+ }
+ const closeSideBar = () => {
+document.getElementById("burger").style.display = "block";
+document.getElementById("close").style.display = "none";
+// document.getElementById("shownavbar").style.display = "none";
+
+ }
+
   return (
     <Nav>
       <NavLink to="/">
         {/* <img src={require("../../images/logo.svg")} alt="logo" /> */}
       </NavLink>
-      <Bars />
-      <NavMenu>
+      <Bars onClick={showSidebar} id="burger" />
+      <CloseSideBarMenu onClick={closeSideBar} id="close"/>
+
+      <NavMenu id="shownavbar">
         <NavLink to="/home" activeStyle>
           Home
         </NavLink>
