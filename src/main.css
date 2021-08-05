@@ -1,4 +1,9 @@
 
 body {
-    background: rgb(65, 65, 43);
+    background: rgb(251, 251, 251);
 }
+.navbar-css {
+  background:#1a39ca;
+  font-size: 18px;
+}
+
