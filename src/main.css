@@ -1,4 +1,16 @@
 
-body {
+/* body {
     background: rgb(65, 65, 43);
+} */
+
+/* Home Page */
+
+.home_para{
+    margin-top: 5.5rem;
 }
+
+.home_heroimg{
+    width: 30rem;
+    height: 20rem;
+}
+/* End of home page */
