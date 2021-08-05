@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Navbar from "./pages/navbar";
+import Navbar from "./navbar/navbar";
 import About from "./pages/about";
 import Blog from "./pages/blog";
 import Forum from "./pages/forum";
@@ -13,8 +13,7 @@ import News from "./pages/news";
 import Post from "./pages/post";
 import Register from "./pages/register";
 import Resources from "./pages/resources";
-import UserProfile from "./pages/userprofile";
-
+import UserProfile from "./pages/userprofile"
 import "./main.css";
 
 const App = () => {
@@ -22,6 +21,7 @@ const App = () => {
   return (
     <div>
       <Router>
+        <Navbar />
         <Switch>
           <Route exact path="/">
             <Home />
@@ -58,7 +58,6 @@ const App = () => {
           </Route>
         </Switch>
       </Router>
-      <Navbar />
     </div>
   );
 };
