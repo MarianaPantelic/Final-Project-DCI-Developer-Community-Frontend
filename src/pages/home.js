@@ -1,47 +1,51 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import dci_logo from "../images/dci_logo.png";
 
 const Home = () => {
   return (
-    <Container>
-      <Row>
-        <Col className="col home_para">
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-6 col-md-6 col-sm-12 home_para">
           <h1>Welcome to our community!</h1>
           <p>
             Join us and you will discover great people and interesting
-            information about how to become a successful developer.{" "}
+            information about how to become a successful developer.
           </p>
-          <button type="button" className="btn btn-warning">
+          <button type="button" className="btn btn-warning homebutton">
             Register
           </button>
-        </Col>
-        <Col>
+        </div>
+        <div className="col-lg-6 col-md-6 col-sm-12">
           <img
             className="home_heroimg"
             src="../images/welcome_HP.jpg"
             alt="hero image of programming"
           />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <img
-            className="home_heroimg"
-            src="../images/who_dci.png"
-            alt="hero image of programming"
-          />
-        </Col>
-        <Col className="col home_para">
-          <h1>Why are we?</h1>
+        </div>
+      </div>
+
+      <div className="row hideRowMobile">
+        <div className="col-lg-6 col-md-6 col-sm-12">
+          <div className="dciOnHeroImg">
+            <img
+              className="home_heroimg"
+              src="../images/who_dci.png"
+              alt="hero image of programming"
+            />
+            <img className="dciLogo" src={dci_logo} />
+          </div>
+        </div>
+        <div className="col-lg-6 col-md-6 col-sm-12 home_para">
+          <h1>Who is DCI?</h1>
           <p>
             The Digital Career Institute was born as an initiative to integrate
             refugees into digital jobs. Today it is committed to train anyone
             who wants to pursue to tech career.
           </p>
-        </Col>
-      </Row>
-      <Row>
-        <Col className="col home_para">
+        </div>
+      </div>
+      <div className="row hideRowMobile">
+        <div className="col-lg-6 col-md-6 col-sm-12 home_para">
           <h1>Why are we here?</h1>
           <p>
             Want to be a Freelancer, Digital Nomad, or work in your dream tech
@@ -50,24 +54,24 @@ const Home = () => {
             become a part of the Tech Disruption, build websites, Web Apps and
             more.
           </p>
-        </Col>
-        <Col>
+        </div>
+        <div className="col-lg-6 col-md-6 col-sm-12">
           <img
             className="home_heroimg"
             src="../images/why_r_v_here.png"
             alt="hero image of programming"
           />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
+        </div>
+      </div>
+      <div className="row hideRowMobile">
+        <div className="col-lg-6 col-md-6 col-sm-12">
           <img
             className="home_heroimg"
             src="../images/why_join_dci.png"
             alt="hero image of programming"
           />
-        </Col>
-        <Col className="col home_para">
+        </div>
+        <div className="col-lg-6 col-md-6 col-sm-12 home_para">
           <h1>Why should I join this community?</h1>
           <p>
             Want to be a Freelancer, Digital Nomad, or work in your dream tech
@@ -76,9 +80,66 @@ const Home = () => {
             become a part of the Tech Disruption, build websites, Web Apps and
             more.
           </p>
-        </Col>
-      </Row>
-    </Container>
+        </div>
+      </div>
+
+      <div className="row hideRowDesktop">
+        <div className="col-lg-6 col-md-6 col-sm-12 home_para">
+          <h1>Who is DCI?</h1>
+          <p>
+            The Digital Career Institute was born as an initiative to integrate
+            refugees into digital jobs. Today it is committed to train anyone
+            who wants to pursue to tech career.
+          </p>
+        </div>
+        <div className="col-lg-6 col-md-6 col-sm-12">
+          <div className="dciOnHeroImg">
+            <img
+              className="home_heroimg"
+              src="../images/who_dci.png"
+              alt="hero image of programming"
+            />
+            <img className="dciLogo" src={dci_logo} />
+          </div>
+        </div>
+      </div>
+      <div className="row hideRowDesktop">
+        <div className="col-lg-6 col-md-6 col-sm-12 home_para">
+          <h1>Why are we here?</h1>
+          <p>
+            The Digital Career Institute was born as an initiative to integrate
+            refugees into digital jobs. Today it is committed to train anyone
+            who wants to pursue to tech career.
+          </p>
+        </div>
+        <div className="col-lg-6 col-md-6 col-sm-12">
+          <img
+            className="home_heroimg"
+            src="../images/why_r_v_here.png"
+            alt="hero image of programming"
+          />
+        </div>
+      </div>
+      <div className="row hideRowDesktop">
+        <div className="col-lg-6 col-md-6 col-sm-12 home_para">
+          <h1>Why should I join this community?</h1>
+          <p>
+            Want to be a Freelancer, Digital Nomad, or work in your dream tech
+            company? Become a Web Developer, a dynamic and vital field in
+            today'S society. As a Web Developer you can show your creativity,
+            become a part of the Tech Disruption, build websites, Web Apps and
+            more.
+          </p>
+        </div>
+        <div className="col-lg-6 col-md-6 col-sm-12">
+          <img
+            className="home_heroimg"
+            src="../images/why_join_dci.png"
+            alt="hero image of programming"
+          />
+        </div>
+      </div>
+    </div>
   );
 };
 
