@@ -2,8 +2,24 @@
 body {
     background: rgb(251, 251, 251);
 }
+/*Navbar*/      
 .navbar-css {
   background:#1a39ca;
   font-size: 18px;
+  align-items: center;
 }
 
+.Avatar {
+    width: 50px;
+    height:40px;
+    border-radius:50%;
+}
+.userdropdown {
+    margin-right: 5rem;
+}
+
+/*Navbar*/
+
+/*Footer*/
+
+/*Footer*/
