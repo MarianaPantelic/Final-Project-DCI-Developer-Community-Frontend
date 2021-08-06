@@ -1,4 +1,80 @@
-
-body {
-    background: rgb(65, 65, 43);
+:root {
+  font-size: 62.5%;
 }
+/* body {
+    background: rgb(65, 65, 43);
+} */
+
+/* Home Page */
+
+.home_para h1 {
+  margin-top: 8rem;
+  text-align: center;
+}
+
+.home_para p {
+  font-size: 1.4rem;
+}
+
+.home_para {
+  text-align: center;
+}
+
+.home_heroimg {
+  width: 35rem;
+  height: 25rem;
+  display: block;
+  margin: auto;
+}
+
+.homebutton {
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.dciOnHeroImg {
+    position: relative;
+}
+
+.dciLogo{
+    position: absolute;
+    width: 5rem;
+    height: 4rem;
+    z-index: 100;
+    top: 3rem;
+    right: 16rem;
+} 
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  max-width: 1100px;
+}
+
+/* media query */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  .hideRowMobile{
+    display: none;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+  .hideRowDesktop{
+    display: none;
+  }
+}
+
+
+/* end of media query */
+
+/* End of home page */
