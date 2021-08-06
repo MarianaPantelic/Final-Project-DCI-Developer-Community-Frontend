@@ -95,13 +95,6 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-import React from 'react';
-
-const Navbar = () => {
-  return (
-    <div>
-      
-    </div>
   );
 };
 
