@@ -2,6 +2,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 import Navbar from "./components/navbar";
 import About from "./pages/about";
@@ -14,8 +16,10 @@ import News from "./pages/news";
 import Post from "./pages/post";
 import Register from "./pages/register";
 import Resources from "./pages/resources";
-import UserProfile from "./pages/userprofile"
+import UserProfile from "./pages/userprofile";
+
 import "./main.css";
+
 
 const App = () => {
   
@@ -58,6 +62,7 @@ const App = () => {
             <Post />
           </Route>
         </Switch>
+        <Footer/>
       </Router>
     </div>
   );
