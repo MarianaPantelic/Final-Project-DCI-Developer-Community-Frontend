@@ -1,21 +1,43 @@
-
 body {
-    background: rgb(251, 251, 251);
+  background: rgb(251, 251, 251);
 }
-/*Navbar*/      
+/*Navbar*/
 .navbar-css {
-  background:#1a39ca;
+  background: #1a39ca;
   font-size: 18px;
   align-items: center;
 }
 
-.Avatar {
-    width: 50px;
-    height:40px;
-    border-radius:50%;
+.userLogin {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  color: #1a39ca;
+  background-color: white;
+  padding: 0.2rem;
+  margin: 0.5rem 1rem;
 }
+
 .userdropdown {
-    margin-right: 5rem;
+  margin-right: 6rem;
+}
+
+.dropdown-toggle::after {
+  content: none;
+}
+
+.logoNav {
+  margin-left: 6rem;
+}
+
+.nav-link {
+  margin: 0.5rem 1rem;
+}
+.navmenu {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*Navbar*/
