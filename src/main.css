@@ -1,21 +1,43 @@
-
 body {
-    background: rgb(251, 251, 251);
+  background: rgb(251, 251, 251);
 }
-/*Navbar*/      
+/*Navbar*/
 .navbar-css {
-  background:#1a39ca;
+  background: #1a39ca;
   font-size: 18px;
   align-items: center;
 }
 
-.Avatar {
-    width: 50px;
-    height:40px;
-    border-radius:50%;
+.userLogin {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  color: #1a39ca;
+  background-color: white;
+  padding: 0.2rem;
+  margin: 0.5rem 1rem;
 }
+
 .userdropdown {
-    margin-right: 5rem;
+  margin-right: 6rem;
+}
+
+.dropdown-toggle::after {
+  content: none;
+}
+
+.logoNav {
+  margin-left: 6rem;
+}
+
+.nav-link {
+  margin: 0.5rem 1rem;
+}
+.navmenu {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*Navbar*/
@@ -33,7 +55,7 @@ body {
 /* Home Page */
 
 .home_para h1 {
-  margin-top: 8rem;
+  margin-top: 3rem;
   text-align: center;
 }
 
@@ -47,29 +69,30 @@ body {
 
 .home_heroimg {
   width: 35rem;
-  height: 25rem;
+  height: 20rem;
   display: block;
   margin: auto;
+  padding-top: 2rem;
 }
 
 .homebutton {
-    font-size: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+  font-size: 1.8rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .dciOnHeroImg {
-    position: relative;
+  position: relative;
 }
 
-.dciLogo{
-    position: absolute;
-    width: 5rem;
-    height: 4rem;
-    z-index: 100;
-    top: 3rem;
-    right: 16rem;
-} 
+.dciLogo {
+  position: absolute;
+  width: 5rem;
+  height: 4rem;
+  z-index: 100;
+  top: 3rem;
+  right: 16rem;
+}
 
 .container,
 .container-lg,
@@ -84,21 +107,17 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-
-  .hideRowMobile{
+  .hideRowMobile {
     display: none;
   }
-
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-
-  .hideRowDesktop{
+  .hideRowDesktop {
     display: none;
   }
 }
-
 
 /* end of media query */
 

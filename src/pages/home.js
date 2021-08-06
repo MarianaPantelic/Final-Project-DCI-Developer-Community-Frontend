@@ -4,8 +4,8 @@ import dci_logo from "../images/dci_logo.png";
 const Home = () => {
   return (
     <div className="container">
-      <div className="row">
-        <div className="col-lg-6 col-md-6 col-sm-12 home_para">
+      <div className="row mt-5">
+        <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
           <h1>Welcome to our community!</h1>
           <p>
             Join us and you will discover great people and interesting
@@ -15,7 +15,7 @@ const Home = () => {
             Register
           </button>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12">
+        <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
           <img
             className="home_heroimg"
             src="../images/welcome_HP.jpg"
@@ -24,8 +24,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="row hideRowMobile">
-        <div className="col-lg-6 col-md-6 col-sm-12">
+      <div className="row hideRowMobile mt-5">
+        <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
           <div className="dciOnHeroImg">
             <img
               className="home_heroimg"
@@ -35,7 +35,7 @@ const Home = () => {
             <img className="dciLogo" src={dci_logo} />
           </div>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 home_para">
+        <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
           <h1>Who is DCI?</h1>
           <p>
             The Digital Career Institute was born as an initiative to integrate
@@ -44,8 +44,8 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="row hideRowMobile">
-        <div className="col-lg-6 col-md-6 col-sm-12 home_para">
+      <div className="row hideRowMobile mt-5">
+        <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
           <h1>Why are we here?</h1>
           <p>
             Want to be a Freelancer, Digital Nomad, or work in your dream tech
@@ -55,7 +55,7 @@ const Home = () => {
             more.
           </p>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12">
+        <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
           <img
             className="home_heroimg"
             src="../images/why_r_v_here.png"
@@ -63,15 +63,15 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="row hideRowMobile">
-        <div className="col-lg-6 col-md-6 col-sm-12">
+      <div className="row hideRowMobile mt-5">
+        <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
           <img
             className="home_heroimg"
             src="../images/why_join_dci.png"
             alt="hero image of programming"
           />
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 home_para">
+        <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
           <h1>Why should I join this community?</h1>
           <p>
             Want to be a Freelancer, Digital Nomad, or work in your dream tech
@@ -83,8 +83,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="row hideRowDesktop">
-        <div className="col-lg-6 col-md-6 col-sm-12 home_para">
+      <div className="row hideRowDesktop mt-5">
+        <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
           <h1>Who is DCI?</h1>
           <p>
             The Digital Career Institute was born as an initiative to integrate
@@ -92,7 +92,7 @@ const Home = () => {
             who wants to pursue to tech career.
           </p>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12">
+        <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
           <div className="dciOnHeroImg">
             <img
               className="home_heroimg"
@@ -103,8 +103,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="row hideRowDesktop">
-        <div className="col-lg-6 col-md-6 col-sm-12 home_para">
+      <div className="row hideRowDesktop mt-5">
+        <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
           <h1>Why are we here?</h1>
           <p>
             The Digital Career Institute was born as an initiative to integrate
@@ -112,7 +112,7 @@ const Home = () => {
             who wants to pursue to tech career.
           </p>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12">
+        <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
           <img
             className="home_heroimg"
             src="../images/why_r_v_here.png"
@@ -120,8 +120,8 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="row hideRowDesktop">
-        <div className="col-lg-6 col-md-6 col-sm-12 home_para">
+      <div className="row hideRowDesktop mt-5">
+        <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
           <h1>Why should I join this community?</h1>
           <p>
             Want to be a Freelancer, Digital Nomad, or work in your dream tech
@@ -131,7 +131,7 @@ const Home = () => {
             more.
           </p>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12">
+        <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
           <img
             className="home_heroimg"
             src="../images/why_join_dci.png"

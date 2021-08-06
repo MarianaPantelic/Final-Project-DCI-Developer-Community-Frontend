@@ -5,7 +5,7 @@ const Navbar = () => {
 
   return (
     <nav class="navbar navbar-expand-lg navbar-dark navbar-css">
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand logoNav" href="/">
         LOGO
       </a>
       <button
@@ -19,8 +19,9 @@ const Navbar = () => {
       >
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 navmenu">
           <li class="nav-item active">
             <a class="nav-link" href="/home">
               Home <span class="sr-only">(current)</span>
@@ -72,7 +73,7 @@ const Navbar = () => {
               focusable="false"
               data-prefix="fas"
               data-icon="user"
-              class="svg-inline--fa fa-user fa-w-14"
+              class="svg-inline--fa fa-user fa-w-14 userLogin"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
