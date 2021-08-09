@@ -1,12 +1,10 @@
 import React from "react";
 
-
 const Navbar = () => {
-
   return (
     <nav class="navbar navbar-expand-lg navbar-dark navbar-css">
       <a class="navbar-brand logoNav" href="/">
-        LOGO
+        <img src="../images/logo.gif" style={{height:"10rem",width:"10rem"}}/>
       </a>
       <button
         class="navbar-toggler"
@@ -96,10 +94,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-
   );
 };
 
 export default Navbar;
-
-

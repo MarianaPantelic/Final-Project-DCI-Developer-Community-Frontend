@@ -19,7 +19,7 @@ const Home = () => {
           <img
             className="home_heroimg"
             src="../images/welcome_HP.jpg"
-            alt="hero image of programming"
+            alt="hero of programming"
           />
         </div>
       </div>
@@ -30,9 +30,9 @@ const Home = () => {
             <img
               className="home_heroimg"
               src="../images/who_dci.png"
-              alt="hero image of programming"
+              alt="hero of programming"
             />
-            <img className="dciLogo" src={dci_logo} />
+            <img className="dciLogo" src={dci_logo} alt="dci logo"/>
           </div>
         </div>
         <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
@@ -59,7 +59,7 @@ const Home = () => {
           <img
             className="home_heroimg"
             src="../images/why_r_v_here.png"
-            alt="hero image of programming"
+            alt="hero of programming"
           />
         </div>
       </div>
@@ -68,7 +68,7 @@ const Home = () => {
           <img
             className="home_heroimg"
             src="../images/why_join_dci.png"
-            alt="hero image of programming"
+            alt="hero of programming"
           />
         </div>
         <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
@@ -97,9 +97,9 @@ const Home = () => {
             <img
               className="home_heroimg"
               src="../images/who_dci.png"
-              alt="hero image of programming"
+              alt="hero of programming"
             />
-            <img className="dciLogo" src={dci_logo} />
+            <img className="dciLogo" src={dci_logo} alt="dci logo"/>
           </div>
         </div>
       </div>
@@ -116,7 +116,7 @@ const Home = () => {
           <img
             className="home_heroimg"
             src="../images/why_r_v_here.png"
-            alt="hero image of programming"
+            alt="hero of programming"
           />
         </div>
       </div>
@@ -135,7 +135,7 @@ const Home = () => {
           <img
             className="home_heroimg"
             src="../images/why_join_dci.png"
-            alt="hero image of programming"
+            alt="hero of programming"
           />
         </div>
       </div>
