@@ -6,6 +6,7 @@ body {
   background: #1a39ca;
   font-size: 18px;
   align-items: center;
+  width: 100%;
 }
 
 .userLogin {
@@ -39,12 +40,23 @@ body {
   align-items: center;
   justify-content: center;
 }
+.navbuttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+
+}
 
 /*Navbar*/
 
 /*Footer*/
+.footerbackgroundcolor {
+    background-color: #1a39ca;
+    color: white;
+}
+/*End of Footer*/
 
-/*Footer*/
 :root {
   font-size: 62.5%;
 }
@@ -68,7 +80,7 @@ body {
 }
 
 .home_heroimg {
-  width: 35rem;
+  width: auto;
   height: 20rem;
   display: block;
   margin: auto;
@@ -109,6 +121,12 @@ body {
 @media only screen and (max-width: 600px) {
   .hideRowMobile {
     display: none;
+  }
+  .aligns_navbar {
+    display: flex;
+  align-items: right;
+  justify-content: right;
+
   }
 }
 
