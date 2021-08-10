@@ -59,6 +59,15 @@ body {
 }
 /*Navbar*/
 /*Footer*/
+
+.footer-container {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #1a39ca;
+  color: white;
+}
+
 /*Footer*/
 
 /* Home Page */
@@ -171,4 +180,43 @@ z
 .about1strowImg {
   background-color: #1a39ca;
 }
+
 /* End of about page */
+
+/*Login Page*/
+.login-container {
+  margin: 13% auto;
+  width: 50vw;
+  max-width: 1150px;
+  height: auto;
+  background-color: #e6efff;
+  border-radius: 10px 10px;
+}
+.login-container h2 {
+  font-size: 3rem;
+}
+#login-img {
+  background-image: url(./images/lock-4441691_1280.png);
+  background-size: cover;
+  background-position: center;
+  background-color: #1a39ca;
+  background-blend-mode: screen;
+  border-radius: 10px 10px;
+}
+.login-form,
+.login-form input {
+  font-size: 1.8rem;
+  padding: 2.5rem;
+}
+.register-btn,
+.login-btn {
+  background-color: #f66e1a;
+  border-color: #a0806c;
+  font-size: 2rem;
+  border-radius: 5px 5px;
+  width: 10rem;
+  color: white;
+}
+
+
+
