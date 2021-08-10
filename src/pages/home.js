@@ -31,7 +31,6 @@ const Home = () => {
           </div>
         </Fade>
         <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
-
           <Fade right duration={2000}>
             <img
               className="first_row_home_heroimg"
@@ -39,23 +38,20 @@ const Home = () => {
               alt="hero of programming"
             />
           </Fade>
-
         </div>
       </div>
 
       <div className="row hideRowMobile mt-5 second_row">
         <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
           <div className="dciOnHeroImg">
-
             <Fade left duration={2000}>
               <img
                 className="home_heroimg"
                 src="../images/who_dci.png"
                 alt="hero image of programming"
               />
-              <img className="dciLogo" src={dci_logo} alt="dci logo"/>
+              <img className="dciLogo" src={dci_logo} alt="dci logo" />
             </Fade>
-
           </div>
         </div>
         <Fade right duration={2000}>
@@ -83,7 +79,6 @@ const Home = () => {
           </div>
         </Fade>
         <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
-
           <Fade right duration={2000}>
             <img
               className="home_heroimg"
@@ -91,19 +86,17 @@ const Home = () => {
               alt="hero of programming"
             />
           </Fade>
-
         </div>
       </div>
       <div className="row hideRowMobile mt-5">
         <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
-
           <Fade left duration={2000}>
-           
-          <img
-            className="home_heroimg"
-            src="../images/why_join_dci.png"
-            alt="hero of programming"
-          />
+            <img
+              className="home_heroimg"
+              src="../images/why_join_dci.png"
+              alt="hero of programming"
+            />
+          </Fade>
         </div>
         <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
           <h1>Why should I join this community?</h1>
@@ -114,7 +107,6 @@ const Home = () => {
             become a part of the Tech Disruption, build websites, Web Apps and
             more.
           </p>
-
         </div>
         <Fade right duration={2000}>
           <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
@@ -143,16 +135,14 @@ const Home = () => {
         </Fade>
         <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
           <div className="dciOnHeroImg">
-
             <Fade left duration={2000}>
               <img
                 className="home_heroimg"
                 src="../images/who_dci.png"
                 alt="hero image of programming"
               />
-              <img className="dciLogo" src={dci_logo} alt="dci logo"/>
+              <img className="dciLogo" src={dci_logo} alt="dci logo" />
             </Fade>
-
           </div>
         </div>
       </div>
@@ -168,7 +158,6 @@ const Home = () => {
           </div>
         </Fade>
         <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
-
           <Fade right duration={2000}>
             <img
               className="home_heroimg"
@@ -176,7 +165,6 @@ const Home = () => {
               alt="hero of programming"
             />
           </Fade>
-
         </div>
       </div>
       <div className="row hideRowDesktop mt-5">
@@ -193,7 +181,6 @@ const Home = () => {
           </div>
         </Fade>
         <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
-
           <Fade left duration={2000}>
             <img
               className="home_heroimg"
@@ -201,7 +188,6 @@ const Home = () => {
               alt="hero of programming"
             />
           </Fade>
-
         </div>
       </div>
     </div>
