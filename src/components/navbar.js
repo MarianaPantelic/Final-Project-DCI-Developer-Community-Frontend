@@ -117,7 +117,7 @@ const Navbar = () => {
                   </div>
                 ) : null}
               </a>
-              <a class="dropdown-item" href="">
+              <a class="dropdown-item" href="/">
                 {localStorage.getItem("token") ? (
                   <div onClick={logOut} className="logout">
                     Logout
