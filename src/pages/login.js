@@ -19,7 +19,7 @@ const Login = () => {
           console.log("ok", resp);
           localStorage.setItem("token", resp.data.token);
           localStorage.setItem("user", JSON.stringify(resp.data.user));
-          window.location.replace("/");
+          window.location.replace("/userprofile");
         });
     } catch (error) {
       console.log(error);
@@ -30,10 +30,10 @@ const Login = () => {
       <h3 className="text-center pacifico-font">Welcome Back!</h3>
       <Form>
         <Form.Group controlId="formBasicEmail">
-          <Form.Label className="m-3">Username</Form.Label>
+          <Form.Label className="m-3">Email</Form.Label>
           <Form.Control
             type="email"
-            placeholder="Enter your username"
+            placeholder="Enter your email"
             ref={emailRef}
           />
         </Form.Group>

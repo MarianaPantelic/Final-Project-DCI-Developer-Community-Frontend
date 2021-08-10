@@ -26,7 +26,7 @@ const Register = (props) => {
       localStorage.setItem("token", resp.data.token);
       localStorage.setItem("user", JSON.stringify(resp.data.user));
 
-      window.location.replace("/");
+      window.location.replace("/userprofile");
       userNameRef.current.value = "";
       classNameRef.current.value = "";
       firstNameRef.current.value = "";
