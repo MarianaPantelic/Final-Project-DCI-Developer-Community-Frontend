@@ -6,14 +6,14 @@ body {
 }
 /*Navbar*/
 .navbar-css {
-  width:100%;
-  min-height:6rem;
+  width: 100%;
+  min-height: 6rem;
   background: #1a39ca;
   font-size: 18px;
   align-items: center;
   position: fixed;
   top: 0;
-  z-index: 1; 
+  z-index: 1;
 }
 .userLogin {
   width: 2.5rem;
@@ -24,10 +24,11 @@ body {
   padding: 0.2rem;
   margin: 0.5rem 1rem;
 }
+
 .user-dropdown {
-  position:fixed;
-  top:1rem;
-  right:7rem;
+  position: fixed;
+  top: 1rem;
+  right: 7rem;
 }
 .dropdown-toggle::after {
   content: none;
@@ -42,17 +43,22 @@ body {
   justify-content: center;
 }
 .nav-menu li a {
-  color:white!important;
+  color: white !important;
 }
 .align-burger-button {
-  position:fixed;
+  position: fixed;
   right: 3rem;
-  top:1.5rem; 
+  top: 1.5rem;
 }
 .align-logo {
   position: fixed;
-  top:1.5rem;
-  left:3rem;
+  top: 1.5rem;
+  left: 3rem;
+}
+.username {
+  position: fixed;
+  top: 1rem;
+  right: 12rem;
 }
 .register-buttons {
   font-size: 14px;
@@ -88,8 +94,8 @@ body {
   margin-bottom: 3.5rem;
 }
 .first_row_home_heroimg {
- width: 100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   display: block;
   margin: auto;
   padding-bottom: 15rem;
@@ -106,7 +112,7 @@ body {
 }
 .home_heroimg {
   width: 100%;
-  height:100%;
+  height: 100%;
   display: block;
   margin: auto;
   padding-top: 2rem;
@@ -128,11 +134,10 @@ body {
   top: 3rem;
   right: 16rem;
 }
-.rest_rows{
+.rest_rows {
   margin-bottom: 10rem;
 }
-z
-.container,
+z .container,
 .container-lg,
 .container-md,
 .container-sm,
@@ -148,7 +153,7 @@ z
   }
   .first_row_home_heroimg {
     width: 100%;
-    height:100%;
+    height: 100%;
     display: block;
     margin: auto;
     padding-bottom: 3rem;
@@ -217,6 +222,3 @@ z
   width: 10rem;
   color: white;
 }
-
-
-
