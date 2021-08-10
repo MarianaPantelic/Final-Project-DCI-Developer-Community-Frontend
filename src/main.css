@@ -21,6 +21,7 @@ body {
 
 .userdropdown {
   margin-right: 6rem;
+  
 }
 
 .dropdown-toggle::after {
@@ -87,7 +88,7 @@ body {
 }
 
 .first_row_home_heroimg {
-  width: 65rem;
+  width: 55rem;
   height: auto;
   display: block;
   margin: auto;
@@ -156,12 +157,7 @@ body {
   .hideRowMobile {
     display: none;
   }
-  .aligns_navbar {
-    display: flex;
-  align-items: right;
-  justify-content: right;
-
-  }
+  
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
