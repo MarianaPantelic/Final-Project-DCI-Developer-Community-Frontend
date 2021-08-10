@@ -4,20 +4,23 @@ const axios = require("axios").default;
 
 const Register = (props) => {
   const userNameRef = useRef();
+  const classNameRef = useRef();
+  const firstNameRef = useRef();
+  const lastNameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
 
   const addUser = async () => {
     try {
       console.log("add user");
-      const resp = await axios.post(
-        "https://marianasblog.herokuapp.com/users",
-        {
-          userName: userNameRef.current.value,
-          email: emailRef.current.value,
-          password: passwordRef.current.value,
-        }
-      );
+      const resp = await axios.post("http://localhost:3001/users", {
+        userName: userNameRef.current.value,
+        className: classNameRef.current.value,
+        firstName: firstNameRef.current.value,
+        lastName: lastNameRef.current.value,
+        email: emailRef.current.value,
+        password: passwordRef.current.value,
+      });
       props.sendUserGetRequest();
       console.log(resp.data);
       localStorage.setItem("token", resp.data.token);
@@ -25,6 +28,9 @@ const Register = (props) => {
 
       window.location.replace("/");
       userNameRef.current.value = "";
+      classNameRef.current.value = "";
+      firstNameRef.current.value = "";
+      lastNameRef.current.value = "";
       emailRef.current.value = "";
       passwordRef.current.value = "";
     } catch (error) {
@@ -49,7 +55,7 @@ const Register = (props) => {
           <Form.Control
             type="text"
             placeholder="Enter your class name"
-            ref={userNameRef}
+            ref={classNameRef}
           />
         </Form.Group>
         <Form.Group controlId="formBasicFirstName">
@@ -57,7 +63,7 @@ const Register = (props) => {
           <Form.Control
             type="text"
             placeholder="Enter your first name"
-            ref={userNameRef}
+            ref={firstNameRef}
           />
         </Form.Group>
         <Form.Group controlId="formBasicLastName">
@@ -65,7 +71,7 @@ const Register = (props) => {
           <Form.Control
             type="text"
             placeholder="Enter your last name"
-            ref={userNameRef}
+            ref={lastNameRef}
           />
         </Form.Group>
         <Form.Group controlId="formBasicEmail">
