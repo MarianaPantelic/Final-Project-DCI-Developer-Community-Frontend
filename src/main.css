@@ -205,11 +205,9 @@ z .container,
   border-radius: 10px 10px;
 }
 .login-form,
-.login-form input,
-.register-form,
-.register-form input {
-  font-size: 1.5rem;
-  padding: 0 2rem;
+.login-form input {
+  font-size: 2rem;
+  padding: 2.5rem;
 }
 .register-btn,
 .login-btn {
@@ -232,4 +230,9 @@ z .container,
   background-color: #1a39ca;
   background-blend-mode: screen;
   border-radius: 10px 10px;
+}
+.register-form,
+.register-form input {
+  font-size: 1.5rem;
+  padding: 0 2rem;
 }
