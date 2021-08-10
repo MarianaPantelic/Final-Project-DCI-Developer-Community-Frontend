@@ -1,6 +1,7 @@
 import React from "react";
 
 const Navbar = () => {
+
   const user = JSON.parse(localStorage.getItem("user"));
   let userName = "";
   if (user) {
@@ -11,10 +12,12 @@ const Navbar = () => {
     localStorage.removeItem("user");
     window.location.replace("/");
   };
+ 
   return (
-    <nav class="navbar navbar-expand-lg navbar-light  navbar-css">
-      <a class="navbar-brand align-logo text-white" href="/">
-        LOGO
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-css">
+      <a class="navbar-brand logoNav" href="/" style={{ margin: "0rem" }}>
+        <img src="../images/logo.gif" className="nav-logo" />
+
       </a>
       <div class="align-burger-button">
         <button
