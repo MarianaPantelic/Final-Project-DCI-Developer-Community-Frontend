@@ -1,13 +1,20 @@
+:root {
+  font-size: 62.5%;
+}
 body {
   background: rgb(251, 251, 251);
 }
 /*Navbar*/
 .navbar-css {
+  width:100%;
+  min-height:6rem;
   background: #1a39ca;
   font-size: 18px;
   align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1; 
 }
-
 .userLogin {
   width: 2.5rem;
   height: 2.5rem;
@@ -17,38 +24,43 @@ body {
   padding: 0.2rem;
   margin: 0.5rem 1rem;
 }
-.userdropdown {
-  margin-right: 6rem;
+.user-dropdown {
+  position:fixed;
+  top:1rem;
+  right:7rem;
 }
 .dropdown-toggle::after {
   content: none;
 }
-.logoNav {
-  margin-left: 6rem;
-}
 .nav-link {
   margin: 0.5rem 1rem;
-  
 }
 .nav-menu {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
- 
 }
 .nav-menu li a {
-  color:white!important
+  color:white!important;
+}
+.align-burger-button {
+  position:fixed;
+  right: 3rem;
+  top:1.5rem; 
+}
+.align-logo {
+  position: fixed;
+  top:1.5rem;
+  left:3rem;
+}
+.register-buttons {
+  font-size: 14px;
 }
 /*Navbar*/
 /*Footer*/
 /*Footer*/
-:root {
-  font-size: 62.5%;
-}
-/* body {
-    background: rgb(65, 65, 43);
-} */
+
 /* Home Page */
 .first_row {
   margin-top: 10rem;
