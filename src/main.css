@@ -1,13 +1,20 @@
+:root {
+  font-size: 62.5%;
+}
 body {
   background: rgb(251, 251, 251);
 }
 /*Navbar*/
 .navbar-css {
+  width: 100%;
+  min-height: 6rem;
   background: #1a39ca;
   font-size: 18px;
   align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
-
 .userLogin {
   width: 2.5rem;
   height: 2.5rem;
@@ -17,31 +24,40 @@ body {
   padding: 0.2rem;
   margin: 0.5rem 1rem;
 }
-
-.userdropdown {
-  margin-right: 6rem;
+.user-dropdown {
+  position: fixed;
+  top: 1rem;
+  right: 7rem;
 }
-
 .dropdown-toggle::after {
   content: none;
 }
-
-.logoNav {
-  margin-left: 6rem;
-}
-
 .nav-link {
   margin: 0.5rem 1rem;
 }
-.navmenu {
-  width: 90%;
+.nav-menu {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
+.nav-menu li a {
+  color: white !important;
+}
+.align-burger-button {
+  position: fixed;
+  right: 3rem;
+  top: 1.5rem;
+}
+.align-logo {
+  position: fixed;
+  top: 1.5rem;
+  left: 3rem;
+}
+.register-buttons {
+  font-size: 14px;
+}
 /*Navbar*/
-
 /*Footer*/
 .footer-container {
   width: 100%;
@@ -51,79 +67,57 @@ body {
   color: white;
 }
 /*Footer*/
-:root {
-  font-size: 62.5%;
-}
-/* body {
-    background: rgb(65, 65, 43);
-} */
 
 /* Home Page */
-
 .first_row {
   margin-top: 10rem;
-  margin-bottom: 10rem;
+  margin-bottom: 20rem;
 }
-
 .first_row_h1 {
   font-size: 4rem;
   margin-bottom: 3.5rem;
 }
-
 .first_row_h2 {
   font-size: 3rem;
   margin-bottom: 3.5rem;
 }
-
 #first_row_p {
   font-size: 1.4rem;
   margin-bottom: 3.5rem;
 }
-
 .first_row_home_heroimg {
-  width: 65rem;
-  height: auto;
+  width: 100%;
+  height: 100%;
   display: block;
   margin: auto;
-  padding-bottom: 10rem;
+  padding-bottom: 15rem;
 }
-
 .home_para h1 {
   margin-top: 3rem;
   text-align: center;
 }
-
 .home_para p {
   font-size: 1.4rem;
 }
-
 .home_para {
   text-align: center;
 }
-
 .home_heroimg {
-  width: 35rem;
-  height: 20rem;
+  width: 100%;
+  height: 100%;
   display: block;
   margin: auto;
   padding-top: 2rem;
 }
-
 .homebutton {
   font-size: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
 }
-
-.second_row {
-  margin-top: 10rem;
-}
-
 .dciOnHeroImg {
   position: relative;
 }
-
 .dciLogo {
   position: absolute;
   width: 5rem;
@@ -132,8 +126,10 @@ body {
   top: 3rem;
   right: 16rem;
 }
-
-.container,
+.rest_rows {
+  margin-bottom: 10rem;
+}
+z .container,
 .container-lg,
 .container-md,
 .container-sm,
@@ -141,55 +137,43 @@ body {
 .container-xxl {
   max-width: 1100px;
 }
-
 /* media query */
-
 /* Extra small devices (phones, 600px and down) */
-
 @media only screen and (max-width: 600px) {
   .hideRowMobile {
     display: none;
   }
-
   .first_row_home_heroimg {
-    width: 35rem;
-    height: auto;
+    width: 100%;
+    height: 100%;
     display: block;
     margin: auto;
     padding-bottom: 3rem;
+    overflow: hidden;
   }
-
   .first_row {
     margin-top: 9rem;
   }
 }
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .hideRowDesktop {
     display: none;
   }
 }
-
 /* end of media query */
-
 /* End of home page */
-
 /* About page */
-
 .aboutCol {
   font-size: 1.4rem;
 }
-
 .about_heroimg {
   width: 35rem;
   height: 20rem;
 }
-
 .about1strow {
   background-color: #f4f5f7;
 }
-
 .about1strowImg {
   background-color: #1a39ca;
 }
@@ -229,3 +213,4 @@ body {
   width: 10rem;
   color: white;
 }
+/* End of about page */
