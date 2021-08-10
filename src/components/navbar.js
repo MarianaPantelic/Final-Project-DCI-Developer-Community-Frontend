@@ -3,8 +3,8 @@ import React from "react";
 const Navbar = () => {
   return (
     <nav class="navbar navbar-expand-lg navbar-dark navbar-css">
-      <a class="navbar-brand logoNav" href="/">
-        <img src="../images/logo.gif" style={{height:"10rem",width:"10rem"}}/>
+      <a class="navbar-brand logoNav" href="/" style={{ margin: "0rem" }}>
+        <img src="../images/logo.gif" className="nav-logo" />
       </a>
       <button
         class="navbar-toggler"
