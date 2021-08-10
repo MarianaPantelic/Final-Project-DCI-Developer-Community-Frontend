@@ -183,7 +183,8 @@ z .container,
 /* End of about page */
 
 /*Login Page*/
-.login-container {
+.login-container,
+.register-container {
   margin: 13% auto;
   width: 50vw;
   max-width: 1150px;
@@ -191,7 +192,8 @@ z .container,
   background-color: #e6efff;
   border-radius: 10px 10px;
 }
-.login-container h2 {
+.login-container h2,
+.register-container h2 {
   font-size: 3rem;
 }
 #login-img {
@@ -203,9 +205,11 @@ z .container,
   border-radius: 10px 10px;
 }
 .login-form,
-.login-form input {
-  font-size: 1.8rem;
-  padding: 2.5rem;
+.login-form input,
+.register-form,
+.register-form input {
+  font-size: 1.5rem;
+  padding: 0 2rem;
 }
 .register-btn,
 .login-btn {
@@ -215,4 +219,17 @@ z .container,
   border-radius: 5px 5px;
   width: 10rem;
   color: white;
+}
+
+/*Register Page*/
+.register-container {
+  margin: 10% auto;
+}
+#register-img {
+  background-image: url(./images/membership-3936563_1280.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: #1a39ca;
+  background-blend-mode: screen;
+  border-radius: 10px 10px;
 }
