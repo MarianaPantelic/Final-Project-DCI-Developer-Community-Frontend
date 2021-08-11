@@ -14,10 +14,10 @@ const Navbar = () => {
   };
  
   return (
+
     <nav class="navbar navbar-expand-lg navbar-dark navbar-css">
       <a class="navbar-brand logoNav" href="/" style={{ margin: "0rem" }}>
         <img src="../images/logo.gif" className="nav-logo" />
-
       </a>
       <div class="align-burger-button">
         <button
@@ -71,6 +71,7 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
+
       </div>
       <div class="dropdown user-dropdown">
         <div>
@@ -115,12 +116,15 @@ const Navbar = () => {
             {!localStorage.getItem("token") ? <div>Register</div> : null}
           </a>
           <a class="dropdown-item" href="/">
+
             {localStorage.getItem("token") ? (
               <div onClick={logOut} className="logout">
                 Logout
               </div>
             ) : null}
+
           </a>
+
         </div>
       </div>
     </nav>
