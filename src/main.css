@@ -314,6 +314,7 @@ td {
 .showPostsSection {
   background-color: #3d88b7;
   height: 100vh;
+  padding-top: 10rem;
 }
 
 .newPostButton {
@@ -348,6 +349,7 @@ form input {
 .postButton {
   background-color: #1a39ca;
   color: #fff;
+  margin-top: 10rem;
 }
 
 /* quil editor */

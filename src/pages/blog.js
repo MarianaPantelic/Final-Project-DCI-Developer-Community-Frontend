@@ -11,7 +11,7 @@ const Blog = (props) => {
         <Link to="/addPosts" className="link_addPost">
           <div class="d-grid gap-2 col-6 mx-auto">
             <button
-              className="btn btn-warning mt-5 pr-5 pl-5 newPostButton"
+              className="btn btn-warning newPostButton"
               type="button"
             >
               Write a new post
