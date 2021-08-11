@@ -55,13 +55,11 @@ body {
   position: fixed;
   top: 1.5rem;
   left: 3rem;
-
 }
 .username {
   position: fixed;
   top: 1rem;
-  right: 12rem;
-
+  right: 13rem;
 }
 .register-buttons {
   font-size: 14px;
@@ -217,7 +215,6 @@ td {
   .hideRowMobile {
     display: none;
   }
-
 }
 .first_row_home_heroimg {
   width: 100%;
@@ -343,7 +340,6 @@ td {
   color: white;
 }
 
-
 /*Register Page*/
 .register-container {
   margin: 10% auto;
@@ -361,4 +357,3 @@ td {
   font-size: 1.5rem;
   padding: 0 2rem;
 }
-
