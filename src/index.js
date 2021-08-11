@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import "../node_modules/react-quill/dist/quill.snow.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -18,10 +19,35 @@ import Resources from "./pages/resources";
 import UserProfile from "./pages/userprofile";
 
 import "./main.css";
+import AddPosts from "./components/addPosts";
+
+const axios = require("axios").default;
 
 
 const App = () => {
-  
+
+    const [posts, setPosts] = useState([]);
+    console.log(posts);
+    console.log(process.env.REACT_APP_ENV);
+
+    useEffect(() => {
+      sendGetRequest();
+    }, []);
+
+    const sendGetRequest = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:3001/blogs"
+        );
+        setPosts(response.data);
+        console.log(response.data);
+      } catch (err) {
+        console.error(err);
+      }
+    }; 
+
+
+
   return (
     <div>
       <Router>
@@ -37,7 +63,10 @@ const App = () => {
             <Forum />
           </Route>
           <Route path="/blog">
-            <Blog />
+            <Blog show={posts} sendGetRequest={sendGetRequest}/>
+          </Route>
+          <Route path="/addPosts">
+            <AddPosts sendGetRequest={sendGetRequest}/>
           </Route>
           <Route path="/news">
             <News />
