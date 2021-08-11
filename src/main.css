@@ -63,12 +63,11 @@ body {
 }
 .register-buttons {
   font-size: 14px;
-
+}
 .nav-logo {
-  width: 7.5rem;
-  height: 6rem;
-  margin-left: 5rem;
-
+  width: 15rem;
+  height: 4.5rem;
+  margin-left: 2rem;
 }
 /*Navbar*/
 /*Footer*/
@@ -144,7 +143,7 @@ body {
 .rest_rows {
   margin-bottom: 10rem;
 }
-z .container,
+.container,
 .container-lg,
 .container-md,
 .container-sm,
@@ -155,6 +154,7 @@ z .container,
 
 /* Resources page */
 .main-resources-container {
+  margin-top: 10vh;
   background-color: #e6eefe;
   display: flex;
   flex-direction: column;
@@ -207,9 +207,9 @@ td {
 .resource-text {
   text-align: justify;
   padding: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+   padding-bottom: 6vh;
 }
-
 
 /* media query */
 /* Extra small devices (phones, 600px and down) */
@@ -232,8 +232,8 @@ td {
 
   /* navbar */
   .nav-logo {
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 10rem;
+    height: 3rem;
     margin-left: 1.2rem;
   }
   /* Resources page */
@@ -270,73 +270,73 @@ td {
     text-align: center;
   }
   .resource-img > img {
-    height: 5vh;
-    width: 30vw;
+    height: 3vh;
+    width: 20vw;
   }
   .resource-text {
     text-align: justify;
     font-size: 1.2rem;
     padding-left: 1rem;
     padding-right: 1rem;
-
   }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .hideRowDesktop {
-    display: none;
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .hideRowDesktop {
+      display: none;
+    }
   }
-}
-/* end of media query */
-/* End of home page */
-/* About page */
-.aboutCol {
-  font-size: 1.4rem;
-}
-.about_heroimg {
-  width: 35rem;
-  height: 20rem;
-}
-.about1strow {
-  background-color: #f4f5f7;
-}
-.about1strowImg {
-  background-color: #1a39ca;
-}
+  /* end of media query */
+  /* End of home page */
+  /* About page */
+  .aboutCol {
+    font-size: 1.4rem;
+  }
+  .about_heroimg {
+    width: 35rem;
+    height: 20rem;
+  }
+  .about1strow {
+    background-color: #f4f5f7;
+  }
+  .about1strowImg {
+    background-color: #1a39ca;
+  }
 
-/* End of about page */
+  /* End of about page */
 
-/*Login Page*/
-.login-container {
-  margin: 13% auto;
-  width: 50vw;
-  max-width: 1150px;
-  height: auto;
-  background-color: #e6efff;
-  border-radius: 10px 10px;
-}
-.login-container h2 {
-  font-size: 3rem;
-}
-#login-img {
-  background-image: url(./images/lock-4441691_1280.png);
-  background-size: cover;
-  background-position: center;
-  background-color: #1a39ca;
-  background-blend-mode: screen;
-  border-radius: 10px 10px;
-}
-.login-form,
-.login-form input {
-  font-size: 1.8rem;
-  padding: 2.5rem;
-}
-.register-btn,
-.login-btn {
-  background-color: #f66e1a;
-  border-color: #a0806c;
-  font-size: 2rem;
-  border-radius: 5px 5px;
-  width: 10rem;
-  color: white;
+  /*Login Page*/
+  .login-container {
+    margin: 13% auto;
+    width: 50vw;
+    max-width: 1150px;
+    height: auto;
+    background-color: #e6efff;
+    border-radius: 10px 10px;
+  }
+  .login-container h2 {
+    font-size: 3rem;
+  }
+  #login-img {
+    background-image: url(./images/lock-4441691_1280.png);
+    background-size: cover;
+    background-position: center;
+    background-color: #1a39ca;
+    background-blend-mode: screen;
+    border-radius: 10px 10px;
+  }
+  .login-form,
+  .login-form input {
+    font-size: 1.8rem;
+    padding: 2.5rem;
+  }
+  .register-btn,
+  .login-btn {
+    background-color: #f66e1a;
+    border-color: #a0806c;
+    font-size: 2rem;
+    border-radius: 5px 5px;
+    width: 10rem;
+    color: white;
+  }
 }
