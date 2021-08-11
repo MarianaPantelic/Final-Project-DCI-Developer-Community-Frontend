@@ -3,6 +3,7 @@ import "../node_modules/react-quill/dist/quill.snow.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 
@@ -17,12 +18,11 @@ import Post from "./pages/post";
 import Register from "./pages/register";
 import Resources from "./pages/resources";
 import UserProfile from "./pages/userprofile";
-
 import "./main.css";
+
 import AddPosts from "./components/addPosts";
 
 const axios = require("axios").default;
-
 
 const App = () => {
 
@@ -46,7 +46,23 @@ const App = () => {
       }
     }; 
 
+const axios = require("axios").default;
 
+const App = () => {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    sendUserGetRequest();
+  }, []);
+  const sendUserGetRequest = async () => {
+    try {
+      const resp = await axios.get("http://localhost:3001/users");
+      setUsers(resp.data);
+      console.log(resp.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div>
@@ -78,7 +94,7 @@ const App = () => {
             <Jobs />
           </Route>
           <Route path="/register">
-            <Register />
+            <Register users={users} sendUserGetRequest={sendUserGetRequest} />
           </Route>
           <Route path="/login">
             <Login />
@@ -90,7 +106,7 @@ const App = () => {
             <Post />
           </Route>
         </Switch>
-        <Footer/>
+        <Footer />
       </Router>
     </div>
   );
