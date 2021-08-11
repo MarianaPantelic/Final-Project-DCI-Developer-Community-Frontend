@@ -47,7 +47,6 @@ const App = () => {
       }
     }; 
 
-const axios = require("axios").default;
 
 const App = () => {
   const [users, setUsers] = useState([]);
@@ -113,4 +112,4 @@ const App = () => {
   );
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />,document.getElementById("root"));
