@@ -9,6 +9,8 @@ const axios = require("axios").default;
 const AddPosts = (props) => {
 
   const [title, setTitle] = useState("");
+    const [errors, setErrors] = useState("");
+
   let history = useHistory();
 
   const inputTitleRef = useRef();
@@ -28,8 +30,14 @@ const AddPosts = (props) => {
         {
           title: postTitle,
           content: postContent,
+        },
+        {
+          headers: {
+            auth: localStorage.getItem("token"),
+          },
         }
       );
+      console.log(localStorage.getItem("token"))
       await props.sendGetRequest({ title });
       console.log("response is :" + JSON.stringify(response));
     } catch (error) {
@@ -40,16 +48,18 @@ const AddPosts = (props) => {
 
     const addPostsOnClick = async () => {
       // console.log(inputContentRef.current);
-      try {
-        await addPost(
-          inputTitleRef.current.value,
-          inputContentRef.current.value
-        );
-        setTitle("");
-        history.push("/blog");
-      } catch (error) {
-        console.log("error");
+    try {
+      await addPost(inputTitleRef.current.value, inputContentRef.current.value);
+      setTitle("");
+      history.push("/blog");
+    } catch (error) {
+      console.log("U need to sign in" + error);
+      if (!localStorage.getItem("token")) {
+        alert("Please sign in to write post");
+        window.location.replace("/");
       }
+      setErrors(error.response.data);
+    }
       //  setContent("");
     };
 

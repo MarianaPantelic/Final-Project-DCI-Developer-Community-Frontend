@@ -311,6 +311,7 @@ td {
 
 /* Blog Page */
 
+
 .showPostsSection {
   background-color: #3d88b7;
   height: 100vh;
@@ -324,6 +325,13 @@ td {
 .link_addPost {
   text-decoration: none;
 }
+
+.blogs, .blogsLink{
+  color: #fff;
+  text-decoration: none;
+}
+
+
 /* add post */
 
 .writeBlogSection {
