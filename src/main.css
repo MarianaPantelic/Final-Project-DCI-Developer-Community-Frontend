@@ -415,3 +415,51 @@ form input {
   font-size: 1.5rem;
   padding: 0 2rem;
 }
+
+/*User profile page*/
+.first-clip {
+  clip-path: inset(5% 9% 15% 10% round 10% 10% 10% 10%);
+  background: linear-gradient(#e6efff, #1a39ca, #04083c);
+  width: 35rem;
+  height: 35rem;
+  position: fixed;
+  bottom: -5rem;
+  right: 40rem;
+  transform: rotate(40deg);
+}
+.second-clip {
+  clip-path: inset(5% 9% 15% 10% round 10% 10% 10% 10%);
+  background: linear-gradient(#e6efff, #1a39ca, #04083c);
+  width: 50rem;
+  height: 50rem;
+  position: fixed;
+  bottom: -5rem;
+  right: -20rem;
+  transform: rotate(40deg);
+}
+.third-clip {
+  clip-path: inset(5% 9% 15% 10% round 10% 10% 10% 10%);
+  background: linear-gradient(#e6efff, #1a39ca, #04083c);
+  width: 25rem;
+  height: 25rem;
+  position: fixed;
+  bottom: 58rem;
+  right: -2rem;
+  transform: rotate(40deg);
+}
+.profile-container {
+  margin: 5% auto;
+}
+.user-info-container {
+  height: 25rem;
+  display: flex;
+  font-size: 2rem;
+  padding: 2.5rem;
+  margin: 5rem;
+  border-radius: 5px 5px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.user-image-container img {
+  width: 15rem;
+  height: auto;
+}
