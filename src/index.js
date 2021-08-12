@@ -21,13 +21,16 @@ import UserProfile from "./pages/userprofile";
 import "./main.css";
 
 import AddPosts from "./components/addPosts";
+import AddQuestions from "./components/addQuestions";
 
 const axios = require("axios").default;
 
 const App = () => {
   const [posts, setPosts] = useState([]);
   const [users, setUsers] = useState([]);
+  const [questions, setQuestions] = useState([]);
   console.log(posts);
+  console.log(questions)
   console.log(process.env.REACT_APP_ENV);
 
   useEffect(() => {
@@ -43,11 +46,14 @@ const App = () => {
       const response = await axios.get("http://localhost:3001/blogs");
       setPosts(response.data);
       console.log(response.data);
+      const questionsresponse = await axios.get("http://localhost:3001/questions");
+      setQuestions(questionsresponse.data);
+      console.log(questionsresponse.data);
     } catch (err) {
       console.error(err);
     }
   };
-
+  
   const sendUserGetRequest = async () => {
     try {
       const resp = await axios.get("http://localhost:3001/users");
@@ -70,7 +76,7 @@ const App = () => {
             <About />
           </Route>
           <Route path="/forum">
-            <Forum />
+            <Forum show={questions} sendGetRequest={sendGetRequest} />
           </Route>
           <Route path="/blog">
             <Blog show={posts} sendGetRequest={sendGetRequest} />
