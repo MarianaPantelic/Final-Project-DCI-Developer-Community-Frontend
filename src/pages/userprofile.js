@@ -54,7 +54,6 @@ const UserProfile = (props) => {
   var today = new Date();
   var date =
     today.getDate() + "." + (today.getMonth() + 1) + "." + today.getFullYear();
-  console.log(date);
 
   const getDailyAgenda = async () => {
     try {
@@ -75,7 +74,7 @@ const UserProfile = (props) => {
       </div>
       <Container className="profile-container">
         <Row>
-          <Col sm={12} md={12} lg={6}>
+          <Col sm={12} md={12} lg={4}>
             <div className="user-info-container">
               <div className="user-image-container">
                 {user.image ? (
@@ -94,11 +93,13 @@ const UserProfile = (props) => {
               <div className="info-container mt-3">
                 {user ? (
                   <div>
-                    <div>Username: {user.userName}</div>
-                    <div>First Name: {user.firstName}</div>
+                    <div className="mt-3 profile-user-name">
+                      {user.userName}
+                    </div>
+                    <div className="mt-3">First Name: {user.firstName}</div>
                     <div>Last Name: {user.lastName}</div>
                     <div>Class: {user.className}</div>
-                    <div>Email: {user.email}</div>
+                    <div>{user.email}</div>
                   </div>
                 ) : null}
               </div>

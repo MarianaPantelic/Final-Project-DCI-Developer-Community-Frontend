@@ -62,7 +62,12 @@ body {
   right: 13rem;
 }
 .register-buttons {
-  font-size: 14px;
+  font-size: 1.8rem;
+}
+.register-buttons a:hover {
+  background-color: #1a39ca;
+  color: white;
+  border-radius: 10px 10px;
 }
 .nav-logo {
   width: 15rem;
@@ -451,15 +456,21 @@ form input {
   margin: 5% auto;
 }
 .user-info-container {
-  height: 25rem;
-  display: flex;
+  height: 35rem;
   font-size: 2rem;
-  padding: 2.5rem;
+  padding: 1rem 2.5rem;
   margin: 5rem;
+  text-align: center;
   border-radius: 5px 5px;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 .user-image-container img {
   width: 15rem;
   height: auto;
+  margin: auto;
+}
+.profile-user-name {
+  background-color: #1a39ca;
+  color: white;
+  border-radius: 10px 10px;
 }
