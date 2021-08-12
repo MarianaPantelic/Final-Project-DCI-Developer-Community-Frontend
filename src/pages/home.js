@@ -41,7 +41,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="row hideRowMobile mt-5 second_row">
+      <div className="row hideRowMobile rest_rows">
         <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
           <div className="dciOnHeroImg">
             <Fade left duration={2000}>
@@ -65,7 +65,7 @@ const Home = () => {
           </div>
         </Fade>
       </div>
-      <div className="row hideRowMobile mt-5">
+      <div className="row hideRowMobile rest_rows">
         <Fade left duration={2000}>
           <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
             <h1>Why are we here?</h1>
@@ -88,7 +88,7 @@ const Home = () => {
           </Fade>
         </div>
       </div>
-      <div className="row hideRowMobile mt-5">
+      <div className="row hideRowMobile mt-5 rest_rows">
         <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
           <Fade left duration={2000}>
             <img
