@@ -24,6 +24,7 @@ const AddPosts = (props) => {
   const addPost = async (postTitle, postContent) => {
     console.log("add post log" + postContent);
     // TODO
+    let userName = localStorage.getItem("user")
     try {
       const response = await axios.post(
         "http://localhost:3001/blogs/",
@@ -46,8 +47,11 @@ const AddPosts = (props) => {
     }
   };
 
+    console.log("user" + localStorage.getItem("user"));
+
     const addPostsOnClick = async () => {
       // console.log(inputContentRef.current);
+      
     try {
       await addPost(inputTitleRef.current.value, inputContentRef.current.value);
       setTitle("");
@@ -67,40 +71,46 @@ const AddPosts = (props) => {
   return (
     <section className="writeBlogSection">
       <div className="container">
-        <form>
-          <h1 className="pt-5"> Welcome</h1>
-          <div className="form-group">
-            <label htmlFor="inputTitle">Title</label>
-            <input
-              ref={inputTitleRef}
-              type="text"
-              className="form-control border border-dark"
-              id="inputTitle"
-              border
-              border-dark
-            />
+        <div className="row">
+            <form>
+              <h1 className="welcomAddPost">
+                Welcome{" "}
+                {localStorage.getItem("user") &&
+                  JSON.parse(localStorage.getItem("user")).firstName}
+              </h1>
+              <div className="form-group">
+                <label htmlFor="inputTitle">Title</label>
+                <input
+                  ref={inputTitleRef}
+                  type="text"
+                  className="form-control border border-dark"
+                  id="inputTitle"
+                  border
+                  border-dark
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="inputContent">Content</label>
+                <ReactQuill
+                  className="border border-dark"
+                  placeholder="write something amazing..."
+                  modules={AddPosts.modules}
+                  formats={AddPosts.formats}
+                  onChange={handleBody}
+                  id="inputContent"
+                  ref={inputContentRef}
+                />
+              </div>
+              <button
+                onClick={() => addPostsOnClick()}
+                type="button"
+                className="btn mt-5 postButton"
+              >
+                <h3>Save</h3>
+              </button>
+            </form>
           </div>
-          <div className="form-group">
-            <label htmlFor="inputContent">Content</label>
-            <ReactQuill
-              className="border border-dark"
-              placeholder="write something amazing..."
-              modules={AddPosts.modules}
-              formats={AddPosts.formats}
-              onChange={handleBody}
-              id="inputContent"
-              ref={inputContentRef}
-            />
-          </div>
-          <button
-            onClick={() => addPostsOnClick()}
-            type="button"
-            className="btn mt-5 postButton"
-          >
-            <h3>Save</h3>
-          </button>
-        </form>
-      </div>
+        </div>
     </section>
   );
 };
@@ -118,6 +128,7 @@ AddPosts.modules = {
     ],
     ["link", "image", "video"],
     ["clean"],
+    
   ],
 };
 /*
