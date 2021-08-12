@@ -73,6 +73,7 @@ const UserProfile = (props) => {
         <div className="third-clip"></div>
       </div>
       <Container className="profile-container">
+        <h1 className="text-center">Welcome back {user.firstName}!</h1>
         <Row>
           <Col sm={12} md={12} lg={4}>
             <div className="user-info-container">
@@ -105,7 +106,7 @@ const UserProfile = (props) => {
               </div>
             </div>
           </Col>
-          <Col sm={12} md={12} lg={6}>
+          <Col sm={12} md={12} lg={8}>
             <div className="agenda-container">
               <h2>Daily Agenda</h2>
               <div></div>
