@@ -629,6 +629,7 @@ form input {
   bottom: -5rem;
   right: 40rem;
   transform: rotate(40deg);
+  z-index: -1;
 }
 .second-clip {
   clip-path: inset(5% 9% 15% 10% round 10% 10% 10% 10%);
@@ -639,6 +640,7 @@ form input {
   bottom: -5rem;
   right: -20rem;
   transform: rotate(40deg);
+  z-index: -1;
 }
 .third-clip {
   clip-path: inset(5% 9% 15% 10% round 10% 10% 10% 10%);
@@ -649,9 +651,10 @@ form input {
   bottom: 58rem;
   right: -2rem;
   transform: rotate(40deg);
+  z-index: -1;
 }
 .profile-container {
-  margin: 5% auto;
+  margin: 5% 10% auto;
 }
 .user-info-container {
   height: 35rem;
@@ -661,6 +664,7 @@ form input {
   text-align: center;
   border-radius: 10px 10px;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  background-color: white;
 }
 .user-image-container img {
   width: 15rem;
@@ -674,10 +678,51 @@ form input {
 }
 .agenda-container {
   height: 35rem;
+  max-height: 35rem;
   font-size: 2rem;
   padding: 1rem 2.5rem;
   margin: 3rem;
-  text-align: center;
+  text-align: start;
   border-radius: 10px 10px;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  background-color: whitesmoke;
+}
+.search-container {
+  height: 35rem;
+  max-height: 35rem;
+
+  overflow-y: scroll;
+  overflow-x: auto;
+  font-size: 2rem;
+  padding: 1rem 2.5rem;
+  margin: 3rem;
+  text-align: justify;
+  border-radius: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  background-color: whitesmoke;
+}
+.myQuestions-container,
+.myBlogs-container {
+  height: 30rem;
+  max-height: 30rem;
+  font-size: 2rem;
+  padding: 1rem 2.5rem;
+  margin: 3rem;
+  text-align: start;
+  border-radius: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  background-color: whitesmoke;
+}
+.search-form {
+  width: 50%;
+  margin: auto;
+}
+.search-input {
+  font-size: 1.5rem;
+}
+.search-btn {
+  background-color: #f66e1a;
+  border-color: #a0806c;
+  width: 10rem;
+  font-size: 1.5rem;
 }
