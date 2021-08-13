@@ -65,9 +65,9 @@ body {
   font-size: 14px;
 }
 .nav-logo {
-  width: 7.5rem;
-  height: 6rem;
-  margin-left: 5rem;
+  width: 15rem;
+  height: 4.5rem;
+  margin-left: 2rem;
 }
 /*Navbar*/
 /*Footer*/
@@ -143,7 +143,10 @@ body {
 .rest_rows {
   margin-bottom: 10rem;
 }
-
+.container,
+.rest_rows {
+  margin-bottom: 10rem;
+}
 .container,
 .container-lg,
 .container-md,
@@ -153,12 +156,13 @@ body {
   max-width: 1100px;
 }
 
-.blogs-container{
+.blogs-container {
   height: 100%;
 }
 
 /* Resources page */
 .main-resources-container {
+  margin-top: 10vh;
   background-color: #e6eefe;
   display: flex;
   flex-direction: column;
@@ -183,8 +187,8 @@ td {
   padding-top: 1rem;
 }
 .resources-container > img {
-  height: 100%;
-  width: 30vw;
+  height: auto;
+  width: 26vw;
 }
 .resources-container > h1 {
   margin-left: 3vw;
@@ -211,7 +215,8 @@ td {
 .resource-text {
   text-align: justify;
   padding: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  padding-bottom: 6vh;
 }
 
 /* media query */
@@ -220,67 +225,67 @@ td {
   .hideRowMobile {
     display: none;
   }
-}
-.first_row_home_heroimg {
-  width: 100%;
-  height: 100%;
-  display: block;
-  margin: auto;
-  padding-bottom: 3rem;
-  overflow: hidden;
-}
-.first_row {
-  margin-top: 9rem;
-}
+  .first_row_home_heroimg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    padding-bottom: 3rem;
+    overflow: hidden;
+  }
+  .first_row {
+    margin-top: 9rem;
+  }
 
-/* navbar */
-.nav-logo {
-  width: 4.5rem;
-  height: 4.5rem;
-  margin-left: 1.2rem;
-}
-/* Resources page */
-.resources-container {
-  display: block;
-}
-.resources-container > img {
-  height: 100%;
-  width: 100%;
-}
-.resources-container > h1 {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0 auto;
-  font-size: 8vw;
-}
-.content-table {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 3vh;
-  background-color: #e6eefe;
-  border: 0.25rem black solid;
-  width: 97%;
-}
-.resource-img {
-  padding: 1.3vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.resource-img > img {
-  height: 5vh;
-  width: 30vw;
-}
-.resource-text {
-  text-align: justify;
-  font-size: 1.2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  /* navbar */
+  .nav-logo {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-left: 1.2rem;
+  }
+  /* Resources page */
+  .resources-container {
+    display: block;
+  }
+  .resources-container > img {
+    height: 100%;
+    width: 100%;
+  }
+  .resources-container > h1 {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    font-size: 8vw;
+  }
+  .content-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3vh;
+    background-color: #e6eefe;
+    border: 0.25rem black solid;
+    width: 97%;
+  }
+  .resource-img {
+    padding: 1.3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .resource-img > img {
+    height: 5vh;
+    width: 30vw;
+  }
+  .resource-text {
+    text-align: justify;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -308,9 +313,7 @@ td {
 
 /* End of about page */
 
-
 /* Blog Page */
-
 
 .showPostsSection {
   background-color: #3d88b7;
@@ -318,47 +321,43 @@ td {
   min-height: 100vh;
 }
 
-.blogCards{
+.blogCards {
   width: 40rem;
   margin: 3rem auto;
   background-color: #fff;
 }
 
-.blogUser{
+.blogUser {
   font-size: 2.5rem;
   border-bottom: 2px solid gainsboro;
-  color:#1a39ca;
+  color: #1a39ca;
   padding-bottom: 0.5rem;
-
 }
 
-.blogTitle{
+.blogTitle {
   padding-top: 0.5rem;
   font-size: 1.4rem;
   height: 8rem;
   border-bottom: 2px solid gainsboro;
-
 }
 
-.blogContent{
+.blogContent {
   height: 35rem;
   border-bottom: 2px solid gainsboro;
-
 }
 
-.showPostsSection img, iframe{
+.showPostsSection img,
+iframe {
   width: 38rem;
   height: 35rem;
-
 }
 
-
-.likeButton{
+.likeButton {
   font-size: 3rem;
   color: #1a39ca;
 }
 
-.likesNumber{
+.likesNumber {
   font-size: 3rem;
 }
 
@@ -371,11 +370,11 @@ td {
   text-decoration: none;
 }
 
-.blogs, .blogsLink{
+.blogs,
+.blogsLink {
   color: #fff;
   text-decoration: none;
 }
-
 
 /* add post */
 
@@ -405,179 +404,157 @@ form input {
   margin: 10rem 0;
 }
 
-.writeBlogImg{
+.writeBlogImg {
   width: 68rem;
   height: 70rem;
   object-fit: contain;
 }
-
 
 /* quil editor */
 .ql-editor {
   min-height: 50rem;
 }
 
-
 /* end of quil editor */
 
 /* end of add post */
 
 @media only screen and (max-width: 600px) {
+  .blogCards {
+    width: 30rem;
+  }
 
-.blogCards{
-  width: 30rem;
-}
+  .blogUser {
+    font-size: 2rem;
+    padding-bottom: 0.3rem;
+  }
 
-.blogUser{
-  font-size: 2rem;
-  padding-bottom: 0.3rem;
+  .blogTitle {
+    padding-top: 0.3rem;
+    font-size: 1.4rem;
+    height: 10rem;
+  }
 
-}
+  .blogContent {
+    height: 28rem;
+    border-bottom: 2px solid gainsboro;
+  }
 
-.blogTitle{
-  padding-top: 0.3rem;
-  font-size: 1.4rem;
-  height: 10rem;
-
-}
-
-.blogContent{
-  height: 28rem;
-  border-bottom: 2px solid gainsboro;
-
-}
-
-.showPostsSection img, iframe{
-  width: 28rem;
-  height: 28rem;
-
-}
-
+  .showPostsSection img,
+  iframe {
+    width: 28rem;
+    height: 28rem;
+  }
 }
 
 @media (min-width: 411px) and (max-width: 823px) {
-.blogCards{
-  width: 35rem;
-}
+  .blogCards {
+    width: 35rem;
+  }
 
-.blogUser{
-  font-size: 2rem;
-  padding-bottom: 0.3rem;
-
-}
-.showPostsSection img, iframe{
-  width: 32.5rem;
-  height: 28rem;
-
-}
-
+  .blogUser {
+    font-size: 2rem;
+    padding-bottom: 0.3rem;
+  }
+  .showPostsSection img,
+  iframe {
+    width: 32.5rem;
+    height: 28rem;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 568px) {
-.blogCards{
-  width: 28rem;
-}
+  .blogCards {
+    width: 28rem;
+  }
 
-.blogUser{
-  font-size: 2rem;
-  padding-bottom: 0.3rem;
-
-}
-.showPostsSection img, iframe{
-  width: 25.7rem;
-  height: 28rem;
-
-}
-
+  .blogUser {
+    font-size: 2rem;
+    padding-bottom: 0.3rem;
+  }
+  .showPostsSection img,
+  iframe {
+    width: 25.7rem;
+    height: 28rem;
+  }
 }
 
 @media (min-width: 375px) and (max-width: 667px) {
-.blogCards{
-  width: 32rem;
-}
+  .blogCards {
+    width: 32rem;
+  }
 
-.blogUser{
-  font-size: 2rem;
-  padding-bottom: 0.3rem;
+  .blogUser {
+    font-size: 2rem;
+    padding-bottom: 0.3rem;
+  }
+  .showPostsSection img,
+  iframe {
+    width: 30rem;
+    height: 28rem;
+  }
 
-}
-.showPostsSection img, iframe{
-  width: 30rem;
-  height: 28rem;
-
-}
-
-.blogTitle{
-  padding-top: 0.3rem;
-  font-size: 1.6rem;
-
-}
-
-
+  .blogTitle {
+    padding-top: 0.3rem;
+    font-size: 1.6rem;
+  }
 }
 
 @media (min-width: 375px) and (max-width: 812px) {
-.blogCards{
-  width: 33rem;
-}
+  .blogCards {
+    width: 33rem;
+  }
 
-.blogUser{
-  font-size: 2rem;
-  padding-bottom: 0.3rem;
-
-}
-.showPostsSection img, iframe{
-  width: 31rem;
-  height: 28rem;
-
-}
-
-
+  .blogUser {
+    font-size: 2rem;
+    padding-bottom: 0.3rem;
+  }
+  .showPostsSection img,
+  iframe {
+    width: 31rem;
+    height: 28rem;
+  }
 }
 
 @media (min-width: 540px) and (max-width: 720px) {
-.blogCards{
-  width: 45rem;
-}
+  .blogCards {
+    width: 45rem;
+  }
 
-.blogUser{
-  font-size: 2.4rem;
-  padding-bottom: 0.3rem;
+  .blogUser {
+    font-size: 2.4rem;
+    padding-bottom: 0.3rem;
+  }
+  .showPostsSection img,
+  iframe {
+    width: 43rem;
+    height: 28rem;
+  }
 
-}
-.showPostsSection img, iframe{
-  width: 43rem;
-  height: 28rem;
-
-}
-
-.blogTitle{
-  font-size: 1.8rem;
-}
-
+  .blogTitle {
+    font-size: 1.8rem;
+  }
 }
 
 @media (min-width: 280px) and (max-width: 653px) {
-.blogCards{
-  width: 24rem;
-}
+  .blogCards {
+    width: 24rem;
+  }
 
-.blogUser{
-  font-size: 2.4rem;
-  padding-bottom: 0.3rem;
+  .blogUser {
+    font-size: 2.4rem;
+    padding-bottom: 0.3rem;
+  }
+  .showPostsSection img,
+  iframe {
+    width: 22rem;
+    height: 28rem;
+  }
 
-}
-.showPostsSection img, iframe{
-  width: 22rem;
-  height: 28rem;
-
-}
-
-.blogTitle{
-  font-size: 1.4rem;
-  height: 12rem;
-}
-
+  .blogTitle {
+    font-size: 1.4rem;
+    height: 12rem;
+  }
 }
 
 /* End of blog page */
@@ -636,4 +613,3 @@ form input {
   font-size: 1.5rem;
   padding: 0 2rem;
 }
-
