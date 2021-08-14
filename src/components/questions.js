@@ -8,7 +8,7 @@ const axios = require("axios").default;
 
 const Questions = (props) => {
   const [userSignup, setUserSignup] = useState({});
-  const [userWriteBlogSignIn, setUserWriteBlogSignIn] = useState({});
+  const [userWriteQuestionSignIn, setUserWriteQuestionSignIn] = useState({});
   const [passwordShown, setPasswordShown] = useState(false);
 
   const myStorage = window.localStorage;
@@ -17,9 +17,9 @@ const Questions = (props) => {
   const handleCloseSignUp = () => setsignUp(false);
   const handlesignUp = () => setsignUp(true);
 
-  const [writeBlogSignIn, setwriteBlogSignIn] = useState(false);
-  const handleCloseWriteBlogSignIn = () => setwriteBlogSignIn(false);
-  const handleWriteBlogsignIn = () => setwriteBlogSignIn(true);
+  const [writeForumSignIn, setwriteForumSignIn] = useState(false);
+  const handleCloseWriteForumSignIn = () => setwriteForumSignIn(false);
+  const handleWriteForumsignIn = () => setwriteForumSignIn(true);
 
   const handleChangeSignup = (evt) => {
     setUserSignup({
@@ -28,9 +28,9 @@ const Questions = (props) => {
     });
   };
 
-  const handleChangeWriteBlogSignin = (evt) => {
-    setUserWriteBlogSignIn({
-      ...userWriteBlogSignIn,
+  const handleChangeWriteForumSignin = (evt) => {
+    setUserWriteQuestionSignIn({
+      ...userWriteForumSignIn,
       [evt.target.name]: evt.target.value,
     });
   };
@@ -38,7 +38,7 @@ const Questions = (props) => {
   const submitSignup = async () => {
     try {
       await axios
-        .post("https://kinjals-blog.herokuapp.com/users", userSignup)
+        .post("http://localhost:3001/register", userSignup)
         .then((response) => {
           myStorage.setItem("token", response.headers.auth);
           myStorage.setItem("user", JSON.stringify(response.data));
@@ -50,23 +50,20 @@ const Questions = (props) => {
     }
   };
 
-  const submitWriteBlogSignin = async () => {
+  const submitWriteForumSignin = async () => {
     try {
-      const response = await axios.post(
-        "https://kinjals-blog.herokuapp.com/users/login",
-        {
-          email: userWriteBlogSignIn.email,
-          password: userWriteBlogSignIn.password,
-        }
-      );
+      const response = await axios.post("http://localhost:3001/login", {
+        email: userWriteQuestionSignIn.email,
+        password: userWriteQuestionSignIn.password,
+      });
       myStorage.setItem("token", response.headers.auth);
       myStorage.setItem("user", JSON.stringify(response.data));
 
       console.log(response);
 
-      window.location.replace("/addPosts");
+      window.location.replace("/addQuestions");
 
-      console.log(userWriteBlogSignIn);
+      console.log(userWriteQuestionSignIn);
     } catch (error) {
       console.log(error.response);
     }
@@ -84,7 +81,7 @@ const Questions = (props) => {
   const deleteQuestionsOnClick = async (id) => {
     try {
       axios
-        .delete(`https://kinjals-blog.herokuapp.com/posts/${id}`, {
+        .delete(`http://localhost:3001/questions/${id}`, {
           headers: {
             auth: localStorage.getItem("token"),
           },
@@ -117,7 +114,7 @@ const Questions = (props) => {
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link-post" to="/showQuestions">
-                      Blogs
+                      Questions
                     </Link>
                   </li>
                   <li className="nav-item">
@@ -237,8 +234,8 @@ const Questions = (props) => {
       </Modal>
 
       <Modal
-        show={writeBlogSignIn}
-        onHide={handleCloseWriteBlogSignIn}
+        show={writeForumSignIn}
+        onHide={handleCloseWriteForumSignIn}
         backdrop="static"
         keyboard={false}
         animation={false}
@@ -255,7 +252,7 @@ const Questions = (props) => {
             id="email"
             name="email"
             placeholder="enter your email"
-            onChange={handleChangeWriteBlogSignin}
+            onChange={handleChangeWriteForumSignin}
           />
           <label htmlFor="password" className="labelClass">
             Password:
@@ -266,14 +263,14 @@ const Questions = (props) => {
             id="password"
             name="password"
             placeholder="enter your password"
-            onChange={handleChangeWriteBlogSignin}
+            onChange={handleChangeWriteForumSignin}
           />
           <Button
             to="/addPosts"
             variant="primary"
             className="modalButton"
             style={{ marginRight: "auto" }}
-            onClick={submitWriteBlogSignin}
+            onClick={submitWriteForumSignin}
           >
             Sign In
           </Button>

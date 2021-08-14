@@ -427,12 +427,33 @@ form input {
   padding: 2rem 5rem;
 }
 
+.main-question-div {
+  padding: 1em;
+    border-bottom: 1px solid var(--primary-low);
+    display: flex;
+    align-items: center;
+}
+
 .btn-container {
   width: 70%;
   margin-top: 6rem;
   display: flex;
   justify-content: space-between;
 }
+
+.askQuestion-btn {
+  background-color: #f66e1a;
+  border-color: #a0806c;
+  font-size: 2rem;
+  border-radius: 6px 6px;
+  width: 14rem;
+  color: white;
+  margin-top:1rem;
+
+}
+ .question-div  {
+  
+  }
 
 /* End of forum page */
 

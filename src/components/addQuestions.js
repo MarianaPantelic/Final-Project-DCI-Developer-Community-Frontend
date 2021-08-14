@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import ReactQuill from "react-quill";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const axios = require("axios").default;
 
@@ -72,13 +72,15 @@ const AddQuestions = (props) => {
               ref={inputContentRef}
             />
           </div>
-          <button
-            onClick={() => AddQuestionsOnClick()}
-            type="button"
-            className="btn mt-5 postButton"
-          >
-            <h3>Save</h3>
-          </button>
+          <Link to="/showQuestions">
+            <button
+              onClick={() => AddQuestionsOnClick()}
+              type="button"
+              className="btn mt-5 postButton"
+            >
+              <h3>Ask</h3>
+            </button>
+          </Link>
         </form>
       </div>
     </section>
@@ -126,3 +128,4 @@ AddQuestions.formats = [
  */
 
 export default AddQuestions;
+ 

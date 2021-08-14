@@ -34,21 +34,22 @@ const App = () => {
   console.log(process.env.REACT_APP_ENV);
 
   useEffect(() => {
-    sendGetRequest();
+    sendPostGetRequest();
   }, []);
 
   useEffect(() => {
     sendUserGetRequest();
   }, []);
+  useEffect(() => {
+    sendQuestionsGetRequest();
+  }, []);
 
-  const sendGetRequest = async () => {
+  const sendPostGetRequest = async () => {
     try {
       const response = await axios.get("http://localhost:3001/blogs");
       setPosts(response.data);
       console.log(response.data);
-      const questionsresponse = await axios.get("http://localhost:3001/questions");
-      setQuestions(questionsresponse.data);
-      console.log(questionsresponse.data);
+      
     } catch (err) {
       console.error(err);
     }
@@ -63,6 +64,15 @@ const App = () => {
       console.log(error);
     }
   };
+const sendQuestionsGetRequest = async () => {
+  try {
+    const questionsresponse = await axios.get("http://localhost:3001/questions");
+    setQuestions(questionsresponse.data);
+    console.log(questionsresponse.data);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
   return (
     <div>
@@ -76,13 +86,19 @@ const App = () => {
             <About />
           </Route>
           <Route path="/forum">
-            <Forum show={questions} sendGetRequest={sendGetRequest} />
+            <Forum
+              show={questions}
+              sendQuestionsGetRequest={sendQuestionsGetRequest}
+            />
+          </Route>
+          <Route path="/addQuestions">
+            <AddQuestions sendQuestionsGetRequest={sendQuestionsGetRequest} />
           </Route>
           <Route path="/blog">
-            <Blog show={posts} sendGetRequest={sendGetRequest} />
+            <Blog show={posts} sendPostGetRequest={sendPostGetRequest} />
           </Route>
           <Route path="/addPosts">
-            <AddPosts sendGetRequest={sendGetRequest} />
+            <AddPosts sendPostGetRequest={sendPostGetRequest} />
           </Route>
           <Route path="/news">
             <News />
