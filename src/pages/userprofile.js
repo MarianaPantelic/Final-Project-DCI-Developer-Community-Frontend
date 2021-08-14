@@ -124,7 +124,7 @@ const UserProfile = (props) => {
               <div className="user-image-container">
                 {user.image ? (
                   <div className="myImg">
-                    <img src={user.image}></img>
+                    <img src={user.image} alt="User Profile"></img>
                   </div>
                 ) : (
                   <ProfileImage
@@ -153,14 +153,18 @@ const UserProfile = (props) => {
           <Col sm={12} md={12} lg={4}>
             <div className="agenda-container">
               <h2 className="text-center mt-5">Daily Agenda</h2>
-              <div className="text-center mt-3">{dailyAgenda.date}</div>
+              <div className="text-center mt-3">{date}</div>
               <h2 className="text-center mt-5">Topics</h2>
 
-              {dailyAgenda.topics
-                ? dailyAgenda.topics.map((topic) => (
-                    <div className="mt-2 text-center">{topic}</div>
-                  ))
-                : null}
+              {dailyAgenda && dailyAgenda.topics ? (
+                dailyAgenda.topics.map((topic) => (
+                  <div className="mt-2 text-center">{topic}</div>
+                ))
+              ) : (
+                <h2 className="text-center mt-5">
+                  There is no info for today!
+                </h2>
+              )}
             </div>
           </Col>
           <Col sm={12} md={12} lg={5}>
@@ -182,7 +186,10 @@ const UserProfile = (props) => {
                 {agendaByDate ? (
                   <div className="text-center mt-3">{agendaByDate.date}</div>
                 ) : null}
-                <h2 className="text-center mt-5">Topics</h2>
+                {agendaByDate.topics ? (
+                  <h2 className="text-center mt-5">Topics</h2>
+                ) : null}
+
                 <ol>
                   {agendaByDate && agendaByDate.topics
                     ? agendaByDate.topics.map((topic) => (
@@ -193,16 +200,68 @@ const UserProfile = (props) => {
                       ))
                     : null}
                 </ol>
-                <h2 className="text-center mt-5">Resources</h2>
+                {agendaByDate.resources ? (
+                  <h2 className="text-center mt-5">Resources</h2>
+                ) : null}
+
                 <ol>
                   {agendaByDate && agendaByDate.resources
                     ? agendaByDate.resources.map((resource) => (
                         <li className="mt-2 ml-5">
                           {" "}
-                          <Link to={resource} target="_blank" />
+                          <a href={resource} rel="noreferrer" target="_blank">
+                            {resource}
+                          </a>
                         </li>
                       ))
                     : null}
+                </ol>
+                {agendaByDate.exercises ? (
+                  <h2 className="text-center mt-5">Exercises</h2>
+                ) : null}
+
+                <ol>
+                  {agendaByDate && agendaByDate.exercises
+                    ? agendaByDate.exercises.map((exercise) => (
+                        <li className="mt-2 ml-5">
+                          {" "}
+                          &nbsp;&nbsp;&nbsp;{exercise}
+                        </li>
+                      ))
+                    : null}
+                </ol>
+                {agendaByDate.questions ? (
+                  <h2 className="text-center mt-5">Questions</h2>
+                ) : null}
+
+                <ol>
+                  {agendaByDate && agendaByDate.questions
+                    ? agendaByDate.questions.map((question) => (
+                        <li className="mt-2 ml-5">
+                          {" "}
+                          &nbsp;&nbsp;&nbsp;{question}
+                        </li>
+                      ))
+                    : null}
+                  {agendaByDate.recording ? (
+                    <h2 className="text-center mt-5">Meeting Recording</h2>
+                  ) : null}
+                </ol>
+
+                <ol>
+                  {agendaByDate && agendaByDate.recording ? (
+                    <div>
+                      <ul>
+                        <li>
+                          Link:{" "}
+                          <a href={agendaByDate.recording.link}>
+                            {agendaByDate.recording.link}
+                          </a>
+                        </li>
+                        <li>Passcode: {agendaByDate.recording.passcode}</li>
+                      </ul>
+                    </div>
+                  ) : null}
                 </ol>
               </div>
             </div>
