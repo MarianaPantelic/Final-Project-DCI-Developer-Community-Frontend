@@ -51,7 +51,7 @@ const Blog = (props) => {
     <section className="showPostsSection">
       <div className="container">
         <Link to="/addPosts" className="link_addPost">
-          <div class="d-grid gap-2 col-6 mx-auto">
+         <div className="text-center">
             <button className="btn btn-warning newPostButton" type="button">
               Write a new post
             </button>
