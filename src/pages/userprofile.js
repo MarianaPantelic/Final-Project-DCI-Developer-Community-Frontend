@@ -185,8 +185,14 @@ const UserProfile = (props) => {
               <div>
                 {agendaByDate ? (
                   <div className="text-center mt-3">{agendaByDate.date}</div>
-                ) : null}
-                {agendaByDate.topics ? (
+                ) : (
+                  <h2 className="text-center mt-5">
+                    There is no info for this day!
+                  </h2>
+                )}
+                {agendaByDate &&
+                agendaByDate.topics &&
+                agendaByDate.topics.length !== 0 ? (
                   <h2 className="text-center mt-5">Topics</h2>
                 ) : null}
 
@@ -200,7 +206,9 @@ const UserProfile = (props) => {
                       ))
                     : null}
                 </ol>
-                {agendaByDate.resources ? (
+                {agendaByDate &&
+                agendaByDate.resources &&
+                agendaByDate.resources.length !== "0" ? (
                   <h2 className="text-center mt-5">Resources</h2>
                 ) : null}
 
@@ -216,7 +224,9 @@ const UserProfile = (props) => {
                       ))
                     : null}
                 </ol>
-                {agendaByDate.exercises ? (
+                {agendaByDate &&
+                agendaByDate.exercises &&
+                agendaByDate.exercises.length !== 0 ? (
                   <h2 className="text-center mt-5">Exercises</h2>
                 ) : null}
 
@@ -230,7 +240,9 @@ const UserProfile = (props) => {
                       ))
                     : null}
                 </ol>
-                {agendaByDate.questions ? (
+                {agendaByDate &&
+                agendaByDate.questions &&
+                agendaByDate.questions.length !== 0 ? (
                   <h2 className="text-center mt-5">Questions</h2>
                 ) : null}
 
@@ -243,7 +255,7 @@ const UserProfile = (props) => {
                         </li>
                       ))
                     : null}
-                  {agendaByDate.recording ? (
+                  {agendaByDate && agendaByDate.recording ? (
                     <h2 className="text-center mt-5">Meeting Recording</h2>
                   ) : null}
                 </ol>
