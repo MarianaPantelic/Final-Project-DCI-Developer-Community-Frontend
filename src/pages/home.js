@@ -1,10 +1,11 @@
 import React from "react";
 import dci_logo from "../images/dci_logo.png";
 import Fade from "react-reveal/Fade";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="container">
+    <div className="container home-section">
       <div className="row first_row">
         <Fade left duration={2000}>
           <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
@@ -25,9 +26,11 @@ const Home = () => {
               accusam et justo duo dolores et ea rebum. Stet clita kasd
               gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
             </p>
+            <Link to="/register">
             <button type="button" className="btn btn-warning homebutton">
               Register
             </button>
+            </Link>
           </div>
         </Fade>
         <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
@@ -108,18 +111,6 @@ const Home = () => {
             more.
           </p>
         </div>
-        <Fade right duration={2000}>
-          <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
-            <h1>Why should I join this community?</h1>
-            <p>
-              Want to be a Freelancer, Digital Nomad, or work in your dream tech
-              company? Become a Web Developer, a dynamic and vital field in
-              today'S society. As a Web Developer you can show your creativity,
-              become a part of the Tech Disruption, build websites, Web Apps and
-              more.
-            </p>
-          </div>
-        </Fade>
       </div>
 
       <div className="row hideRowDesktop mt-5">
