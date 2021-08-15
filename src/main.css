@@ -451,9 +451,13 @@ form input {
   margin-top:1rem;
 
 }
- .question-div  {
-  
-  }
+.searchbar {
+  margin-top:5rem;
+  align-items:center;
+  width:auto;
+  height:5rem;
+  display:flex;
+}
 
 /* End of forum page */
 

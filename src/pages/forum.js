@@ -8,7 +8,7 @@ const axios = require("axios").default;
 
 const Forum = (props) => {
   let contentHTML = null;
-
+  
   return (
     <Container className="mt-5">
       {/* <div className="text-center">
@@ -30,6 +30,18 @@ const Forum = (props) => {
           </a>
         </div>
       </div> */}
+      <div class="input-group searchbar">
+        <div class="form-outline">
+          <input type="search" id="form1" class="form-control" />
+          <label class="form-label" for="form1">
+            Search
+          </label>
+        </div>
+        <button type="button" class="btn btn-primary">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      ;
       <div className="blog-container d-flex flex-wrap justify-content-center ">
         {props.questions ? (
           props.questions.reverse().map((element) => {
