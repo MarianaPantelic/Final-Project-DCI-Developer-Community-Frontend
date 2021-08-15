@@ -11,37 +11,13 @@ const Forum = (props) => {
   
   return (
     <Container className="mt-5">
-      {/* <div className="text-center">
+      <div className="text-center pt-5 pb-3">
         <Link to="/addQuestions">
-          <button type="button" className="m-5 askQuestion-btn">
+          <button type="button" className="askQuestion-btn">
             Ask Question
           </button>
         </Link>
       </div>
-      <div className="col-lg-6 col-md-6 col-sm-12  main-question-div">
-        <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center question-div">
-          <Link to="/showQuestion">
-            <h2>Can’t confirm if mongoose is connected with Atlas or not</h2>
-          </Link>
-        </div>
-        <div className="topic-div">
-          <a href="https://www.javascript.com/">
-            <span>JavaScript</span>
-          </a>
-        </div>
-      </div> */}
-      <div class="input-group searchbar">
-        <div class="form-outline">
-          <input type="search" id="form1" class="form-control" />
-          <label class="form-label" for="form1">
-            Search
-          </label>
-        </div>
-        <button type="button" class="btn btn-primary">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
-      ;
       <div className="blog-container d-flex flex-wrap justify-content-center ">
         {props.questions ? (
           props.questions.reverse().map((element) => {
