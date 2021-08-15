@@ -1,187 +1,107 @@
 import React from "react";
-import dci_logo from "../images/dci_logo.png";
+import { Col, Container, Row } from "react-bootstrap";
 import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="container home-section">
-      <div className="row first_row">
-        <Fade left duration={2000}>
-          <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
-            <h1 className="first_row_h1">Come Join Us!</h1>
-            <h2 className="first_row_h2">
-              Welcome to our developer community!
-            </h2>
-            <p id="first_row_p">
-              Join us and you will discover great people and interesting
-              information about how to become a successful developer. Lorem
-              ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-              eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-              sed diam voluptua. At vero eos et accusam et justo duo dolores et
-              ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-              Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-              sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-              et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-              accusam et justo duo dolores et ea rebum. Stet clita kasd
-              gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
-            <Link to="/register">
-            <button type="button" className="btn btn-warning homebutton">
-              Register
-            </button>
-            </Link>
-          </div>
-        </Fade>
-        <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
-          <Fade right duration={2000}>
-            <img
-              className="first_row_home_heroimg"
-              src="../images/welcome_HP.jpg"
-              alt="hero of programming"
-            />
-          </Fade>
-        </div>
+    <>
+      <div>
+        <div className="clip-1"></div>
+        <div className="clip-2"></div>
       </div>
-
-      <div className="row hideRowMobile rest_rows">
-        <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
-          <div className="dciOnHeroImg">
+      <Container>
+        <Row className="justify-content-around">
+          <Col sm={12} md={5} lg={5}>
             <Fade left duration={2000}>
-              <img
-                className="home_heroimg"
-                src="../images/who_dci.png"
-                alt="hero image of programming"
-              />
-              <img className="dciLogo" src={dci_logo} alt="dci logo" />
+              <div className="align-self-center">
+                <h1>Come Join Us!</h1>
+                <p>
+                  We are DCI DEVS, a community for the Web Developer students at
+                  DCI Digital Career Institute.
+                </p>
+                <p>Got ideas? We would love to hear them out!</p>
+                <p>Got questions? We give you answers!</p>
+                <p>You need help? We help each other!</p>
+              </div>
+              <Link to="/register">
+                <button type="button" className="mt-5 register-btn">
+                  Register
+                </button>
+              </Link>
             </Fade>
-          </div>
-        </div>
-        <Fade right duration={2000}>
-          <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
-            <h1>Who is DCI?</h1>
-            <p>
-              The Digital Career Institute was born as an initiative to
-              integrate refugees into digital jobs. Today it is committed to
-              train anyone who wants to pursue to tech career.
-            </p>
-          </div>
-        </Fade>
-      </div>
-      <div className="row hideRowMobile rest_rows">
-        <Fade left duration={2000}>
-          <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
-            <h1>Why are we here?</h1>
-            <p>
-              Want to be a Freelancer, Digital Nomad, or work in your dream tech
-              company? Become a Web Developer, a dynamic and vital field in
-              today'S society. As a Web Developer you can show your creativity,
-              become a part of the Tech Disruption, build websites, Web Apps and
-              more.
-            </p>
-          </div>
-        </Fade>
-        <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
-          <Fade right duration={2000}>
-            <img
-              className="home_heroimg"
-              src="../images/why_r_v_here.png"
-              alt="hero of programming"
-            />
-          </Fade>
-        </div>
-      </div>
-      <div className="row hideRowMobile mt-5 rest_rows">
-        <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
-          <Fade left duration={2000}>
-            <img
-              className="home_heroimg"
-              src="../images/why_join_dci.png"
-              alt="hero of programming"
-            />
-          </Fade>
-        </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
-          <h1>Why should I join this community?</h1>
-          <p>
-            Want to be a Freelancer, Digital Nomad, or work in your dream tech
-            company? Become a Web Developer, a dynamic and vital field in
-            today'S society. As a Web Developer you can show your creativity,
-            become a part of the Tech Disruption, build websites, Web Apps and
-            more.
-          </p>
-        </div>
-      </div>
+          </Col>
+          <Col>
+            <Fade right duration={2000}>
+              <div className="img1"></div>
+            </Fade>
+          </Col>
+        </Row>
 
-      <div className="row hideRowDesktop mt-5">
-        <Fade right duration={2000}>
-          <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
-            <h1>Who is DCI?</h1>
-            <p>
-              The Digital Career Institute was born as an initiative to
-              integrate refugees into digital jobs. Today it is committed to
-              train anyone who wants to pursue to tech career.
-            </p>
-          </div>
-        </Fade>
-        <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
-          <div className="dciOnHeroImg">
+        <Row className="justify-content-around">
+          <Col sm={12} md={5} lg={5} className="align-self-center">
             <Fade left duration={2000}>
-              <img
-                className="home_heroimg"
-                src="../images/who_dci.png"
-                alt="hero image of programming"
-              />
-              <img className="dciLogo" src={dci_logo} alt="dci logo" />
+              <div className="img1"></div>
             </Fade>
-          </div>
-        </div>
-      </div>
-      <div className="row hideRowDesktop mt-5">
-        <Fade left duration={2000}>
-          <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
-            <h1>Why are we here?</h1>
-            <p>
-              The Digital Career Institute was born as an initiative to
-              integrate refugees into digital jobs. Today it is committed to
-              train anyone who wants to pursue to tech career.
-            </p>
-          </div>
-        </Fade>
-        <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
-          <Fade right duration={2000}>
-            <img
-              className="home_heroimg"
-              src="../images/why_r_v_here.png"
-              alt="hero of programming"
-            />
-          </Fade>
-        </div>
-      </div>
-      <div className="row hideRowDesktop mt-5">
-        <Fade right duration={2000}>
-          <div className="col-lg-6 col-md-6 col-sm-12 home_para align-self-center">
-            <h1>Why should I join this community?</h1>
-            <p>
-              Want to be a Freelancer, Digital Nomad, or work in your dream tech
-              company? Become a Web Developer, a dynamic and vital field in
-              today'S society. As a Web Developer you can show your creativity,
-              become a part of the Tech Disruption, build websites, Web Apps and
-              more.
-            </p>
-          </div>
-        </Fade>
-        <div className="col-lg-6 col-md-6 col-sm-12 align-self-center">
-          <Fade left duration={2000}>
-            <img
-              className="home_heroimg"
-              src="../images/why_join_dci.png"
-              alt="hero of programming"
-            />
-          </Fade>
-        </div>
-      </div>
-    </div>
+          </Col>
+
+          <Col sm={12} md={5} lg={5}>
+            <Fade right duration={2000}>
+              <div className="align-self-center">
+                <h1>Who is DCI?</h1>
+                <p>
+                  The Digital Career Institute was born as an initiative to
+                  integrate refugees into digital jobs. Today it is committed to
+                  train anyone who wants to pursue to tech career.
+                </p>
+              </div>
+            </Fade>
+          </Col>
+        </Row>
+        <Row className="justify-content-around">
+          <Col sm={12} md={5} lg={5}>
+            <Fade left duration={2000}>
+              <div className="align-self-center">
+                <h1>Why are we here?</h1>
+                <p>
+                  Want to be a Freelancer, Digital Nomad, or work in your dream
+                  tech company? Become a Web Developer, a dynamic and vital
+                  field in today'S society. As a Web Developer you can show your
+                  creativity, become a part of the Tech Disruption, build
+                  websites, Web Apps and more.
+                </p>
+              </div>
+            </Fade>
+          </Col>
+          <Col sm={12} md={5} lg={5} className="align-self-center">
+            <Fade right duration={2000}>
+              <div className="img1"></div>
+            </Fade>
+          </Col>
+        </Row>
+        <Row className="justify-content-around">
+          <Col sm={12} md={5} lg={5} className="align-self-center">
+            <Fade left duration={2000}>
+              <div className="img1"></div>
+            </Fade>
+          </Col>
+          <Col sm={12} md={5} lg={5}>
+            <Fade right duration={2000}>
+              <div className="align-self-center">
+                <h1>Why should I join this community?</h1>
+                <p>
+                  Want to be a Freelancer, Digital Nomad, or work in your dream
+                  tech company? Become a Web Developer, a dynamic and vital
+                  field in today'S society. As a Web Developer you can show your
+                  creativity, become a part of the Tech Disruption, build
+                  websites, Web Apps and more.
+                </p>
+              </div>
+            </Fade>
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 };
 

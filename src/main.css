@@ -88,68 +88,7 @@ body {
 /*Footer*/
 
 /* Home Page */
-.home-section {
-  margin-top: 20rem;
-}
 
-.first_row_h1 {
-  font-size: 4rem;
-  margin-bottom: 3.5rem;
-}
-.first_row_h2 {
-  font-size: 3rem;
-  margin-bottom: 3.5rem;
-}
-#first_row_p {
-  font-size: 1.4rem;
-  margin-bottom: 3.5rem;
-}
-.first_row_home_heroimg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.home_para h1 {
-  margin-top: 3rem;
-  text-align: center;
-}
-.home_para p {
-  font-size: 1.4rem;
-}
-.home_para {
-  text-align: center;
-}
-.home_heroimg {
-  width: 100%;
-  height: 100%;
-  display: block;
-  margin: auto;
-  padding-top: 2rem;
-}
-.homebutton {
-  font-size: 2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 10rem;
-}
-.dciOnHeroImg {
-  position: relative;
-}
-.dciLogo {
-  position: absolute;
-  width: 5rem;
-  height: 4rem;
-  z-index: 100;
-  top: 3rem;
-  right: 16rem;
-}
-.rest_rows {
-  margin-bottom: 10rem;
-}
-.container,
-.rest_rows {
-  margin-bottom: 10rem;
-}
 .container,
 .container-lg,
 .container-md,
@@ -159,8 +98,43 @@ body {
   max-width: 1100px;
 }
 
-.blogs-container {
-  height: 100%;
+.img1 {
+  background-image: url(./images/undraw_Code_thinking_re_gka2.png);
+  background-position: center;
+  background-size: cover;
+  margin: 3rem;
+}
+.img2 {
+  background-image: url(./images/undraw_Code_thinking_re_gka2.png);
+  background-position: center;
+  background-size: cover;
+  margin: 3rem;
+}
+.img3 {
+  background-image: url(./images/undraw_Code_thinking_re_gka2.png);
+  background-position: center;
+  background-size: cover;
+  margin: 3rem;
+}
+.clip-1 {
+  clip-path: polygon(50% 0%, 0 47%, 0 0);
+  background: linear-gradient(#e6efff, #1a39ca, #04083c);
+  width: 220rem;
+  height: 50rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.clip-2 {
+  clip-path: polygon(100% 36%, 100% 100%, 0 100%);
+  background: linear-gradient(#e6efff, #1a39ca, #04083c);
+  width: 200rem;
+  height: 80rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 }
 
 /* Resources page */
