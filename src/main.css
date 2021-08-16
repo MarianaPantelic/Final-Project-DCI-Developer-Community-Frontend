@@ -62,7 +62,12 @@ body {
   right: 13rem;
 }
 .register-buttons {
-  font-size: 14px;
+  font-size: 1.8rem;
+}
+.register-buttons a:hover {
+  background-color: #1a39ca;
+  color: white;
+  border-radius: 10px 10px;
 }
 .nav-logo {
   width: 15rem;
@@ -83,79 +88,101 @@ body {
 /*Footer*/
 
 /* Home Page */
-.home-section {
-  margin-top: 20rem;
+.hero-container {
+  width: 90%;
+  margin: 15% auto;
 }
-
-.first_row_h1 {
+.hero-container h1 {
   font-size: 4rem;
-  margin-bottom: 3.5rem;
 }
-.first_row_h2 {
-  font-size: 3rem;
-  margin-bottom: 3.5rem;
-}
-#first_row_p {
-  font-size: 1.4rem;
-  margin-bottom: 3.5rem;
-}
-.first_row_home_heroimg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.home_para h1 {
-  margin-top: 3rem;
-  text-align: center;
-}
-.home_para p {
-  font-size: 1.4rem;
-}
-.home_para {
-  text-align: center;
-}
-.home_heroimg {
-  width: 100%;
-  height: 100%;
-  display: block;
-  margin: auto;
-  padding-top: 2rem;
-}
-.homebutton {
+.hero-text {
+  padding: 3rem 2rem;
   font-size: 2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 10rem;
+  text-align: center;
+  border-radius: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  background-color: whitesmoke;
+  height: 40rem;
 }
-.dciOnHeroImg {
-  position: relative;
+.hero-img {
+  background: url(./images/meeting-1019875_1920.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40rem;
+  border-radius: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
-.dciLogo {
-  position: absolute;
-  width: 5rem;
-  height: 4rem;
-  z-index: 100;
-  top: 3rem;
-  right: 16rem;
+.who-section {
+  width: 70%;
+  margin: 20% auto;
+  height: 30rem;
 }
-.rest_rows {
-  margin-bottom: 10rem;
+.why-section {
+  width: 70%;
+  margin: 15% auto;
+  height: 30rem;
 }
-.container,
-.rest_rows {
-  margin-bottom: 10rem;
+.join-section {
+  width: 70%;
+  margin: 15% auto;
+  height: 30rem;
 }
-.container,
-.container-lg,
-.container-md,
-.container-sm,
-.container-xl,
-.container-xxl {
-  max-width: 1100px;
+.text-container {
+  height: 30rem;
+  border-radius: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  background-color: whitesmoke;
+  font-size: 1.8rem;
+  text-align: justify;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+.img-container {
+  height: 30rem;
+  border-radius: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  margin: 0;
+  background-color: #ffffff;
+}
+.img1 {
+  background: url(./images/undraw_pair_programming_njlp.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.img2 {
+  background: url(./images/undraw_Code_typing_re_p8b9.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.img3 {
+  background: url(./images/undraw_Code_thinking_re_gka2.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.blogs-container {
-  height: 100%;
+.clip-1 {
+  clip-path: polygon(50% 0%, 0 47%, 0 0);
+  background: linear-gradient(#e6efff, #1a39ca, #04083c);
+  width: 220rem;
+  height: 50rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.clip-2 {
+  clip-path: polygon(100% 36%, 100% 100%, 0 100%);
+  background: linear-gradient(#e6efff, #1a39ca, #04083c);
+  width: 200rem;
+  height: 80rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 }
 
 /* Resources page */
@@ -614,4 +641,112 @@ form input {
 .register-form input {
   font-size: 1.5rem;
   padding: 0 2rem;
+}
+
+/*User profile page*/
+.first-clip {
+  clip-path: inset(5% 9% 15% 10% round 10% 10% 10% 10%);
+  background: linear-gradient(#e6efff, #1a39ca, #04083c);
+  width: 35rem;
+  height: 35rem;
+  position: fixed;
+  bottom: -5rem;
+  right: 40rem;
+  transform: rotate(40deg);
+  z-index: -1;
+}
+.second-clip {
+  clip-path: inset(5% 9% 15% 10% round 10% 10% 10% 10%);
+  background: linear-gradient(#e6efff, #1a39ca, #04083c);
+  width: 50rem;
+  height: 50rem;
+  position: fixed;
+  bottom: -5rem;
+  right: -20rem;
+  transform: rotate(40deg);
+  z-index: -1;
+}
+.third-clip {
+  clip-path: inset(5% 9% 15% 10% round 10% 10% 10% 10%);
+  background: linear-gradient(#e6efff, #1a39ca, #04083c);
+  width: 25rem;
+  height: 25rem;
+  position: fixed;
+  bottom: 58rem;
+  right: -2rem;
+  transform: rotate(40deg);
+  z-index: -1;
+}
+.profile-container {
+  margin: 5% 10% auto;
+}
+.user-info-container {
+  height: 35rem;
+  font-size: 2rem;
+  padding: 1rem 2.5rem;
+  margin: 3rem;
+  text-align: center;
+  border-radius: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  background-color: white;
+}
+.user-image-container img {
+  width: 15rem;
+  height: auto;
+  margin: auto;
+}
+.profile-user-name {
+  background-color: #1a39ca;
+  color: white;
+  border-radius: 10px 10px;
+}
+.agenda-container {
+  height: 35rem;
+  max-height: 35rem;
+  font-size: 2rem;
+  padding: 1rem 2.5rem;
+  margin: 3rem;
+  text-align: start;
+  border-radius: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  background-color: whitesmoke;
+}
+.search-container {
+  height: 35rem;
+  max-height: 35rem;
+
+  overflow-y: scroll;
+  overflow-x: scroll;
+  font-size: 2rem;
+  padding: 1rem 2.5rem;
+  margin: 3rem;
+  text-align: justify;
+  border-radius: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  background-color: whitesmoke;
+}
+.myQuestions-container,
+.myBlogs-container {
+  height: 30rem;
+  max-height: 30rem;
+  font-size: 2rem;
+  padding: 1rem 2.5rem;
+  margin: 3rem;
+  text-align: start;
+  border-radius: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  background-color: whitesmoke;
+}
+.search-form {
+  width: 50%;
+  margin: auto;
+}
+.search-input {
+  font-size: 1.5rem;
+}
+.search-btn {
+  background-color: #f66e1a;
+  border-color: #a0806c;
+  width: 10rem;
+  font-size: 1.5rem;
 }

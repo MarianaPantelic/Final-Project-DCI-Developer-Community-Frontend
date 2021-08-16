@@ -95,7 +95,10 @@ const App = () => {
             <Login />
           </Route>
           <Route path="/userprofile">
-            <UserProfile />
+            <UserProfile
+              users={users}
+              sendUserGetRequest={sendUserGetRequest}
+            />
           </Route>
           <Route path="/post">
             <Post />
