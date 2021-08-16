@@ -14,12 +14,12 @@ import Forum from "./pages/forum";
 import Home from "./pages/home";
 import Jobs from "./pages/jobs";
 import Login from "./pages/login";
-import News from "./pages/news";
 import Post from "./pages/post";
 import Register from "./pages/register";
 import Resources from "./pages/resources";
 import UserProfile from "./pages/userprofile";
 import "./main.css";
+import News from "./pages/news";
 
 import AddPosts from "./components/addPosts";
 
@@ -79,9 +79,6 @@ const App = () => {
           <Route path="/addPosts">
             <AddPosts sendGetRequest={sendGetRequest} />
           </Route>
-          <Route path="/news">
-            <News />
-          </Route>
           <Route path="/resources">
             <Resources />
           </Route>
@@ -102,6 +99,9 @@ const App = () => {
           </Route>
           <Route path="/post">
             <Post />
+          </Route>
+          <Route path="/news">
+            <News />
           </Route>
         </Switch>
         <Footer />
