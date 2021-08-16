@@ -138,7 +138,6 @@ const Blog = (props) => {
                               }}
                               className="likeButton"
                             />
-
                             <span className="likesNumber"> {post.likes} </span>
                           </Card.Footer>
                         </Card.Body>

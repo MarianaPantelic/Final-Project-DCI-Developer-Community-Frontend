@@ -1,7 +1,13 @@
 import React from "react";
 
 const Navbar = () => {
-  const user = JSON.parse(localStorage.getItem("user"));
+  let user = "";
+ try {
+    user = JSON.parse(localStorage.getItem("user"));
+ } catch (error) {
+   console.log(error)
+ }
+  
   let userName = "";
   if (user) {
     userName = user.userName;
