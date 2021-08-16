@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 
@@ -39,7 +40,7 @@ const App = () => {
 
   const sendGetRequest = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/blogs");
+      const response = await axios.get("http://localhost:3001/blogs/");
       setPosts(response.data);
       console.log(response.data);
     } catch (err) {
@@ -103,6 +104,6 @@ const App = () => {
       </Router>
     </div>
   );
-};
+}
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />,document.getElementById("root"));
