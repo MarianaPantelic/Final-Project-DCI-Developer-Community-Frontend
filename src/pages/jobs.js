@@ -4,7 +4,8 @@ import { Container } from "react-bootstrap";
 const Jobs = () => {
   return (
     <Container>
-      <div></div>
+      <div>
+      </div>
     </Container>
   );
 };
