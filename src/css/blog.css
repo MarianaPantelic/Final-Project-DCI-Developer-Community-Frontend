@@ -1,0 +1,51 @@
+/* Blog Page */
+
+.showPostsSection {
+  background-color: #3d88b7;
+  height: 100vh;
+}
+
+.newPostButton {
+  font-size: 2rem;
+}
+
+.link_addPost {
+  text-decoration: none;
+}
+/* add post */
+
+.writeBlogSection {
+  height: 100vh;
+}
+
+form label {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+form input {
+  height: 4rem;
+  border: 1px solid black;
+}
+
+#inputTitle,
+#firstName,
+#email {
+  font-size: 2rem;
+}
+
+.postButton {
+  background-color: #1a39ca;
+  color: #fff;
+}
+
+/* quil editor */
+.ql-editor {
+  min-height: 30rem;
+}
+
+/* end of quil editor */
+
+/* end of add post */
+
+/* End of blog page */

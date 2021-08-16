@@ -1,0 +1,16 @@
+/* About page */
+.aboutCol {
+  font-size: 1.4rem;
+}
+.about_heroimg {
+  width: 35rem;
+  height: 20rem;
+}
+.about1strow {
+  background-color: #f4f5f7;
+}
+.about1strowImg {
+  background-color: #1a39ca;
+}
+
+/* End of about page */

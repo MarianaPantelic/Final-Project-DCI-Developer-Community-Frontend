@@ -17,7 +17,20 @@ import Post from "./pages/post";
 import Register from "./pages/register";
 import Resources from "./pages/resources";
 import UserProfile from "./pages/userprofile";
+
 import "./main.css";
+import "./css/about.css"
+import "./css/blog.css";
+import "./css/forum.css";
+import "./css/home.css";
+import "./css/jobs.css";
+import "./css/login.css";
+import "./css/news.css";
+import "./css/post.css";
+import "./css/register.css";
+import "./css/resources.css";
+import "./css/userprofile.css";
+
 
 import AddPosts from "./components/addPosts";
 
