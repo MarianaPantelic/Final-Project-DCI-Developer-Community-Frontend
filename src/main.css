@@ -361,9 +361,7 @@ td {
 /* Blog Page */
 
 .showPostsSection {
-  background-color: #3d88b7;
   padding-top: 10rem;
-  min-height: 100vh;
 }
 
 .blogCards {
@@ -381,25 +379,34 @@ td {
 
 .blogTitle {
   padding-top: 0.5rem;
-  font-size: 1.4rem;
-  height: 8rem;
+  font-size: 1.6rem;
+  height:8rem;
   border-bottom: 2px solid gainsboro;
+  overflow-y: scroll;
 }
 
 .blogContent {
-  height: 35rem;
+  height: 20rem;
   border-bottom: 2px solid gainsboro;
+  overflow-y: scroll;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+  padding: 1rem;
 }
 
 .showPostsSection img,
 iframe {
-  width: 38rem;
-  height: 35rem;
+  width: 30rem;
+  height: 20rem;
 }
 
 .likeButton {
   font-size: 3rem;
   color: #1a39ca;
+  
 }
 
 .likesNumber {
@@ -491,6 +498,13 @@ form input {
 
   .showPostsSection img,
   iframe {
+    width: 30rem;
+    height: 28rem;
+  } 
+} 
+
+@media only screen and (device-width: 411px) and (device-height: 823px) {
+
     width: 28rem;
     height: 28rem;
   }
@@ -511,10 +525,26 @@ form input {
     height: 28rem;
   }
 }
-
-@media (min-width: 320px) and (max-width: 568px) {
+@media only screen and (device-width: 414px) and (device-height: 736px) {
   .blogCards {
-    width: 28rem;
+    width: 37rem;
+  }
+
+  .blogUser {
+    font-size: 2rem;
+    padding-bottom: 0.3rem;
+  }
+  .showPostsSection img,
+  iframe {
+    width: 35rem;
+    height: 28rem;
+  }
+}
+
+@media only screen and (device-width: 320px) and (device-height: 568px) {
+  .blogCards {
+    width: 20rem;
+
   }
 
   .blogUser {
@@ -527,8 +557,38 @@ form input {
     height: 28rem;
   }
 }
+  @media only screen and (max-width: 600px) {
+    .blogCards {
+      width: 28rem;
+    }
 
-@media (min-width: 375px) and (max-width: 667px) {
+    .blogUser {
+      font-size: 2rem;
+      padding-bottom: 0.3rem;
+    }
+
+    .blogTitle {
+      padding-top: 0.3rem;
+      font-size: 1.4rem;
+      height: 10rem;
+    }
+
+    .blogContent {
+      height: 28rem;
+      border-bottom: 2px solid gainsboro;
+    }
+
+    .showPostsSection img,
+    iframe {
+      width: 28rem;
+      height: 28rem;
+    }
+  }
+
+
+@media only screen and (device-width: 375px) and (device-height: 667px) {
+
+
   .blogCards {
     width: 32rem;
   }
@@ -549,7 +609,8 @@ form input {
   }
 }
 
-@media (min-width: 375px) and (max-width: 812px) {
+@media only screen and (device-width: 375px) and (device-height: 812px) {
+
   .blogCards {
     width: 33rem;
   }
@@ -565,7 +626,7 @@ form input {
   }
 }
 
-@media (min-width: 540px) and (max-width: 720px) {
+@media only screen and (device-width: 540px) and (device-height: 720px) {
   .blogCards {
     width: 45rem;
   }
@@ -585,7 +646,14 @@ form input {
   }
 }
 
-@media (min-width: 280px) and (max-width: 653px) {
+@media only screen and (device-width: 768px) and (device-height: 1024px) {
+  .blogCards{
+    width: 35rem;
+    margin-left: 1rem;
+  }
+}
+
+@media only screen and (device-width: 280px) and (device-height: 653px) {
   .blogCards {
     width: 24rem;
   }
