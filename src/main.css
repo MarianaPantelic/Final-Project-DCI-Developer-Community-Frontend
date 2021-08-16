@@ -88,34 +88,82 @@ body {
 /*Footer*/
 
 /* Home Page */
-
-.container,
-.container-lg,
-.container-md,
-.container-sm,
-.container-xl,
-.container-xxl {
-  max-width: 1100px;
+.hero-container {
+  width: 90%;
+  margin: 15% auto;
 }
-
-.img1 {
-  background-image: url(./images/undraw_Code_thinking_re_gka2.png);
+.hero-container h1 {
+  font-size: 4rem;
+}
+.hero-text {
+  padding: 3rem 2rem;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  background-color: whitesmoke;
+  height: 40rem;
+}
+.hero-img {
+  background: url(./images/meeting-1019875_1920.jpg);
   background-position: center;
   background-size: cover;
-  margin: 3rem;
+  background-repeat: no-repeat;
+  height: 40rem;
+  border-radius: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.who-section {
+  width: 70%;
+  margin: 20% auto;
+  height: 30rem;
+}
+.why-section {
+  width: 70%;
+  margin: 15% auto;
+  height: 30rem;
+}
+.join-section {
+  width: 70%;
+  margin: 15% auto;
+  height: 30rem;
+}
+.text-container {
+  height: 30rem;
+  border-radius: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  background-color: whitesmoke;
+  font-size: 1.8rem;
+  text-align: justify;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+.img-container {
+  height: 30rem;
+  border-radius: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  margin: 0;
+  background-color: #ffffff;
+}
+.img1 {
+  background: url(./images/undraw_pair_programming_njlp.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .img2 {
-  background-image: url(./images/undraw_Code_thinking_re_gka2.png);
+  background: url(./images/undraw_Code_typing_re_p8b9.png);
   background-position: center;
   background-size: cover;
-  margin: 3rem;
+  background-repeat: no-repeat;
 }
 .img3 {
-  background-image: url(./images/undraw_Code_thinking_re_gka2.png);
+  background: url(./images/undraw_Code_thinking_re_gka2.png);
   background-position: center;
   background-size: cover;
-  margin: 3rem;
+  background-repeat: no-repeat;
 }
+
 .clip-1 {
   clip-path: polygon(50% 0%, 0 47%, 0 0);
   background: linear-gradient(#e6efff, #1a39ca, #04083c);
