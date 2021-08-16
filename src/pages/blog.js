@@ -48,26 +48,22 @@ const Blog = (props) => {
   //   }
   // };
 
-   const increaseLikes = async (id) => {
-     const foundPost = props.show.find((post) => post._id === id);
-     console.log(foundPost.likes);
-
-     try {
-       axios
-         .put(`http://localhost:3001/blogs/${id}`, {
-           likes: foundPost.likes + 1,
-           clicked:true,
-           whoClicked: foundPost.whoClicked.push(foundPost.user._id)
-         })
-         .then((resp) => props.sendGetRequest());
-     } catch (error) {
-       console.log(error);
-     }
-     console.log(foundPost.whoClicked)
-
-   };
-
-
+  const increaseLikes = async (id) => {
+    const foundPost = props.show.find((post) => post._id === id);
+    let tempArray = foundPost.whoClicked;
+    tempArray.push(foundPost.user.id);
+    try {
+      axios
+        .put(`http://localhost:3001/blogs/${id}`, {
+          likes: foundPost.likes + 1,
+          clicked: true,
+          whoClicked: tempArray
+        })
+        .then((resp) => props.sendGetRequest());
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <section className="showPostsSection">
@@ -109,7 +105,7 @@ const Blog = (props) => {
                           <Card.Footer>
                             <AiFillLike 
 
-                              onClick={() => {console.log(post.whoClicked); post.whoClicked.find((element => element == post.user._id))  ? "" : increaseLikes(post._id)}}
+                              onClick={() => {post.whoClicked.find((element => element == post.user._id))  ? "" : increaseLikes(post._id)}}
                               className="likeButton"
                             />
 
