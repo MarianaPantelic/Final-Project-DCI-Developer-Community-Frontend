@@ -4,9 +4,20 @@ import { Link } from "react-router-dom";
 import { AiFillLike } from "react-icons/ai";
 const axios = require("axios").default;
 
-
-
 const Blog = (props) => {
+  //    How to check if a post is already liked
+  //  1. get the array of likes already stored in localstorage
+  //   try {
+  //   let likes = localStorage.getItem("postsAlreadyLikedByUser");
+  //  } catch (error) {
+  //   TODO Handle Errors
+  //  }//
+  //  // 2. TODO iterate through the array and look for the post id
+  //  if (...){
+  //   TODO reject in case the post id is in the array
+  //  }//
+
+
 
 //    How to check if a post is already liked
 //  1. get the array of likes already stored in localstorage
@@ -32,6 +43,18 @@ const Blog = (props) => {
 //    }//
 //  2. TODO: Overwrite the object in localstorage with the new post id
 //   localStorage.setItem("postsAlreadyLikedByUser", likes);
+  //  /*
+  //  how to
+  //  add a post to localstorage
+  //  */
+  //  1. get the array of likes already stored in localstorage
+  //   try {
+  //     let likes = localStorage.getItem("postsAlreadyLikedByUser");
+  //    } catch (error) {
+  //     TODO Handle Errors
+  //    }//
+  //  2. TODO: Overwrite the object in localstorage with the new post id
+  //   localStorage.setItem("postsAlreadyLikedByUser", likes);
   // const increaseLikes = async (id) => {
   //   const foundPost = props.show.find((post) => post._id === id);
   //   console.log(foundPost.likes);
@@ -46,12 +69,32 @@ const Blog = (props) => {
   //   }
   // };
 
+   const increaseLikes = async (id) => {
+     const foundPost = props.show.find((post) => post._id === id);
+     console.log(foundPost.likes);
+
+     try {
+       axios
+         .put(`http://localhost:3001/blogs/${id}`, {
+           likes: foundPost.likes + 1,
+           clicked:true,
+           whoClicked: foundPost.whoClicked.push(foundPost.user._id)
+         })
+         .then((resp) => props.sendGetRequest());
+     } catch (error) {
+       console.log(error);
+     }
+     console.log(foundPost.whoClicked)
+
+   };
+
+
 
   return (
     <section className="showPostsSection">
       <div className="container">
         <Link to="/addPosts" className="link_addPost">
-         <div className="text-center">
+          <div className="text-center">
             <button className="btn btn-warning newPostButton" type="button">
               Write a new post
             </button>
@@ -71,7 +114,8 @@ const Blog = (props) => {
                       <Card className="blogCards">
                         <Card.Body>
                           <Card.Title className="blogUser">
-                            {post.user.firstName}
+                            {post.user ? post.user.firstName : ""}
+                            {/* {post.user.firstName} */}
                           </Card.Title>
                           <Card.Subtitle className="blogTitle">
                             {post.title}
@@ -85,13 +129,9 @@ const Blog = (props) => {
                             ></p>
                           </Card.Text>
                           <Card.Footer>
-                            <AiFillLike
-                              onClick={() => {
-                                localStorage.setItem(
-                                  "postsAlreadyLiked",
-                                  post._id
-                                );
-                              }}
+                            <AiFillLike 
+
+                              onClick={() => {console.log(post.whoClicked); post.whoClicked.find((element => element == post.user._id))  ? "" : increaseLikes(post._id)}}
                               className="likeButton"
                             />
 
