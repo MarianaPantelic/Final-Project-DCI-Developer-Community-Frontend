@@ -17,32 +17,30 @@ const Blog = (props) => {
   //   TODO reject in case the post id is in the array
   //  }//
 
+  //    How to check if a post is already liked
+  //  1. get the array of likes already stored in localstorage
+  //   try {
+  //   let likes = localStorage.getItem("postsAlreadyLikedByUser");
+  //  } catch (error) {
+  //   TODO Handle Errors
+  //  }//
+  //  // 2. TODO iterate through the array and look for the post id
+  //  if (...){
+  //   TODO reject in case the post id is in the array
+  //  }//
 
-
-//    How to check if a post is already liked
-//  1. get the array of likes already stored in localstorage
-//   try {
-//   let likes = localStorage.getItem("postsAlreadyLikedByUser");
-//  } catch (error) {
-//   TODO Handle Errors
-//  }//
-//  // 2. TODO iterate through the array and look for the post id
-//  if (...){
-//   TODO reject in case the post id is in the array
-//  }//
-
-//  /*
-//  how to 
-//  add a post to localstorage
-//  */
-//  1. get the array of likes already stored in localstorage
-//   try {
-//     let likes = localStorage.getItem("postsAlreadyLikedByUser");
-//    } catch (error) {
-//     TODO Handle Errors
-//    }//
-//  2. TODO: Overwrite the object in localstorage with the new post id
-//   localStorage.setItem("postsAlreadyLikedByUser", likes);
+  //  /*
+  //  how to
+  //  add a post to localstorage
+  //  */
+  //  1. get the array of likes already stored in localstorage
+  //   try {
+  //     let likes = localStorage.getItem("postsAlreadyLikedByUser");
+  //    } catch (error) {
+  //     TODO Handle Errors
+  //    }//
+  //  2. TODO: Overwrite the object in localstorage with the new post id
+  //   localStorage.setItem("postsAlreadyLikedByUser", likes);
   //  /*
   //  how to
   //  add a post to localstorage
@@ -69,26 +67,23 @@ const Blog = (props) => {
   //   }
   // };
 
-   const increaseLikes = async (id) => {
-     const foundPost = props.show.find((post) => post._id === id);
-     console.log(foundPost.likes);
+  const increaseLikes = async (id) => {
+    const foundPost = props.show.find((post) => post._id === id);
+    console.log(foundPost.likes);
 
-     try {
-       axios
-         .put(`http://localhost:3001/blogs/${id}`, {
-           likes: foundPost.likes + 1,
-           clicked:true,
-           whoClicked: foundPost.whoClicked.push(foundPost.user._id)
-         })
-         .then((resp) => props.sendGetRequest());
-     } catch (error) {
-       console.log(error);
-     }
-     console.log(foundPost.whoClicked)
-
-   };
-
-
+    try {
+      axios
+        .put(`http://localhost:3001/blogs/${id}`, {
+          likes: foundPost.likes + 1,
+          clicked: true,
+          whoClicked: foundPost.whoClicked.push(foundPost.user._id),
+        })
+        .then((resp) => props.sendGetRequest());
+    } catch (error) {
+      console.log(error);
+    }
+    console.log(foundPost.whoClicked);
+  };
 
   return (
     <section className="showPostsSection">
@@ -129,9 +124,18 @@ const Blog = (props) => {
                             ></p>
                           </Card.Text>
                           <Card.Footer>
-                            <AiFillLike 
-
-                              onClick={() => {console.log(post.whoClicked); post.whoClicked.find((element => element == post.user._id))  ? "" : increaseLikes(post._id)}}
+                            <AiFillLike
+                              onClick={() => {
+                                console.log(post.whoClicked);
+                                let findWhoClicked = post.whoClicked.find(
+                                  (element) => element == post.user._id
+                                );
+                                if (!findWhoClicked) increaseLikes(post._id);
+                                //console.log(post.whoClicked);
+                                //post.whoClicked.find(
+                                //(element) => element == post.user._id)? ""
+                                //: increaseLikes(post._id);
+                              }}
                               className="likeButton"
                             />
 
