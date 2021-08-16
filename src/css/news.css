@@ -1,0 +1,21 @@
+/* News Page */
+
+.news-header-container {
+  background-color: #e7b433;
+  margin-top: 6rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.news-header-container > h1 {
+  font-size: 5vw;
+  font-weight: bold;
+}
+.article-card {
+  margin: 0 auto;
+  width: 70vw;
+  text-align: center;
+  font-size: 1.5rem;
+}

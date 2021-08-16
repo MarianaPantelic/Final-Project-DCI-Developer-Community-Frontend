@@ -130,11 +130,10 @@ const Blog = (props) => {
                           </Card.Text>
                           <Card.Footer>
                             <AiFillLike 
-
-                              onClick={() => {console.log(post.whoClicked); post.whoClicked.find((element => element == post.user._id))  ? "" : increaseLikes(post._id)}}
+                              onClick={() => {console.log(post.whoClicked);
+                              post.whoClicked.find((element => element == post.user._id))  ? "" : increaseLikes(post._id)}}
                               className="likeButton"
                             />
-
                             <span className="likesNumber"> {post.likes} </span>
                           </Card.Footer>
                         </Card.Body>

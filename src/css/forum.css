@@ -1,0 +1,44 @@
+/* Start of forum page */
+
+.forum-container {
+  background-color: rgba(0, 0, 0, 0.445);
+  color: white;
+  border-radius: 10px 10px;
+  text-align: center;
+  margin-top: 10rem;
+  padding: 2rem 5rem;
+}
+
+.main-question-div {
+  padding: 1em;
+    border-bottom: 1px solid var(--primary-low);
+    display: flex;
+    align-items: center;
+}
+
+.btn-container {
+  width: 70%;
+  margin-top: 6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.askQuestion-btn {
+  background-color: #f66e1a;
+  border-color: #a0806c;
+  font-size: 2rem;
+  border-radius: 6px 6px;
+  width: 14rem;
+  color: white;
+  margin-top:1rem;
+
+}
+.searchbar {
+  margin-top:5rem;
+  align-items:center;
+  width:auto;
+  height:5rem;
+  display:flex;
+}
+
+/* End of forum page */
