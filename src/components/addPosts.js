@@ -31,6 +31,9 @@ const AddPosts = (props) => {
         {
           title: postTitle,
           content: postContent,
+          clicked: false,
+          likes: 0,
+          whoClicked:[]
         },
         {
           headers: {
