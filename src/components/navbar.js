@@ -1,7 +1,6 @@
 import React from "react";
 
 const Navbar = () => {
-
   const user = JSON.parse(localStorage.getItem("user"));
   let userName = "";
   if (user) {
@@ -12,12 +11,11 @@ const Navbar = () => {
     localStorage.removeItem("user");
     window.location.replace("/");
   };
- 
+
   return (
     <nav class="navbar navbar-expand-lg navbar-dark navbar-css">
       <a class="navbar-brand logoNav" href="/" style={{ margin: "0rem" }}>
         <img src="../images/logo.gif" className="nav-logo" />
-
       </a>
       <div class="align-burger-button">
         <button
@@ -82,6 +80,7 @@ const Navbar = () => {
             </div>
           ) : null}
         </div>
+
         <button
           class="btn btn-transparent dropdown-toggle"
           type="button"
@@ -113,6 +112,11 @@ const Navbar = () => {
           </a>
           <a class="dropdown-item" href="/register">
             {!localStorage.getItem("token") ? <div>Register</div> : null}
+          </a>
+          <a class="dropdown-item" href="/userprofile">
+            {localStorage.getItem("token") ? (
+              <div className="profile">Profile</div>
+            ) : null}
           </a>
           <a class="dropdown-item" href="/">
             {localStorage.getItem("token") ? (
