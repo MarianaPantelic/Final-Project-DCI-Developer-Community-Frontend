@@ -1,63 +1,62 @@
 import React, { useEffect, useState } from "react";
-import "../node_modules/react-quill/dist/quill.snow.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
-
+import "../node_modules/react-quill/dist/quill.snow.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
-
 import About from "./pages/about";
 import Blog from "./pages/blog";
 import Forum from "./pages/forum";
 import Home from "./pages/home";
 import Jobs from "./pages/jobs";
 import Login from "./pages/login";
-import News from "./pages/news";
 import Post from "./pages/post";
 import Register from "./pages/register";
 import Resources from "./pages/resources";
 import UserProfile from "./pages/userprofile";
-import "./main.css";
-
+import News from "./pages/news";
 import AddPosts from "./components/addPosts";
 import AddQuestions from "./components/addQuestions";
 import ShowQuestion from "./components/showQuestion";
-
-
+import "./css/main.css";
+import "./css/about.css";
+import "./css/blog.css";
+import "./css/forum.css";
+import "./css/home.css";
+import "./css/jobs.css";
+import "./css/login.css";
+import "./css/news.css";
+import "./css/post.css";
+import "./css/register.css";
+import "./css/resources.css";
+import "./css/userprofile.css";
 const axios = require("axios").default;
-
 const App = () => {
   const [posts, setPosts] = useState([]);
   const [users, setUsers] = useState([]);
   const [questions, setQuestions] = useState([]);
   console.log(posts);
-  console.log(questions)
+  console.log(questions);
   console.log(process.env.REACT_APP_ENV);
-
   useEffect(() => {
-    sendPostGetRequest();
+    sendGetRequest();
   }, []);
-
   useEffect(() => {
     sendUserGetRequest();
   }, []);
   useEffect(() => {
     sendQuestionsGetRequest();
   }, []);
-
-  const sendPostGetRequest = async () => {
+  const sendGetRequest = async () => {
     try {
       const response = await axios.get("http://localhost:3001/blogs/");
       setPosts(response.data);
       console.log(response.data);
-      
     } catch (err) {
       console.error(err);
     }
   };
-  
   const sendUserGetRequest = async () => {
     try {
       const resp = await axios.get("http://localhost:3001/users");
@@ -67,16 +66,15 @@ const App = () => {
       console.log(error);
     }
   };
-const sendQuestionsGetRequest = async () => {
-  try {
-    const questionsresponse = await axios.get("http://localhost:3001/questions");
-    setQuestions(questionsresponse.data);
-    console.log(questionsresponse.data);
-  } catch (error) {
-    console.log(error);
-  }
-};
-
+  const sendQuestionsGetRequest = async () => {
+    try {
+      const questionsresponse = await axios.get("http://localhost:3001/forum");
+      setQuestions(questionsresponse.data);
+      console.log(questionsresponse.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div>
       <Router>
@@ -101,13 +99,10 @@ const sendQuestionsGetRequest = async () => {
             <AddQuestions sendQuestionsGetRequest={sendQuestionsGetRequest} />
           </Route>
           <Route path="/blog">
-            <Blog show={posts} sendPostGetRequest={sendPostGetRequest} />
+            <Blog show={posts} sendGetRequest={sendGetRequest} />
           </Route>
           <Route path="/addPosts">
-            <AddPosts sendPostGetRequest={sendPostGetRequest} />
-          </Route>
-          <Route path="/news">
-            <News />
+            <AddPosts sendGetRequest={sendGetRequest} />
           </Route>
           <Route path="/resources">
             <Resources />
@@ -122,16 +117,21 @@ const sendQuestionsGetRequest = async () => {
             <Login users={users} sendUserGetRequest={sendUserGetRequest} />
           </Route>
           <Route path="/userprofile">
-            <UserProfile />
+            <UserProfile
+              users={users}
+              sendUserGetRequest={sendUserGetRequest}
+            />
           </Route>
           <Route path="/post">
             <Post />
+          </Route>
+          <Route path="/news">
+            <News />
           </Route>
         </Switch>
         <Footer />
       </Router>
     </div>
   );
-}
-
-ReactDOM.render(<App />,document.getElementById("root"));
+};
+ReactDOM.render(<App />, document.getElementById("root"));
