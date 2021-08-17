@@ -126,8 +126,7 @@ const Blog = (props) => {
                           </Card.Text>
                           <Card.Footer>
                             <AiFillLike 
-
-                              onClick={() => {post.whoClicked.find((element => element == post.user._id))  ? "" : increaseLikes(post._id)}}
+                              onClick={() => post.whoClicked.find((element => element == post.user._id))  ? "" : increaseLikes(post._id)}
                               className="likeButton"
                             />
 
