@@ -21,18 +21,10 @@ const Forum = (props) => {
       <div className="">
         {props.show.map((question, index) => (
           <>
-          <p>
-            {question.topic}
-          </p>
-           <p>
-            {question.title}
-          </p>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: question.content,
-            }}
-            className="card-text"
-          ></p>
+            <p>{question.topic}</p>
+            <Link to="/showQuestion">
+              <p>{question.title}</p>
+            </Link>
           </>
         ))}
       </div>

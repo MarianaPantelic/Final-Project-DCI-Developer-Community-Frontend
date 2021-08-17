@@ -21,6 +21,8 @@ import News from "./pages/news";
 
 import AddPosts from "./components/addPosts";
 import AddQuestions from "./components/addQuestions";
+import ShowQuestion from "./components/showQuestion";
+
 
 import "./css/main.css";
 import "./css/about.css";
@@ -101,6 +103,9 @@ const App = () => {
               show={questions}
               sendQuestionsGetRequest={sendQuestionsGetRequest}
             />
+          </Route>
+          <Route path="/showQuestion">
+            <ShowQuestion showQuestionDetails={questions} />
           </Route>
           <Route path="/addQuestions">
             <AddQuestions sendQuestionsGetRequest={sendQuestionsGetRequest} />

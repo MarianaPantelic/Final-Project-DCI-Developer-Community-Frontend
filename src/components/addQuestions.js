@@ -56,8 +56,7 @@ const AddQuestions = (props) => {
       <div className="container">
         <form>
           <h1 className="pt-5">
-            {" "}
-            Welcome
+            Welcome{" "}
             {localStorage.getItem("user") &&
               JSON.parse(localStorage.getItem("user")).firstName}
           </h1>
