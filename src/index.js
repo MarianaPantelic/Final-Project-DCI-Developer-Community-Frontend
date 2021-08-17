@@ -114,7 +114,7 @@ const sendQuestionsGetRequest = async () => {
             <Register users={users} sendUserGetRequest={sendUserGetRequest} />
           </Route>
           <Route path="/login">
-            <Login />
+            <Login users={users} sendUserGetRequest={sendUserGetRequest} />
           </Route>
           <Route path="/userprofile">
             <UserProfile />

@@ -123,16 +123,18 @@ const UserProfile = (props) => {
             <div className="user-info-container">
               <div className="user-image-container">
                 {user.image ? (
-                  <div className="myImg">
+                  <div>
                     <img src={user.image} alt="User Profile"></img>
                   </div>
                 ) : (
-                  <ProfileImage
-                    className="mt-5"
-                    camera
-                    returnImage={getImages}
-                    uploadBtnProps={{ variant: "contained", label: "Up" }}
-                  />
+                  <div>
+                    <ProfileImage
+                      className="mt-5 mx-auto"
+                      camera
+                      returnImage={getImages}
+                      uploadBtnProps={{ variant: "contained", label: "Up" }}
+                    />
+                  </div>
                 )}
               </div>
               <div className="info-container mt-3">
