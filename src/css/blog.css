@@ -104,7 +104,7 @@ form input {
 
 /* quil editor */
 .ql-editor {
-  min-height: 50rem;
+  min-height: 30rem;
 }
 
 /* end of quil editor */
@@ -117,7 +117,7 @@ form input {
 }
 @media only screen and (max-width: 600px) {
   .blogCards {
-    width: 30rem;
+    width: 0rem;
   }
 
   .blogUser {
