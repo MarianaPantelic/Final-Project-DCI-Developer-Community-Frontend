@@ -81,7 +81,7 @@ const Questions = (props) => {
   const deleteQuestionsOnClick = async (id) => {
     try {
       axios
-        .delete(`http://localhost:3001/questions/${id}`, {
+        .delete(`http://localhost:3001/forum/${id}`, {
           headers: {
             auth: localStorage.getItem("token"),
           },
