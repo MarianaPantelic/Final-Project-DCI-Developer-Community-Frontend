@@ -7,7 +7,7 @@ import { Link, useParams } from "react-router-dom";
 import { Button, Modal } from "react-bootstrap";
 const axios = require("axios").default;
 
-const EditQuestions= (props) => {
+const EditQuestions = (props) => {
   const [userSignup, setUserSignup] = useState({});
   const [userWriteQuestionSignIn, setUserWriteQuestionSignIn] = useState({});
   const [passwordShown, setPasswordShown] = useState(false);
@@ -53,13 +53,10 @@ const EditQuestions= (props) => {
 
   const submitwriteForumSignIn = async () => {
     try {
-      const response = await axios.post(
-        "http://localhost:3001/login",
-        {
-          email: userWriteQuestionSignIn.email,
-          password: userWriteQuestionSignIn.password,
-        }
-      );
+      const response = await axios.post("http://localhost:3001/login", {
+        email: userWriteQuestionSignIn.email,
+        password: userWriteQuestionSignIn.password,
+      });
       myStorage.setItem("token", response.headers.auth);
       myStorage.setItem("user", JSON.stringify(response.data));
 
@@ -79,7 +76,9 @@ const EditQuestions= (props) => {
   const [content, setContent] = useState();
 
   useEffect(() => {
-    const foundQuestionToEdit = props.edit.find((question) => question._id === id);
+    const foundQuestionToEdit = props.edit.find(
+      (question) => question._id === id
+    );
 
     if (foundQuestionToEdit && id) {
       console.log(foundQuestionToEdit);
@@ -96,7 +95,7 @@ const EditQuestions= (props) => {
     var data = { title, content };
     try {
       axios
-        .put(`http://localhost:3001/questions/${id}`, data, {
+        .put(`http://localhost:3001/forum/${id}`, data, {
           headers: {
             auth: localStorage.getItem("token"),
           },
@@ -130,7 +129,7 @@ const EditQuestions= (props) => {
               </Link>
             ) : (
               <button onClick={handlewriteForumSignIn} className="nav-link">
-               Welcome to DCI Devs Forum
+                Welcome to DCI Devs Forum
               </button>
             )}
           </nav>
