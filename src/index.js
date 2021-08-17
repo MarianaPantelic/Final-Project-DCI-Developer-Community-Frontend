@@ -92,7 +92,7 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <Home />
-          </Route>
+          </Route>  
           <Route path="/about">
             <About />
           </Route>
