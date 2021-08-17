@@ -75,7 +75,7 @@ body {
 /* media query */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  /* navbar */
+/* navbar */
   .nav-logo {
     width: 4.5rem;
     height: 4.5rem;
@@ -93,3 +93,15 @@ body {
   color: white;
 }
 /*end of Footer*/
+
+
+
+
+
+
+
+
+
+
+
+
