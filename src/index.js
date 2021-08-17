@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
+import "../node_modules/react-quill/dist/quill.snow.css";
 
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
@@ -42,11 +42,11 @@ const App = () => {
   const [users, setUsers] = useState([]);
   const [questions, setQuestions] = useState([]);
   console.log(posts);
-  console.log(questions)
+  console.log(questions);
   console.log(process.env.REACT_APP_ENV);
 
   useEffect(() => {
-    sendPostGetRequest();
+    sendGetRequest();
   }, []);
 
   useEffect(() => {
@@ -56,17 +56,16 @@ const App = () => {
     sendQuestionsGetRequest();
   }, []);
 
-  const sendPostGetRequest = async () => {
+  const sendGetRequest = async () => {
     try {
       const response = await axios.get("http://localhost:3001/blogs/");
       setPosts(response.data);
       console.log(response.data);
-      
     } catch (err) {
       console.error(err);
     }
   };
-  
+
   const sendUserGetRequest = async () => {
     try {
       const resp = await axios.get("http://localhost:3001/users");
@@ -76,15 +75,15 @@ const App = () => {
       console.log(error);
     }
   };
-const sendQuestionsGetRequest = async () => {
-  try {
-    const questionsresponse = await axios.get("http://localhost:3001/questions");
-    setQuestions(questionsresponse.data);
-    console.log(questionsresponse.data);
-  } catch (error) {
-    console.log(error);
-  }
-};
+  const sendQuestionsGetRequest = async () => {
+    try {
+      const questionsresponse = await axios.get("http://localhost:3001/forum");
+      setQuestions(questionsresponse.data);
+      console.log(questionsresponse.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div>
@@ -107,10 +106,10 @@ const sendQuestionsGetRequest = async () => {
             <AddQuestions sendQuestionsGetRequest={sendQuestionsGetRequest} />
           </Route>
           <Route path="/blog">
-            <Blog show={posts} sendPostGetRequest={sendPostGetRequest} />
+            <Blog show={posts} sendGetRequest={sendGetRequest} />
           </Route>
           <Route path="/addPosts">
-            <AddPosts sendPostGetRequest={sendPostGetRequest} />
+            <AddPosts sendGetRequest={sendGetRequest} />
           </Route>
           <Route path="/resources">
             <Resources />
@@ -141,6 +140,6 @@ const sendQuestionsGetRequest = async () => {
       </Router>
     </div>
   );
-}
+};
 
-ReactDOM.render(<App />,document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
