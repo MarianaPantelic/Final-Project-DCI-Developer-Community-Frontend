@@ -22,12 +22,19 @@ const AddQuestions = (props) => {
     console.log("add post log" + questionContent);
 
     try {
+
       const response = await axios.post("http://localhost:3001/forum/", {
         topic: questionTopic,
         title: questionTitle,
         content: questionContent,
         user: JSON.parse(localStorage.getItem("user"))._id,
-      });
+      },
+                                        {
+          headers: {
+            auth: localStorage.getItem("token"),
+          },
+      }                                );
+
       await props.sendQuestionsGetRequest({ title });
       console.log("response is :" + JSON.stringify(response));
     } catch (error) {
