@@ -94,7 +94,7 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <Home />
-          </Route>
+          </Route>  
           <Route path="/about">
             <About />
           </Route>
@@ -104,7 +104,7 @@ const App = () => {
               sendQuestionsGetRequest={sendQuestionsGetRequest}
             />
           </Route>
-          <Route path="/showQuestion">
+          <Route path="/showQuestion/:id">
             <ShowQuestion showQuestionDetails={questions} />
           </Route>
           <Route path="/addQuestions">
