@@ -1,13 +1,9 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 import ReactQuill from "react-quill";
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
 const axios = require("axios").default;
-
-
-
 const AddPosts = (props) => {
-
   const [title, setTitle] = useState("");
   let history = useHistory();
 
@@ -23,13 +19,10 @@ const AddPosts = (props) => {
     console.log("add post log" + postContent);
     // TODO
     try {
-      const response = await axios.post(
-        "http://localhost:3001/blogs/",
-        {
-          title: postTitle,
-          content: postContent,
-        }
-      );
+      const response = await axios.post("http://localhost:3001/blogs/", {
+        title: postTitle,
+        content: postContent,
+      });
       await props.sendGetRequest({ title });
       console.log("response is :" + JSON.stringify(response));
     } catch (error) {
@@ -38,21 +31,17 @@ const AddPosts = (props) => {
     }
   };
 
-    const addPostsOnClick = async () => {
-      // console.log(inputContentRef.current);
-      try {
-        await addPost(
-          inputTitleRef.current.value,
-          inputContentRef.current.value
-        );
-        setTitle("");
-        history.push("/blog");
-      } catch (error) {
-        console.log("error");
-      }
-      //  setContent("");
-    };
-
+  const addPostsOnClick = async () => {
+    // console.log(inputContentRef.current);
+    try {
+      await addPost(inputTitleRef.current.value, inputContentRef.current.value);
+      setTitle("");
+      history.push("/blog");
+    } catch (error) {
+      console.log("error");
+    }
+    //  setContent("");
+  };
 
   return (
     <section className="writeBlogSection">
@@ -134,6 +123,5 @@ AddPosts.formats = [
 /*
  * PropType validation
  */
-
 
 export default AddPosts;
