@@ -104,7 +104,7 @@ const App = () => {
               sendQuestionsGetRequest={sendQuestionsGetRequest}
             />
           </Route>
-          <Route path="/showQuestion">
+          <Route path="/showQuestion/:id">
             <ShowQuestion showQuestionDetails={questions} />
           </Route>
           <Route path="/addQuestions">
