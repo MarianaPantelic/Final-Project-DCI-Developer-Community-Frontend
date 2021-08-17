@@ -134,9 +134,15 @@
   background-color: white;
 }
 .user-image-container img {
+  width: 10rem !important;
+  height: 10rem !important;
+  align-self: center;
+}
+.user-image-container {
   width: 15rem;
-  height: auto;
   margin: auto;
+  display: flex;
+  justify-content: center !important;
 }
 .profile-user-name {
   background-color: #1a39ca;
