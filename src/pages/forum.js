@@ -18,7 +18,17 @@ const Forum = (props) => {
           </button>
         </Link>
       </div>
-      <div className="blog-container d-flex flex-wrap justify-content-center ">
+      <div className="">
+        {props.show.map((question, index) => (
+          <>
+            <p>{question.topic}</p>
+            <Link to="/showQuestion">
+              <p>{question.title}</p>
+            </Link>
+          </>
+        ))}
+      </div>
+      {/* <div className="blog-container d-flex flex-wrap justify-content-center ">
         {props.questions ? (
           props.questions.reverse().map((element) => {
             const converter = new QuillDeltaToHtmlConverter(
@@ -46,7 +56,7 @@ const Forum = (props) => {
         ) : (
           <div className="loader">LOADING...</div>
         )}
-      </div>
+      </div> */}
     </Container>
   );
 };

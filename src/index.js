@@ -23,6 +23,8 @@ import "./main.css";
 
 import AddPosts from "./components/addPosts";
 import AddQuestions from "./components/addQuestions";
+import ShowQuestion from "./components/showQuestion";
+
 
 const axios = require("axios").default;
 
@@ -91,6 +93,9 @@ const sendQuestionsGetRequest = async () => {
               show={questions}
               sendQuestionsGetRequest={sendQuestionsGetRequest}
             />
+          </Route>
+          <Route path="/showQuestion">
+            <ShowQuestion showQuestionDetails={questions} />
           </Route>
           <Route path="/addQuestions">
             <AddQuestions sendQuestionsGetRequest={sendQuestionsGetRequest} />
