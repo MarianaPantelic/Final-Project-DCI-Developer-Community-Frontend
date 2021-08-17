@@ -1,14 +1,14 @@
-import  React from "react";
+import React from "react";
 import { Container } from "react-bootstrap";
 import { QuillDeltaToHtmlConverter } from "quill-delta-to-html";
 import { Link } from "react-router-dom";
-
 
 const axios = require("axios").default;
 
 const Forum = (props) => {
   let contentHTML = null;
-  
+  console.log(props.show);
+
   return (
     <Container className="mt-5">
       <div className="text-center pt-5 pb-3">
