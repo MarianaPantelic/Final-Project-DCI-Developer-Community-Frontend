@@ -15,7 +15,6 @@ const UserProfile = (props) => {
   const [user, setUser] = useState([]);
   const [userBlogs, setUserBlogs] = useState([]);
   const [userQuestions, setUserQuestions] = useState([]);
-
   const [agenda, setAgenda] = useState([]);
   const [dailyAgenda, setDailyAgenda] = useState([]);
   const [agendaByDate, setAgendaByDate] = useState([]);
@@ -59,9 +58,11 @@ const UserProfile = (props) => {
 
   const getUserBlogs = async () => {
     try {
-      const resp = await axios.get(`http://localhost:3001/profile/${userId}`);
+      const resp = await axios.get(
+        `http://localhost:3001/profile/blog/${userId}`
+      );
       setUserBlogs(resp.data);
-      console.log(resp.data);
+      console.log(userBlogs);
     } catch (error) {
       console.log(error);
     }
@@ -69,9 +70,11 @@ const UserProfile = (props) => {
 
   const getUserQuestions = async () => {
     try {
-      const resp = await axios.get(`http://localhost:3001/profile/${userId}`);
+      const resp = await axios.get(
+        `http://localhost:3001/profile/question/${userId}`
+      );
       setUserQuestions(resp.data);
-      console.log(resp.data);
+      console.log(userQuestions);
     } catch (error) {
       console.log(error);
     }
@@ -312,10 +315,33 @@ const UserProfile = (props) => {
         </Row>
         <Row>
           <Col sm={12} md={12} lg={6}>
-            <div className="myQuestions-container"></div>
+            <div className="myQuestions-container">
+              <h2 className="text-center mt-5">My Questions</h2>
+
+              <ul>
+                {userQuestions.length !== 0 ? (
+                  userQuestions.map((question) => <li>{question.title}</li>)
+                ) : (
+                  <h3 className="text-center mt-5">
+                    You didn't ask any questions yet!
+                  </h3>
+                )}
+              </ul>
+            </div>
           </Col>
           <Col sm={12} md={12} lg={6}>
-            <div className="myBlogs-container"></div>
+            <div className="myBlogs-container">
+              <h2 className="text-center mt-5">My Blogs</h2>
+              <ul>
+                {userBlogs.length !== 0 ? (
+                  userBlogs.map((blog) => <li>{blog.title}</li>)
+                ) : (
+                  <h3 className="text-center mt-5">
+                    You didn't ask any blogs yet!
+                  </h3>
+                )}
+              </ul>
+            </div>
           </Col>
         </Row>
       </div>

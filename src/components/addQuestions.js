@@ -20,12 +20,13 @@ const AddQuestions = (props) => {
 
   const addQuestion = async (questionTopic, questionTitle, questionContent) => {
     console.log("add post log" + questionContent);
-    
+
     try {
       const response = await axios.post("http://localhost:3001/forum/", {
         topic: questionTopic,
         title: questionTitle,
         content: questionContent,
+        user: JSON.parse(localStorage.getItem("user"))._id,
       });
       await props.sendQuestionsGetRequest({ title });
       console.log("response is :" + JSON.stringify(response));
@@ -151,4 +152,3 @@ AddQuestions.formats = [
  */
 
 export default AddQuestions;
- 
