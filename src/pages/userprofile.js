@@ -13,6 +13,9 @@ const axios = require("axios").default;
 
 const UserProfile = (props) => {
   const [user, setUser] = useState([]);
+  const [userBlogs, setUserBlogs] = useState([]);
+  const [userQuestions, setUserQuestions] = useState([]);
+
   const [agenda, setAgenda] = useState([]);
   const [dailyAgenda, setDailyAgenda] = useState([]);
   const [agendaByDate, setAgendaByDate] = useState([]);
@@ -32,6 +35,12 @@ const UserProfile = (props) => {
     getUser();
   }, []);
   useEffect(() => {
+    getUserBlogs();
+  }, []);
+  useEffect(() => {
+    getUserQuestions();
+  }, []);
+  useEffect(() => {
     getAgenda();
   }, []);
   useEffect(() => {
@@ -45,6 +54,26 @@ const UserProfile = (props) => {
       console.log(response.data);
     } catch (err) {
       console.error(err);
+    }
+  };
+
+  const getUserBlogs = async () => {
+    try {
+      const resp = await axios.get(`http://localhost:3001/profile/${userId}`);
+      setUserBlogs(resp.data);
+      console.log(resp.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const getUserQuestions = async () => {
+    try {
+      const resp = await axios.get(`http://localhost:3001/profile/${userId}`);
+      setUserQuestions(resp.data);
+      console.log(resp.data);
+    } catch (error) {
+      console.log(error);
     }
   };
 

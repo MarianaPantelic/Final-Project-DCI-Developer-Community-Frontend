@@ -23,7 +23,6 @@ import AddPosts from "./components/addPosts";
 import AddQuestions from "./components/addQuestions";
 import ShowQuestion from "./components/showQuestion";
 
-
 import "./css/main.css";
 import "./css/about.css";
 import "./css/blog.css";
@@ -43,6 +42,7 @@ const App = () => {
   const [posts, setPosts] = useState([]);
   const [users, setUsers] = useState([]);
   const [questions, setQuestions] = useState([]);
+
   console.log(posts);
   console.log(questions);
   console.log(process.env.REACT_APP_ENV);
@@ -53,9 +53,6 @@ const App = () => {
 
   useEffect(() => {
     sendUserGetRequest();
-  }, []);
-  useEffect(() => {
-    sendQuestionsGetRequest();
   }, []);
 
   const sendGetRequest = async () => {
@@ -77,6 +74,7 @@ const App = () => {
       console.log(error);
     }
   };
+
   const sendQuestionsGetRequest = async () => {
     try {
       const questionsresponse = await axios.get("http://localhost:3001/forum");
