@@ -54,6 +54,9 @@ const App = () => {
   useEffect(() => {
     sendUserGetRequest();
   }, []);
+  useEffect(() => {
+    sendQuestionsGetRequest();
+  }, []);
 
   const sendGetRequest = async () => {
     try {
