@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import lockImg from "../images/lock-4441691_1280.png";
+
 const axios = require("axios").default;
 
 const Login = () => {
