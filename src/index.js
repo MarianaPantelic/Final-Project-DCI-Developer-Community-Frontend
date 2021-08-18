@@ -35,6 +35,8 @@ import "./css/post.css";
 import "./css/register.css";
 import "./css/resources.css";
 import "./css/userprofile.css";
+import MyQuestion from "./pages/myQuestion";
+import MyBlog from "./pages/myBlog";
 
 const axios = require("axios").default;
 
@@ -95,7 +97,7 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <Home />
-          </Route>  
+          </Route>
           <Route path="/about">
             <About />
           </Route>
@@ -134,6 +136,12 @@ const App = () => {
               users={users}
               sendUserGetRequest={sendUserGetRequest}
             />
+          </Route>
+          <Route path="/myQuestion/:id">
+            <MyQuestion />
+          </Route>
+          <Route path="/myBlog/:id">
+            <MyBlog />
           </Route>
           <Route path="/post">
             <Post />

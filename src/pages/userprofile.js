@@ -91,7 +91,7 @@ const UserProfile = (props) => {
           },
         })
         .then((resp) => props.sendUserGetRequest());
-
+      window.location.reload();
       console.log(user.image);
     } catch (error) {
       console.log(error);
@@ -320,7 +320,11 @@ const UserProfile = (props) => {
 
               <ul>
                 {userQuestions.length !== 0 ? (
-                  userQuestions.map((question) => <li>{question.title}</li>)
+                  userQuestions.map((question) => (
+                    <Link to={`/myQuestion/${question._id}`}>
+                      <li>{question.title}</li>
+                    </Link>
+                  ))
                 ) : (
                   <h3 className="text-center mt-5">
                     You didn't ask any questions yet!
@@ -334,10 +338,14 @@ const UserProfile = (props) => {
               <h2 className="text-center mt-5">My Blogs</h2>
               <ul>
                 {userBlogs.length !== 0 ? (
-                  userBlogs.map((blog) => <li>{blog.title}</li>)
+                  userBlogs.map((blog) => (
+                    <Link to={`/myBlog/${blog._id}`}>
+                      <li>{blog.title}</li>
+                    </Link>
+                  ))
                 ) : (
                   <h3 className="text-center mt-5">
-                    You didn't ask any blogs yet!
+                    You don't have any blogs yet!
                   </h3>
                 )}
               </ul>
