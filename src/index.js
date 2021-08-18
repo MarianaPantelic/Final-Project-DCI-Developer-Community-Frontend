@@ -21,6 +21,7 @@ import News from "./pages/news";
 
 import AddPosts from "./components/addPosts";
 import AddQuestions from "./components/addQuestions";
+import ShowQuestion from "./components/showQuestion";
 
 import "./css/main.css";
 import "./css/about.css";
@@ -41,6 +42,7 @@ const App = () => {
   const [posts, setPosts] = useState([]);
   const [users, setUsers] = useState([]);
   const [questions, setQuestions] = useState([]);
+
   console.log(posts);
   console.log(questions);
   console.log(process.env.REACT_APP_ENV);
@@ -75,6 +77,7 @@ const App = () => {
       console.log(error);
     }
   };
+
   const sendQuestionsGetRequest = async () => {
     try {
       const questionsresponse = await axios.get("http://localhost:3001/forum");
@@ -92,7 +95,7 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <Home />
-          </Route>
+          </Route>  
           <Route path="/about">
             <About />
           </Route>
@@ -101,6 +104,9 @@ const App = () => {
               show={questions}
               sendQuestionsGetRequest={sendQuestionsGetRequest}
             />
+          </Route>
+          <Route path="/showQuestion/:id">
+            <ShowQuestion showQuestionDetails={questions} />
           </Route>
           <Route path="/addQuestions">
             <AddQuestions sendQuestionsGetRequest={sendQuestionsGetRequest} />

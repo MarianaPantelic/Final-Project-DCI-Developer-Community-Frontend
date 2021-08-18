@@ -6,25 +6,36 @@ const axios = require("axios").default;
 
 const AddQuestions = (props) => {
   const [title, setTitle] = useState("");
+  const [topic, setTopic] = useState("");
   let history = useHistory();
 
   const inputTitleRef = useRef();
   const inputContentRef = useRef();
+  const inputTopicRef = useRef();
 
   const handleBody = (e) => {
     console.log(e);
     inputContentRef.current.value = e;
   };
 
-  const addQuestion = async (questionTitle, questionContent) => {
+  const addQuestion = async (questionTopic, questionTitle, questionContent) => {
     console.log("add post log" + questionContent);
-    
+
     try {
+
       const response = await axios.post("http://localhost:3001/forum/", {
+        topic: questionTopic,
         title: questionTitle,
         content: questionContent,
-      });
-      await props.sendGetRequest({ title });
+        user: JSON.parse(localStorage.getItem("user"))._id,
+      },
+                                        {
+          headers: {
+            auth: localStorage.getItem("token"),
+          },
+      }                                );
+
+      await props.sendQuestionsGetRequest({ title });
       console.log("response is :" + JSON.stringify(response));
     } catch (error) {
       console.log(error);
@@ -35,20 +46,40 @@ const AddQuestions = (props) => {
   const AddQuestionsOnClick = async () => {
     // console.log(inputContentRef.current);
     try {
-      await addQuestion(inputTitleRef.current.value, inputContentRef.current.value);
+      await addQuestion(
+        inputTopicRef.current.value,
+        inputTitleRef.current.value,
+        inputContentRef.current.value
+      );
+      setTopic("");
       setTitle("");
       history.push("/forum");
     } catch (error) {
       console.log("error");
     }
-    //  setContent("");
   };
 
   return (
     <section className="writeBlogSection">
       <div className="container">
         <form>
-          <h1 className="pt-5"> Welcome</h1>
+          <h1 className="pt-5">
+            Welcome{" "}
+            {localStorage.getItem("user") &&
+              JSON.parse(localStorage.getItem("user")).firstName}
+          </h1>
+
+          <div className="form-group">
+            <label htmlFor="inputTopic">Topic</label>
+            <input
+              ref={inputTopicRef}
+              type="text"
+              className="form-control border border-dark"
+              id="inputTopic"
+              border
+              border-dark
+            />
+          </div>
           <div className="form-group">
             <label htmlFor="inputTitle">Title</label>
             <input
@@ -72,7 +103,7 @@ const AddQuestions = (props) => {
               ref={inputContentRef}
             />
           </div>
-          <Link to="/showQuestions">
+          <Link to="/forum">
             <button
               onClick={() => AddQuestionsOnClick()}
               type="button"
@@ -128,4 +159,3 @@ AddQuestions.formats = [
  */
 
 export default AddQuestions;
- 
