@@ -31,7 +31,7 @@ const Jobs = () => {
 
           <div className="Job-box">
             <div className="Job-logo">
-              <a href="https://www.zapp.com/en-us/" target="_blank"><img src="images/Zapp logo1539270111559.jpeg" width="75"  alt="Linus Torvalds"></img></a>
+              <a href="https://www.zapp.com/en-us/" target="_blank"><img src="images/Zapp logo1539270111559.jpeg" width="75"  alt="Zapp logo"></img></a>
             </div>
               
                 <div className="Job-data">
@@ -55,7 +55,7 @@ const Jobs = () => {
 
           <div className="Job-box">
             <div className="Job-logo">
-              <a href="https://global-savings-group.com/" target="_blank"><img src="images/Screenshot from 2021-08-15 20-53-04.png" width="75"  alt="Linus Torvalds"></img></a>
+              <a href="https://global-savings-group.com/" target="_blank"><img src="images/Screenshot from 2021-08-15 20-53-04.png" width="75"  alt="Global Savings logo"></img></a>
             </div>
               
                 <div className="Job-data">
@@ -80,8 +80,8 @@ const Jobs = () => {
         
           <div className="Job-box">
             <div className="Job-logo">
-              <a href="" target="_blank"></a><img src="images/Climate partner logo1619620883677.jpeg" width="75"  alt="Linus Torvalds"></img>
-            </div>ok
+              <a href="https://www.climatepartner.com" target="_blank"><img src="images/Climate partner logo1619620883677.jpeg" width="75"  alt="Climate Partner logo"></img></a>
+            </div>
               
                 <div className="Job-data">
                   
@@ -104,7 +104,7 @@ const Jobs = () => {
 
           <div className="Job-box">
             <div className="Job-logo">
-              <a href="" target="_blank"></a><img src="images/Screenshot from 2021-08-15 20-34-02.png" width="75"  alt="Linus Torvalds"></img>
+              <a href="https://join.com/" target="_blank"><img src="images/Screenshot from 2021-08-15 20-34-02.png" width="75"  alt="JOIN Solutions logo"></img></a>
             </div>
               
                 <div className="Job-data">
@@ -128,7 +128,7 @@ const Jobs = () => {
 
           <div className="Job-box">
             <div className="Job-logo">
-              <a href="" target="_blank"><img src="images/Screenshot from 2021-08-15 20-35-40.png" width="75"  alt="Linus Torvalds"></img></a>
+              <a href="https://www.jimdo.com/" target="_blank"><img src="images/Screenshot from 2021-08-15 20-35-40.png" width="75"  alt="Jimdo logo"></img></a>
             </div>
               
                 <div className="Job-data">
@@ -152,7 +152,7 @@ const Jobs = () => {
 
           <div className="Job-box">
             <div className="Job-logo">
-              <a href="" target="_blank"><img src="images/Screenshot from 2021-08-15 21-05-39.png" width="75"  alt="Linus Torvalds"></img></a>
+              <a href="https://www.reuter.de" target="_blank"><img src="images/Screenshot from 2021-08-15 21-05-39.png" width="75"  alt="Reuter logo"></img></a>
             </div>
               
                 <div className="Job-data">
@@ -176,7 +176,7 @@ const Jobs = () => {
 
           <div className="Job-box">
             <div className="Job-logo">
-              <a href="" target="_blank"><img src="images/truckoo logo 1612875179380.jpeg" width="75"  alt="Linus Torvalds"></img></a>
+              <a href="https://www.truckoo.com" target="_blank"><img src="images/truckoo logo 1612875179380.jpeg" width="75"  alt="Truckoo logo"></img></a>
             </div>
               
                 <div className="Job-data">
@@ -200,7 +200,7 @@ const Jobs = () => {
 
           <div className="Job-box">
             <div className="Job-logo">
-              <a href="" target="_blank"><img src="images/pult-logo-xl.png" width="75"  alt="Linus Torvalds"></img></a>
+              <a href="https://pult.join.com/" target="_blank"><img src="images/pult-logo-xl.png" width="75"  alt="Pult logo"></img></a>
             </div>
               
                 <div className="Job-data">
@@ -224,12 +224,12 @@ const Jobs = () => {
 
           <div className="Job-box">
             <div className="Job-logo">
-              <a href="" target="_blank"><img src="images/Screenshot from 2021-08-15 20-42-10.png" width="75"  alt="Linus Torvalds"></img></a>
+              <a href="https://hubblr.io/" target="_blank"><img src="images/Screenshot from 2021-08-15 20-42-10.png" width="75"  alt="hubbler logo"></img></a>
             </div>
               
                 <div className="Job-data">
                   
-                  <a className="job-title-card" href="https://hubblr.join.com/jobs/2651937-software-engineer-web-frontend-f-m-x-hh?pid=93dde148e3f919be3310&utm_source=linkedin&utm_medium=free&utm_campaign=linkedin%2Blimited%2Blisting&utm_content=software%2Bengineer%2Bweb-frontend%2Bf%2Bm%2Bx%2Bhh" target="_blank">Software Enginner (Web-Frontend) (f/m/x)</a>
+                  <a className="job-title-card" href="https://hubblr.join.com/jobs/2651937-software-engineer-web-frontend-f-m-x-hh?pid=93dde148e3f919be3310&utm_source=linkedin&utm_medium=free&utm_campaign=linkedin%2Blimited%2Blisting&utm_content=software%2Bengineer%2Bweb-frontend%2Bf%2Bm%2Bx%2Bhh" target="_blank">Software Engineer (Web-Frontend) (f/m/x)</a>
                   <h3>hubblr (Software Development)</h3>
                   <h3>Hamburg, Germany</h3>
                   
@@ -248,7 +248,7 @@ const Jobs = () => {
 
           <div className="Job-box">
             <div className="Job-logo">
-              <a href="" target="_blank"><img src="images/deepblue dark logo index.jpeg" width="75"  alt="Linus Torvalds"></img></a>
+              <a href="https://www.db-n.com/" target="_blank"><img src="images/deepblue dark logo index.jpeg" width="75"  alt="deepblue networks logo"></img></a>
             </div>
               
                 <div className="Job-data">
@@ -272,13 +272,37 @@ const Jobs = () => {
 
           <div className="Job-box">
             <div className="Job-logo">
-              <a href="" target="_blank"></a><img src="images/Screenshot from 2021-08-15 20-42-10.png" width="75"  alt="Linus Torvalds"></img>
+              <a href="https://www.auto1-group.com" target="_blank"><img src="images/Auto1 Group logo Screenshot from 2021-08-17 18-18-42.png" width="75"  alt="AUTO1 Group logo"></img></a>
             </div>
               
                 <div className="Job-data">
                   
-                  <a className="job-title-card" href="https://hubblr.join.com/jobs/2651937-software-engineer-web-frontend-f-m-x-hh?pid=93dde148e3f919be3310&utm_source=linkedin&utm_medium=free&utm_campaign=linkedin%2Blimited%2Blisting&utm_content=software%2Bengineer%2Bweb-frontend%2Bf%2Bm%2Bx%2Bhh" target="_blank">Software Enginner (Web-Frontend) (f/m/x)</a>
-                  <h3>YOC (Marketing)</h3>
+                  <a className="job-title-card" href="https://jobs.smartrecruiters.com/Auto1/743999758040442-web-developer-f-m-x-?trid=2d92f286-613b-4daf-9dfa-6340ffbecf73" target="_blank">Web Developer (f/m/x)</a>
+                  <h3>AUTO1 Group (Marketing)</h3>
+                  <h3>Düsseldorf, Germany</h3>
+                  
+                  <div className="profile-match">
+                    <a href="pages/userprofile" target="_blank"><img className="match-pic" src="images/Cohen-Linus-Torvalds.jpg"  height="25"  alt="Linus Torvalds"></img></a>
+                    <h4>Your profile matches this job</h4>
+                  </div>
+
+                  <div className="promoted-applicants" >
+                    <h4 className="promoted" >Promoted - </h4>
+                    <h4 className="applicants">16 applicants</h4>
+                  </div>
+
+                </div>  
+          </div>
+
+          <div className="Job-box">
+            <div className="Job-logo">
+              <a href="https://www.sonova.com" target="_blank"><img src="images/Sonova logo 1614925607762.jpeg" width="75"  alt="Sonova Group logo"></img></a>
+            </div>
+              
+                <div className="Job-data">
+                  
+                  <a className="job-title-card" href="https://sonova.join.com/jobs/2698247-frontend-engineer-m-f-d?pid=93dde148e3f919be3310&utm_source=linkedin&utm_medium=free&utm_campaign=linkedin%2Blimited%2Blisting&utm_content=frontend%2Bengineer%2Bm%2Bf%2Bd" target="_blank">Frontend Engineer (m/f/d)</a>
+                  <h3>Sonova Group (Healthcare)</h3>
                   <h3>Berlin, Germany</h3>
                   
                   <div className="profile-match">
@@ -288,21 +312,22 @@ const Jobs = () => {
 
                   <div className="promoted-applicants" >
                     <h4 className="promoted" >Promoted - </h4>
-                    <h4 className="applicants">16 applicants</h4>
+                    <h4 className="applicants">5 applicants</h4>
                   </div>
 
                 </div>  
           </div>
 
+
           <div className="Job-box">
             <div className="Job-logo">
-              <a href="" target="_blank"></a><img src="images/Screenshot from 2021-08-15 20-42-10.png" width="75"  alt="Linus Torvalds"></img>
+              <a href="https://careers.camelot-group.com/ITLab/" target="_blank"><img src="images/Camelot ITLab logo 2938b043-b1a5-4591-8a3b-632514314375_1_60dd9952adf2b.gif" width="75"  alt="Linus Torvalds"></img></a>
             </div>
               
                 <div className="Job-data">
                   
-                  <a className="job-title-card" href="https://hubblr.join.com/jobs/2651937-software-engineer-web-frontend-f-m-x-hh?pid=93dde148e3f919be3310&utm_source=linkedin&utm_medium=free&utm_campaign=linkedin%2Blimited%2Blisting&utm_content=software%2Bengineer%2Bweb-frontend%2Bf%2Bm%2Bx%2Bhh" target="_blank">Software Enginner (Web-Frontend) (f/m/x)</a>
-                  <h3>hubblr (Software Development)</h3>
+                  <a className="job-title-card" href="https://careers.camelot-group.com/ITLab/job/Mannheim-Backend-Developer-%28fmd%29-1/701864001/?locale=en_US" target="_blank">(Junior) Developer (f/m/d)</a>
+                  <h3>Camelot ITLab (IT Services)</h3>
                   <h3>Hamburg, Germany</h3>
                   
                   <div className="profile-match">
@@ -312,22 +337,23 @@ const Jobs = () => {
 
                   <div className="promoted-applicants" >
                     <h4 className="promoted" >Promoted - </h4>
-                    <h4 className="applicants">16 applicants</h4>
+                    <h4 className="applicants">15 applicants</h4>
                   </div>
 
                 </div>  
           </div>
 
+
           <div className="Job-box">
             <div className="Job-logo">
-              <a href="" target="_blank"></a><img src="images/Screenshot from 2021-08-15 20-42-10.png" width="75"  alt="Linus Torvalds"></img>
+              <a href="https://www.cgi.com/" target="_blank"><img src="images/CGI logo Screenshot from 2021-08-17 18-28-21.png" width="75"  alt="CGI logo"></img></a>
             </div>
               
                 <div className="Job-data">
                   
-                  <a className="job-title-card" href="https://hubblr.join.com/jobs/2651937-software-engineer-web-frontend-f-m-x-hh?pid=93dde148e3f919be3310&utm_source=linkedin&utm_medium=free&utm_campaign=linkedin%2Blimited%2Blisting&utm_content=software%2Bengineer%2Bweb-frontend%2Bf%2Bm%2Bx%2Bhh" target="_blank">Software Enginner (Web-Frontend) (f/m/x)</a>
-                  <h3>hubblr (Software Development)</h3>
-                  <h3>Hamburg, Germany</h3>
+                  <a className="job-title-card" href="https://cgi.njoyn.com/cgi/xweb/xweb.asp?clid=21001&page=jobdetails&jobid=J0621-1942&BRID=828336&SBDID=20561&SBDID=20561" target="_blank">Frontend / Web Developer (PHP) (m/w/d)</a>
+                  <h3>CGI (IT Service Provider)</h3>
+                  <h3>Leipzig, Germany</h3>
                   
                   <div className="profile-match">
                     <a href="pages/userprofile" target="_blank"><img className="match-pic" src="images/Cohen-Linus-Torvalds.jpg"  height="25"  alt="Linus Torvalds"></img></a>
@@ -336,103 +362,7 @@ const Jobs = () => {
 
                   <div className="promoted-applicants" >
                     <h4 className="promoted" >Promoted - </h4>
-                    <h4 className="applicants">16 applicants</h4>
-                  </div>
-
-                </div>  
-          </div>
-
-          <div className="Job-box">
-            <div className="Job-logo">
-              <a href="" target="_blank"><img src="images/Screenshot from 2021-08-15 20-42-10.png" width="75"  alt="Linus Torvalds"></img></a>
-            </div>
-              
-                <div className="Job-data">
-                  
-                  <a className="job-title-card" href="https://hubblr.join.com/jobs/2651937-software-engineer-web-frontend-f-m-x-hh?pid=93dde148e3f919be3310&utm_source=linkedin&utm_medium=free&utm_campaign=linkedin%2Blimited%2Blisting&utm_content=software%2Bengineer%2Bweb-frontend%2Bf%2Bm%2Bx%2Bhh" target="_blank">Software Enginner (Web-Frontend) (f/m/x)</a>
-                  <h3>hubblr (Software Development)</h3>
-                  <h3>Hamburg, Germany</h3>
-                  
-                  <div className="profile-match">
-                    <a href="pages/userprofile" target="_blank"><img className="match-pic" src="images/Cohen-Linus-Torvalds.jpg"  height="25"  alt="Linus Torvalds"></img></a>
-                    <h4>Your profile matches this job</h4>
-                  </div>
-
-                  <div className="promoted-applicants" >
-                    <h4 className="promoted" >Promoted - </h4>
-                    <h4 className="applicants">16 applicants</h4>
-                  </div>
-
-                </div>  
-          </div>
-
-          <div className="Job-box">
-            <div className="Job-logo">
-              <a href="" target="_blank"><img src="images/Screenshot from 2021-08-15 20-42-10.png" width="75"  alt="Linus Torvalds"></img></a>
-            </div>
-              
-                <div className="Job-data">
-                  
-                  <a className="job-title-card" href="https://hubblr.join.com/jobs/2651937-software-engineer-web-frontend-f-m-x-hh?pid=93dde148e3f919be3310&utm_source=linkedin&utm_medium=free&utm_campaign=linkedin%2Blimited%2Blisting&utm_content=software%2Bengineer%2Bweb-frontend%2Bf%2Bm%2Bx%2Bhh" target="_blank">Software Enginner (Web-Frontend) (f/m/x)</a>
-                  <h3>hubblr (Software Development)</h3>
-                  <h3>Hamburg, Germany</h3>
-                  
-                  <div className="profile-match">
-                    <a href="pages/userprofile" target="_blank"><img className="match-pic" src="images/Cohen-Linus-Torvalds.jpg"  height="25"  alt="Linus Torvalds"></img></a>
-                    <h4>Your profile matches this job</h4>
-                  </div>
-
-                  <div className="promoted-applicants" >
-                    <h4 className="promoted" >Promoted - </h4>
-                    <h4 className="applicants">16 applicants</h4>
-                  </div>
-
-                </div>  
-          </div>
-
-          <div className="Job-box">
-            <div className="Job-logo">
-              <a href="" target="_blank"><img src="images/Screenshot from 2021-08-15 20-42-10.png" width="75"  alt="Linus Torvalds"></img></a>
-            </div>
-              
-                <div className="Job-data">
-                  
-                  <a className="job-title-card" href="https://hubblr.join.com/jobs/2651937-software-engineer-web-frontend-f-m-x-hh?pid=93dde148e3f919be3310&utm_source=linkedin&utm_medium=free&utm_campaign=linkedin%2Blimited%2Blisting&utm_content=software%2Bengineer%2Bweb-frontend%2Bf%2Bm%2Bx%2Bhh" target="_blank">Software Enginner (Web-Frontend) (f/m/x)</a>
-                  <h3>hubblr (Software Development)</h3>
-                  <h3>Hamburg, Germany</h3>
-                  
-                  <div className="profile-match">
-                    <a href="pages/userprofile" target="_blank"><img className="match-pic" src="images/Cohen-Linus-Torvalds.jpg"  height="25"  alt="Linus Torvalds"></img></a>
-                    <h4>Your profile matches this job</h4>
-                  </div>
-
-                  <div className="promoted-applicants" >
-                    <h4 className="promoted" >Promoted - </h4>
-                    <h4 className="applicants">16 applicants</h4>
-                  </div>
-
-                </div>  
-          </div>
-
-          <div className="Job-box">
-            <div className="Job-logo">
-              <a href="" target="_blank"><img src="images/Screenshot from 2021-08-15 20-42-10.png" width="75"  alt="Linus Torvalds"></img></a>
-            </div>
-              
-                <div className="Job-data">
-                  
-                  <a className="job-title-card" href="https://hubblr.join.com/jobs/2651937-software-engineer-web-frontend-f-m-x-hh?pid=93dde148e3f919be3310&utm_source=linkedin&utm_medium=free&utm_campaign=linkedin%2Blimited%2Blisting&utm_content=software%2Bengineer%2Bweb-frontend%2Bf%2Bm%2Bx%2Bhh" target="_blank">Software Enginner (Web-Frontend) (f/m/x)</a>
-                  <h3>hubblr (Software Development)</h3>
-                  <h3>Hamburg, Germany</h3>
-                  
-                  <div className="profile-match">
-                    <a href="pages/userprofile" target="_blank"><img className="match-pic" src="images/Cohen-Linus-Torvalds.jpg"  height="25"  alt="Linus Torvalds"></img></a>
-                    <h4>Your profile matches this job</h4>
-                  </div>
-
-                  <div className="promoted-applicants" >
-                    <h4 className="promoted" >Promoted - </h4>
-                    <h4 className="applicants">16 applicants</h4>
+                    <h4 className="applicants">13 applicants</h4>
                   </div>
 
                 </div>  
