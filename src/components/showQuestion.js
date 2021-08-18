@@ -15,21 +15,28 @@ const ShowQuestion = (props) => {
       <div>
         <h1>Answers</h1>
 
-        {
-          foundQuestion ? 
-          (<p
+        {foundQuestion ? (
+          <p
             dangerouslySetInnerHTML={{
               __html: foundQuestion.content,
-            }} 
-          ></p>) : "Question content not found"
-        }
+            }}
+          ></p>
+        ) : (
+          "Question content not found"
+        )}
 
-         {/* <p
+        {/* <p
             dangerouslySetInnerHTML={{
               __html: question.content,
             }} 
           ></p> */}
-
+        <button
+          //onClick={() => AddAnswerOnClick()}
+          type="button"
+          className="btn mt-5 ask_replyQuestion-btn "
+        >
+          <h3>Reply</h3>
+        </button>
       </div>
     </>
   );
