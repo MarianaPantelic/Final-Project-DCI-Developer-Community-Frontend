@@ -321,7 +321,7 @@ const Jobs = () => {
 
           <div className="Job-box">
             <div className="Job-logo">
-              <a href="https://careers.camelot-group.com/ITLab/" target="_blank"><img src="images/Camelot ITLab logo 2938b043-b1a5-4591-8a3b-632514314375_1_60dd9952adf2b.gif" width="75"  alt="Linus Torvalds"></img></a>
+              <a href="https://careers.camelot-group.com/ITLab/" target="_blank"><img src="images/Camelot ITLab logo.gif" width="75"  alt="Linus Torvalds"></img></a>
             </div>
               
                 <div className="Job-data">
