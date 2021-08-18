@@ -7,13 +7,15 @@ const axios = require("axios").default;
 const Blog = (props) => {
   const increaseLikes = async (id) => {
     const foundPost = props.show.find((post) => post._id === id);
-    let tempArray = foundPost.whoClicked;
-    tempArray.push(foundPost.user.id);
+    console.log("post" + foundPost.likes);
+    let tempArray = [...foundPost.whoClicked];
+    const userLocal = JSON.parse(localStorage.getItem("user"));
+    tempArray.push(userLocal._id);
+
     try {
       axios
         .put(`http://localhost:3001/blogs/${id}`, {
           likes: foundPost.likes + 1,
-          clicked: true,
           whoClicked: tempArray,
         })
         .then((resp) => props.sendGetRequest());
@@ -51,7 +53,7 @@ const Blog = (props) => {
             ) : (
               <Container>
                 <Row className="mt-5">
-                  {props.show.reverse().map((post, index) => (
+                  {props.show.map((post, index) => (
                     <Col lg={6} md={6} sm={12}>
                       <Card className="blogCards">
                         <Card.Body>
@@ -74,7 +76,9 @@ const Blog = (props) => {
                             <AiFillLike
                               onClick={() =>
                                 post.whoClicked.find(
-                                  (element) => element == post.user._id
+                                  (element) =>
+                                    element ==
+                                    JSON.parse(localStorage.getItem("user"))._id
                                 )
                                   ? ""
                                   : increaseLikes(post._id)
