@@ -1,28 +1,36 @@
-import  React from "react";
+import React from "react";
 import { Container } from "react-bootstrap";
 import { QuillDeltaToHtmlConverter } from "quill-delta-to-html";
 import { Link } from "react-router-dom";
-
 
 const axios = require("axios").default;
 
 const Forum = (props) => {
   let contentHTML = null;
-  
+  console.log(props.show);
+
   return (
     <Container className="mt-5">
       <div className="text-center pt-5 pb-3">
-        <Link to="/addQuestions">
-          <button type="button" className="askQuestion-btn">
-            Ask Question
-          </button>
-        </Link>
+        {localStorage.getItem("token") ? (
+          <Link to="/addQuestions">
+            <button type="button" className="askQuestion-btn">
+              Ask Question
+            </button>
+          </Link>
+        ) : (
+          <Link to="/login">
+            <button type="button" className="askQuestion-btn">
+              Ask Question
+            </button>
+          </Link>
+        )}
       </div>
       <div className="">
-        {props.show.map((question, index) => (
+        {props.show.reverse().map((question, index) => (
           <>
             <p>{question.topic}</p>
-            <Link to="/showQuestion">
+            <Link to={`/showQuestion/${question._id}`}>
               <p>{question.title}</p>
             </Link>
           </>
