@@ -19,10 +19,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-css">
-      <a class="navbar-brand logoNav" href="/" style={{ margin: "0rem" }}>
-        <img src="../images/logo.gif" className="nav-logo" />
-      </a>
+    <nav className="navbar navbar-expand-lg navbar-dark navbar-css">
+      
+        <a className="navbar-brand logoNav" href="/" style={{ margin: "0rem" }}>
+            <img src="/images/logo.gif" style={{ marginLeft: "2rem", width: "15rem", height: "4.5rem"}}/>
+        </a>
+      
+
       <div class="align-burger-button">
         <button
           class="navbar-toggler text-white"

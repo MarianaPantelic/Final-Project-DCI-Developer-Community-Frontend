@@ -4,7 +4,7 @@ import { Button, Col, Container } from "react-bootstrap";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 const axios = require("axios").default;
 
-const MyQuestion = () => {
+const MyQuestion = (props) => {
   const { id } = useParams();
 
   const [question, setQuestion] = useState([]);
@@ -23,6 +23,21 @@ const MyQuestion = () => {
     }
   };
   console.log(question);
+
+  const deleteQuestion = async () => {
+    try {
+      await axios
+        .delete(`http://localhost:3001/forum/${id}`, {
+          data: { _id: id },
+        })
+        .then((resp) => {
+          props.sendQuestionsGetRequest();
+        });
+    } catch (error) {
+      console.log(error);
+    }
+    window.location.replace("/userprofile");
+  };
   return (
     <Container>
       <Col sm={12} md={12} lg={8} className="question-container">
@@ -66,7 +81,9 @@ const MyQuestion = () => {
             <Button className="register-btn">Update</Button>
           </Link>
 
-          <Button className="register-btn">Delete</Button>
+          <Button className="register-btn" onClick={deleteQuestion}>
+            Delete
+          </Button>
         </div>
       </Col>
     </Container>
