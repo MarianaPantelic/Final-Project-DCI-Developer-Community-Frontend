@@ -69,9 +69,9 @@ const About = () => {
         <div className="col-lg-6 col-md-6 col-sm-12 aboutCol about-Text">
           <h2 className="mt-4 mb-3">What we offer?</h2>
           <p className="mt-5 mb-5">
-            We are comming with a structured platform where all the students
+            We are coming with a structured platform where all the students
             which are registered can have access to value information about
-            webdevelopment as follows:
+            web development as follows:
           </p>
           <li>
             in Forum page ,they can ask questions and receive answers about
