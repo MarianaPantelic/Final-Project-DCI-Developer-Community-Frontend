@@ -107,10 +107,36 @@ const UserProfile = (props) => {
     console.log(fileImage);
   };
 
-  var today = new Date();
+  /* var today = new Date();
   var date =
     today.getDate() + "." + (today.getMonth() + 1) + "." + today.getFullYear();
+  console.log(date); */
 
+  function formatDateAsDD_MM_YYYY(date) {
+    const regex = /\d{2}\.\d{2}\.\d{4}/;
+    if (regex.test(date)) {
+      // console.log("Leave date as it is");
+      return date;
+    }
+    // console.log("Calculating date");
+    date = new Date(date);
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    if (day < 10) {
+      day = "0" + day;
+    }
+    if (month < 10) {
+      month = "0" + month;
+    }
+    return day + "." + month + "." + year;
+  }
+  const today = new Date();
+  const formatted = formatDateAsDD_MM_YYYY(today);
+  console.log("today:", today, ":", formatted);
+  const moonLanding = "1969-07-20";
+  const moonFormat = formatDateAsDD_MM_YYYY(moonLanding);
+  console.log("moonLanding:", moonLanding, ":", moonFormat);
   const getAgenda = async () => {
     try {
       const response = await axios.get("http://localhost:3001/agenda");
@@ -125,7 +151,9 @@ const UserProfile = (props) => {
 
   const getDailyAgenda = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/agenda/${date}`);
+      const response = await axios.get(
+        `http://localhost:3001/agenda/${formatDateAsDD_MM_YYYY(value)}`
+      );
       console.log(response);
       setDailyAgenda(response.data[0]);
       console.log(response.data);
@@ -137,7 +165,9 @@ const UserProfile = (props) => {
 
   const getAgendaByDate = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/agenda/${value}`);
+      const response = await axios.get(
+        `http://localhost:3001/agenda/${formatDateAsDD_MM_YYYY(value)}`
+      );
       console.log(response);
       setAgendaByDate(response.data[0]);
       console.log(response.data);
@@ -205,7 +235,7 @@ const UserProfile = (props) => {
                     computableFormat={"DD.MM.YYYY"}
                   />
                 </div>
-                {dailyAgenda ? (
+                {/* {dailyAgenda ? (
                   <div>
                     {dailyAgenda &&
                     dailyAgenda.topics &&
@@ -298,7 +328,7 @@ const UserProfile = (props) => {
                   <h2 className="text-center mt-5">
                     There is no info for today!
                   </h2>
-                )}
+                )}*/}
               </div>
 
               {console.log(value)}
