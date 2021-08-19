@@ -148,7 +148,7 @@ const App = () => {
             <MyQuestion />
           </Route>
           <Route path="/updateMyQuestion/:id">
-            <UpdateMyQuestion />
+          {questions && <UpdateMyQuestion edit={questions} sendQuestionsGetRequest={sendQuestionsGetRequest} />}
           </Route>
           <Route path="/myBlog/:id">
             <MyBlog />
