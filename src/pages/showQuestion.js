@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import ReactQuill from "react-quill";
 import { useParams } from "react-router-dom";
 
 const ShowQuestion = (props) => {
-
   const { id } = useParams();
+
+  const [answer, setAnswer] = useState();
+
+  const inputContentRef = useRef();
+
   const foundQuestion = props.showQuestionDetails.find(
     (question) => id == question._id
   );
-  console.log("question"+foundQuestion);
+  console.log("question" + foundQuestion);
+
+  const handleBody = (e) => {
+    console.log(e);
+    inputContentRef.current.value = e;
+  };
 
   return (
     <>
@@ -41,5 +51,45 @@ const ShowQuestion = (props) => {
     </>
   );
 };
+
+ShowQuestion.modules = {
+  toolbar: [
+    [{ header: "1" }, { header: "2" }, { font: [] }],
+    [{ size: [] }],
+    ["bold", "italic", "underline", "strike", "blockquote"],
+    [
+      { list: "ordered" },
+      { list: "bullet" },
+      { indent: "-1" },
+      { indent: "+1" },
+    ],
+    ["link", "image", "video"],
+    ["clean"],
+  ],
+};
+/*
+ * Quill editor formats
+ * See https://quilljs.com/docs/formats/
+ */
+ShowQuestion.formats = [
+  "header",
+  "font",
+  "size",
+  "bold",
+  "italic",
+  "underline",
+  "strike",
+  "blockquote",
+  "list",
+  "bullet",
+  "indent",
+  "link",
+  "image",
+  "video",
+];
+
+/*
+ * PropType validation
+ */
 
 export default ShowQuestion;
