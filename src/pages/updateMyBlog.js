@@ -12,9 +12,7 @@ const UpdateMyBlogs = (props) => {
   const [content, setContent] = useState("");
 
   useEffect(() => {
-    const foundBlogToEdit = props.edit.find(
-      (blog) => blog._id === id
-    );
+    const foundBlogToEdit = props.edit.find((blog) => blog._id === id);
 
     if (foundBlogToEdit && id) {
       console.log(foundBlogToEdit);
@@ -30,7 +28,7 @@ const UpdateMyBlogs = (props) => {
     var data = { title, content };
 
     try {
-      axios.put(`http://localhost:3001/forum/${id}`, data).then((response) => {
+      axios.put(`http://localhost:3001/blogs/${id}`, data).then((response) => {
         props.sendGetRequest();
       });
     } catch (error) {
