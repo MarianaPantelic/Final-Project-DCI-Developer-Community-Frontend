@@ -148,13 +148,23 @@ const App = () => {
             <MyQuestion />
           </Route>
           <Route path="/updateMyQuestion/:id">
-          {questions && <UpdateMyQuestion edit={questions} sendQuestionsGetRequest={sendQuestionsGetRequest} />}
+            {questions && (
+              <UpdateMyQuestion
+                edit={questions}
+                sendQuestionsGetRequest={sendQuestionsGetRequest}
+              />
+            )}
           </Route>
           <Route path="/myBlog/:id">
             <MyBlog />
           </Route>
           <Route path="/updateMyBlog/:id">
-            <UpdateMyBlog />
+            {posts && (
+              <UpdateMyBlog
+                edit={questions}
+                sendGetRequest={sendGetRequest}
+              />
+            )}
           </Route>
           <Route path="/post">
             <Post />

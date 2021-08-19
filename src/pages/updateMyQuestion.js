@@ -6,43 +6,40 @@ import { useParams } from "react-router-dom";
 const axios = require("axios").default;
 
 const UpdateMyQuestion = (props) => {
-
   const { id } = useParams();
 
   const [title, setTitle] = useState();
   const [topic, setTopic] = useState();
-  const [content, setContent] = useState();
-
-
-  const inputContentRef = useRef();
+  const [content, setContent] = useState("");
 
   useEffect(() => {
-    const foundQuestionToEdit = props.edit.find((question) => question._id === id);
+    const foundQuestionToEdit = props.edit.find(
+      (question) => question._id === id
+    );
 
-    if(foundQuestionToEdit && id) {
+    if (foundQuestionToEdit && id) {
       console.log(foundQuestionToEdit);
-      setTopic(foundQuestionToEdit.topic)
+      setTopic(foundQuestionToEdit.topic);
       setTitle(foundQuestionToEdit.title);
       setContent(foundQuestionToEdit.content);
     }
-  }, [id, props.edit])
+  }, [id, props.edit]);
 
-  const handleBody = (data) => {
-    setContent(data)};
-
-  const updateQuestion = async (topic,title, content) => {
+  const handleBody = (value) => {
+    setContent(value);
+  };
+  const updateQuestion = async (topic, title, content) => {
     var data = { topic, title, content };
 
-    try{
-      axios.put(`http://localhost:3001/forum/${id}` , data)
-      .then((response) => {
+    try {
+      axios.put(`http://localhost:3001/forum/${id}`, data).then((response) => {
         props.sendQuestionsGetRequest();
-        window.location.replace("/profile");
+        window.location.replace("/");
       });
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   return (
     <section className="writeBlogSection">
@@ -88,15 +85,18 @@ const UpdateMyQuestion = (props) => {
               formats={UpdateMyQuestion.formats}
               onChange={handleBody}
               id="inputContent"
-            />
+            />{" "}
           </div>
-          <button
-          onClick = {() => {
-            updateQuestion(topic, title, content);
-          }}
-           className="btn mt-5 postButton">
-            <h3>Save</h3>
-          </button>
+          <Link to="/profile">
+            <button
+              onClick={() => {
+                updateQuestion(topic, title, content);
+              }}
+              className="btn mt-5 postButton"
+            >
+              <h3>Save</h3>
+            </button>
+          </Link>
         </form>
       </div>
     </section>
