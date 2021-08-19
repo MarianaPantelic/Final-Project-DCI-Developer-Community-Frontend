@@ -2,23 +2,47 @@ import React, { useRef, useState } from "react";
 import ReactQuill from "react-quill";
 import { useParams } from "react-router-dom";
 
+const axios = require("axios").default;
+
+
 const ShowQuestion = (props) => {
+  console.log(props)
 
   const { id } = useParams();
 
-  const [answer,setAnswer] = useState();
+  const [answer, setAnswer] = useState("");
 
   const inputContentRef = useRef();
 
   const foundQuestion = props.showQuestionDetails.find(
     (question) => id == question._id
   );
-  console.log("question" + foundQuestion);
+  console.log(foundQuestion);
 
   const handleBody = (e) => {
     console.log(e);
     inputContentRef.current.value = e;
+    setAnswer(e)
   };
+
+  const addAnswers = async (answer) => {
+
+    let tempArray = [...foundQuestion.answer, answer];
+
+    var data = { answer };
+    try {
+      axios
+        .put(`http://localhost:3001/forum/${id}`, { answer: tempArray })
+        .then((response) => {
+          props.sendQuestionsGetRequest();
+        });
+    } catch (error) {
+      console.log(error);
+    }
+    console.log(data);
+  };
+
+  console.log(answer)
 
 
   return (
@@ -55,14 +79,32 @@ const ShowQuestion = (props) => {
             modules={ShowQuestion.modules}
             formats={ShowQuestion.formats}
             onChange={handleBody}
-            id="inputContent"
             ref={inputContentRef}
           />
         </div>
       </form>
-      <button type="button" className="btn btn-warning p-3 submit-button">
+      <button
+        onClick={() => addAnswers(answer)}
+        type="button"
+        className="btn btn-warning p-3 submit-button"
+      >
         Submit
       </button>{" "}
+      {foundQuestion
+        ? foundQuestion.answer.map((ans) => (
+            <div class="card showQuestionDetails-cards p-3">
+              <div class="card-header showQuestionDetails-header">Featured</div>
+              <div class="card-body">
+                <p
+                  className="card-text showAnswerDetails"
+                  dangerouslySetInnerHTML={{
+                    __html: ans,
+                  }}
+                ></p>
+              </div>
+            </div>
+          ))
+        : ""}
     </div>
   );
 };
