@@ -14,13 +14,13 @@ const Forum = (props) => {
       <div className="text-center pt-5 pb-3">
         {localStorage.getItem("token") ? (
           <Link to="/addQuestions">
-            <button type="button" className="ask_replyQuestion-btn">
+            <button type="button" className="askQuestion-btn">
               Ask Question
             </button>
           </Link>
         ) : (
           <Link to="/login">
-            <button type="button" className="ask_replyQuestion-btn">
+            <button type="button" className="askQuestion-btn">
               Ask Question
             </button>
           </Link>
@@ -28,26 +28,26 @@ const Forum = (props) => {
       </div>
       <div className="container question-cards-container">
         {props.show.map((question, index) => (
-            <div key={index} class="card mt-5 question-cards">
-              <div className="card-header pl-5 question-user">
-                {question.user ? question.user.firstName : ""}
-              </div>
-              <div className="card-body">
-                <blockquote class="blockquote mb-0 question-title">
-                  <Link
-                    to={`/showQuestion/${question._id}`}
-                    className="question-link"
-                  >
-                    <p className="p-4">{question.title}</p>
-                  </Link>
-                  <footer className="p-4">
-                    <div className="question-topic">
-                      <p className="text-center">{question.topic}</p>
-                    </div>
-                  </footer>
-                </blockquote>
-              </div>
+          <div key={index} class="card mt-5 question-cards">
+            <div className="card-header pl-5 question-user">
+              {question.user ? question.user.firstName : ""}
             </div>
+            <div className="card-body">
+              <blockquote class="blockquote mb-0 question-title">
+                <Link
+                  to={`/showQuestion/${question._id}`}
+                  className="question-link"
+                >
+                  <p className="p-4">{question.title}</p>
+                </Link>
+                <footer className="p-4">
+                  <div className="question-topic">
+                    <p className="text-center">{question.topic}</p>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
         ))}
       </div>
       {/* <div className="blog-container d-flex flex-wrap justify-content-center ">
