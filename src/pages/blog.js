@@ -12,6 +12,7 @@ const Blog = (props) => {
     const userLocal = JSON.parse(localStorage.getItem("user"));
     tempArray.push(userLocal._id);
 
+
     try {
       axios
         .put(`http://localhost:3001/blogs/${id}`, {

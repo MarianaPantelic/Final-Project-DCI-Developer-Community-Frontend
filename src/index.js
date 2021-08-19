@@ -16,9 +16,19 @@ import Register from "./pages/register";
 import Resources from "./pages/resources";
 import UserProfile from "./pages/userprofile";
 import News from "./pages/news";
+<<<<<<< HEAD
 import AddPosts from "./components/addPosts";
 import AddQuestions from "./components/addQuestions";
 import ShowQuestion from "./components/showQuestion";
+=======
+
+
+import AddPosts from "./pages/addPosts";
+import AddQuestions from "./pages/addQuestions";
+import ShowQuestion from "./pages/showQuestion";
+import MyQuestion from "./pages/myQuestion";
+import MyBlog from "./pages/myBlog";
+>>>>>>> ae24b8c4dbe3a4760be80dc4a7f841218f63ef76
 
 import "./css/main.css";
 import "./css/about.css";
@@ -32,6 +42,13 @@ import "./css/post.css";
 import "./css/register.css";
 import "./css/resources.css";
 import "./css/userprofile.css";
+<<<<<<< HEAD
+=======
+import "./css/myQuestion.css";
+import UpdateMyBlog from "./pages/updateMyBlog";
+import UpdateMyQuestion from "./pages/updateMyQuestion";
+
+>>>>>>> ae24b8c4dbe3a4760be80dc4a7f841218f63ef76
 const axios = require("axios").default;
 const App = () => {
   const [posts, setPosts] = useState([]);
@@ -85,7 +102,7 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <Home />
-          </Route>  
+          </Route>
           <Route path="/about">
             <About />
           </Route>
@@ -96,7 +113,10 @@ const App = () => {
             />
           </Route>
           <Route path="/showQuestion/:id">
-            <ShowQuestion showQuestionDetails={questions} />
+            <ShowQuestion
+              showQuestionDetails={questions}
+              sendQuestionsGetRequest={sendQuestionsGetRequest}
+            />
           </Route>
           <Route path="/addQuestions">
             <AddQuestions sendQuestionsGetRequest={sendQuestionsGetRequest} />
@@ -124,6 +144,18 @@ const App = () => {
               users={users}
               sendUserGetRequest={sendUserGetRequest}
             />
+          </Route>
+          <Route path="/myQuestion/:id">
+            <MyQuestion />
+          </Route>
+          <Route path="/updateMyQuestion/:id">
+            <UpdateMyQuestion />
+          </Route>
+          <Route path="/myBlog/:id">
+            <MyBlog />
+          </Route>
+          <Route path="/updateMyBlog/:id">
+            <UpdateMyBlog />
           </Route>
           <Route path="/post">
             <Post />
