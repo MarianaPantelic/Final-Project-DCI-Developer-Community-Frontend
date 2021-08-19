@@ -19,9 +19,10 @@ import Resources from "./pages/resources";
 import UserProfile from "./pages/userprofile";
 import News from "./pages/news";
 
-import AddPosts from "./components/addPosts";
-import AddQuestions from "./components/addQuestions";
-import ShowQuestion from "./components/showQuestion";
+
+import AddPosts from "./pages/addPosts";
+import AddQuestions from "./pages/addQuestions";
+import ShowQuestion from "./pages/showQuestion";
 import MyQuestion from "./pages/myQuestion";
 import MyBlog from "./pages/myBlog";
 

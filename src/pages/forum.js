@@ -14,13 +14,13 @@ const Forum = (props) => {
       <div className="text-center pt-5 pb-3">
         {localStorage.getItem("token") ? (
           <Link to="/addQuestions">
-            <button type="button" className="askQuestion-btn">
+            <button type="button" className="ask_replyQuestion-btn">
               Ask Question
             </button>
           </Link>
         ) : (
           <Link to="/login">
-            <button type="button" className="askQuestion-btn">
+            <button type="button" className="ask_replyQuestion-btn">
               Ask Question
             </button>
           </Link>
