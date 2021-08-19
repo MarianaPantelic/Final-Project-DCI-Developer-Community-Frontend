@@ -48,8 +48,10 @@ const ShowQuestion = (props) => {
         <>
           <div className="card showQuestionDetails-cards p-3">
             <div className="card-header showQuestionDetails-header pt-2 pb-2">
-              {" "}
-              {foundQuestion.user ? foundQuestion.user.firstName : ""}
+              <span>
+                {foundQuestion.user ? foundQuestion.user.firstName : ""}
+              </span>
+              <span className="float-right topic">{foundQuestion.topic}</span>
             </div>
             <div className="card-body">
               <h5 className="card-title showQuestionDetails-title">
@@ -90,7 +92,7 @@ const ShowQuestion = (props) => {
       {foundQuestion
         ? foundQuestion.answer.map((ans) => (
             <div class="card showQuestionDetails-cards p-3">
-              <div class="card-header showQuestionDetails-header">Featured</div>
+              <div class="card-header showQuestionDetails-header">Answer</div>
               <div class="card-body">
                 <p
                   className="card-text showAnswerDetails"
