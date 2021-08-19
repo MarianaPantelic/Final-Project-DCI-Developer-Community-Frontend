@@ -4,9 +4,8 @@ import { useParams } from "react-router-dom";
 
 const axios = require("axios").default;
 
-
 const ShowQuestion = (props) => {
-  console.log(props)
+  console.log(props);
 
   const { id } = useParams();
 
@@ -22,11 +21,10 @@ const ShowQuestion = (props) => {
   const handleBody = (e) => {
     console.log(e);
     inputContentRef.current.value = e;
-    setAnswer(e)
+    setAnswer(e);
   };
 
   const addAnswers = async (answer) => {
-
     let tempArray = [...foundQuestion.answer, answer];
 
     var data = { answer };
@@ -42,8 +40,7 @@ const ShowQuestion = (props) => {
     console.log(data);
   };
 
-  console.log(answer)
-
+  console.log(answer);
 
   return (
     <div className="container showQuestionDetails-container">
@@ -148,6 +145,5 @@ ShowQuestion.formats = [
 /*
  * PropType validation
  */
-
 
 export default ShowQuestion;
