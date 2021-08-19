@@ -19,9 +19,12 @@ import Resources from "./pages/resources";
 import UserProfile from "./pages/userprofile";
 import News from "./pages/news";
 
+
 import AddPosts from "./pages/addPosts";
 import AddQuestions from "./pages/addQuestions";
 import ShowQuestion from "./pages/showQuestion";
+import MyQuestion from "./pages/myQuestion";
+import MyBlog from "./pages/myBlog";
 
 import "./css/main.css";
 import "./css/about.css";
@@ -35,6 +38,9 @@ import "./css/post.css";
 import "./css/register.css";
 import "./css/resources.css";
 import "./css/userprofile.css";
+import "./css/myQuestion.css";
+import UpdateMyBlog from "./pages/updateMyBlog";
+import UpdateMyQuestion from "./pages/updateMyQuestion";
 
 const axios = require("axios").default;
 
@@ -95,7 +101,7 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <Home />
-          </Route>  
+          </Route>
           <Route path="/about">
             <About />
           </Route>
@@ -106,7 +112,10 @@ const App = () => {
             />
           </Route>
           <Route path="/showQuestion/:id">
-            <ShowQuestion showQuestionDetails={questions} />
+            <ShowQuestion
+              showQuestionDetails={questions}
+              sendQuestionsGetRequest={sendQuestionsGetRequest}
+            />
           </Route>
           <Route path="/addQuestions">
             <AddQuestions sendQuestionsGetRequest={sendQuestionsGetRequest} />
@@ -134,6 +143,18 @@ const App = () => {
               users={users}
               sendUserGetRequest={sendUserGetRequest}
             />
+          </Route>
+          <Route path="/myQuestion/:id">
+            <MyQuestion />
+          </Route>
+          <Route path="/updateMyQuestion/:id">
+            <UpdateMyQuestion />
+          </Route>
+          <Route path="/myBlog/:id">
+            <MyBlog />
+          </Route>
+          <Route path="/updateMyBlog/:id">
+            <UpdateMyBlog />
           </Route>
           <Route path="/post">
             <Post />

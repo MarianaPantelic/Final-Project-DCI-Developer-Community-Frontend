@@ -11,6 +11,8 @@ const Blog = (props) => {
     let tempArray = [...foundPost.whoClicked];
     const userLocal = JSON.parse(localStorage.getItem("user"));
     tempArray.push(userLocal._id);
+
+
     try {
       axios
         .put(`http://localhost:3001/blogs/${id}`, {
@@ -52,7 +54,7 @@ const Blog = (props) => {
             ) : (
               <Container>
                 <Row className="mt-5">
-                  {props.show.reverse().map((post, index) => (
+                  {props.show.map((post, index) => (
                     <Col lg={6} md={6} sm={12}>
                       <Card className="blogCards">
                         <Card.Body>
