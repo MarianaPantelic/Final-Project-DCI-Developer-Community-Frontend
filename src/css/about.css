@@ -21,40 +21,66 @@
 }
 .pictures {
   margin: 3rem 6rem 0rem 6rem;
-  padding:5rem 5rem;
-  width:40px;
-  height:60px;
-  background-color:white;  
+  padding:5rem 4rem 2rem 4rem;
+  width:12rem;
+  height:18rem;
+  background-color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align: center;
 }
 .text-center {
   text-align: center;
-  display:block !important;
+  margin: 0;
+  padding-top: 0rem;
+  margin-top:5rem;
+  margin-bottom: 3rem;
+}
+.vertical-alignment {
+ position: relative;
+ height:22rem;
 }
 #florin {
 background: url(../images/florin.png) no-repeat;
 background-size: 100%;
-border-radius: 50%;
+border-radius: 50%;;
+height: auto;
+width: auto;
 }
 #heriberto {
 background: url(../images/Heriberto.png) no-repeat;
-background-size: 50%;
-padding: 10rem 4rem 5rem 8rem;
-background-color: white;
-}
-#mariana {
-/* background: url(../images/florin.png) no-repeat; */
 background-size: 100%;
 border-radius: 50%;
+height: auto;
+width: auto;
+
+}
+#mariana {
+background: url(../images/Heriberto.png) no-repeat;
+background-size: 100%;
+border-radius: 50%;
+height: auto;
+width: auto;
 }
 #sara {
 /* background: url(../images/florin.png) no-repeat; */
 background-size: 100%;
-border-radius: 50%;
+border-radius: 5%;
+height: 20rem;
+width: auto;
 }
 #kinjal {
 /* background: url(../images/florin.png) no-repeat; */
-background-size: 80%;
-border-radius: 50%;
+background-size: 100%;
+border-radius: 5%;
+height: auto;
+width: auto;
 }
-
+.kinjal-pic {
+  width: 1rem;
+  height: 1rem;
+  margin-top: 1rem;
+  background: url(../images/florin.png) no-repeat;
+}
 

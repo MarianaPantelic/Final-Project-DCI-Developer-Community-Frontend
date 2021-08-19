@@ -20,15 +20,51 @@ const About = () => {
         </div>
         <div className="col-lg-6 col-md-6 col-sm-12 about1strowImg">
           <div className="row d-flex justify-content-between pt-3">
-            <div className="col-lg-4 col-md-12 pictures" id="kinjal"></div>
-            <div className="col-lg-4 col-md-12 pictures" id="sara"></div>
+            <div className="col-lg-4 col-md-12 pictures">
+              <div className="vertical-alignment">
+                <div id="heriberto" className=" pictures"></div>
+                <div className="text-center">
+                  <h5>Heriberto</h5>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-12 pictures">
+              <div className="vertical-alignment">
+                <div id="heriberto" className=" pictures"></div>
+                <div className="text-center">
+                  <h5>Heriberto</h5>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="row d-flex justify-content-center mt-2 pt-2">
-            <div className="col-lg-4 col-md-12 pictures" id="mariana"></div>
+          <div className="row d-flex justify-content-center pt-2 pb-5">
+            <div className="col-lg-4 col-md-12 pictures">
+              <div className="vertical-alignment">
+                <div id="mariana" className=" pictures"></div>
+                <div className="text-center">
+                  <h5>Mariana</h5>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="row d-flex justify-content-between pt-2 pb-5">
-            <div className="col-lg-4 col-md-12 pictures "id="heriberto"></div>
-            <div className="col-lg-4 col-md-12 pictures" id="florin"></div>
+            <div className="col-lg-4 col-md-12 pictures">
+              <div className="vertical-alignment">
+                <div id="heriberto" className=" pictures"></div>
+                <div className="text-center">
+                  <h5>Heriberto</h5>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-12 pictures">
+              <div className="vertical-alignment">
+                <div id="florin" className=" pictures"></div>
+                <div className="text-center">
+                  <h5>Florin</h5>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
