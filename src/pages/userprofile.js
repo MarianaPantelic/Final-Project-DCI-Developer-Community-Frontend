@@ -91,7 +91,7 @@ const UserProfile = (props) => {
           },
         })
         .then((resp) => props.sendUserGetRequest());
-
+      window.location.reload();
       console.log(user.image);
     } catch (error) {
       console.log(error);
@@ -157,6 +157,7 @@ const UserProfile = (props) => {
                 {user.image ? (
                   <div>
                     <img src={user.image} alt="User Profile"></img>
+                    {/* <Button>Change Photo</Button> */}
                   </div>
                 ) : (
                   <div>
@@ -318,29 +319,43 @@ const UserProfile = (props) => {
             <div className="myQuestions-container">
               <h2 className="text-center mt-5">My Questions</h2>
 
-              <ul>
+              <div className="mt-5 links">
                 {userQuestions.length !== 0 ? (
-                  userQuestions.map((question) => <li>{question.title}</li>)
+                  userQuestions.map((question, idx) => (
+                    <div>
+                      <span>{idx + 1 + "." + " "}</span>
+                      <Link to={`/myQuestion/${question._id}`}>
+                        <span>{question.title}</span>
+                      </Link>
+                    </div>
+                  ))
                 ) : (
                   <h3 className="text-center mt-5">
                     You didn't ask any questions yet!
                   </h3>
                 )}
-              </ul>
+              </div>
             </div>
           </Col>
           <Col sm={12} md={12} lg={6}>
             <div className="myBlogs-container">
               <h2 className="text-center mt-5">My Blogs</h2>
-              <ul>
+              <div className="mt-5 links">
                 {userBlogs.length !== 0 ? (
-                  userBlogs.map((blog) => <li>{blog.title}</li>)
+                  userBlogs.map((blog, idx) => (
+                    <div>
+                      <span>{idx + 1 + "." + " "}</span>
+                      <Link to={`/myBlog/${blog._id}`}>
+                        <span>{blog.title}</span>
+                      </Link>
+                    </div>
+                  ))
                 ) : (
                   <h3 className="text-center mt-5">
-                    You didn't ask any blogs yet!
+                    You don't have any blogs yet!
                   </h3>
                 )}
-              </ul>
+              </div>
             </div>
           </Col>
         </Row>
