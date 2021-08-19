@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row, Image } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 const About = () => {
   return (
@@ -20,58 +20,38 @@ const About = () => {
         </div>
         <div className="col-lg-6 col-md-6 col-sm-12 about1strowImg">
           <div className="row d-flex justify-content-between pt-3">
-            <div className="col-lg-4 col-md-12 pictures">
-              <img src="dci_logo.png" />
-            </div>
-            <div className="col-lg-4 col-md-12 pictures">
-              <img src="./images/florin.jpg" />
-            </div>
+            <div className="col-lg-4 col-md-12 pictures" id="kinjal"></div>
+            <div className="col-lg-4 col-md-12 pictures" id="sara"></div>
           </div>
           <div className="row d-flex justify-content-center mt-2 pt-2">
-            <div className="col-lg-4 col-md-12 pictures">
-              <img src="./images/florin.jpg" />
-            </div>
+            <div className="col-lg-4 col-md-12 pictures" id="mariana"></div>
           </div>
           <div className="row d-flex justify-content-between pt-2 pb-5">
-            <div className="col-lg-4 col-md-12 pictures">
-              <img src="./images/florin.jpg" />
-            </div>
-            <div className="col-lg-4 col-md-12 pictures">
-              <img src="./images/florin.jpg" />
-            </div>
+            <div className="col-lg-4 col-md-12 pictures "id="heriberto"></div>
+            <div className="col-lg-4 col-md-12 pictures" id="florin"></div>
           </div>
         </div>
       </div>
       <div className="row mt-5 about1strow mt-3">
         <div className="col-lg-6 col-md-6 col-sm-12 about1strowImg">
           <div className="row d-flex justify-content-between pt-3">
-            <div className="col-lg-4 col-md-12 pictures">
-              <img src="dci_logo.png" />
-            </div>
-            <div className="col-lg-4 col-md-12 pictures">
-              <img src="./images/florin.jpg" />
-            </div>
+            <div className="col-lg-4 col-md-12 "></div>
+            <div className="col-lg-4 col-md-12 "></div>
           </div>
           <div className="row d-flex justify-content-center mt-2 pt-2">
-            <div className="col-lg-4 col-md-12 pictures">
-              <img src="./images/florin.jpg" />
-            </div>
+            <div className="col-lg-4 col-md-12 "></div>
           </div>
           <div className="row d-flex justify-content-between pt-2 pb-5">
-            <div className="col-lg-4 col-md-12 pictures">
-              <img src="./images/florin.jpg" />
-            </div>
-            <div className="col-lg-4 col-md-12 pictures">
-              <img src="./images/florin.jpg" />
-            </div>
+            <div className="col-lg-4 col-md-12 "></div>
+            <div className="col-lg-4 col-md-12 "></div>
           </div>
         </div>
         <div className="col-lg-6 col-md-6 col-sm-12 aboutCol about-Text">
           <h2 className="mt-4 mb-3">What we offer?</h2>
           <p className="mt-5 mb-5">
             We are coming with a structured platform where all the students
-            which are registered can have access to value information about
-            web development as follows:
+            which are registered can have access to value information about web
+            development as follows:
           </p>
           <li>
             in Forum page ,they can ask questions and receive answers about

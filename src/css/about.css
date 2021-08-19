@@ -8,6 +8,7 @@
 }
 .about1strow {
   background-color: #ffffff;
+  
 }
 .about1strowImg {
   background-color: #1a39ca;
@@ -19,10 +20,41 @@
   padding-right: 2rem;
 }
 .pictures {
-  margin: 3rem 4rem 0rem 4rem;
+  margin: 3rem 6rem 0rem 6rem;
   padding:5rem 5rem;
-  width:50px;
-  height:50px;
-  background-color:white;
+  width:40px;
+  height:60px;
+  background-color:white;  
 }
+.text-center {
+  text-align: center;
+  display:block !important;
+}
+#florin {
+background: url(../images/florin.png) no-repeat;
+background-size: 100%;
+border-radius: 50%;
+}
+#heriberto {
+background: url(../images/Heriberto.png) no-repeat;
+background-size: 50%;
+padding: 10rem 4rem 5rem 8rem;
+background-color: white;
+}
+#mariana {
+/* background: url(../images/florin.png) no-repeat; */
+background-size: 100%;
+border-radius: 50%;
+}
+#sara {
+/* background: url(../images/florin.png) no-repeat; */
+background-size: 100%;
+border-radius: 50%;
+}
+#kinjal {
+/* background: url(../images/florin.png) no-repeat; */
+background-size: 80%;
+border-radius: 50%;
+}
+
 
