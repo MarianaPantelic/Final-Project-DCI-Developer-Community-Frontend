@@ -19,7 +19,6 @@ import Resources from "./pages/resources";
 import UserProfile from "./pages/userprofile";
 import News from "./pages/news";
 
-
 import AddPosts from "./pages/addPosts";
 import AddQuestions from "./pages/addQuestions";
 import ShowQuestion from "./pages/showQuestion";
@@ -39,6 +38,8 @@ import "./css/register.css";
 import "./css/resources.css";
 import "./css/userprofile.css";
 import "./css/myQuestion.css";
+import "./css/calendar.css";
+
 import UpdateMyBlog from "./pages/updateMyBlog";
 import UpdateMyQuestion from "./pages/updateMyQuestion";
 
