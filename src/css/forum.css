@@ -74,14 +74,9 @@
   margin-bottom: 10rem;
 }
 
-<<<<<<< HEAD
-.showQuestionDetails-cards{
-  margin-bottom: 5rem;
-=======
 .showQuestionDetails-cards {
   margin-bottom: 5rem;
 
->>>>>>> d4df10e3554745113d44783211b475550fb3b600
   border-radius: 10px 10px;
   box-shadow: rgba(100, 97, 97, 0.56) 0px 2px 20px 4px;
 }
@@ -116,18 +111,6 @@
   border-radius: 10px;
   margin-top: 3rem;
   background-color: #f66e1a;
-<<<<<<< HEAD
-  color: #fff;
-  margin-bottom: 3rem;
-}
-
-.showAnswerDetails{
-  font-size: 1.6rem;
-  height: 20rem;
-  overflow-y: scroll;
-
-=======
->>>>>>> d4df10e3554745113d44783211b475550fb3b600
 }
 
 @media (min-width: 1400px) {
