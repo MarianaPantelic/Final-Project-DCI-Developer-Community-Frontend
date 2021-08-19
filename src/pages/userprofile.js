@@ -429,43 +429,77 @@ const UserProfile = (props) => {
           </Col>
 
           <Col sm={12} md={12} lg={4}>
-            <div className="myQuestions-container">
-              <h2 className="text-center mt-5">My Questions</h2>
+            <div className="myQuestions-container d-flex flex-column justify-content-between">
+              <div>
+                <h2 className="text-center mt-5">My Questions</h2>
 
-              <div className="mt-5 links">
-                {userQuestions.length !== 0 ? (
-                  userQuestions.map((question, idx) => (
-                    <div>
-                      <span>{idx + 1 + "." + " "}</span>
-                      <Link to={`/myQuestion/${question._id}`}>
-                        <span>{question.title}</span>
-                      </Link>
-                    </div>
-                  ))
+                <div className="mt-5 links">
+                  {userQuestions.length !== 0 ? (
+                    userQuestions.map((question, idx) => (
+                      <div>
+                        <span>{idx + 1 + "." + " "}</span>
+                        <Link to={`/myQuestion/${question._id}`}>
+                          <span>{question.title}</span>
+                        </Link>
+                      </div>
+                    ))
+                  ) : (
+                    <h3 className="text-center mt-5">
+                      You didn't ask any questions yet!
+                    </h3>
+                  )}
+                </div>
+              </div>
+              <div className="d-flex justify-content-end mx-auto">
+                {localStorage.getItem("token") ? (
+                  <Link to="/addQuestions">
+                    <button type="button" className="askQuestion-btn mb-3">
+                      Ask Question
+                    </button>
+                  </Link>
                 ) : (
-                  <h3 className="text-center mt-5">
-                    You didn't ask any questions yet!
-                  </h3>
+                  <Link to="/login">
+                    <button type="button" className="askQuestion-btn mb-3">
+                      Ask Question
+                    </button>
+                  </Link>
                 )}
               </div>
             </div>
 
-            <div className="myBlogs-container">
-              <h2 className="text-center mt-5">My Blogs</h2>
-              <div className="mt-5 links">
-                {userBlogs.length !== 0 ? (
-                  userBlogs.map((blog, idx) => (
-                    <div>
-                      <span>{idx + 1 + "." + " "}</span>
-                      <Link to={`/myBlog/${blog._id}`}>
-                        <span>{blog.title}</span>
-                      </Link>
-                    </div>
-                  ))
+            <div className="myBlogs-container d-flex flex-column justify-content-between">
+              <div>
+                <h2 className="text-center mt-5">My Blogs</h2>
+                <div className="mt-5 links">
+                  {userBlogs.length !== 0 ? (
+                    userBlogs.map((blog, idx) => (
+                      <div>
+                        <span>{idx + 1 + "." + " "}</span>
+                        <Link to={`/myBlog/${blog._id}`}>
+                          <span>{blog.title}</span>
+                        </Link>
+                      </div>
+                    ))
+                  ) : (
+                    <h3 className="text-center mt-5">
+                      You don't have any blogs yet!
+                    </h3>
+                  )}
+                </div>
+              </div>
+              <div className="d-flex justify-content-end mx-auto">
+                {localStorage.getItem("token") ? (
+                  <Link to="/addPosts">
+                    <button type="button" className="askQuestion-btn mb-3">
+                      Add Blog
+                    </button>
+                  </Link>
                 ) : (
-                  <h3 className="text-center mt-5">
-                    You don't have any blogs yet!
-                  </h3>
+                  <Link to="/login">
+                    <button type="button" className="askQuestion-btn mb-3">
+                      Add Blog
+                    </button>
+                  </Link>
                 )}
               </div>
             </div>
