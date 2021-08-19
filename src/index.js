@@ -157,7 +157,7 @@ const App = () => {
             )}
           </Route>
           <Route path="/myBlog/:id">
-            <MyBlog />
+            <MyBlog show={posts} sendGetRequest={sendGetRequest} />
           </Route>
           <Route path="/updateMyBlog/:id">
             {posts && (
