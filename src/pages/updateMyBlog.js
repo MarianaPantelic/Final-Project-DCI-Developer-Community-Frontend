@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import ReactQuill from "react-quill";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 const axios = require("axios").default;
@@ -9,17 +9,15 @@ const UpdateMyBlogs = (props) => {
   const { id } = useParams();
 
   const [title, setTitle] = useState();
-  const [topic, setTopic] = useState();
   const [content, setContent] = useState("");
 
   useEffect(() => {
     const foundBlogToEdit = props.edit.find(
-      (question) => question._id === id
+      (blog) => blog._id === id
     );
 
     if (foundBlogToEdit && id) {
       console.log(foundBlogToEdit);
-      setTopic(foundBlogToEdit.topic);
       setTitle(foundBlogToEdit.title);
       setContent(foundBlogToEdit.content);
     }
@@ -28,8 +26,8 @@ const UpdateMyBlogs = (props) => {
   const handleBody = (value) => {
     setContent(value);
   };
-  const updateBlog = async (topic, title, content) => {
-    var data = { topic, title, content };
+  const updateBlog = async (title, content) => {
+    var data = { title, content };
 
     try {
       axios.put(`http://localhost:3001/forum/${id}`, data).then((response) => {
@@ -50,18 +48,6 @@ const UpdateMyBlogs = (props) => {
               JSON.parse(localStorage.getItem("user")).firstName}
           </h1>
 
-          <div className="form-group">
-            <label htmlFor="inputTopic">Topic</label>
-            <input
-              value={topic}
-              onChange={(e) => setTopic(e.target.value)}
-              type="text"
-              className="form-control border border-dark"
-              id="inputTopic"
-              border
-              border-dark
-            />
-          </div>
           <div className="form-group">
             <label htmlFor="inputTitle">Title</label>
             <input
