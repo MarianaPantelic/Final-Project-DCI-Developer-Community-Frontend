@@ -18,58 +18,41 @@ const About = () => {
             next students to have more structured information in the same place.
           </p>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 about1strowImg">
-          <div className="row d-flex justify-content-between pt-3">
-            <div className="col-lg-4 col-md-12 pictures">
-              <div className="vertical-alignment">
-                <div id="heriberto" className=" pictures"></div>
-                <div className="text-center">
-                  <h5>Heriberto</h5>
-                </div>
+        <div className="col-lg-6 col-md-6 col-sm-12 about1strowImg1">
+          <div className="col-lg-4 col-md-12 pictures mariana-pic-position">
+              <div id="mariana"></div>
+              <div>
+                <h5>Mariana</h5>
               </div>
-            </div>
-            <div className="col-lg-4 col-md-12 pictures">
-              <div className="vertical-alignment">
-                <div id="heriberto" className=" pictures"></div>
-                <div className="text-center">
-                  <h5>Heriberto</h5>
-                </div>
-              </div>
+          </div>
+          <div className="col-lg-4 col-md-12 pictures kinjal-pic-position">
+            <div id="kinjal" className=" pictures"></div>
+            <div>
+              <h5>Kinjal</h5>
             </div>
           </div>
-          <div className="row d-flex justify-content-center pt-2 pb-5">
-            <div className="col-lg-4 col-md-12 pictures">
-              <div className="vertical-alignment">
-                <div id="mariana" className=" pictures"></div>
-                <div className="text-center">
-                  <h5>Mariana</h5>
-                </div>
-              </div>
+          <div className="col-lg-4 col-md-12 pictures sara-pic-position">
+            <div id="sara" className=" pictures"></div>
+            <div>
+              <h5>Sara</h5>
             </div>
           </div>
-          <div className="row d-flex justify-content-between pt-2 pb-5">
-            <div className="col-lg-4 col-md-12 pictures">
-              <div className="vertical-alignment">
-                <div id="heriberto" className=" pictures"></div>
-                <div className="text-center">
-                  <h5>Heriberto</h5>
-                </div>
-              </div>
+          <div className="col-lg-4 col-md-12 pictures heriberto-pic-position">
+            <div id="heriberto" className=" pictures"></div>
+            <div>
+              <h5>Heriberto</h5>
             </div>
-
-            <div className="col-lg-4 col-md-12 pictures">
-              <div className="vertical-alignment">
-                <div id="florin" className=" pictures"></div>
-                <div className="text-center">
-                  <h5>Florin</h5>
-                </div>
-              </div>
+          </div>
+          <div className="col-lg-4 col-md-12 pictures florin-pic-position">
+            <div id="florin" className=" pictures"></div>
+            <div className="text-center">
+              <h5>Florin</h5>
             </div>
           </div>
         </div>
       </div>
       <div className="row mt-5 about1strow mt-3">
-        <div className="col-lg-6 col-md-6 col-sm-12 about1strowImg">
+        <div className="col-lg-6 col-md-6 col-sm-12 about1strowImg2">
           <div className="row d-flex justify-content-between pt-3">
             <div className="col-lg-4 col-md-12 "></div>
             <div className="col-lg-4 col-md-12 "></div>

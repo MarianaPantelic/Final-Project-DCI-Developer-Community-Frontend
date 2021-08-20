@@ -10,8 +10,15 @@
   background-color: #ffffff;
   
 }
-.about1strowImg {
+.about1strowImg1 {
   background-color: #1a39ca;
+  position: relative;
+  margin-top:3rem;
+}
+.about1strowImg2 {
+  background-color: #1a39ca;
+  position: relative;
+  margin-top:1rem;
 }
 .about-Text {
   font-size:1.5rem;
@@ -19,68 +26,76 @@
   padding-top: 5rem;
   padding-right: 2rem;
 }
+.mariana-pic-position {
+left:2;
+position:absolute;
+}
+.kinjal-pic-position {
+right:1rem; 
+position:absolute;
+}
+.sara-pic-position {
+left:20rem;
+top:5rem;
+
+position:absolute;
+}
+.heriberto-pic-position {
+left:1rem;
+bottom:2rem;
+position:absolute;
+}
+.florin-pic-position {
+right:1rem;
+bottom:2rem;
+position:absolute;
+}
 .pictures {
-  margin: 3rem 6rem 0rem 6rem;
-  padding:5rem 4rem 2rem 4rem;
-  width:12rem;
-  height:18rem;
+  width:11rem;
+  height:14rem;
   background-color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align: center;
-}
-.text-center {
-  text-align: center;
-  margin: 0;
-  padding-top: 0rem;
-  margin-top:5rem;
-  margin-bottom: 3rem;
-}
-.vertical-alignment {
- position: relative;
- height:22rem;
+   display: flex;
+ flex-direction: column;
+  align-content: center;
+  align-items: center;
+  padding: 2rem;
+  
 }
 #florin {
 background: url(../images/florin.png) no-repeat;
 background-size: 100%;
-border-radius: 50%;;
-height: auto;
-width: auto;
+border-radius: 20%;
+height: 6rem;
+width: 6rem;
 }
 #heriberto {
 background: url(../images/Heriberto.png) no-repeat;
 background-size: 100%;
-border-radius: 50%;
-height: auto;
-width: auto;
+border-radius: 20%;
+height: 6rem;
+width: 6rem;
 
 }
 #mariana {
-background: url(../images/Heriberto.png) no-repeat;
+background: url(../images/Mariana.png) no-repeat;
 background-size: 100%;
-border-radius: 50%;
-height: auto;
-width: auto;
+border-radius: 20%;
+height: 6rem;
+width: 6rem;
 }
 #sara {
-/* background: url(../images/florin.png) no-repeat; */
+background: url(../images/Mariana.png) no-repeat;
 background-size: 100%;
-border-radius: 5%;
-height: 20rem;
-width: auto;
+border-radius: 20%;
+height: 6rem;
+width: 6rem;
 }
 #kinjal {
-/* background: url(../images/florin.png) no-repeat; */
+background: url(../images/Mariana.png) no-repeat;
 background-size: 100%;
-border-radius: 5%;
-height: auto;
-width: auto;
+border-radius: 20%;
+height: 6rem;
+width: 6rem;
 }
-.kinjal-pic {
-  width: 1rem;
-  height: 1rem;
-  margin-top: 1rem;
-  background: url(../images/florin.png) no-repeat;
-}
+
 
