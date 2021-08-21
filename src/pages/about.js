@@ -19,50 +19,47 @@ const About = () => {
           </p>
         </div>
         <div className="col-lg-6 col-md-6 col-sm-12 about1strowImg1">
-          <div className="col-lg-4 col-md-12 pictures mariana-pic-position">
+          <div className="row d-flex justify-content-between pt-3">
+            <div className="col-lg-6 col-md-6 col-sm-12 pictures">
               <div id="mariana"></div>
               <div>
                 <h5>Mariana</h5>
               </div>
-          </div>
-          <div className="col-lg-4 col-md-12 pictures kinjal-pic-position">
-            <div id="kinjal" className=" pictures"></div>
-            <div>
-              <h5>Kinjal</h5>
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-12 pictures">
+              <div id="kinjal"></div>
+              <div>
+                <h5>Kinjal</h5>
+              </div>
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-12 pictures">
+              <div id="sara"></div>
+              <div>
+                <h5>Sara</h5>
+              </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-12 pictures sara-pic-position">
-            <div id="sara" className=" pictures"></div>
-            <div>
-              <h5>Sara</h5>
+          <div className="row d-flex justify-content-evenly pt-1">
+            <div className="col-lg-6 col-md-6 col-sm-12 pictures">
+              <div id="heriberto"></div>
+              <div>
+                <h5>Heriberto</h5>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-12 pictures heriberto-pic-position">
-            <div id="heriberto" className=" pictures"></div>
-            <div>
-              <h5>Heriberto</h5>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-12 pictures florin-pic-position">
-            <div id="florin" className=" pictures"></div>
-            <div className="text-center">
-              <h5>Florin</h5>
+            <div className="col-lg-6 col-md-6 col-sm-12 pictures">
+              <div id="florin"></div>
+              <div className="text-center">
+                <h5>Florin</h5>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="row mt-5 about1strow mt-3">
+      <div className="row mt-5 about2strow">
         <div className="col-lg-6 col-md-6 col-sm-12 about1strowImg2">
-          <div className="row d-flex justify-content-between pt-3">
-            <div className="col-lg-4 col-md-12 "></div>
-            <div className="col-lg-4 col-md-12 "></div>
-          </div>
-          <div className="row d-flex justify-content-center mt-2 pt-2">
-            <div className="col-lg-4 col-md-12 "></div>
-          </div>
-          <div className="row d-flex justify-content-between pt-2 pb-5">
-            <div className="col-lg-4 col-md-12 "></div>
-            <div className="col-lg-4 col-md-12 "></div>
+          <div className="row d-flex">
+            <div id="webdev-gif" className="col-lg-6 col-md-6 col-sm-12">
+            </div>
           </div>
         </div>
         <div className="col-lg-6 col-md-6 col-sm-12 aboutCol about-Text">

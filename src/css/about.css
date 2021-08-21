@@ -1,101 +1,79 @@
 /* About page */
-.aboutCol {
-  font-size: 1.4rem;
-}
-.about_heroimg {
-  width: 35rem;
-  height: 20rem;
-}
+
 .about1strow {
   background-color: #ffffff;
-  
+  padding-top:10rem;
+}
+.about2strow {
+  background-color: #ffffff;
+  padding-bottom:12rem;
+
 }
 .about1strowImg1 {
   background-color: #1a39ca;
-  position: relative;
-  margin-top:3rem;
 }
 .about1strowImg2 {
   background-color: #1a39ca;
-  position: relative;
-  top:3rem
 }
 .about-Text {
   font-size:1.5rem;
-  padding-bottom: 5rem;
-  padding-top: 5rem;
-  padding-right: 2rem;
+  padding:2rem;
 }
-.mariana-pic-position {
-left:2;
-position:absolute;
-}
-.kinjal-pic-position {
-right:1rem; 
-position:absolute;
-}
-.sara-pic-position {
-left:20rem;
-top:5rem;
 
-position:absolute;
-}
-.heriberto-pic-position {
-left:1rem;
-bottom:2rem;
-position:absolute;
-}
-.florin-pic-position {
-right:1rem;
-bottom:2rem;
-position:absolute;
-}
 .pictures {
-  width:11rem;
-  height:14rem;
+  width:10rem;
+  height:12rem;
   background-color:white;
-   display: flex;
- flex-direction: column;
+  display: flex;
+  flex-direction: column;
   align-content: center;
   align-items: center;
-  padding: 2rem;
-  
+  padding: 1rem;
+  margin:1rem;
 }
 #florin {
 background: url(../images/florin.png) no-repeat;
 background-size: 100%;
-border-radius: 20%;
-height: 6rem;
+border-radius: 50%;
+height:6rem;
 width: 6rem;
+padding:4rem;
 }
 #heriberto {
 background: url(../images/Heriberto.png) no-repeat;
 background-size: 100%;
-border-radius: 20%;
+border-radius: 50%;
 height: 6rem;
 width: 6rem;
-
+padding:4rem;
 }
 #mariana {
 background: url(../images/Mariana.png) no-repeat;
 background-size: 100%;
-border-radius: 20%;
+border-radius: 50%;
 height: 6rem;
 width: 6rem;
+padding:4rem;
 }
 #sara {
 background: url(../images/Mariana.png) no-repeat;
 background-size: 100%;
-border-radius: 20%;
+border-radius: 50%;
 height: 6rem;
 width: 6rem;
+padding:4rem;
 }
 #kinjal {
 background: url(../images/Mariana.png) no-repeat;
 background-size: 100%;
-border-radius: 20%;
+border-radius: 50%;
 height: 6rem;
 width: 6rem;
+padding:4rem;
 }
-
+#webdev-gif {
+  background: url(../images/basics-of-web-development.gif) no-repeat;
+  width: 100%;
+  height: 42rem;
+}
 
