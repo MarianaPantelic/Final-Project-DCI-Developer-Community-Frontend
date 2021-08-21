@@ -61,15 +61,17 @@ const AddQuestions = (props) => {
 
   return (
     <section className="writeBlogSection">
-      <div className="container">
+      <div>
+        <div className="clip-add-question"></div>
+      </div>
+      <div className="container write-container">
+        <h1 className="pt-3">
+          Welcome{" "}
+          {localStorage.getItem("user") &&
+            JSON.parse(localStorage.getItem("user")).firstName}
+        </h1>
         <form>
-          <h1 className="pt-5">
-            Welcome{" "}
-            {localStorage.getItem("user") &&
-              JSON.parse(localStorage.getItem("user")).firstName}
-          </h1>
-
-          <div className="form-group">
+          <div className="form-group mt-3">
             <label htmlFor="inputTopic">Topic</label>
             <input
               ref={inputTopicRef}
@@ -107,7 +109,7 @@ const AddQuestions = (props) => {
             <button
               onClick={() => AddQuestionsOnClick()}
               type="button"
-              className="btn mt-5 postButton"
+              className="btn mt-3 postButton"
             >
               <h3>Ask</h3>
             </button>
