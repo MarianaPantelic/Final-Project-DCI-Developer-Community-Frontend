@@ -22,7 +22,6 @@ import AddQuestions from "./components/addQuestions";
 import ShowQuestion from "./components/showQuestion";
 =======
 
-
 import AddPosts from "./pages/addPosts";
 import AddQuestions from "./pages/addQuestions";
 import ShowQuestion from "./pages/showQuestion";
@@ -45,6 +44,8 @@ import "./css/userprofile.css";
 <<<<<<< HEAD
 =======
 import "./css/myQuestion.css";
+import "./css/calendar.css";
+
 import UpdateMyBlog from "./pages/updateMyBlog";
 import UpdateMyQuestion from "./pages/updateMyQuestion";
 
@@ -149,13 +150,20 @@ const App = () => {
             <MyQuestion />
           </Route>
           <Route path="/updateMyQuestion/:id">
-            <UpdateMyQuestion />
+            {questions && (
+              <UpdateMyQuestion
+                edit={questions}
+                sendQuestionsGetRequest={sendQuestionsGetRequest}
+              />
+            )}
           </Route>
           <Route path="/myBlog/:id">
-            <MyBlog />
+            <MyBlog show={posts} sendGetRequest={sendGetRequest} />
           </Route>
           <Route path="/updateMyBlog/:id">
-            <UpdateMyBlog />
+            {posts && (
+              <UpdateMyBlog edit={questions} sendGetRequest={sendGetRequest} />
+            )}
           </Route>
           <Route path="/post">
             <Post />

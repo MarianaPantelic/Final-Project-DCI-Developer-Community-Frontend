@@ -161,8 +161,8 @@
   background-color: whitesmoke;
 }
 .search-container {
-  height: 35rem;
-  max-height: 35rem;
+  height: 63rem;
+  max-height: 63rem;
 
   overflow-y: scroll;
   overflow-x: scroll;
@@ -178,7 +178,7 @@
 .myBlogs-container {
   height: 30rem;
   max-height: 30rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 1rem 2.5rem;
   margin: 3rem;
   text-align: start;
@@ -198,4 +198,8 @@
   border-color: #a0806c;
   width: 10rem;
   font-size: 1.5rem;
+}
+.calendar {
+  width: 30%;
+  margin: 5% auto !important;
 }

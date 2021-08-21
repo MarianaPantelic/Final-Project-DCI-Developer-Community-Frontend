@@ -1,4 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
+//import Calendar from "react-calendar";
+import Calendar from "react-input-calendar";
+import "react-calendar/dist/Calendar.css";
 import {
   Button,
   Col,
@@ -18,6 +21,7 @@ const UserProfile = (props) => {
   const [agenda, setAgenda] = useState([]);
   const [dailyAgenda, setDailyAgenda] = useState([]);
   const [agendaByDate, setAgendaByDate] = useState([]);
+  const [value, onChange] = useState(new Date());
 
   const userLocal = JSON.parse(localStorage.getItem("user"));
   let userId = "";
@@ -45,6 +49,9 @@ const UserProfile = (props) => {
   useEffect(() => {
     getDailyAgenda();
   }, []);
+  useEffect(() => {
+    getAgendaByDate();
+  }, [value]);
 
   const getUser = async () => {
     try {
@@ -100,10 +107,36 @@ const UserProfile = (props) => {
     console.log(fileImage);
   };
 
-  var today = new Date();
+  /* var today = new Date();
   var date =
     today.getDate() + "." + (today.getMonth() + 1) + "." + today.getFullYear();
+  console.log(date); */
 
+  function formatDateAsDD_MM_YYYY(date) {
+    const regex = /\d{2}\.\d{2}\.\d{4}/;
+    if (regex.test(date)) {
+      // console.log("Leave date as it is");
+      return date;
+    }
+    // console.log("Calculating date");
+    date = new Date(date);
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    if (day < 10) {
+      day = "0" + day;
+    }
+    if (month < 10) {
+      month = "0" + month;
+    }
+    return day + "." + month + "." + year;
+  }
+  const today = new Date();
+  const formatted = formatDateAsDD_MM_YYYY(today);
+  console.log("today:", today, ":", formatted);
+  const moonLanding = "1969-07-20";
+  const moonFormat = formatDateAsDD_MM_YYYY(moonLanding);
+  console.log("moonLanding:", moonLanding, ":", moonFormat);
   const getAgenda = async () => {
     try {
       const response = await axios.get("http://localhost:3001/agenda");
@@ -118,7 +151,9 @@ const UserProfile = (props) => {
 
   const getDailyAgenda = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/agenda/${date}`);
+      const response = await axios.get(
+        `http://localhost:3001/agenda/${formatDateAsDD_MM_YYYY(value)}`
+      );
       console.log(response);
       setDailyAgenda(response.data[0]);
       console.log(response.data);
@@ -131,7 +166,7 @@ const UserProfile = (props) => {
   const getAgendaByDate = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3001/agenda/${inputRef.current.value}`
+        `http://localhost:3001/agenda/${formatDateAsDD_MM_YYYY(value)}`
       );
       console.log(response);
       setAgendaByDate(response.data[0]);
@@ -185,38 +220,118 @@ const UserProfile = (props) => {
               </div>
             </div>
           </Col>
-          <Col sm={12} md={12} lg={4}>
-            <div className="agenda-container">
-              <h2 className="text-center mt-5">Daily Agenda</h2>
-              <div className="text-center mt-3">{date}</div>
-              <h2 className="text-center mt-5">Topics</h2>
 
-              {dailyAgenda && dailyAgenda.topics ? (
-                dailyAgenda.topics.map((topic) => (
-                  <div className="mt-2 text-center">{topic}</div>
-                ))
-              ) : (
-                <h2 className="text-center mt-5">
-                  There is no info for today!
-                </h2>
-              )}
-            </div>
-          </Col>
           <Col sm={12} md={12} lg={5}>
             <div className="search-container">
-              <h2 className="text-center mt-5">Search Agenda</h2>
-              <Form className="d-flex mt-3 search-form">
-                <FormControl
-                  type="search"
-                  placeholder="Search"
-                  className="mr-2 search-input"
-                  aria-label="Search"
-                  ref={inputRef}
-                />
-                <Button className="search-btn" onClick={getAgendaByDate}>
-                  Search
-                </Button>
-              </Form>
+              <h2 className="text-center mt-5">Agenda</h2>
+
+              <div>
+                <div className="calendar">
+                  <Calendar
+                    format="DD/MM/YYYY"
+                    date={today}
+                    onChange={onChange}
+                    value={value}
+                    computableFormat={"DD.MM.YYYY"}
+                  />
+                </div>
+                {/* {dailyAgenda ? (
+                  <div>
+                    {dailyAgenda &&
+                    dailyAgenda.topics &&
+                    dailyAgenda.topics.length !== 0 ? (
+                      <h2 className="text-center mt-5">Topics</h2>
+                    ) : null}
+
+                    <ol>
+                      {dailyAgenda && dailyAgenda.topics
+                        ? dailyAgenda.topics.map((topic) => (
+                            <li className="mt-2 ml-5">
+                              {" "}
+                              &nbsp;&nbsp;&nbsp;{topic}
+                            </li>
+                          ))
+                        : null}
+                    </ol>
+                    {dailyAgenda &&
+                    dailyAgenda.resources &&
+                    dailyAgenda.resources.length !== 0 ? (
+                      <h2 className="text-center mt-5">Resources</h2>
+                    ) : null}
+
+                    <ol>
+                      {dailyAgenda && dailyAgenda.resources
+                        ? dailyAgenda.resources.map((resource) => (
+                            <li className="mt-2 ml-5">
+                              {" "}
+                              <a
+                                href={resource}
+                                rel="noreferrer"
+                                target="_blank"
+                              >
+                                {resource}
+                              </a>
+                            </li>
+                          ))
+                        : null}
+                    </ol>
+                    {dailyAgenda &&
+                    dailyAgenda.exercises &&
+                    dailyAgenda.exercises.length !== 0 ? (
+                      <h2 className="text-center mt-5">Exercises</h2>
+                    ) : null}
+
+                    <ol>
+                      {dailyAgenda && dailyAgenda.exercises
+                        ? dailyAgenda.exercises.map((exercise) => (
+                            <li className="mt-2 ml-5">
+                              {" "}
+                              &nbsp;&nbsp;&nbsp;{exercise}
+                            </li>
+                          ))
+                        : null}
+                    </ol>
+                    {dailyAgenda &&
+                    dailyAgenda.questions &&
+                    dailyAgenda.questions.length !== 0 ? (
+                      <h2 className="text-center mt-5">Questions</h2>
+                    ) : null}
+
+                    <ol>
+                      {dailyAgenda && dailyAgenda.questions
+                        ? dailyAgenda.questions.map((question) => (
+                            <li className="mt-2 ml-5">
+                              {" "}
+                              &nbsp;&nbsp;&nbsp;{question}
+                            </li>
+                          ))
+                        : null}
+                    </ol>
+                    {dailyAgenda && dailyAgenda.recording ? (
+                      <h2 className="text-center mt-5">Meeting Recording</h2>
+                    ) : null}
+                    {dailyAgenda && dailyAgenda.recording ? (
+                      <div>
+                        <ul>
+                          <li>
+                            Link:{" "}
+                            <a href={dailyAgenda.recording.link}>
+                              {dailyAgenda.recording.link}
+                            </a>
+                          </li>
+                          <li>Passcode: {dailyAgenda.recording.passcode}</li>
+                        </ul>
+                      </div>
+                    ) : null}
+                  </div>
+                ) : (
+                  <h2 className="text-center mt-5">
+                    There is no info for today!
+                  </h2>
+                )}*/}
+              </div>
+
+              {console.log(value)}
               <div>
                 {agendaByDate ? (
                   <div className="text-center mt-3">{agendaByDate.date}</div>
@@ -243,7 +358,7 @@ const UserProfile = (props) => {
                 </ol>
                 {agendaByDate &&
                 agendaByDate.resources &&
-                agendaByDate.resources.length !== "0" ? (
+                agendaByDate.resources.length !== 0 ? (
                   <h2 className="text-center mt-5">Resources</h2>
                 ) : null}
 
@@ -290,11 +405,10 @@ const UserProfile = (props) => {
                         </li>
                       ))
                     : null}
-                  {agendaByDate && agendaByDate.recording ? (
-                    <h2 className="text-center mt-5">Meeting Recording</h2>
-                  ) : null}
                 </ol>
-
+                {agendaByDate && agendaByDate.recording ? (
+                  <h2 className="text-center mt-5">Meeting Recording</h2>
+                ) : null}
                 <ol>
                   {agendaByDate && agendaByDate.recording ? (
                     <div>
@@ -313,47 +427,79 @@ const UserProfile = (props) => {
               </div>
             </div>
           </Col>
-        </Row>
-        <Row>
-          <Col sm={12} md={12} lg={6}>
-            <div className="myQuestions-container">
-              <h2 className="text-center mt-5">My Questions</h2>
 
-              <div className="mt-5 links">
-                {userQuestions.length !== 0 ? (
-                  userQuestions.map((question, idx) => (
-                    <div>
-                      <span>{idx + 1 + "." + " "}</span>
-                      <Link to={`/myQuestion/${question._id}`}>
-                        <span>{question.title}</span>
-                      </Link>
-                    </div>
-                  ))
+          <Col sm={12} md={12} lg={4}>
+            <div className="myQuestions-container d-flex flex-column justify-content-between">
+              <div>
+                <h2 className="text-center mt-5">My Questions</h2>
+
+                <div className="mt-5 links">
+                  {userQuestions.length !== 0 ? (
+                    userQuestions.map((question, idx) => (
+                      <div>
+                        <span>{idx + 1 + "." + " "}</span>
+                        <Link to={`/myQuestion/${question._id}`}>
+                          <span>{question.title}</span>
+                        </Link>
+                      </div>
+                    ))
+                  ) : (
+                    <h3 className="text-center mt-5">
+                      You didn't ask any questions yet!
+                    </h3>
+                  )}
+                </div>
+              </div>
+              <div className="d-flex justify-content-end mx-auto">
+                {localStorage.getItem("token") ? (
+                  <Link to="/addQuestions">
+                    <button type="button" className="askQuestion-btn mb-3">
+                      Ask Question
+                    </button>
+                  </Link>
                 ) : (
-                  <h3 className="text-center mt-5">
-                    You didn't ask any questions yet!
-                  </h3>
+                  <Link to="/login">
+                    <button type="button" className="askQuestion-btn mb-3">
+                      Ask Question
+                    </button>
+                  </Link>
                 )}
               </div>
             </div>
-          </Col>
-          <Col sm={12} md={12} lg={6}>
-            <div className="myBlogs-container">
-              <h2 className="text-center mt-5">My Blogs</h2>
-              <div className="mt-5 links">
-                {userBlogs.length !== 0 ? (
-                  userBlogs.map((blog, idx) => (
-                    <div>
-                      <span>{idx + 1 + "." + " "}</span>
-                      <Link to={`/myBlog/${blog._id}`}>
-                        <span>{blog.title}</span>
-                      </Link>
-                    </div>
-                  ))
+
+            <div className="myBlogs-container d-flex flex-column justify-content-between">
+              <div>
+                <h2 className="text-center mt-5">My Blogs</h2>
+                <div className="mt-5 links">
+                  {userBlogs.length !== 0 ? (
+                    userBlogs.map((blog, idx) => (
+                      <div>
+                        <span>{idx + 1 + "." + " "}</span>
+                        <Link to={`/myBlog/${blog._id}`}>
+                          <span>{blog.title}</span>
+                        </Link>
+                      </div>
+                    ))
+                  ) : (
+                    <h3 className="text-center mt-5">
+                      You don't have any blogs yet!
+                    </h3>
+                  )}
+                </div>
+              </div>
+              <div className="d-flex justify-content-end mx-auto">
+                {localStorage.getItem("token") ? (
+                  <Link to="/addPosts">
+                    <button type="button" className="askQuestion-btn mb-3">
+                      Add Blog
+                    </button>
+                  </Link>
                 ) : (
-                  <h3 className="text-center mt-5">
-                    You don't have any blogs yet!
-                  </h3>
+                  <Link to="/login">
+                    <button type="button" className="askQuestion-btn mb-3">
+                      Add Blog
+                    </button>
+                  </Link>
                 )}
               </div>
             </div>
