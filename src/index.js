@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "../node_modules/react-quill/dist/quill.snow.css";
+
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import About from "./pages/about";
@@ -17,7 +18,7 @@ import Resources from "./pages/resources";
 import UserProfile from "./pages/userprofile";
 import News from "./pages/news";
 
-import AddPosts from "./pages/addPosts";
+import AddPosts from "./pages/addPosts";import "../node_modules/react-input-calendar/dist/quill.snow.css";
 import AddQuestions from "./pages/addQuestions";
 import ShowQuestion from "./pages/showQuestion";
 import MyQuestion from "./pages/myQuestion";
