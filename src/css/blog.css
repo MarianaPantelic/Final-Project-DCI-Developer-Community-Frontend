@@ -4,6 +4,15 @@
   padding-top: 10rem;
 }
 
+.writeBlogSection {
+  max-width: 1400px;
+}
+
+.writeBlogSection form {
+  width: 85%;
+  margin: 0 auto;
+}
+
 .blogCards {
   width: 40rem;
   margin: 3rem auto;
@@ -11,7 +20,6 @@
   border-radius: 10px 10px;
   box-shadow: rgba(100, 97, 97, 0.56) 0px 22px 70px 4px;
   background-color: whitesmoke;
-
 }
 
 .blogUser {
@@ -24,7 +32,7 @@
 .blogTitle {
   padding-top: 0.5rem;
   font-size: 1.6rem;
-  height:8rem;
+  height: 8rem;
   border-bottom: 2px solid gainsboro;
 }
 
@@ -44,7 +52,6 @@ iframe {
 .likeButton {
   font-size: 3rem;
   color: #1a39ca;
-  
 }
 
 .likesNumber {
@@ -104,7 +111,7 @@ form input {
 
 /* quil editor */
 .ql-editor {
-  min-height: 30rem;
+  min-height: 22rem;
 }
 
 /* end of quil editor */
@@ -138,11 +145,11 @@ form input {
   iframe {
     width: 30rem;
     height: 28rem;
-  } 
-} 
+  }
+}
 
 @media only screen and (device-width: 411px) and (device-height: 823px) {
-    .blogCards {
+  .blogCards {
     width: 28rem;
     height: 28rem;
   }
@@ -182,7 +189,6 @@ form input {
 @media only screen and (device-width: 320px) and (device-height: 568px) {
   .blogCards {
     width: 20rem;
-
   }
 
   .blogUser {
@@ -195,38 +201,35 @@ form input {
     height: 28rem;
   }
 }
-  @media only screen and (max-width: 600px) {
-    .blogCards {
-      width: 28rem;
-    }
-
-    .blogUser {
-      font-size: 2rem;
-      padding-bottom: 0.3rem;
-    }
-
-    .blogTitle {
-      padding-top: 0.3rem;
-      font-size: 1.4rem;
-      height: 10rem;
-    }
-
-    .blogContent {
-      height: 28rem;
-      border-bottom: 2px solid gainsboro;
-    }
-
-    .showPostsSection img,
-    iframe {
-      width: 28rem;
-      height: 28rem;
-    }
+@media only screen and (max-width: 600px) {
+  .blogCards {
+    width: 28rem;
   }
 
+  .blogUser {
+    font-size: 2rem;
+    padding-bottom: 0.3rem;
+  }
+
+  .blogTitle {
+    padding-top: 0.3rem;
+    font-size: 1.4rem;
+    height: 10rem;
+  }
+
+  .blogContent {
+    height: 28rem;
+    border-bottom: 2px solid gainsboro;
+  }
+
+  .showPostsSection img,
+  iframe {
+    width: 28rem;
+    height: 28rem;
+  }
+}
 
 @media only screen and (device-width: 375px) and (device-height: 667px) {
-
-
   .blogCards {
     width: 32rem;
   }
@@ -248,7 +251,6 @@ form input {
 }
 
 @media only screen and (device-width: 375px) and (device-height: 812px) {
-
   .blogCards {
     width: 33rem;
   }
@@ -285,7 +287,7 @@ form input {
 }
 
 @media only screen and (device-width: 768px) and (device-height: 1024px) {
-  .blogCards{
+  .blogCards {
     width: 32rem;
     margin-left: 1rem;
   }

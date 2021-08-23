@@ -34,7 +34,7 @@ const UpdateMyQuestion = (props) => {
     try {
       axios.put(`http://localhost:3001/forum/${id}`, data).then((response) => {
         props.sendQuestionsGetRequest();
-        window.location.replace("/");
+        window.location.replace("/profile");
       });
     } catch (error) {
       console.log(error);
@@ -87,7 +87,7 @@ const UpdateMyQuestion = (props) => {
               id="inputContent"
             />{" "}
           </div>
-          <Link to="/profile">
+          <Link to="/userprofile">
             <button
               onClick={() => {
                 updateQuestion(topic, title, content);
