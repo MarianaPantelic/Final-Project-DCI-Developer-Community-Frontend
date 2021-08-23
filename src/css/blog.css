@@ -1,5 +1,52 @@
 /* Blog Page */
 
+/* .writeblog-clip-1{
+  clip-path: polygon(56% 0, 0 0, 0 38%);
+  background: linear-gradient(#e6efff, #1a39ca, #04083c);
+  top: 0;
+  width: 150rem;
+  height: 70%;
+  position: fixed;
+  z-index: -1;
+
+}
+
+.writeblog-clip-2{
+clip-path: polygon(100% 39%, 100% 0, 42% 0);  
+  background: linear-gradient(#e6efff, #1a39ca, #04083c);
+  top: 0;
+  right: 0;
+  width: 150rem;
+  height: 70%;
+  position: fixed;
+  z-index: -1;
+
+}
+
+.writeblog-clip-3{
+  clip-path: polygon(100% 100%, 100% 58%, 45% 100%);
+  background: linear-gradient(#e6efff, #1a39ca, #04083c);
+  bottom: 0;
+  right: 0;
+  width: 150rem;
+  height: 70%;
+  position: fixed;
+  z-index: -1;
+
+}
+
+.writeblog-clip-4{
+  clip-path: polygon(51% 100%, 0 100%, 0 57%);
+  background: linear-gradient(#e6efff, #1a39ca, #04083c);
+  bottom: 0;
+  width: 150rem;
+  height: 70%;
+  position: fixed;
+  z-index: -1;
+
+
+} */
+
 .showPostsSection {
   padding-top: 10rem;
 }
@@ -80,6 +127,7 @@ iframe {
 .writeBlogSection {
   margin-top: 10rem;
 }
+
 
 form label {
   font-size: 2rem;

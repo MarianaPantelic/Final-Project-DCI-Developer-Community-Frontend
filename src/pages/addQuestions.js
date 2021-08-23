@@ -60,7 +60,16 @@ const AddQuestions = (props) => {
   };
 
   return (
-    <section className="writeBlogSection">
+
+    
+      <section className="writeQuestionSection">
+
+    <div>
+        <div className="first-clip-ask-question"></div>
+        <div className="second-clip-ask-question"></div>
+        <div className="third-clip-ask-question"></div>
+    </div>
+
       <div>
         <div className="clip-add-question"></div>
       </div>
