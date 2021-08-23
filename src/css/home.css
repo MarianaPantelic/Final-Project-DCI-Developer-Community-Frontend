@@ -112,7 +112,13 @@
   .first_row {
     margin-top: 9rem;
   }
+
+  .hero-container {
+    width: 90%;
+    margin: 15% auto;
+  }
 }
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .hideRowDesktop {

@@ -54,6 +54,8 @@ iframe {
 .newPostButton {
   font-size: 2rem;
   padding: 1rem 4rem;
+  background-color: #f66e1a;
+  color: #fff;
 }
 
 .link_addPost {
