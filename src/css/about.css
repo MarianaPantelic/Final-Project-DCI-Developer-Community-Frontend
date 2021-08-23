@@ -7,8 +7,22 @@
   height: 20rem;
 }
 .about1strow {
-  background-color: #f4f5f7;
+  background-color: #ffffff;
 }
 .about1strowImg {
   background-color: #1a39ca;
 }
+.about-Text {
+  font-size:1.5rem;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+  padding-right: 2rem;
+}
+.pictures {
+  margin: 3rem 4rem 0rem 4rem;
+  padding:5rem 5rem;
+  width:50px;
+  height:50px;
+  background-color:white;
+}
+
