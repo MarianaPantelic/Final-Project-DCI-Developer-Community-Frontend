@@ -30,8 +30,8 @@ const News = () => {
       </div>
       <Navbar bg="light" variant="light">
         <Container className="navbar-container">
-          <Navbar.Brand href="#home">News</Navbar.Brand>
-          <Nav className="me-auto">
+          {/* <Nav className="me-auto> */}
+            <Navbar.Brand href="#home">News</Navbar.Brand>
             <Button
               className="navbtn-news"
               onClick={() => {
@@ -80,7 +80,7 @@ const News = () => {
             >
               6
             </Button>
-          </Nav>
+          {/* </Nav> */}
         </Container>
       </Navbar>
       {news.map((article, idx) => (
