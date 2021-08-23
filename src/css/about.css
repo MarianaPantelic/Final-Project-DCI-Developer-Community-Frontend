@@ -14,7 +14,7 @@
 }
 .about1strowImg2 {
   background-color: #1a39ca;
-  padding:4rem;
+  padding:1rem;
   }
 .about-Text {
   font-size:1.5rem;
@@ -65,7 +65,7 @@ width: 6rem;
 padding:4rem;
 }
 #kinjal {
-background: url(../images/Mariana.png) no-repeat;
+background: url(../images/kinjal.jpeg) no-repeat;
 background-size: 100%;
 border-radius: 50%;
 height: 6rem;
