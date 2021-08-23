@@ -70,7 +70,7 @@ const UpdateMyBlogs = (props) => {
               id="inputContent"
             />{" "}
           </div>
-          <Link to="/profile">
+          <Link to="/userprofile">
             <button
               onClick={() => {
                 updateBlog(title, content);

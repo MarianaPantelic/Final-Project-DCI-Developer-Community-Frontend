@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row, Image } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 const About = () => {
   return (
@@ -18,60 +18,55 @@ const About = () => {
             next students to have more structured information in the same place.
           </p>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 about1strowImg">
+        <div className="col-lg-6 col-md-6 col-sm-12 about1strowImg1">
           <div className="row d-flex justify-content-between pt-3">
-            <div className="col-lg-4 col-md-12 pictures">
-              <img src="dci_logo.png" />
+            <div className="col-lg-6 col-md-6 col-sm-12 pictures">
+              <div id="mariana"></div>
+              <div>
+                <h5>Mariana</h5>
+              </div>
             </div>
-            <div className="col-lg-4 col-md-12 pictures">
-              <img src="./images/florin.jpg" />
+            <div className="col-lg-6 col-md-6 col-sm-12 pictures">
+              <div id="kinjal"></div>
+              <div>
+                <h5>Kinjal</h5>
+              </div>
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-12 pictures">
+              <div id="sara"></div>
+              <div>
+                <h5>Sara</h5>
+              </div>
             </div>
           </div>
-          <div className="row d-flex justify-content-center mt-2 pt-2">
-            <div className="col-lg-4 col-md-12 pictures">
-              <img src="./images/florin.jpg" />
+          <div className="row d-flex justify-content-evenly pt-1">
+            <div className="col-lg-6 col-md-6 col-sm-12 pictures">
+              <div id="heriberto"></div>
+              <div>
+                <h5>Heriberto</h5>
+              </div>
             </div>
-          </div>
-          <div className="row d-flex justify-content-between pt-2 pb-5">
-            <div className="col-lg-4 col-md-12 pictures">
-              <img src="./images/florin.jpg" />
-            </div>
-            <div className="col-lg-4 col-md-12 pictures">
-              <img src="./images/florin.jpg" />
+            <div className="col-lg-6 col-md-6 col-sm-12 pictures">
+              <div id="florin"></div>
+              <div className="text-center">
+                <h5>Florin</h5>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="row mt-5 about1strow mt-3">
-        <div className="col-lg-6 col-md-6 col-sm-12 about1strowImg">
-          <div className="row d-flex justify-content-between pt-3">
-            <div className="col-lg-4 col-md-12 pictures">
-              <img src="dci_logo.png" />
-            </div>
-            <div className="col-lg-4 col-md-12 pictures">
-              <img src="./images/florin.jpg" />
-            </div>
-          </div>
-          <div className="row d-flex justify-content-center mt-2 pt-2">
-            <div className="col-lg-4 col-md-12 pictures">
-              <img src="./images/florin.jpg" />
-            </div>
-          </div>
-          <div className="row d-flex justify-content-between pt-2 pb-5">
-            <div className="col-lg-4 col-md-12 pictures">
-              <img src="./images/florin.jpg" />
-            </div>
-            <div className="col-lg-4 col-md-12 pictures">
-              <img src="./images/florin.jpg" />
-            </div>
+      <div className="row mt-5 about2strow">
+        <div className="col-lg-6 col-md-6 col-sm-12 about1strowImg2">
+          <div className="row d-flex">
+            <div id="webdev-gif" className="col-lg-6 col-md-6 col-sm-12"></div>
           </div>
         </div>
         <div className="col-lg-6 col-md-6 col-sm-12 aboutCol about-Text">
           <h2 className="mt-4 mb-3">What we offer?</h2>
           <p className="mt-5 mb-5">
-            We are comming with a structured platform where all the students
-            which are registered can have access to value information about
-            webdevelopment as follows:
+            We are coming with a structured platform where all the students
+            which are registered can have access to value information about web
+            development as follows:
           </p>
           <li>
             in Forum page ,they can ask questions and receive answers about
