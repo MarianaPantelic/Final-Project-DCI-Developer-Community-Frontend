@@ -76,7 +76,7 @@ const AddPosts = (props) => {
               {localStorage.getItem("user") &&
                 JSON.parse(localStorage.getItem("user")).firstName}
             </h1>
-            <div className="form-group">
+            <div className="form-group mt-5">
               <label htmlFor="inputTitle">Title</label>
               <input
                 ref={inputTitleRef}
