@@ -15,7 +15,45 @@
 }
 .article-card {
   margin: 0 auto;
-  width: 70vw;
+  width: 90%;
   text-align: center;
   font-size: 1.5rem;
+}
+.navbar-container {
+  width: 25%;
+  margin-bottom: 2rem;
+}
+.backBtn {
+  border: #e7b433;
+  background-color: #e7b433;
+  color: black;
+  width: 90%;
+  margin: 0 auto;
+}
+.navbtn-news {
+  background-color: #fbfbfb;
+  border: none;
+  border-radius: 50%;
+  color: black;
+  margin-right: 0.5rem;
+}
+.article-image {
+  float: left;
+  height: 30vh;
+  width: 25vw;
+  object-fit: cover;
+}
+@media only screen and (max-width: 600px) {
+  .news-header-container > h1 {
+    font-size: 7vw;
+  }
+  .article-card {
+    font-size: 1rem;
+  }
+  .navbar-container {
+    width: 50%;
+  }
+  .article-image {
+    margin: 1rem;
+  }
 }
