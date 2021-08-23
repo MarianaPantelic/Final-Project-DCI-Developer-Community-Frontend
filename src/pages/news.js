@@ -31,55 +31,55 @@ const News = () => {
       <Navbar bg="light" variant="light">
         <Container className="navbar-container">
           {/* <Nav className="me-auto> */}
-            <Navbar.Brand href="#home">News</Navbar.Brand>
-            <Button
-              className="navbtn-news"
-              onClick={() => {
-                updateNews(1);
-              }}
-            >
-              1
-            </Button>
-            <Button
-              className="navbtn-news"
-              onClick={() => {
-                updateNews(2);
-              }}
-            >
-              2
-            </Button>
-            <Button
-              className="navbtn-news"
-              onClick={() => {
-                updateNews(3);
-              }}
-            >
-              3
-            </Button>
-            <Button
-              className="navbtn-news"
-              onClick={() => {
-                updateNews(4);
-              }}
-            >
-              4
-            </Button>
-            <Button
-              className="navbtn-news"
-              onClick={() => {
-                updateNews(5);
-              }}
-            >
-              5
-            </Button>
-            <Button
-              className="navbtn-news"
-              onClick={() => {
-                updateNews(6);
-              }}
-            >
-              6
-            </Button>
+          <Navbar.Brand href="#home">News</Navbar.Brand>
+          <Button
+            className="navbtn-news"
+            onClick={() => {
+              updateNews(1);
+            }}
+          >
+            1
+          </Button>
+          <Button
+            className="navbtn-news"
+            onClick={() => {
+              updateNews(2);
+            }}
+          >
+            2
+          </Button>
+          <Button
+            className="navbtn-news"
+            onClick={() => {
+              updateNews(3);
+            }}
+          >
+            3
+          </Button>
+          <Button
+            className="navbtn-news"
+            onClick={() => {
+              updateNews(4);
+            }}
+          >
+            4
+          </Button>
+          <Button
+            className="navbtn-news"
+            onClick={() => {
+              updateNews(5);
+            }}
+          >
+            5
+          </Button>
+          <Button
+            className="navbtn-news"
+            onClick={() => {
+              updateNews(6);
+            }}
+          >
+            6
+          </Button>
           {/* </Nav> */}
         </Container>
       </Navbar>
@@ -89,7 +89,7 @@ const News = () => {
             {article.cover_image ? (
               <Card.Img className="article-image" src={article.cover_image} />
             ) : (
-              <Card.Img className="article-image" src="../images/laptop.png" />
+              <Card.Img className="article-image" src="../images/laptop.jpeg" />
             )}
 
             <Card.Title className="mt-4 ">
@@ -113,7 +113,7 @@ const News = () => {
       ))}
 
       <div className="d-grid gap-2 mt-4">
-        <Button href="#top" className="backBtn" size="md">
+        <Button href="#top" className="backBtn" size="lg">
           Back to top
         </Button>
       </div>
