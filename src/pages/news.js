@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card, Container, Navbar, Nav } from "react-bootstrap";
 const axios = require("axios");
+
 const News = () => {
   const [news, setNews] = useState([]);
   const [page, setPage] = useState("1");
@@ -23,6 +24,7 @@ const News = () => {
     getArticles();
   }, [page]);
   console.log(news);
+
   return (
     <Container id="top" className="news-container">
       <div className="news-header-container">
