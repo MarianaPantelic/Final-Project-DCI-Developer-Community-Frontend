@@ -31,7 +31,7 @@ const Blog = (props) => {
         {localStorage.getItem("token") ? (
           <Link to="/addPosts" className="link_addPost">
             <div className="text-center">
-              <button className="btn btn-warning newPostButton" type="button">
+              <button className="btn newPostButton" type="button">
                 Write a new post
               </button>
             </div>

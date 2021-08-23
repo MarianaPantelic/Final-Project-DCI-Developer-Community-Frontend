@@ -1,6 +1,7 @@
 /* News Page */
 
 .news-header-container {
+  width: 70vw;
   background-color: #e7b433;
   margin-top: 6rem;
   height: 10rem;
@@ -14,8 +15,21 @@
   font-weight: bold;
 }
 .article-card {
-  margin: 0 auto;
+  margin: 0;
   width: 70vw;
-  text-align: center;
   font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .news-header-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
+    height: 5rem;
+  }
+
+  .article-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
