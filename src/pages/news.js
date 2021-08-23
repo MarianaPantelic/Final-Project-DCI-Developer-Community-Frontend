@@ -6,7 +6,9 @@ import {
   ListGroup,
   ListGroupItem,
 } from "react-bootstrap";
+
 const axios = require("axios");
+
 const News = () => {
   const [news, setNews] = useState([]);
   const getArticles = () => {
@@ -23,6 +25,7 @@ const News = () => {
     getArticles();
   }, []);
   console.log(news);
+
   return (
     <Container className="news-container">
       <div className="news-header-container">
