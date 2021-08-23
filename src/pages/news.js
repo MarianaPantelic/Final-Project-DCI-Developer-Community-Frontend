@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card, Container, Navbar, Nav } from "react-bootstrap";
 const axios = require("axios");
+
 const News = () => {
   const [news, setNews] = useState([]);
   const [page, setPage] = useState("1");
@@ -23,6 +24,7 @@ const News = () => {
     getArticles();
   }, [page]);
   console.log(news);
+
   return (
     <Container id="top" className="news-container">
       <div className="news-header-container">
@@ -30,57 +32,57 @@ const News = () => {
       </div>
       <Navbar bg="light" variant="light">
         <Container className="navbar-container">
+          {/* <Nav className="me-auto> */}
           <Navbar.Brand href="#home">News</Navbar.Brand>
-          <Nav className="me-auto">
-            <Button
-              className="navbtn-news"
-              onClick={() => {
-                updateNews(1);
-              }}
-            >
-              1
-            </Button>
-            <Button
-              className="navbtn-news"
-              onClick={() => {
-                updateNews(2);
-              }}
-            >
-              2
-            </Button>
-            <Button
-              className="navbtn-news"
-              onClick={() => {
-                updateNews(3);
-              }}
-            >
-              3
-            </Button>
-            <Button
-              className="navbtn-news"
-              onClick={() => {
-                updateNews(4);
-              }}
-            >
-              4
-            </Button>
-            <Button
-              className="navbtn-news"
-              onClick={() => {
-                updateNews(5);
-              }}
-            >
-              5
-            </Button>
-            <Button
-              className="navbtn-news"
-              onClick={() => {
-                updateNews(6);
-              }}
-            >
-              6
-            </Button>
-          </Nav>
+          <Button
+            className="navbtn-news"
+            onClick={() => {
+              updateNews(1);
+            }}
+          >
+            1
+          </Button>
+          <Button
+            className="navbtn-news"
+            onClick={() => {
+              updateNews(2);
+            }}
+          >
+            2
+          </Button>
+          <Button
+            className="navbtn-news"
+            onClick={() => {
+              updateNews(3);
+            }}
+          >
+            3
+          </Button>
+          <Button
+            className="navbtn-news"
+            onClick={() => {
+              updateNews(4);
+            }}
+          >
+            4
+          </Button>
+          <Button
+            className="navbtn-news"
+            onClick={() => {
+              updateNews(5);
+            }}
+          >
+            5
+          </Button>
+          <Button
+            className="navbtn-news"
+            onClick={() => {
+              updateNews(6);
+            }}
+          >
+            6
+          </Button>
+          {/* </Nav> */}
         </Container>
       </Navbar>
       {news.map((article, idx) => (
@@ -89,7 +91,7 @@ const News = () => {
             {article.cover_image ? (
               <Card.Img className="article-image" src={article.cover_image} />
             ) : (
-              <Card.Img className="article-image" src="../images/laptop.png" />
+              <Card.Img className="article-image" src="../images/laptop.jpeg" />
             )}
 
             <Card.Title className="mt-4 ">
@@ -113,7 +115,7 @@ const News = () => {
       ))}
 
       <div className="d-grid gap-2 mt-4">
-        <Button href="#top" className="backBtn" size="md">
+        <Button href="#top" className="backBtn" size="lg">
           Back to top
         </Button>
       </div>

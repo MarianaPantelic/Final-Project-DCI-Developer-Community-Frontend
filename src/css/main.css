@@ -2,8 +2,8 @@
   font-size: 62.5%;
 }
 body {
-  background: hsl(0, 0%, 98%);
-  margin-bottom: 7rem;
+  background: rgb(251, 251, 251);
+  margin-bottom: 6rem;
 }
 /*start of Navbar*/
 .navbar-css {
