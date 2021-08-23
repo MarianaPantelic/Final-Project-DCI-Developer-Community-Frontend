@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 //import Calendar from "react-calendar";
 import Calendar from "react-input-calendar";
-import "react-calendar/dist/Calendar.css";
+
 import {
   Button,
   Col,

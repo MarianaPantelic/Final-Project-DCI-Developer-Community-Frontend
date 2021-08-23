@@ -18,7 +18,8 @@ import Resources from "./pages/resources";
 import UserProfile from "./pages/userprofile";
 import News from "./pages/news";
 
-import AddPosts from "./pages/addPosts";import "../node_modules/react-input-calendar/dist/quill.snow.css";
+import AddPosts from "./pages/addPosts";
+
 import AddQuestions from "./pages/addQuestions";
 import ShowQuestion from "./pages/showQuestion";
 import MyQuestion from "./pages/myQuestion";
