@@ -58,8 +58,7 @@ const About = () => {
       <div className="row mt-5 about2strow">
         <div className="col-lg-6 col-md-6 col-sm-12 about1strowImg2">
           <div className="row d-flex">
-            <div id="webdev-gif" className="col-lg-6 col-md-6 col-sm-12">
-            </div>
+            <div id="webdev-gif" className="col-lg-6 col-md-6 col-sm-12"></div>
           </div>
         </div>
         <div className="col-lg-6 col-md-6 col-sm-12 aboutCol about-Text">
