@@ -14,7 +14,7 @@ const Resources = () => {
               <a href="https://www.codecademy.com/" target="_blank">
                 <img
                   src="../images/Code academy logo.png"
-                  className="link-img"
+                  className="link-img-12"
                 />
               </a>
             </td>
@@ -32,7 +32,7 @@ const Resources = () => {
           <tr>
             <td className="resource-img">
               <a href="https://www.freecodecamp.org/" target="_blank">
-                <img src="../images/fcc.png" className="link-img" />
+                <img src="../images/freecodecamp logo background blue images.png" className="link-img-12" />
               </a>
             </td>
             <td className="resource-text">
@@ -50,7 +50,7 @@ const Resources = () => {
           <tr>
             <td className="resource-img">
               <a href="https://www.github.com//" target="_blank">
-                <img src="../images/github-logo.png" className="link-img" />
+                <img src="../images/github-logo.png" className="link-img-10" />
               </a>
             </td>
             <td className="resource-text">
@@ -64,11 +64,11 @@ const Resources = () => {
               <a href="https://www.stackoverflow.com/" target="_blank">
                 <img
                   src="../images/Stack overflow logo .png"
-                  className="link-img"
+                  className="link-img-12"
                 />
               </a>
             </td>
-            <td className="resource-text">
+            <td className="resource-text stackOverflow">
               Founded in 2008, Stack Overflow's public platform is used by
               nearly everyone who codes to learn, share their knowleddge,
               collaborate, and build their careers.
@@ -77,7 +77,7 @@ const Resources = () => {
           <tr>
             <td className="resource-img">
               <a href="https://www.w3schools.com/" target="_blank">
-                <img src="../images/w3scholls1 logo.png" className="link-img" />
+                <img src="../images/w3scholls1 logo.png" className="link-img-12" />
               </a>
             </td>
             <td className="resource-text">
@@ -92,7 +92,7 @@ const Resources = () => {
           <tr>
             <td className="resource-img">
               <a href="https://www.coursera.org/" target="_blank">
-                <img src="../images/coursera.png" className="link-img" />
+                <img src="../images/coursera.png" className="link-img-12" />
               </a>
             </td>
             <td className="resource-text">
@@ -112,7 +112,7 @@ const Resources = () => {
           <tr>
             <td className="resource-img">
               <a href="https://www.udemy.com/" target="_blank">
-                <img src="../images/udemy.png" className="link-img" />
+                <img src="../images/udemy.png" className="link-img-9" />
               </a>
             </td>
             <td className="resource-text">
@@ -125,11 +125,7 @@ const Resources = () => {
           <tr>
             <td className="resource-img">
               <a href="https://www.hackr.io/" target="_blank">
-                <img
-                  src="../images/hackr.png"
-                  className="link-img"
-                  className="link-img"
-                />
+                <img src="../images/hackr.png" className="link-img-12" />
               </a>
             </td>
             <td className="resource-text">
@@ -144,7 +140,7 @@ const Resources = () => {
           <tr>
             <td className="resource-img">
               <a href="https://www.upskillcourses.com//" target="_blank">
-                <img src="../images/upskill.jpg" className="link-img" />
+                <img src="../images/Upskill logo Screenshot from 2021-08-19 14-35-00.png" className="link-img-10" />
               </a>
             </td>
             <td className="resource-text">
@@ -158,7 +154,7 @@ const Resources = () => {
           <tr>
             <td className="resource-img">
               <a href="https://edabit.com/" target="_blank">
-                <img src="../images/edabit.png" className="link-img" />
+                <img src="../images/edabit.png" className="link-img-9" />
               </a>
             </td>
             <td className="resource-text">
@@ -171,7 +167,7 @@ const Resources = () => {
           <tr>
             <td className="resource-img">
               <a href="https://developer.mozilla.org/" target="_blank">
-                <img src="../images/mdn.png" className="link-img" />
+                <img src="../images/mdn.png" className="link-img-12" />
               </a>
             </td>
             <td className="resource-text">
@@ -183,7 +179,7 @@ const Resources = () => {
           <tr>
             <td className="resource-img">
               <a href="https://eloquentjavascript.net/" target="_blank">
-                <img src="../images/eloquent.png" className="link-img" />
+                <img src="../images/eloquent Javascript 91ceCcI4d+L.jpg" className="link-img-12" />
               </a>
             </td>
             <td className="resource-text">
@@ -195,7 +191,7 @@ const Resources = () => {
           <tr>
             <td className="resource-img">
               <a href="https://coderbyte.com/" target="_blank">
-                <img src="../images/coderbyte.png" className="link-img" />
+                <img src="../images/coderbyte.png" className="link-img-12" />
               </a>
             </td>
             <td className="resource-text">
@@ -209,7 +205,7 @@ const Resources = () => {
           <tr>
             <td className="resource-img">
               <a href="https://scotch.io/" target="_blank">
-                <img src="../images/scotch.png" className="link-img" />
+                <img src="../images/Logo scotch.io nuevo Screenshot from 2021-08-19 21-06-46.png" className="link-img-12" />
               </a>
             </td>
             <td className="resource-text">
@@ -221,7 +217,7 @@ const Resources = () => {
           <tr>
             <td className="resource-img">
               <a href="https://www.code.org/" target="_blank">
-                <img src="../images/code.png" className="link-img" />
+                <img src="../images/code.png" className="link-img-12" />
               </a>
             </td>
             <td className="resource-text">
@@ -237,7 +233,7 @@ const Resources = () => {
           <tr>
             <td className="resource-img">
               <a href="https://www.codewars.com/" target="_blank">
-                <img src="../images/codewars.png" className="link-img" />
+                <img src="../images/codewars.png" className="link-img-12" />
               </a>
             </td>
             <td className="resource-text">
@@ -254,7 +250,7 @@ const Resources = () => {
           <tr>
             <td className="resource-img">
               <a href="https://www.edx.org/" target="_blank">
-                <img src="../images/edx.png" className="link-img" />
+                <img src="../images/edx logo Screenshot from 2021-08-19 14-53-55.png" className="link-img-12" />
               </a>
             </td>
             <td className="resource-text">
@@ -271,7 +267,7 @@ const Resources = () => {
           <tr>
             <td className="resource-img">
               <a href="https://codegym.cc/" target="_blank">
-                <img src="../images/codegym.png" className="link-img" />
+                <img src="../images/codegym horizontal logo Screenshot from 2021-08-19 15-13-51.png" className="link-img-12" />
               </a>
             </td>
             <td className="resource-text">
@@ -286,7 +282,7 @@ const Resources = () => {
           <tr>
             <td className="resource-img">
               <a href="https://www.sitepoint.com/" target="_blank">
-                <img src="../images/sitepoint.png" className="link-img" />
+                <img src="../images/sitepoint.png" className="link-img-12" />
               </a>
             </td>
             <td className="resource-text">
@@ -301,7 +297,7 @@ const Resources = () => {
           <tr>
             <td className="resource-img">
               <a href="https://css-tricks.com/" target="_blank">
-                <img src="../images/css-tricks.png" className="link-img" />
+                <img src="../images/css-tricks.png" className="link-img-12" />
               </a>
             </td>
             <td className="resource-text">
