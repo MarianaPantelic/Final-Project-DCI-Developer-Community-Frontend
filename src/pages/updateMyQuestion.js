@@ -34,7 +34,6 @@ const UpdateMyQuestion = (props) => {
     try {
       axios.put(`http://localhost:3001/forum/${id}`, data).then((response) => {
         props.sendQuestionsGetRequest();
-        window.location.replace("/");
       });
     } catch (error) {
       console.log(error);
