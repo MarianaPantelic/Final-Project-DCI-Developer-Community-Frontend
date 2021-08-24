@@ -12,11 +12,13 @@ const Forum = (props) => {
   return (
     <>
       <div>
-        <div className="first-clip-forum"></div>
-        <div className="second-clip-forum"></div>
+        <div className="forum-clip1"></div>
+        <div className="forum-clip2"></div>
+        <div className="forum-clip3"></div>
+        <div className="forum-clip4"></div>
       </div>
 
-      <Container className="mt-5">  
+      <Container className="mt-5">
         <div className="text-center pt-5 pb-3">
           {localStorage.getItem("token") ? (
             <Link to="/addQuestions">
@@ -49,6 +51,15 @@ const Forum = (props) => {
                   <footer className="p-4">
                     <div className="float-left topic">
                       <p className="text-center">{question.topic}</p>
+                    </div>
+                    <div className="float-right">
+                      <p>
+                        {" "}
+                        {question && question.answer
+                          ? question.answer.length
+                          : 0}
+                        answer{" "}
+                      </p>
                     </div>
                   </footer>
                 </blockquote>
