@@ -67,9 +67,12 @@ const AddPosts = (props) => {
 
   return (
     <section className="writeBlogSection">
+      <div>
+        <div className="clip-post"></div>
+      </div>
       <div className="container">
         <div className="row">
-          <form>
+          <form >
             <h1 className="welcomAddPost">
               Welcome{" "}
               {localStorage.getItem("user") &&
