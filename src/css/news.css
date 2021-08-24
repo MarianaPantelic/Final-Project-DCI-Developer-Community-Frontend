@@ -15,6 +15,7 @@
   font-weight: bold;
 }
 .article-card {
+   box-shadow: rgba(100, 97, 97, 0.56) 0px 22px 70px 4px;
   margin: 0 auto;
   width: 90%;
   text-align: center;
@@ -54,6 +55,7 @@
     font-size: 1rem;
     margin-left: auto;
     margin-right: auto;
+    
   }
   .navbar-container {
     width: 50%;

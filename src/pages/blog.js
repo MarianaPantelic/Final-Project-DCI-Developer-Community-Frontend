@@ -27,6 +27,9 @@ const Blog = (props) => {
 
   return (
     <section className="showPostsSection">
+      <div>
+        <div className="clip-blog"></div>
+      </div>
       <div className="container">
         {localStorage.getItem("token") ? (
           <Link to="/addPosts" className="link_addPost">

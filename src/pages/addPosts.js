@@ -3,7 +3,6 @@ import ReactQuill from "react-quill";
 import { useHistory } from "react-router-dom";
 
 const axios = require("axios").default;
-
 const AddPosts = (props) => {
   const [title, setTitle] = useState("");
   const [errors, setErrors] = useState("");
@@ -78,7 +77,7 @@ const AddPosts = (props) => {
     </div>
       <div className="container">
         <div className="row">
-          <form>
+          <form >
             <h1 className="welcomAddPost">
               Welcome{" "}
               {localStorage.getItem("user") &&
