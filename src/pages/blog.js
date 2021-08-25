@@ -12,7 +12,6 @@ const Blog = (props) => {
     const userLocal = JSON.parse(localStorage.getItem("user"));
     tempArray.push(userLocal._id);
 
-
     try {
       axios
         .put(`http://localhost:3001/blogs/${id}`, {
@@ -62,8 +61,15 @@ const Blog = (props) => {
                       <Card className="blogCards">
                         <Card.Body>
                           <Card.Title className="blogUser">
-                            {post.user ? post.user.firstName : ""}
-                            {/* {post.user.firstName} */}
+                            <div className="d-flex">
+                              <div className="align-self-center">
+                                {post.image ? <img src={post.image} /> : null}
+                              </div>
+                              <div className="align-self-center ml-4">
+                                {post.user ? post.user.firstName : ""}
+                                {/* {post.user.firstName} */}
+                              </div>
+                            </div>
                           </Card.Title>
                           <Card.Subtitle className="blogTitle">
                             {post.title}
