@@ -9,34 +9,35 @@
   margin-bottom: 7.5vh;
 }
 .resources-container {
-  background: linear-gradient(
+  /* background: linear-gradient(
     to right,
     #1f4d6a,
     #1f4d6a,
     #3c8bbc,
     #3c8bbc,
     #3c8bbc
-  );
+  ); */
+  background-color: #061296;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 35vh;
+  height: 15rem;
 }
 td {
   padding-top: 1rem;
 }
-.resources-container > img {
+/* .resources-container > img {
   height: auto;
   width: 26vw;
-}
+} */
 .resources-container > h1 {
-  margin-left: 3vw;
   color: white;
   font-size: 6vw;
   font-weight: bold;
 }
 .content-table {
+  box-shadow: rgba(100, 97, 97, 0.56) 0px 1px 10px 2px;
   margin-top: 2vh;
   background-color: #e6eefe;
   border: 0.25rem black solid;
@@ -74,23 +75,19 @@ td {
   padding-top: 3.5rem;
 }
 
-@media only screen and (max-width: 1187px) {
+@media only screen and (max-width: 600px) { 
   .resources-container {
-    display: block;
-    background: none;
-    height: 20vh;
+    /* display: block; */
+    /* background: none; */
+    height: 10vh;
   }
-  .resources-container > img {
+  /* .resources-container > img {
     height: auto;
     width: 100%;
-  }
+  } */
   .resources-container > h1 {
-    position: absolute;
-    top: 13%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     margin: 0 auto;
-    font-size: 8vw;
+    font-size: 10vw;
   }
   .content-table {
     display: flex;
@@ -128,23 +125,23 @@ td {
   }
 }
 
-@media only screen and (min-width: 980px) and (max-width: 1187px) {
+/* @media only screen and (min-width: 980px) and (max-width: 1187px) {
   .content-table {
     margin-top: 27.5vh;
   }
-}
+} */
 
-@media only screen and (min-width: 766px) and (max-width: 979px) {
+/* @media only screen and (min-width: 766px) and (max-width: 979px) {
   .content-table {
     margin-top: 16vh;
   }
-}
+} */
 
-@media only screen and (min-width: 480px) and (max-width: 765px) {
+/* @media only screen and (min-width: 480px) and (max-width: 765px) {
   .content-table {
     margin-top: 7vh;
   }
-}
+} */
 
 @media only screen and (min-width: 375px) and (max-width: 479px) {
   .content-table {
