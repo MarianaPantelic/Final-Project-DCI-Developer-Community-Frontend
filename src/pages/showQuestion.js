@@ -79,10 +79,12 @@ const ShowQuestion = (props) => {
         ? foundQuestion.answer.map((ans) => (
             <div class="card showQuestionDetails-cards p-3">
               <div class="card-header showQuestionDetails-header d-flex">
-                <div>
+                <div className="align-self-center">
                   {ans.image ? <img src={ans.image} width={50} /> : null}
                 </div>
-                <div className="m-4">Answered by {ans.user}</div>
+                <div className="ml-4 align-self-center">
+                  Answered by {ans.user}
+                </div>
               </div>
               <div class="card-body">
                 <p>{console.log(ans)}</p>
