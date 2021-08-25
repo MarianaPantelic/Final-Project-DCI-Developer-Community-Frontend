@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import ReactQuill from "react-quill";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const axios = require("axios").default;
 
@@ -69,6 +69,24 @@ const ShowQuestion = (props) => {
       ) : (
         "Question content not found"
       )}
+
+      {foundQuestion
+        ? foundQuestion.answer.map((ans) => (
+            <div class="card showQuestionDetails-cards p-3">
+              <div class="card-header showQuestionDetails-header">Answer by </div>
+              <div class="card-body">
+              <p>{console.log(ans)}</p>
+                <p
+                  className="card-text showAnswerDetails"
+                  dangerouslySetInnerHTML={{
+                    __html: ans,
+                  }}
+                ></p>
+              </div>
+            </div>
+          ))
+        : ""}
+
       <h1 className="mb-5">Your Answer</h1>
       <form className="form-container">
         <div className="form-group">
@@ -82,28 +100,15 @@ const ShowQuestion = (props) => {
           />
         </div>
       </form>
-      <button
-        onClick={() => addAnswers(answer)}
-        type="button"
-        className="btn btn-warning p-3 submit-button"
-      >
-        Submit
-      </button>{" "}
-      {foundQuestion
-        ? foundQuestion.answer.map((ans) => (
-            <div class="card showQuestionDetails-cards p-3">
-              <div class="card-header showQuestionDetails-header">Answer</div>
-              <div class="card-body">
-                <p
-                  className="card-text showAnswerDetails"
-                  dangerouslySetInnerHTML={{
-                    __html: ans,
-                  }}
-                ></p>
-              </div>
-            </div>
-          ))
-        : ""}
+      <Link to="/forum">
+        <button
+          onClick={() => addAnswers(answer)}
+          type="button"
+          className="btn btn-warning p-3 submit-button"
+        >
+          Submit
+        </button>{" "}
+      </Link>
     </div>
   );
 };
