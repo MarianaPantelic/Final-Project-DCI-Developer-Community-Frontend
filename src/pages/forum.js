@@ -37,8 +37,15 @@ const Forum = (props) => {
         <div className="container question-cards-container">
           {props.show.map((question, index) => (
             <div key={index} class="card mt-5 question-cards">
-              <div className="card-header pl-5 question-user">
-                {question.user ? question.user.firstName : ""}
+              <div className="card-header pl-5 question-user d-flex">
+                <div className="align-self-center">
+                  {question.image ? (
+                    <img src={question.image} width={50} />
+                  ) : null}
+                </div>
+                <div className="ml-3 align-self-center">
+                  {question.user ? question.user.firstName : null}
+                </div>
               </div>
               <div className="card-body">
                 <blockquote class="blockquote mb-0 question-title">

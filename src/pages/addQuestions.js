@@ -18,24 +18,32 @@ const AddQuestions = (props) => {
     inputContentRef.current.value = e;
   };
 
-  const addQuestion = async (questionTopic, questionTitle, questionContent) => {
-    console.log("add post log" + questionContent);
+  const userLocal = JSON.parse(localStorage.getItem("user"));
+  let userImage = userLocal.image;
+  console.log(userImage);
 
+  const addQuestion = async () => {
     try {
-
-      const response = await axios.post("http://localhost:3001/forum/", {
-        topic: questionTopic,
-        title: questionTitle,
-        content: questionContent,
-        user: JSON.parse(localStorage.getItem("user"))._id,
-      },
-                                        {
+      const response = await axios.post(
+        "http://localhost:3001/forum/",
+        {
+          topic: inputTopicRef.current.value,
+          title: inputTitleRef.current.value,
+          content: inputContentRef.current.value,
+          user: JSON.parse(localStorage.getItem("user"))._id,
+          image: userImage,
+        },
+        {
           headers: {
             auth: localStorage.getItem("token"),
           },
-      }                                );
+        }
+      );
 
-      await props.sendQuestionsGetRequest({ title });
+      await props.sendQuestionsGetRequest();
+      setTopic("");
+      setTitle("");
+      history.push("/forum");
       console.log("response is :" + JSON.stringify(response));
     } catch (error) {
       console.log(error);
@@ -43,13 +51,14 @@ const AddQuestions = (props) => {
     }
   };
 
-  const AddQuestionsOnClick = async () => {
+  /* const AddQuestionsOnClick = async () => {
     // console.log(inputContentRef.current);
     try {
       await addQuestion(
         inputTopicRef.current.value,
         inputTitleRef.current.value,
-        inputContentRef.current.value
+        inputContentRef.current.value,
+        userImage
       );
       setTopic("");
       setTitle("");
@@ -58,10 +67,10 @@ const AddQuestions = (props) => {
       console.log("error");
     }
   };
-
+ */
   return (
     <section className="writeQuestionSection">
-    
+   
       <div>
         <div className="first-clip-ask-question"></div>
         <div className="second-clip-ask-question"></div>
@@ -115,7 +124,7 @@ const AddQuestions = (props) => {
           </div>
           <Link to="/forum">
             <button
-              onClick={() => AddQuestionsOnClick()}
+              onClick={() => addQuestion()}
               type="button"
               className="btn mt-3 postButton"
             >

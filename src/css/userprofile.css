@@ -199,7 +199,10 @@
   width: 10rem;
   font-size: 1.5rem;
 }
-.calendar {
-  width: 30%;
+.react-calendar {
+  width: 300px;
+  height: 250px;
+  font-size: 1.5rem;
+  line-height: 0.5rem;
   margin: 5% auto !important;
 }

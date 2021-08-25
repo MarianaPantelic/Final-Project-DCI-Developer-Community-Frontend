@@ -95,6 +95,10 @@ iframe {
   width: 38rem;
   height: 20rem;
 }
+.blogUser img {
+  width: 50px;
+  height: auto;
+}
 
 .likeButton {
   font-size: 3rem;
