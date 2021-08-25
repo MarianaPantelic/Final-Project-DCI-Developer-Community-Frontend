@@ -16,6 +16,10 @@ const ShowQuestion = (props) => {
   const foundQuestion = props.showQuestionDetails.find(
     (question) => id == question._id
   );
+
+  const userLocal = JSON.parse(localStorage.getItem("user"));
+  let userName = userLocal.firstName;
+  let userImage = userLocal.image;
   console.log(foundQuestion);
 
   const handleBody = (e) => {
@@ -24,8 +28,9 @@ const ShowQuestion = (props) => {
     setAnswer(e);
   };
 
-  const addAnswers = async (answer) => {
-    let tempArray = [...foundQuestion.answer, answer];
+  const addAnswers = async (answer, userName, userImage) => {
+    let myAnswer = { content: answer, user: userName, image: userImage };
+    let tempArray = [...foundQuestion.answer, myAnswer];
 
     var data = { answer };
     try {
@@ -73,13 +78,18 @@ const ShowQuestion = (props) => {
       {foundQuestion
         ? foundQuestion.answer.map((ans) => (
             <div class="card showQuestionDetails-cards p-3">
-              <div class="card-header showQuestionDetails-header">Answer by </div>
+              <div class="card-header showQuestionDetails-header d-flex">
+                <div>
+                  {ans.image ? <img src={ans.image} width={50} /> : null}
+                </div>
+                <div className="m-4">Answered by {ans.user}</div>
+              </div>
               <div class="card-body">
-              <p>{console.log(ans)}</p>
+                <p>{console.log(ans)}</p>
                 <p
                   className="card-text showAnswerDetails"
                   dangerouslySetInnerHTML={{
-                    __html: ans,
+                    __html: ans.content,
                   }}
                 ></p>
               </div>
@@ -102,7 +112,7 @@ const ShowQuestion = (props) => {
       </form>
       <Link to="/forum">
         <button
-          onClick={() => addAnswers(answer)}
+          onClick={() => addAnswers(answer, userName, userImage)}
           type="button"
           className="btn btn-warning p-3 submit-button"
         >
