@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { Form } from "react-bootstrap";
 import ReactQuill from "react-quill";
 import { useHistory } from "react-router-dom";
 
@@ -17,19 +18,20 @@ const AddPosts = (props) => {
     inputContentRef.current.value = e;
   };
 
-  const addPost = async (postTitle, postContent) => {
-    console.log("add post log" + postContent);
-    // TODO
-    let userName = localStorage.getItem("user");
+  const userLocal = JSON.parse(localStorage.getItem("user"));
+  let userImage = userLocal.image;
+
+  const addPost = async () => {
     try {
       const response = await axios.post(
         "http://localhost:3001/blogs/",
         {
-          title: postTitle,
-          content: postContent,
+          title: inputTitleRef.current.value,
+          content: inputContentRef.current.value,
           clicked: false,
           likes: 0,
           whoClicked: [],
+          image: userImage,
         },
         {
           headers: {
@@ -38,23 +40,10 @@ const AddPosts = (props) => {
         }
       );
       console.log(localStorage.getItem("token"));
-      await props.sendGetRequest({ title });
-      console.log("response is :" + JSON.stringify(response));
-    } catch (error) {
-      console.log(error);
-      throw error;
-    }
-  };
-
-  console.log("user" + localStorage.getItem("user"));
-
-  const addPostsOnClick = async () => {
-    // console.log(inputContentRef.current);
-
-    try {
-      await addPost(inputTitleRef.current.value, inputContentRef.current.value);
+      await props.sendGetRequest();
       setTitle("");
       history.push("/blog");
+      console.log("response is :" + JSON.stringify(response));
     } catch (error) {
       console.log("U need to sign in" + error);
       if (!localStorage.getItem("token")) {
@@ -62,22 +51,30 @@ const AddPosts = (props) => {
         window.location.replace("/");
       }
     }
-    //  setContent("");
   };
+
+  console.log("user" + localStorage.getItem("user"));
 
   return (
     <section className="writeBlogSection">
-    <div>
-      <div className="writeblog-clip-1"></div>
-      <div className="writeblog-clip-2"></div>
-      <div className="writeblog-clip-3"></div>
-      <div className="writeblog-clip-4"></div>
+      <div>
 
+        <div className="clip-post"></div>
+      </div>
 
-    </div>
+      {/* <div>
+
+        <div className="writeblog-clip-1"></div>
+        <div className="writeblog-clip-2"></div>
+        <div className="writeblog-clip-3"></div>
+        <div className="writeblog-clip-4"></div>
+
+      </div> */}
+
+      </div>
       <div className="container">
         <div className="row">
-          <form >
+          <form>
             <h1 className="welcomAddPost">
               Welcome{" "}
               {localStorage.getItem("user") &&
@@ -107,7 +104,7 @@ const AddPosts = (props) => {
               />
             </div>
             <button
-              onClick={() => addPostsOnClick()}
+              onClick={() => addPost()}
               type="button"
               className="btn mt-5 postButton"
             >
