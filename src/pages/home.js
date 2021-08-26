@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Row } from "react-bootstrap";
 import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
 

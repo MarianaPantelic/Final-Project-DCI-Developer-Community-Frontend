@@ -48,7 +48,7 @@ clip-path: polygon(100% 39%, 100% 0, 42% 0);
 } */
 
 .showPostsSection {
-  padding-top: 10rem;
+  /* padding-top: 10rem; */
 }
 
 .writeBlogSection {
@@ -95,6 +95,10 @@ iframe {
   width: 38rem;
   height: 20rem;
 }
+.blogUser img {
+  width: 50px;
+  height: auto;
+}
 
 .likeButton {
   font-size: 3rem;
@@ -106,6 +110,7 @@ iframe {
 }
 
 .newPostButton {
+  margin-top: 10rem;
   font-size: 2rem;
   padding: 1rem 4rem;
   background-color: #f66e1a;
@@ -121,13 +126,29 @@ iframe {
   color: #fff;
   text-decoration: none;
 }
-
+.clip-blog {
+  clip-path: polygon(38% 0, 73% 0, 56% 100%, 17% 100%);
+  background: linear-gradient(#e6efff, #1a39ca, #141a75);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  z-index: -1;
+}
 /* add post */
-
-.writeBlogSection {
-  margin-top: 10rem;
+.clip-post {
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 48% 100%, 77% 51%, 52% 1%);
+  background: linear-gradient(#e6efff, #1a39ca, #141a75);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  z-index: -1;
 }
 
+.welcomAddPost {
+  margin-top: 10rem;
+}
 
 form label {
   font-size: 2rem;

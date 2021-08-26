@@ -1,17 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-//import Calendar from "react-calendar";
-import Calendar from "react-input-calendar";
-import "react-calendar/dist/Calendar.css";
-import {
-  Button,
-  Col,
-  Container,
-  Form,
-  FormControl,
-  Row,
-} from "react-bootstrap";
+
+import { Col, Row } from "react-bootstrap";
 import ProfileImage from "@daym3l/react-profile-image";
 import { Link } from "react-router-dom";
+
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+
 const axios = require("axios").default;
 
 const UserProfile = (props) => {
@@ -107,18 +102,11 @@ const UserProfile = (props) => {
     console.log(fileImage);
   };
 
-  /* var today = new Date();
-  var date =
-    today.getDate() + "." + (today.getMonth() + 1) + "." + today.getFullYear();
-  console.log(date); */
-
   function formatDateAsDD_MM_YYYY(date) {
     const regex = /\d{2}\.\d{2}\.\d{4}/;
     if (regex.test(date)) {
-      // console.log("Leave date as it is");
       return date;
     }
-    // console.log("Calculating date");
     date = new Date(date);
     let day = date.getDate();
     let month = date.getMonth() + 1;
@@ -223,123 +211,31 @@ const UserProfile = (props) => {
 
           <Col sm={12} md={12} lg={5}>
             <div className="search-container">
-              <h2 className="text-center mt-5">Agenda</h2>
+              <h2 className="text-center mt-5">
+                Agenda <span>{formatDateAsDD_MM_YYYY(value)}</span>
+              </h2>
 
               <div>
                 <div className="calendar">
                   <Calendar
+                    width={200}
+                    height={200}
                     format="DD/MM/YYYY"
-                    date={today}
+                    onClickDay={getAgendaByDate}
                     onChange={onChange}
                     value={value}
                     computableFormat={"DD.MM.YYYY"}
                   />
                 </div>
-                {/* {dailyAgenda ? (
-                  <div>
-                    {dailyAgenda &&
-                    dailyAgenda.topics &&
-                    dailyAgenda.topics.length !== 0 ? (
-                      <h2 className="text-center mt-5">Topics</h2>
-                    ) : null}
-
-                    <ol>
-                      {dailyAgenda && dailyAgenda.topics
-                        ? dailyAgenda.topics.map((topic) => (
-                            <li className="mt-2 ml-5">
-                              {" "}
-                              &nbsp;&nbsp;&nbsp;{topic}
-                            </li>
-                          ))
-                        : null}
-                    </ol>
-                    {dailyAgenda &&
-                    dailyAgenda.resources &&
-                    dailyAgenda.resources.length !== 0 ? (
-                      <h2 className="text-center mt-5">Resources</h2>
-                    ) : null}
-
-                    <ol>
-                      {dailyAgenda && dailyAgenda.resources
-                        ? dailyAgenda.resources.map((resource) => (
-                            <li className="mt-2 ml-5">
-                              {" "}
-                              <a
-                                href={resource}
-                                rel="noreferrer"
-                                target="_blank"
-                              >
-                                {resource}
-                              </a>
-                            </li>
-                          ))
-                        : null}
-                    </ol>
-                    {dailyAgenda &&
-                    dailyAgenda.exercises &&
-                    dailyAgenda.exercises.length !== 0 ? (
-                      <h2 className="text-center mt-5">Exercises</h2>
-                    ) : null}
-
-                    <ol>
-                      {dailyAgenda && dailyAgenda.exercises
-                        ? dailyAgenda.exercises.map((exercise) => (
-                            <li className="mt-2 ml-5">
-                              {" "}
-                              &nbsp;&nbsp;&nbsp;{exercise}
-                            </li>
-                          ))
-                        : null}
-                    </ol>
-                    {dailyAgenda &&
-                    dailyAgenda.questions &&
-                    dailyAgenda.questions.length !== 0 ? (
-                      <h2 className="text-center mt-5">Questions</h2>
-                    ) : null}
-
-                    <ol>
-                      {dailyAgenda && dailyAgenda.questions
-                        ? dailyAgenda.questions.map((question) => (
-                            <li className="mt-2 ml-5">
-                              {" "}
-                              &nbsp;&nbsp;&nbsp;{question}
-                            </li>
-                          ))
-                        : null}
-                    </ol>
-                    {dailyAgenda && dailyAgenda.recording ? (
-                      <h2 className="text-center mt-5">Meeting Recording</h2>
-                    ) : null}
-                    {dailyAgenda && dailyAgenda.recording ? (
-                      <div>
-                        <ul>
-                          <li>
-                            Link:{" "}
-                            <a href={dailyAgenda.recording.link}>
-                              {dailyAgenda.recording.link}
-                            </a>
-                          </li>
-                          <li>Passcode: {dailyAgenda.recording.passcode}</li>
-                        </ul>
-                      </div>
-                    ) : null}
-                  </div>
-                ) : (
-                  <h2 className="text-center mt-5">
-                    There is no info for today!
-                  </h2>
-                )}*/}
               </div>
 
               {console.log(value)}
               <div>
-                {agendaByDate ? (
-                  <div className="text-center mt-3">{agendaByDate.date}</div>
-                ) : (
+                {!agendaByDate ? (
                   <h2 className="text-center mt-5">
                     There is no info for this day!
                   </h2>
-                )}
+                ) : null}
                 {agendaByDate &&
                 agendaByDate.topics &&
                 agendaByDate.topics.length !== 0 ? (
@@ -349,7 +245,7 @@ const UserProfile = (props) => {
                 <ol>
                   {agendaByDate && agendaByDate.topics
                     ? agendaByDate.topics.map((topic) => (
-                        <li className="mt-2 ml-5">
+                        <li className="mt-3 ml-5">
                           {" "}
                           &nbsp;&nbsp;&nbsp;{topic}
                         </li>
