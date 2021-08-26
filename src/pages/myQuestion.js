@@ -7,7 +7,7 @@ const axios = require("axios").default;
 const MyQuestion = (props) => {
   const { id } = useParams();
 
-  const [question, setQuestion] = useState([]);
+  const [question, setQuestion] = useState({});
 
   useEffect(() => {
     getQuestion();
@@ -16,7 +16,7 @@ const MyQuestion = (props) => {
   const getQuestion = async () => {
     try {
       const response = await axios.get(`http://localhost:3001/forum/${id}`);
-      console.log(response.data);
+      console.log(typeof response.data);
       setQuestion(response.data);
     } catch (err) {
       console.error(err);
@@ -67,7 +67,12 @@ const MyQuestion = (props) => {
                   ? question.answer.map((element) => (
                       <div>
                         <h2>Answers</h2>
-                        <li>{element}</li>
+                        <div
+                          className="mt-5 text-center"
+                          dangerouslySetInnerHTML={{
+                            __html: element.content,
+                          }}
+                        ></div>
                       </div>
                     ))
                   : null}
