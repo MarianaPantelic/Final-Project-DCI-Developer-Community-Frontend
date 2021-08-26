@@ -211,7 +211,9 @@ const UserProfile = (props) => {
 
           <Col sm={12} md={12} lg={5}>
             <div className="search-container">
-              <h2 className="text-center mt-5">Agenda</h2>
+              <h2 className="text-center mt-5">
+                Agenda <span>{formatDateAsDD_MM_YYYY(value)}</span>
+              </h2>
 
               <div>
                 <div className="calendar">
@@ -229,13 +231,11 @@ const UserProfile = (props) => {
 
               {console.log(value)}
               <div>
-                {agendaByDate ? (
-                  <div className="text-center mt-3">{agendaByDate.date}</div>
-                ) : (
+                {!agendaByDate ? (
                   <h2 className="text-center mt-5">
                     There is no info for this day!
                   </h2>
-                )}
+                ) : null}
                 {agendaByDate &&
                 agendaByDate.topics &&
                 agendaByDate.topics.length !== 0 ? (
@@ -245,7 +245,7 @@ const UserProfile = (props) => {
                 <ol>
                   {agendaByDate && agendaByDate.topics
                     ? agendaByDate.topics.map((topic) => (
-                        <li className="mt-2 ml-5">
+                        <li className="mt-3 ml-5">
                           {" "}
                           &nbsp;&nbsp;&nbsp;{topic}
                         </li>
