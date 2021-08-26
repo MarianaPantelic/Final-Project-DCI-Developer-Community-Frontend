@@ -71,7 +71,7 @@ const AddPosts = (props) => {
 
       </div> */}
 
-      </div>
+   
       <div className="container">
         <div className="row">
           <form>
