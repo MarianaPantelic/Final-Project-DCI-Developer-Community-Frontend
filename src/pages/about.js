@@ -70,22 +70,20 @@ const About = () => {
           </p>
           <li>
             in Forum page ,they can ask questions and receive answers about
-            different topics related to web development; In Blog Page , they can
-            see , write and like posts from the other users;
+            different topics related to web development; 
           </li>
           <li>
             inside Blog Page , they can see , write and like posts from the
             other users;
           </li>
-          <li>News Page is offering information about programming world</li>
+          <li>News Page is offering information about programming world;</li>
           <li>
-            {" "}
             in Resources Page the students are able to find websites from where
-            they can learn how to code{" "}
+            they can learn how to code;
           </li>
           <li>
             Jobs page is offering information about jobs which are available in
-            this domain
+            this domain.
           </li>
         </div>
       </div>
