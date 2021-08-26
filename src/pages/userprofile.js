@@ -1,20 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-<<<<<<< HEAD
-//import Calendar from "react-calendar";
-import Calendar from "react-input-calendar";
-
-import {
-  Button,
-  Col,
-  Container,
-  Form,
-  FormControl,
-  Row,
-} from "react-bootstrap";
-=======
 
 import { Col, Row } from "react-bootstrap";
->>>>>>> 5b71b6aef84ffa8b4619be5847bec563752e67f9
 import ProfileImage from "@daym3l/react-profile-image";
 import { Link } from "react-router-dom";
 
