@@ -58,11 +58,20 @@ const AddPosts = (props) => {
   return (
     <section className="writeBlogSection">
       <div>
-
         <div className="clip-post"></div>
       </div>
 
 
+<<<<<<< HEAD
+=======
+        <div className="writeblog-clip-1"></div>
+        <div className="writeblog-clip-2"></div>
+        <div className="writeblog-clip-3"></div>
+        <div className="writeblog-clip-4"></div>
+
+      </div> */}
+
+>>>>>>> 180be02a708cfd3fa5f76ce19cf492b58b983d7d
       <div className="container">
         <div className="row">
           <form>
