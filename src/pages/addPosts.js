@@ -58,7 +58,6 @@ const AddPosts = (props) => {
   return (
     <section className="writeBlogSection">
       <div>
-
         <div className="clip-post"></div>
       </div>
 
@@ -71,7 +70,6 @@ const AddPosts = (props) => {
 
       </div> */}
 
-      </div>
       <div className="container">
         <div className="row">
           <form>
