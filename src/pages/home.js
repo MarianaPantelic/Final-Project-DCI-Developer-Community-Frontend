@@ -11,8 +11,8 @@ const Home = () => {
         <div className="clip-2"></div>
       </div>
 
-      <Row className="justify-content-around hero-container">
-        <Col sm={12} md={5} lg={5}>
+      <Row className="hero-container">
+        <Col>
           <Fade left duration={2000}>
             <div className="align-self-center hero-text">
               <h1>Come Join Us!</h1>
@@ -25,76 +25,76 @@ const Home = () => {
               <p>You need help? We help each other!</p>
 
               <Link to="/register">
-                <Button className="m-5 register-btn">Register</Button>
+                <Button className="register-btn">Register</Button>
               </Link>
             </div>
           </Fade>
         </Col>
-        <Col sm={12} md={5} lg={5}>
+        <Col>
           <Fade right duration={2000}>
             <div className="hero-img align-self-center"></div>
           </Fade>
         </Col>
       </Row>
 
-      <Row className="justify-content-around who-section">
-        <Col sm={12} md={5} lg={5} className="align-self-center">
+      <Row className="who-section">
+        <Col className="align-self-center">
           <Fade left duration={2000}>
             <div className="img-container img1"></div>
           </Fade>
         </Col>
 
-        <Col sm={12} md={5} lg={5}>
+        <Col className="align-self-center">
           <Fade right duration={2000}>
-            <div className="align-self-center text-container">
+            <div className="text-container">
               <h2 className="text-center">Who is DCI?</h2>
               <p className="mt-5">
                 The Digital Career Institute was born as an initiative to
                 integrate refugees into digital jobs. Today it is committed to
-                train anyone who wants to pursue to tech career.
+                train anyone who wants to pursue a tech career.
               </p>
             </div>
           </Fade>
         </Col>
       </Row>
-      <Row className="justify-content-around why-section">
-        <Col sm={12} md={5} lg={5}>
+
+      <Row className="why-section">
+        <Col className="align-self-center">
           <Fade left duration={2000}>
-            <div className="align-self-center text-container">
+            <div className="text-container">
               <h2 className="text-center">Why are we here?</h2>
               <p className="mt-5">
-                Want to be a Freelancer, Digital Nomad, or work in your dream
-                tech company? Become a Web Developer, a dynamic and vital field
-                in today'S society. As a Web Developer you can show your
-                creativity, become a part of the Tech Disruption, build
-                websites, Web Apps and more.
+                We are here to support and help each other. We are here to guide
+                you and show you what, how and where to learn. We are here for
+                you and you can be also here for us!
               </p>
             </div>
           </Fade>
         </Col>
-        <Col sm={12} md={5} lg={5} className="align-self-center">
+        <Col className="align-self-center">
           <Fade right duration={2000}>
             <div className="img-container img2"></div>
           </Fade>
         </Col>
       </Row>
-      <Row className="justify-content-around join-section">
-        <Col sm={12} md={5} lg={5} className="align-self-center">
+
+      <Row className="join-section">
+        <Col className="align-self-center">
           <Fade left duration={2000}>
             <div className="img-container img3"></div>
           </Fade>
         </Col>
-        <Col sm={12} md={5} lg={5}>
+        <Col className="align-self-center">
           <Fade right duration={3000}>
-            <div className="align-self-center text-container">
+            <div className="text-container">
               <h2 className="text-center">Why should I join this community?</h2>
               <p className="mt-5">
-                Want to be a Freelancer, Digital Nomad, or work in your dream
-                tech company? Become a Web Developer, a dynamic and vital field
-                in today'S society. As a Web Developer you can show your
-                creativity, become a part of the Tech Disruption, build
-                websites, Web Apps and more.
+                You should join because we offer information, help and support.
+                Most important you can be part of a community of developers like
+                you, at the beginning of a new journey. Exciting, confusing, but
+                wonderful.
               </p>
+              <h2 className="mt-5 text-center">JOIN US! BE A DCI DEV!</h2>
             </div>
           </Fade>
         </Col>
