@@ -144,6 +144,10 @@
 @media only screen and (min-width: 600px) and (max-width: 1400px) {
   .hero-text,
   .hero-img {
-    width: 70rem;
+    width: 55rem;
+  }
+  .text-container,
+  .img-container {
+    width: 45rem;
   }
 }
