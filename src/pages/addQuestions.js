@@ -25,7 +25,7 @@ const AddQuestions = (props) => {
   const addQuestion = async () => {
     try {
       const response = await axios.post(
-        "https://dcidevs-backend.herokuapp.com/forum/",
+        "https://dcidevs-backend.herokuapp.com/forum",
         {
           topic: inputTopicRef.current.value,
           title: inputTitleRef.current.value,

@@ -130,7 +130,7 @@ const UserProfile = (props) => {
   const getAgenda = async () => {
     try {
       const response = await axios.get(
-        "https://dcidevs-backend.herokuapp.com//agenda"
+        "https://dcidevs-backend.herokuapp.com/agenda"
       );
       console.log(response);
       setAgenda(response.data);

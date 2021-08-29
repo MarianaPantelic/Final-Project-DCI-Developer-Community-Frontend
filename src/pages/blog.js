@@ -14,7 +14,7 @@ const Blog = (props) => {
 
     try {
       axios
-        .put(`https://dcidevs-backend.herokuapp.com/${id}`, {
+        .put(`https://dcidevs-backend.herokuapp.com/blogs/${id}`, {
           likes: foundPost.likes + 1,
           whoClicked: tempArray,
         })

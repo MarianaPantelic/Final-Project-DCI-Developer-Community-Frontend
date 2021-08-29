@@ -24,7 +24,7 @@ const AddPosts = (props) => {
   const addPost = async () => {
     try {
       const response = await axios.post(
-        "https://dcidevs-backend.herokuapp.com/blogs/",
+        "https://dcidevs-backend.herokuapp.com/blogs",
         {
           title: inputTitleRef.current.value,
           content: inputContentRef.current.value,

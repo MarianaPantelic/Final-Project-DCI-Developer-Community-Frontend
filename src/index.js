@@ -68,7 +68,7 @@ const App = () => {
   const sendGetRequest = async () => {
     try {
       const response = await axios.get(
-        "https://dcidevs-backend.herokuapp.com/blogs/"
+        "https://dcidevs-backend.herokuapp.com/blogs"
       );
       setPosts(response.data);
       console.log(response.data);
