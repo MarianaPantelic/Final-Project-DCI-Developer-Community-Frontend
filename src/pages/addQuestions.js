@@ -25,7 +25,7 @@ const AddQuestions = (props) => {
   const addQuestion = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3001/forum/",
+        "https://dcidevs-backend.herokuapp.com/forum/",
         {
           topic: inputTopicRef.current.value,
           title: inputTitleRef.current.value,
@@ -70,7 +70,6 @@ const AddQuestions = (props) => {
  */
   return (
     <section className="writeQuestionSection">
-   
       <div>
         <div className="first-clip-ask-question"></div>
         <div className="second-clip-ask-question"></div>

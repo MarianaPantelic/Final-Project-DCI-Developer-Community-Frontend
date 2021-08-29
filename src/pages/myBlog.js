@@ -15,7 +15,9 @@ const MyBlog = (props) => {
 
   const getBlog = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/blogs/${id}`);
+      const response = await axios.get(
+        `https://dcidevs-backend.herokuapp.com/blogs/${id}`
+      );
       console.log(response.data);
       setBlog(response.data);
     } catch (err) {
@@ -27,7 +29,7 @@ const MyBlog = (props) => {
   const deleteBlog = async () => {
     try {
       await axios
-        .delete(`http://localhost:3001/blogs/${id}`, {
+        .delete(`https://dcidevs-backend.herokuapp.com/blogs/${id}`, {
           data: { _id: id },
         })
         .then((resp) => {

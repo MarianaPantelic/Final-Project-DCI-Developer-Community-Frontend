@@ -50,7 +50,9 @@ const UserProfile = (props) => {
 
   const getUser = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/users/${userId}`);
+      const response = await axios.get(
+        `https://dcidevs-backend.herokuapp.com/users/${userId}`
+      );
       setUser(response.data);
       console.log(response.data);
     } catch (err) {
@@ -61,7 +63,7 @@ const UserProfile = (props) => {
   const getUserBlogs = async () => {
     try {
       const resp = await axios.get(
-        `http://localhost:3001/profile/blog/${userId}`
+        `https://dcidevs-backend.herokuapp.com/profile/blog/${userId}`
       );
       setUserBlogs(resp.data);
       console.log(userBlogs);
@@ -73,7 +75,7 @@ const UserProfile = (props) => {
   const getUserQuestions = async () => {
     try {
       const resp = await axios.get(
-        `http://localhost:3001/profile/question/${userId}`
+        `https://dcidevs-backend.herokuapp.com/profile/question/${userId}`
       );
       setUserQuestions(resp.data);
       console.log(userQuestions);
@@ -86,7 +88,7 @@ const UserProfile = (props) => {
     // Do something with the selected image)
     try {
       await axios
-        .put(`http://localhost:3001/users/${userId}`, {
+        .put(`https://dcidevs-backend.herokuapp.com/users/${userId}`, {
           image: base64Image,
           headers: {
             "Content-Type": "multipart/form-data",
@@ -127,7 +129,9 @@ const UserProfile = (props) => {
   console.log("moonLanding:", moonLanding, ":", moonFormat);
   const getAgenda = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/agenda");
+      const response = await axios.get(
+        "https://dcidevs-backend.herokuapp.com//agenda"
+      );
       console.log(response);
       setAgenda(response.data);
       console.log(response.data);
@@ -140,7 +144,9 @@ const UserProfile = (props) => {
   const getDailyAgenda = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3001/agenda/${formatDateAsDD_MM_YYYY(value)}`
+        `https://dcidevs-backend.herokuapp.com/agenda/${formatDateAsDD_MM_YYYY(
+          value
+        )}`
       );
       console.log(response);
       setDailyAgenda(response.data[0]);
@@ -154,7 +160,9 @@ const UserProfile = (props) => {
   const getAgendaByDate = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3001/agenda/${formatDateAsDD_MM_YYYY(value)}`
+        `https://dcidevs-backend.herokuapp.com/agenda/${formatDateAsDD_MM_YYYY(
+          value
+        )}`
       );
       console.log(response);
       setAgendaByDate(response.data[0]);

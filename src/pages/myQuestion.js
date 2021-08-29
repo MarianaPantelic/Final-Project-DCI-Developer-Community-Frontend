@@ -15,7 +15,9 @@ const MyQuestion = (props) => {
 
   const getQuestion = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/forum/${id}`);
+      const response = await axios.get(
+        `https://dcidevs-backend.herokuapp.com/forum/${id}`
+      );
       console.log(typeof response.data);
       setQuestion(response.data);
     } catch (err) {
@@ -27,7 +29,7 @@ const MyQuestion = (props) => {
   const deleteQuestion = async () => {
     try {
       await axios
-        .delete(`http://localhost:3001/forum/${id}`, {
+        .delete(`https://dcidevs-backend.herokuapp.com/forum/${id}`, {
           data: { _id: id },
         })
         .then((resp) => {

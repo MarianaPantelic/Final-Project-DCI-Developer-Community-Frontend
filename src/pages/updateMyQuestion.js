@@ -32,9 +32,11 @@ const UpdateMyQuestion = (props) => {
     var data = { topic, title, content };
 
     try {
-      axios.put(`http://localhost:3001/forum/${id}`, data).then((response) => {
-        props.sendQuestionsGetRequest();
-      });
+      axios
+        .put(`https://dcidevs-backend.herokuapp.com/forum/${id}`, data)
+        .then((response) => {
+          props.sendQuestionsGetRequest();
+        });
     } catch (error) {
       console.log(error);
     }

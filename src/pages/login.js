@@ -12,7 +12,7 @@ const Login = () => {
     console.log(emailRef.current.value);
     try {
       axios
-        .post(`http://localhost:3001/users/login`, {
+        .post(`https://dcidevs-backend.herokuapp.com/login`, {
           email: emailRef.current.value,
           password: passwordRef.current.value,
         })
