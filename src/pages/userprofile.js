@@ -172,9 +172,11 @@ const UserProfile = (props) => {
         <div className="third-clip"></div>
       </div>
       <div className="profile-container">
-        <h1 className="text-center">Welcome back {user.firstName}!</h1>
+        <div className="h1-bg">
+          <h1 className="text-center">Welcome back {user.firstName}!</h1>
+        </div>
         <Row>
-          <Col sm={12} md={12} lg={3}>
+          <Col>
             <div className="user-info-container">
               <div className="user-image-container">
                 {user.image ? (
@@ -197,7 +199,7 @@ const UserProfile = (props) => {
                 {user ? (
                   <div>
                     <div className="mt-3 profile-user-name">
-                      {user.userName}
+                      <div>{user.userName}</div>
                     </div>
                     <div className="mt-3">First Name: {user.firstName}</div>
                     <div>Last Name: {user.lastName}</div>
@@ -209,7 +211,7 @@ const UserProfile = (props) => {
             </div>
           </Col>
 
-          <Col sm={12} md={12} lg={5}>
+          <Col>
             <div className="search-container">
               <h2 className="text-center mt-5">
                 Agenda <span>{formatDateAsDD_MM_YYYY(value)}</span>
@@ -324,79 +326,81 @@ const UserProfile = (props) => {
             </div>
           </Col>
 
-          <Col sm={12} md={12} lg={4}>
-            <div className="myQuestions-container d-flex flex-column justify-content-between">
-              <div>
-                <h2 className="text-center mt-5">My Questions</h2>
+          <Col>
+            <div className="my-stuff-container">
+              <div className="myQuestions-container d-flex flex-column justify-content-between">
+                <div>
+                  <h2 className="text-center mt-5">My Questions</h2>
 
-                <div className="mt-5 links">
-                  {userQuestions.length !== 0 ? (
-                    userQuestions.map((question, idx) => (
-                      <div>
-                        <span>{idx + 1 + "." + " "}</span>
-                        <Link to={`/myQuestion/${question._id}`}>
-                          <span>{question.title}</span>
-                        </Link>
-                      </div>
-                    ))
+                  <div className="mt-5 links">
+                    {userQuestions.length !== 0 ? (
+                      userQuestions.map((question, idx) => (
+                        <div>
+                          <span>{idx + 1 + "." + " "}</span>
+                          <Link to={`/myQuestion/${question._id}`}>
+                            <span>{question.title}</span>
+                          </Link>
+                        </div>
+                      ))
+                    ) : (
+                      <h3 className="text-center mt-5">
+                        You didn't ask any questions yet!
+                      </h3>
+                    )}
+                  </div>
+                </div>
+                <div className="d-flex justify-content-end mx-auto">
+                  {localStorage.getItem("token") ? (
+                    <Link to="/addQuestions">
+                      <button type="button" className="askQuestion-btn mb-3">
+                        Ask Question
+                      </button>
+                    </Link>
                   ) : (
-                    <h3 className="text-center mt-5">
-                      You didn't ask any questions yet!
-                    </h3>
+                    <Link to="/login">
+                      <button type="button" className="askQuestion-btn mb-3">
+                        Ask Question
+                      </button>
+                    </Link>
                   )}
                 </div>
               </div>
-              <div className="d-flex justify-content-end mx-auto">
-                {localStorage.getItem("token") ? (
-                  <Link to="/addQuestions">
-                    <button type="button" className="askQuestion-btn mb-3">
-                      Ask Question
-                    </button>
-                  </Link>
-                ) : (
-                  <Link to="/login">
-                    <button type="button" className="askQuestion-btn mb-3">
-                      Ask Question
-                    </button>
-                  </Link>
-                )}
-              </div>
-            </div>
 
-            <div className="myBlogs-container d-flex flex-column justify-content-between">
-              <div>
-                <h2 className="text-center mt-5">My Blogs</h2>
-                <div className="mt-5 links">
-                  {userBlogs.length !== 0 ? (
-                    userBlogs.map((blog, idx) => (
-                      <div>
-                        <span>{idx + 1 + "." + " "}</span>
-                        <Link to={`/myBlog/${blog._id}`}>
-                          <span>{blog.title}</span>
-                        </Link>
-                      </div>
-                    ))
+              <div className="myBlogs-container d-flex flex-column justify-content-between">
+                <div>
+                  <h2 className="text-center mt-5">My Blogs</h2>
+                  <div className="mt-5 links">
+                    {userBlogs.length !== 0 ? (
+                      userBlogs.map((blog, idx) => (
+                        <div>
+                          <span>{idx + 1 + "." + " "}</span>
+                          <Link to={`/myBlog/${blog._id}`}>
+                            <span>{blog.title}</span>
+                          </Link>
+                        </div>
+                      ))
+                    ) : (
+                      <h3 className="text-center mt-5">
+                        You don't have any blogs yet!
+                      </h3>
+                    )}
+                  </div>
+                </div>
+                <div className="d-flex justify-content-end mx-auto">
+                  {localStorage.getItem("token") ? (
+                    <Link to="/addPosts">
+                      <button type="button" className="askQuestion-btn mb-3">
+                        Add Blog
+                      </button>
+                    </Link>
                   ) : (
-                    <h3 className="text-center mt-5">
-                      You don't have any blogs yet!
-                    </h3>
+                    <Link to="/login">
+                      <button type="button" className="askQuestion-btn mb-3">
+                        Add Blog
+                      </button>
+                    </Link>
                   )}
                 </div>
-              </div>
-              <div className="d-flex justify-content-end mx-auto">
-                {localStorage.getItem("token") ? (
-                  <Link to="/addPosts">
-                    <button type="button" className="askQuestion-btn mb-3">
-                      Add Blog
-                    </button>
-                  </Link>
-                ) : (
-                  <Link to="/login">
-                    <button type="button" className="askQuestion-btn mb-3">
-                      Add Blog
-                    </button>
-                  </Link>
-                )}
               </div>
             </div>
           </Col>

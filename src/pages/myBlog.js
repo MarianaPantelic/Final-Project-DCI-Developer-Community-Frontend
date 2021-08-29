@@ -39,37 +39,40 @@ const MyBlog = (props) => {
     window.location.replace("/userprofile");
   };
   return (
-    <Container>
-      <Col sm={12} md={12} lg={8} className="question-container">
-        {blog ? (
-          <div>
-            <div className="question-section">
-              <h1 className=" text-center">{blog.title}</h1>
+    <>
+      <div className="my-clip1"></div>
+      <Container>
+        <Col sm={12} md={12} lg={8} className="question-container">
+          {blog ? (
+            <div>
+              <div className="question-section">
+                <h1 className=" text-center">{blog.title}</h1>
 
-              <div
-                className="mt-5 text-center"
-                dangerouslySetInnerHTML={{
-                  __html: blog.content,
-                }}
-              ></div>
+                <div
+                  className="mt-5 text-center"
+                  dangerouslySetInnerHTML={{
+                    __html: blog.content,
+                  }}
+                ></div>
+              </div>
+              <div className="float-right mt-2">
+                {blog && blog.likes ? blog.likes : 0} likes
+              </div>
             </div>
-            <div className="float-right mt-2">
-              {blog && blog.likes ? blog.likes : 0} likes
-            </div>
+          ) : null}
+
+          <div className="d-flex justify-content-around justify-content-center btn-container">
+            <Link to={`/updateMyBlog/${id}`}>
+              <Button className="register-btn">Update</Button>
+            </Link>
+
+            <Button className="register-btn" onClick={deleteBlog}>
+              Delete
+            </Button>
           </div>
-        ) : null}
-
-        <div className="d-flex justify-content-around justify-content-center btn-container">
-          <Link to={`/updateMyBlog/${id}`}>
-            <Button className="register-btn">Update</Button>
-          </Link>
-
-          <Button className="register-btn" onClick={deleteBlog}>
-            Delete
-          </Button>
-        </div>
-      </Col>
-    </Container>
+        </Col>
+      </Container>
+    </>
   );
 };
 
