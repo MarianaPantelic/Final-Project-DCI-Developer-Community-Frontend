@@ -94,7 +94,7 @@ const News = () => {
               <Card.Img className="article-image" src="../images/laptop.jpeg" />
             )}
 
-            <Card.Title className="mt-4 ">
+            <Card.Title className="mt-4">
               <h3>{article.title}</h3>
             </Card.Title>
             <Card.Text className="mt-4">{article.description}</Card.Text>

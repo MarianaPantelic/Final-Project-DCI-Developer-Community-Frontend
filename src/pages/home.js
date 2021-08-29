@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Row } from "react-bootstrap";
+
 import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
 

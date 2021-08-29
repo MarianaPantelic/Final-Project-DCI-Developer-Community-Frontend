@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { Form } from "react-bootstrap";
 import ReactQuill from "react-quill";
 import { useHistory } from "react-router-dom";
 
@@ -57,11 +58,18 @@ const AddPosts = (props) => {
   return (
     <section className="writeBlogSection">
       <div>
+        <div className="clip-post"></div>
+      </div>
+
+      {/* <div>
+
         <div className="writeblog-clip-1"></div>
         <div className="writeblog-clip-2"></div>
         <div className="writeblog-clip-3"></div>
         <div className="writeblog-clip-4"></div>
-      </div>
+
+      </div> */}
+
       <div className="container">
         <div className="row">
           <form>
