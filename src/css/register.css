@@ -1,6 +1,6 @@
 /*Register Page*/
 .register-container {
-  margin: 10% auto;
+  margin: 7% auto;
 }
 #register-img {
   background-image: url(../images/membership-3936563_1280.jpg);
@@ -14,4 +14,27 @@
 .register-form input {
   font-size: 1.5rem;
   padding: 0 2rem;
+}
+.register-clip1 {
+  clip-path: circle(50% at 50% 50%);
+  background: linear-gradient(#e6efff, #1a39ca, #04083c);
+  position: fixed;
+  z-index: -1;
+  width: 50rem;
+  height: 50rem;
+  bottom: -5rem;
+  right: -10rem;
+}
+.register-clip2 {
+  clip-path: circle(50% at 50% 50%);
+  background: linear-gradient(#e6efff, #1a39ca, #04083c);
+  position: fixed;
+  z-index: -1;
+  width: 35rem;
+  height: 35rem;
+  right: 30rem;
+  bottom: 45rem;
+}
+
+@media only screen and (max-width: 600px) {
 }
