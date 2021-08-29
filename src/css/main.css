@@ -83,7 +83,7 @@ body {
     margin-left: 1.2rem;
   }
   .footer-container {
-    font-size: 0.8rem;
+    font-size: 0.8rem !important;
   }
 }
 /*  end of Navbar*/
