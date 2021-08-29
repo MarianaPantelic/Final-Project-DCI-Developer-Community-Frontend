@@ -39,80 +39,86 @@ const Register = (props) => {
   };
 
   return (
-    <Container>
-      <div className="register-container">
-        <Row>
-          <Col md={0} lg={5} sm={0} id="register-img"></Col>
-          <Col md={0} lg={7} sm={0}>
-            <h2 className="text-center mt-5">Create an account</h2>
-
-            <Form className="register-form">
-              <Form.Group controlId="formBasicUserName">
-                <Form.Label className="m-3">User Name</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Enter your user name"
-                  ref={userNameRef}
-                />
-              </Form.Group>
-              <Form.Group controlId="formBasicClassName">
-                <Form.Label className="m-3">Class Name</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Enter your class name"
-                  ref={classNameRef}
-                />
-              </Form.Group>
-
-              <Form.Group controlId="formBasicFirstName">
-                <Form.Label className="m-3">First Name</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Enter your first name"
-                  ref={firstNameRef}
-                />
-              </Form.Group>
-              <Form.Group controlId="formBasicLastName">
-                <Form.Label className="m-3">Last Name</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Enter your last name"
-                  ref={lastNameRef}
-                />
-              </Form.Group>
-
-              <Form.Group controlId="formBasicEmail">
-                <Form.Label className="m-3">Email address</Form.Label>
-                <Form.Control
-                  type="email"
-                  placeholder="Enter your email"
-                  ref={emailRef}
-                />
-              </Form.Group>
-
-              <Form.Group controlId="formBasicPassword">
-                <Form.Label className="m-3">Password</Form.Label>
-                <Form.Control
-                  type="password"
-                  placeholder="Enter your Password"
-                  ref={passwordRef}
-                />
-              </Form.Group>
-
-              <div className="text-center mt-5">
-                <button
-                  className="register-btn mb-5"
-                  type="button"
-                  onClick={addUser}
-                >
-                  Register
-                </button>
-              </div>
-            </Form>
-          </Col>
-        </Row>
+    <>
+      <div>
+        <div className="register-clip1"></div>
+        <div className="register-clip2"></div>
       </div>
-    </Container>
+      <Container>
+        <div className="register-container">
+          <Row>
+            <Col xs={0} sm={5} md={5} lg={5} id="register-img"></Col>
+            <Col xs={12} sm={7} md={7} lg={7}>
+              <h2 className="text-center mt-5">Create an account</h2>
+
+              <Form className="register-form">
+                <Form.Group controlId="formBasicUserName">
+                  <Form.Label className="m-3">User Name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter your user name"
+                    ref={userNameRef}
+                  />
+                </Form.Group>
+                <Form.Group controlId="formBasicClassName">
+                  <Form.Label className="m-3">Class Name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter your class name"
+                    ref={classNameRef}
+                  />
+                </Form.Group>
+
+                <Form.Group controlId="formBasicFirstName">
+                  <Form.Label className="m-3">First Name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter your first name"
+                    ref={firstNameRef}
+                  />
+                </Form.Group>
+                <Form.Group controlId="formBasicLastName">
+                  <Form.Label className="m-3">Last Name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter your last name"
+                    ref={lastNameRef}
+                  />
+                </Form.Group>
+
+                <Form.Group controlId="formBasicEmail">
+                  <Form.Label className="m-3">Email address</Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="Enter your email"
+                    ref={emailRef}
+                  />
+                </Form.Group>
+
+                <Form.Group controlId="formBasicPassword">
+                  <Form.Label className="m-3">Password</Form.Label>
+                  <Form.Control
+                    type="password"
+                    placeholder="Enter your Password"
+                    ref={passwordRef}
+                  />
+                </Form.Group>
+
+                <div className="text-center mt-5">
+                  <button
+                    className="register-btn mb-5"
+                    type="button"
+                    onClick={addUser}
+                  >
+                    Register
+                  </button>
+                </div>
+              </Form>
+            </Col>
+          </Row>
+        </div>
+      </Container>
+    </>
   );
 };
 
