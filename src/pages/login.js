@@ -32,8 +32,8 @@ const Login = () => {
       <Container>
         <div className="login-container">
           <Row>
-            <Col md={0} lg={6} sm={0} id="login-img"></Col>
-            <Col md={12} lg={6} sm={12}>
+            <Col xs={0} sm={6} md={6} lg={6} id="login-img"></Col>
+            <Col xs={12} sm={6} md={6} lg={6}>
               <h2 className="text-center mt-5">Welcome Back!</h2>
 
               <Form className="login-form">
