@@ -37,4 +37,64 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .register-container {
+    margin: 35% auto;
+    width: 300px;
+    padding: 1rem;
+  }
+  .register-container h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  #register-img {
+    display: none;
+  }
+  .register-form,
+  .register-form input {
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+  }
+  .form-label {
+    font-size: 1.2rem;
+    margin: 0 !important;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .register-container {
+    margin: 15% auto;
+    width: 600px;
+    padding: 1rem;
+  }
+  .register-container h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .register-form,
+  .register-form input {
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+  }
+  .form-label {
+    font-size: 1.2rem;
+    margin: 0 !important;
+  }
+  .register-btn {
+    margin-top: 10px !important;
+    font-size: 1.5rem !important;
+    width: 7rem !important;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .register-container {
+    margin: 25% auto;
+    width: 800px;
+    padding: 1rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .register-container {
+    margin: 10% auto;
+    width: 800px;
+    padding: 1rem;
+  }
 }

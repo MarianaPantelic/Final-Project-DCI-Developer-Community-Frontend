@@ -47,8 +47,8 @@ const Register = (props) => {
       <Container>
         <div className="register-container">
           <Row>
-            <Col md={0} lg={5} sm={0} id="register-img"></Col>
-            <Col md={0} lg={7} sm={0}>
+            <Col xs={0} sm={5} md={5} lg={5} id="register-img"></Col>
+            <Col xs={12} sm={7} md={7} lg={7}>
               <h2 className="text-center mt-5">Create an account</h2>
 
               <Form className="register-form">
