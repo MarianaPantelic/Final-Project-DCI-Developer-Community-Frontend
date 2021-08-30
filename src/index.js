@@ -6,7 +6,6 @@ import "../node_modules/react-quill/dist/quill.snow.css";
 
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
-
 import About from "./pages/about";
 import Blog from "./pages/blog";
 import Forum from "./pages/forum";
@@ -20,6 +19,7 @@ import UserProfile from "./pages/userprofile";
 import News from "./pages/news";
 
 import AddPosts from "./pages/addPosts";
+
 import AddQuestions from "./pages/addQuestions";
 import ShowQuestion from "./pages/showQuestion";
 import MyQuestion from "./pages/myQuestion";
@@ -44,7 +44,6 @@ import UpdateMyBlog from "./pages/updateMyBlog";
 import UpdateMyQuestion from "./pages/updateMyQuestion";
 
 const axios = require("axios").default;
-
 const App = () => {
   const [posts, setPosts] = useState([]);
   const [users, setUsers] = useState([]);
@@ -53,18 +52,15 @@ const App = () => {
   console.log(posts);
   console.log(questions);
   console.log(process.env.REACT_APP_ENV);
-
   useEffect(() => {
     sendGetRequest();
   }, []);
-
   useEffect(() => {
     sendUserGetRequest();
   }, []);
   useEffect(() => {
     sendQuestionsGetRequest();
   }, []);
-
   const sendGetRequest = async () => {
     try {
       const response = await axios.get(
@@ -76,7 +72,6 @@ const App = () => {
       console.error(err);
     }
   };
-
   const sendUserGetRequest = async () => {
     try {
       const resp = await axios.get(
@@ -100,7 +95,6 @@ const App = () => {
       console.log(error);
     }
   };
-
   return (
     <div>
       <Router>
@@ -182,5 +176,4 @@ const App = () => {
     </div>
   );
 };
-
 ReactDOM.render(<App />, document.getElementById("root"));
