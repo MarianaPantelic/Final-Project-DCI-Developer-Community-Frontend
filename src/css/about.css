@@ -2,21 +2,17 @@
 
 .about1strow {
   background-color: #ffffff;
-  padding-top: 12rem;
+  padding-top: 3rem;
 }
 .about2strow {
   background-color: #ffffff;
-  padding-bottom: 12rem;
+  padding-bottom: 3rem;
 }
 .about1strowImg1 {
   background-color: #1a39ca;
 }
 .about1strowImg2 {
   background-color: #1a39ca;
-<<<<<<< HEAD
-
-=======
->>>>>>> 68ee68287ed6c71e5a6fb132c8079206c92aca3b
 }
 .about-Text {
   font-size: 1.5rem;
