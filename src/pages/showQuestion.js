@@ -35,7 +35,9 @@ const ShowQuestion = (props) => {
     var data = { answer };
     try {
       axios
-        .put(`http://localhost:3001/forum/${id}`, { answer: tempArray })
+        .put(`https://dcidevs-backend.herokuapp.com/forum/${id}`, {
+          answer: tempArray,
+        })
         .then((response) => {
           props.sendQuestionsGetRequest();
         });

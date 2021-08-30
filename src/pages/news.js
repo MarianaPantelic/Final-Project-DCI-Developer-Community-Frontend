@@ -12,7 +12,7 @@ const News = () => {
   };
   const getArticles = async () => {
     await axios
-      .get(`http://localhost:3001/news/${page}`)
+      .get(`https://dcidevs-backend.herokuapp.com/news/${page}`)
       .then(function (response) {
         setNews(response.data);
       })
