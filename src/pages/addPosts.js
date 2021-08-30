@@ -24,7 +24,7 @@ const AddPosts = (props) => {
   const addPost = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3001/blogs/",
+        "https://dcidevs-backend.herokuapp.com/blogs",
         {
           title: inputTitleRef.current.value,
           content: inputContentRef.current.value,
@@ -58,7 +58,6 @@ const AddPosts = (props) => {
   return (
     <section className="writeBlogSection">
       <div>
-
         <div className="clip-post"></div>
       </div>
 
@@ -71,7 +70,6 @@ const AddPosts = (props) => {
 
       </div> */}
 
-   
       <div className="container">
         <div className="row">
           <form>

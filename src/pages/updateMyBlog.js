@@ -28,9 +28,11 @@ const UpdateMyBlogs = (props) => {
     var data = { title, content };
 
     try {
-      axios.put(`http://localhost:3001/blogs/${id}`, data).then((response) => {
-        props.sendGetRequest();
-      });
+      axios
+        .put(`https://dcidevs-backend.herokuapp.com/blogs/${id}`, data)
+        .then((response) => {
+          props.sendGetRequest();
+        });
     } catch (error) {
       console.log(error);
     }

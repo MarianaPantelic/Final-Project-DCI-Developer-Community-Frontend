@@ -63,7 +63,9 @@ const App = () => {
   }, []);
   const sendGetRequest = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/blogs/");
+      const response = await axios.get(
+        "https://dcidevs-backend.herokuapp.com/blogs"
+      );
       setPosts(response.data);
       console.log(response.data);
     } catch (err) {
@@ -72,7 +74,9 @@ const App = () => {
   };
   const sendUserGetRequest = async () => {
     try {
-      const resp = await axios.get("http://localhost:3001/users");
+      const resp = await axios.get(
+        "https://dcidevs-backend.herokuapp.com/users"
+      );
       setUsers(resp.data);
       console.log(resp.data);
     } catch (error) {
@@ -82,7 +86,9 @@ const App = () => {
 
   const sendQuestionsGetRequest = async () => {
     try {
-      const questionsresponse = await axios.get("http://localhost:3001/forum");
+      const questionsresponse = await axios.get(
+        "https://dcidevs-backend.herokuapp.com/forum"
+      );
       setQuestions(questionsresponse.data);
       console.log(questionsresponse.data);
     } catch (error) {

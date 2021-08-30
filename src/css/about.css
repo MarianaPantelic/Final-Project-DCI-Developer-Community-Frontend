@@ -13,7 +13,10 @@
 }
 .about1strowImg2 {
   background-color: #1a39ca;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 68ee68287ed6c71e5a6fb132c8079206c92aca3b
 }
 .about-Text {
   font-size: 1.5rem;
@@ -32,7 +35,7 @@
   margin: 1rem;
 }
 #florin {
-  background: url(../images/florin.png) no-repeat;
+  background: url(../images/Florin\ foto\ transparent\ background.png) no-repeat;
 
   background-size: 100%;
   border-radius: 50%;
@@ -41,7 +44,7 @@
   padding: 4rem;
 }
 #heriberto {
-  background: url(../images/Heriberto.png) no-repeat;
+  background: url(../images/Heriberto\ foto\ transparent\ background.png) no-repeat;
   background-size: 100%;
   border-radius: 50%;
   height: 6rem;
@@ -57,15 +60,16 @@
   padding: 4rem;
 }
 #sara {
-  background: url(../images/sara.jpg) no-repeat;
-  background-size: 100%;
+  background: url(../images/Sara\ foto\ \ transparent\ background.png.png) no-repeat;
+  background-size: 75%;
   border-radius: 50%;
   height: 6rem;
   width: 6rem;
   padding: 4rem;
+  margin-left:2rem;
 }
 #kinjal {
-  background: url(../images/kinjal.jpeg) no-repeat;
+  background: url(../images/Kinjal\ transparent\ background.png) no-repeat;
   background-size: 100%;
   border-radius: 50%;
   height: 6rem;
