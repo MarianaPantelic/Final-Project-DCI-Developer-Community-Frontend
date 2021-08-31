@@ -2,11 +2,11 @@
 
 .about1strow {
   background-color: #ffffff;
-  padding-top: 12rem;
+  padding-top: 3rem;
 }
 .about2strow {
   background-color: #ffffff;
-  padding-bottom: 12rem;
+  padding-bottom: 3rem;
 }
 .about1strowImg1 {
   background-color: #1a39ca;
@@ -79,5 +79,5 @@
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 40rem;
+  height: 41rem;
 }
