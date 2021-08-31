@@ -68,7 +68,7 @@ body {
   color: white;
   border-radius: 10px 10px;
 }
-.nav-logo {
+.logoNav img {
   width: 15rem;
   height: 4.5rem;
   margin-left: 2rem;
@@ -77,13 +77,16 @@ body {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   /* navbar */
-  .nav-logo {
-    width: 4.5rem;
-    height: 4.5rem;
+  .logoNav img {
+    width: 10rem;
+    height: 4rem;
     margin-left: 1.2rem;
   }
   .footer-container {
     font-size: 0.8rem !important;
+  }
+  .nav-username {
+    font-size: 1.5rem;
   }
 }
 /*  end of Navbar*/

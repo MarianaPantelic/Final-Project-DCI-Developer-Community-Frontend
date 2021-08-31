@@ -70,6 +70,7 @@ const AddQuestions = (props) => {
  */
   return (
     <section className="writeQuestionSection">
+
       <div>
         <div className="first-clip-ask-question"></div>
         <div className="second-clip-ask-question"></div>
@@ -80,57 +81,61 @@ const AddQuestions = (props) => {
         <div className="clip-add-question"></div>
       </div>
       <div className="container write-container">
-        <h1 className="pt-3 text-center">
+        <h1 className="text-center">
           Welcome{" "}
           {localStorage.getItem("user") &&
             JSON.parse(localStorage.getItem("user")).firstName}
           !
         </h1>
-        <form>
-          <div className="form-group mt-4">
-            <label htmlFor="inputTopic">Topic</label>
-            <input
-              ref={inputTopicRef}
-              type="text"
-              className="form-control border border-dark"
-              id="inputTopic"
-              border
-              border-dark
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="inputTitle">Title</label>
-            <input
-              ref={inputTitleRef}
-              type="text"
-              className="form-control border border-dark"
-              id="inputTitle"
-              border
-              border-dark
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="inputContent">Content</label>
-            <ReactQuill
-              className="border border-dark"
-              placeholder="write something amazing..."
-              modules={AddQuestions.modules}
-              formats={AddQuestions.formats}
-              onChange={handleBody}
-              id="inputContent"
-              ref={inputContentRef}
-            />
-          </div>
-          <Link to="/forum">
-            <button
-              onClick={() => addQuestion()}
-              type="button"
-              className="btn mt-3 postButton"
-            >
-              <h3>Ask</h3>
-            </button>
-          </Link>
-        </form>
+        <div className=" blog-container">
+          <form>
+            <h1 className="pt-5 m-5">Feel free to ask your questions here!</h1>
+
+            <div className="form-group mt-4 pl-5 pr-5">
+              <label htmlFor="inputTopic">Topic</label>
+              <input
+                ref={inputTopicRef}
+                type="text"
+                className="form-control border border-dark"
+                id="inputTopic"
+                border
+                border-dark
+              />
+            </div>
+            <div className="form-group pl-5 pr-5">
+              <label htmlFor="inputTitle">Title</label>
+              <input
+                ref={inputTitleRef}
+                type="text"
+                className="form-control border border-dark"
+                id="inputTitle"
+                border
+                border-dark
+              />
+            </div>
+            <div className="form-group pl-5 pr-5">
+              <label htmlFor="inputContent">Content</label>
+              <ReactQuill
+                className="border border-dark"
+                placeholder="write something amazing..."
+                modules={AddQuestions.modules}
+                formats={AddQuestions.formats}
+                onChange={handleBody}
+                id="inputContent"
+                ref={inputContentRef}
+              />
+            </div>
+            <Link to="/forum" className="pl-5">
+              <button
+                onClick={() => addQuestion()}
+                type="button"
+                className="btn mt-3 postButton"
+              >
+                <h3>Ask</h3>
+              </button>
+            </Link>
+          </form>
+        </div>
       </div>
     </section>
   );

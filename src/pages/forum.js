@@ -64,8 +64,8 @@ const Forum = (props) => {
                         {" "}
                         {question && question.answer
                           ? question.answer.length
-                          : 0}
-                        answer{" "}
+                          : 0} {" "}
+                          {question.answer.length > 1 ? "answers" : "answer"}
                       </p>
                     </div>
                   </footer>

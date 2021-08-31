@@ -58,6 +58,19 @@ iframe {
   right: 0;
   z-index: -1;
 }
+
+.welcome-update{
+  margin-top: 10rem;
+}
+
+.update-container{
+  margin-top: 5rem;
+  margin-bottom: 12rem;
+  border-radius: 10px 10px;
+  box-shadow: rgba(100, 97, 97, 0.56) 0px 22px 70px 4px;
+  background-color: #fff;
+}
+
 @media only screen and (max-width: 600px) {
   .question-container {
     width: 80%;

@@ -2,12 +2,12 @@ import React from "react";
 
 const Navbar = () => {
   let user = "";
- try {
+  try {
     user = JSON.parse(localStorage.getItem("user"));
- } catch (error) {
-   console.log(error)
- }
-  
+  } catch (error) {
+    console.log(error);
+  }
+
   let userName = "";
   if (user) {
     userName = user.userName;
@@ -20,11 +20,9 @@ const Navbar = () => {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark navbar-css">
-      
-        <a className="navbar-brand logoNav" href="/" style={{ margin: "0rem" }}>
-            <img src="/images/logo.gif" style={{ marginLeft: "2rem", width: "15rem", height: "4.5rem"}}/>
-        </a>
-      
+      <a className="navbar-brand logoNav" href="/" style={{ margin: "0rem" }}>
+        <img src="/images/logo.gif" />
+      </a>
 
       <div class="align-burger-button">
         <button
