@@ -81,7 +81,7 @@ const Navbar = () => {
         <div>
           {localStorage.getItem("token") ? (
             <div href="/profile" className="d-flex username">
-              <span className="mx-2 text-white mt-3 nav-username">
+              <span className="mx-2 text-white mt-3">
                 {user && user.userName}
               </span>
             </div>
