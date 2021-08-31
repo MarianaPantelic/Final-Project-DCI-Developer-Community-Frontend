@@ -1,7 +1,5 @@
 /* Blog Page */
 
-
-
 .showPostsSection {
   /* padding-top: 10rem; */
 }
@@ -73,13 +71,12 @@ iframe {
   color: #fff;
 }
 
-.blog-container{
+.blog-container {
   margin-top: 5rem;
   margin-bottom: 10rem;
   border-radius: 10px 10px;
   box-shadow: rgba(100, 97, 97, 0.56) 0px 22px 70px 4px;
   background-color: #fff;
-
 }
 
 .link_addPost {
@@ -111,7 +108,7 @@ iframe {
   z-index: -1;
 }
 
-.welcomePost{
+.welcomePost {
   margin-top: 10rem;
 }
 
@@ -178,6 +175,11 @@ form input {
   iframe {
     width: 30rem;
     height: 28rem;
+  }
+  .user-img,
+  .blogUser .user-img img {
+    width: 25px;
+    height: auto;
   }
 }
 
