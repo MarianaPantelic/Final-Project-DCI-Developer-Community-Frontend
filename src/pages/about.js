@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 const About = () => {
   return (
     <Container>
-      <div className="row mt-5 about1strow mt-3">
+      <div className="row about1strow">
         <div className="col-lg-6 col-md-6 col-sm-12 aboutCol about-Text">
           <h1 className="fw-bold">About Us</h1>
           <h2 className="mt-4 mb-3">Who We Are?</h2>
@@ -39,7 +39,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="row d-flex justify-content-evenly pt-1">
+          <div className="row d-flex justify-content-evenly pt-5">
             <div className="col-lg-6 col-md-6 col-sm-12 pictures">
               <div id="heriberto"></div>
               <div>
@@ -55,7 +55,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="row mt-5 about2strow">
+      <div className="row about2strow">
         <div className="col-lg-6 col-md-6 col-sm-12 about1strowImg2">
           <div className="row d-flex">
             <div id="webdev-gif" className="col-lg-6 col-md-6 col-sm-12"></div>

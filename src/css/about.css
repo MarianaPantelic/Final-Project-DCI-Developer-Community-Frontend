@@ -2,26 +2,31 @@
 
 .about1strow {
   background-color: #ffffff;
-  padding-top: 3rem;
+  padding-top: 5rem;
 }
 .about2strow {
   background-color: #ffffff;
   padding-bottom: 3rem;
 }
 .about1strowImg1 {
-  background-color: #1a39ca;
+  background-color: #345cfd;
+  height: 40rem;
+  margin-top:2rem;
+  padding-top: 2rem;
 }
 .about1strowImg2 {
   background-color: #1a39ca;
+  height: 40rem;
+  margin-bottom:1rem;
 }
 .about-Text {
   font-size: 1.5rem;
-  padding: 2rem;
+  padding-top: 3rem;
 }
 
 .pictures {
-  width: 10rem;
-  height: 12rem;
+  width: 12rem;
+  height: 14rem;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -32,45 +37,43 @@
 }
 #florin {
   background: url(../images/Florin\ foto\ transparent\ background.png) no-repeat;
-
   background-size: 100%;
   border-radius: 50%;
-  height: 6rem;
-  width: 6rem;
-  padding: 4rem;
+  height: 7rem;
+  width: 7rem;
+  padding: 5rem;
 }
 #heriberto {
   background: url(../images/Heriberto\ foto\ transparent\ background.png) no-repeat;
   background-size: 100%;
   border-radius: 50%;
-  height: 6rem;
-  width: 6rem;
-  padding: 4rem;
+ height: 7rem;
+  width: 7rem;
+  padding: 5rem;
 }
 #mariana {
   background: url(../images/Mariana.png) no-repeat;
   background-size: 100%;
   border-radius: 50%;
-  height: 6rem;
-  width: 6rem;
-  padding: 4rem;
+ height: 7rem;
+  width: 7rem;
+  padding: 5rem;
 }
 #sara {
-  background: url(../images/Sara\ foto\ \ transparent\ background.png.png) no-repeat;
-  background-size: 75%;
+  background: url(../images/sara-removebg-preview.png) no-repeat;
+  background-size: 100%;
   border-radius: 50%;
-  height: 6rem;
-  width: 6rem;
-  padding: 4rem;
-  margin-left:2rem;
+  height: 7rem;
+  width: 7rem;
+  padding: 5rem;
 }
 #kinjal {
   background: url(../images/Kinjal\ transparent\ background.png) no-repeat;
   background-size: 100%;
   border-radius: 50%;
-  height: 6rem;
-  width: 6rem;
-  padding: 4rem;
+ height: 7rem;
+  width: 7rem;
+  padding: 5rem;
 }
 #webdev-gif {
   background: url(../images/basics-of-web-development.gif) no-repeat;
