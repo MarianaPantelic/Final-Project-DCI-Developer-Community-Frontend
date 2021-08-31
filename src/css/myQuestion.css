@@ -1,4 +1,5 @@
 .question-container {
+  width: 1000px;
   height: 60rem;
   max-height: 60rem;
   max-width: 1000px;
@@ -59,11 +60,11 @@ iframe {
   z-index: -1;
 }
 
-.welcome-update{
+.welcome-update {
   margin-top: 10rem;
 }
 
-.update-container{
+.update-container {
   margin-top: 5rem;
   margin-bottom: 12rem;
   border-radius: 10px 10px;
