@@ -44,61 +44,69 @@ const UpdateMyQuestion = (props) => {
 
   return (
     <section className="writeBlogSection">
-      <div className="container">
-        <form>
-          <h1 className="pt-5">
-            Welcome{" "}
-            {localStorage.getItem("user") &&
-              JSON.parse(localStorage.getItem("user")).firstName}
-          </h1>
+      <div>
+        <div className="clip-1"></div>
+        <div className="clip-2"></div>
+      </div>
 
-          <div className="form-group">
-            <label htmlFor="inputTopic">Topic</label>
-            <input
-              value={topic}
-              onChange={(e) => setTopic(e.target.value)}
-              type="text"
-              className="form-control border border-dark"
-              id="inputTopic"
-              border
-              border-dark
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="inputTitle">Title</label>
-            <input
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              type="text"
-              className="form-control border border-dark"
-              id="inputTitle"
-              border
-              border-dark
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="inputContent">Content</label>
-            <ReactQuill
-              value={content}
-              className="border border-dark"
-              placeholder="write something amazing..."
-              modules={UpdateMyQuestion.modules}
-              formats={UpdateMyQuestion.formats}
-              onChange={handleBody}
-              id="inputContent"
-            />{" "}
-          </div>
-          <Link to="/userprofile">
-            <button
-              onClick={() => {
-                updateQuestion(topic, title, content);
-              }}
-              className="btn mt-5 postButton"
-            >
-              <h3>Save</h3>
-            </button>
-          </Link>
-        </form>
+      <div className="container">
+        <h1 className="welcome-update text-center">
+          Welcome{" "}
+          {localStorage.getItem("user") &&
+            JSON.parse(localStorage.getItem("user")).firstName}
+          !
+        </h1>
+        <div className="update-container">
+          <h1 className="text-center pt-5">Update your question here</h1>
+          <form>
+            <div className="form-group pt-5">
+              <label htmlFor="inputTopic">Topic</label>
+              <input
+                value={topic}
+                onChange={(e) => setTopic(e.target.value)}
+                type="text"
+                className="form-control border border-dark"
+                id="inputTopic"
+                border
+                border-dark
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="inputTitle">Title</label>
+              <input
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                type="text"
+                className="form-control border border-dark"
+                id="inputTitle"
+                border
+                border-dark
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="inputContent">Content</label>
+              <ReactQuill
+                value={content}
+                className="border border-dark"
+                placeholder="write something amazing..."
+                modules={UpdateMyQuestion.modules}
+                formats={UpdateMyQuestion.formats}
+                onChange={handleBody}
+                id="inputContent"
+              />{" "}
+            </div>
+            <Link to="/userprofile">
+              <button
+                onClick={() => {
+                  updateQuestion(topic, title, content);
+                }}
+                className="btn mt-5 postButton"
+              >
+                <h3>Save</h3>
+              </button>
+            </Link>
+          </form>
+        </div>
       </div>
     </section>
   );

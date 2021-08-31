@@ -34,8 +34,9 @@
 .blogTitle {
   padding-top: 0.5rem;
   font-size: 1.6rem;
-  height: 8rem;
+  height: 7rem;
   border-bottom: 2px solid gainsboro;
+  overflow-y: scroll;
 }
 
 .blogContent {
@@ -167,7 +168,6 @@ form input {
   .blogTitle {
     padding-top: 0.3rem;
     font-size: 1.4rem;
-    height: 10rem;
   }
   .blogContent {
     height: 28rem;
@@ -247,7 +247,6 @@ form input {
   .blogTitle {
     padding-top: 0.3rem;
     font-size: 1.4rem;
-    height: 10rem;
   }
 
   .blogContent {
@@ -343,6 +342,5 @@ form input {
 
   .blogTitle {
     font-size: 1.4rem;
-    height: 12rem;
   }
 }
