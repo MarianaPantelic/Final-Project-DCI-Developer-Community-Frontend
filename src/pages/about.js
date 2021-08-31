@@ -1,5 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import Zoom from "react-reveal/Zoom";
 
 const About = () => {
   return (
@@ -25,38 +26,48 @@ const About = () => {
         </div>
         <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 about1strowImg1">
           <div className="row d-flex justify-content-between pt-3">
-            <div className="col-lg-6 col-md-6 col-sm-12 pictures">
-              <div id="mariana"></div>
-              <div>
-                <h5>Mariana</h5>
+            <Zoom duration={2000}>
+              <div className="col-lg-6 col-md-6 col-sm-12 pictures">
+                <div id="mariana"></div>
+                <div>
+                  <h5>Mariana</h5>
+                </div>
               </div>
-            </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 pictures">
-              <div id="kinjal"></div>
-              <div>
-                <h5>Kinjal</h5>
+            </Zoom>
+            <Zoom duration={2000} delay={2000}>
+              <div className="col-lg-6 col-md-6 col-sm-12 pictures">
+                <div id="kinjal"></div>
+                <div>
+                  <h5>Kinjal</h5>
+                </div>
               </div>
-            </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 pictures">
-              <div id="sara"></div>
-              <div>
-                <h5>Sara</h5>
+            </Zoom>
+            <Zoom duration={2000} delay={4000}>
+              <div className="col-lg-6 col-md-6 col-sm-12 pictures">
+                <div id="sara"></div>
+                <div>
+                  <h5>Sara</h5>
+                </div>
               </div>
-            </div>
+            </Zoom>
           </div>
           <div className="row d-flex justify-content-evenly pt-5">
-            <div className="col-lg-6 col-md-6 col-sm-12 pictures">
-              <div id="heriberto"></div>
-              <div>
-                <h5>Heriberto</h5>
+            <Zoom duration={2000} delay={6000}>
+              <div className="col-lg-6 col-md-6 col-sm-12 pictures">
+                <div id="heriberto"></div>
+                <div>
+                  <h5>Heriberto</h5>
+                </div>
               </div>
-            </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 pictures">
-              <div id="florin"></div>
-              <div className="text-center">
-                <h5>Florin</h5>
+            </Zoom>
+            <Zoom duration={2000} delay={8000}>
+              <div className="col-lg-6 col-md-6 col-sm-12 pictures">
+                <div id="florin"></div>
+                <div className="text-center">
+                  <h5>Florin</h5>
+                </div>
               </div>
-            </div>
+            </Zoom>
           </div>
         </div>
       </div>
