@@ -97,6 +97,24 @@ const MyQuestion = (props) => {
             </Button>
           </div>
         </Col>
+        <div class="el-date-editor el-input el-input--prefix el-input--suffix el-date-editor--time-select">
+          <label className="text-white">thats my label</label>
+          <input
+            type="text"
+            autocomplete="off"
+            name=""
+            placeholder="Από"
+            class="el-input__inner"
+          />
+          <span class="el-input__prefix">
+            <i class="el-input__icon el-icon-time"></i>
+          </span>
+          <span class="el-input__suffix">
+            <span class="el-input__suffix-inner">
+              <i class="el-input__icon"></i>
+            </span>
+          </span>
+        </div>
       </Container>
     </>
   );

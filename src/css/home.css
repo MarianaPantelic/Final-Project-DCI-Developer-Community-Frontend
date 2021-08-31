@@ -164,13 +164,13 @@
     width: 45rem;
   }
 }
-@media only screen and (min-width: 1000px) and (max-width: 1400px) {
+@media only screen and (min-width: 1000px) and (max-width: 1450px) {
   .hero-text,
   .hero-img {
     width: 45rem;
   }
   .text-container,
   .img-container {
-    width: 45rem;
+    width: 40rem;
   }
 }
