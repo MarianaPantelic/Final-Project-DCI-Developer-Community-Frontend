@@ -58,14 +58,16 @@ const MyQuestion = (props) => {
                   }}
                 ></div>
                 <div className="answers-section">
-                  <h2 className="mt-3">Answers</h2>
+                  <h2 className="mt-5 text-center">Answers</h2>
                   <ul>
                     {question.answer && question.answer.length !== 0
-                      ? question.answer.map((element) => (
+                      ? question.answer.map((element, idx) => (
                           <div>
-                            <h2>Answers</h2>
+                            <h2 className="mt-3 text-primary">
+                              Answered by {element.user}
+                            </h2>
                             <div
-                              className="mt-5 text-center"
+                              className="mt-3 text-center"
                               dangerouslySetInnerHTML={{
                                 __html: element.content,
                               }}
