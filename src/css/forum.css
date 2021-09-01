@@ -172,6 +172,11 @@
   height: 20rem;
   overflow-y: scroll;
 }
+.question-image {
+  width: 50px;
+  height: auto;
+  max-height: 50px;
+}
 
 @media (min-width: 1400px) {
   .container,

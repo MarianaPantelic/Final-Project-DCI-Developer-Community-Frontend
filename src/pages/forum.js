@@ -40,7 +40,7 @@ const Forum = (props) => {
               <div className="card-header pl-5 question-user d-flex">
                 <div className="align-self-center">
                   {question.image ? (
-                    <img src={question.image} width={50} />
+                    <img className="question-image" src={question.image} />
                   ) : null}
                 </div>
                 <div className="ml-3 align-self-center">

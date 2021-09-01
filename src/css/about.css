@@ -37,6 +37,7 @@
   padding: 1rem;
   margin: 1rem;
 }
+
 #florin {
   background: url(../images/Florin\ foto\ transparent\ background.png) no-repeat;
   background-size: 100%;
@@ -105,5 +106,13 @@
     width: 35rem;
     height: auto;
     margin: 5rem auto;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .list {
+    line-height: 1.8;
+  }
+  .about-Text {
+    font-size: 1.6rem;
   }
 }
