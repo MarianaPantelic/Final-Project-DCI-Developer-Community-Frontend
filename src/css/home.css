@@ -150,6 +150,11 @@
     font-size: 1.5rem !important;
     width: 7rem !important;
   }
+
+  .hero-container {
+    width: 90%;
+    margin: 15% auto;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
