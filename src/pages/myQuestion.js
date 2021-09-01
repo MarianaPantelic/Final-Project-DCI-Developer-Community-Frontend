@@ -15,7 +15,9 @@ const MyQuestion = (props) => {
 
   const getQuestion = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/forum/${id}`);
+      const response = await axios.get(
+        `https://dcidevs-backend.herokuapp.com/forum/${id}`
+      );
       console.log(typeof response.data);
       setQuestion(response.data);
     } catch (err) {
@@ -27,7 +29,7 @@ const MyQuestion = (props) => {
   const deleteQuestion = async () => {
     try {
       await axios
-        .delete(`http://localhost:3001/forum/${id}`, {
+        .delete(`https://dcidevs-backend.herokuapp.com/forum/${id}`, {
           data: { _id: id },
         })
         .then((resp) => {
@@ -39,59 +41,82 @@ const MyQuestion = (props) => {
     window.location.replace("/userprofile");
   };
   return (
-    <Container>
-      <Col sm={12} md={12} lg={8} className="question-container">
-        {question ? (
-          <div>
-            <div className=" float-left topic">{question.topic}</div>
-            <div className="question-section">
-              <h1 className=" text-center">{question.title}</h1>
+    <>
+      <div className="my-clip2"></div>
+      <Container>
+        <Col sm={12} md={12} lg={8} className="question-container">
+          {question ? (
+            <div>
+              <div className=" float-left topic">{question.topic}</div>
+              <div className="question-section">
+                <h1 className=" text-center">{question.title}</h1>
 
-              <div
-                className="mt-5 text-center"
-                dangerouslySetInnerHTML={{
-                  __html: question.content,
-                }}
-              ></div>
+                <div
+                  className="mt-5 text-center"
+                  dangerouslySetInnerHTML={{
+                    __html: question.content,
+                  }}
+                ></div>
+                <div className="answers-section">
+                  <h2 className="mt-5 text-center">Answers</h2>
+                  <ul>
+                    {question.answer && question.answer.length !== 0
+                      ? question.answer.map((element, idx) => (
+                          <div>
+                            <h2 className="mt-3 text-primary">
+                              Answered by {element.user}
+                            </h2>
+                            <div
+                              className="mt-3 text-center"
+                              dangerouslySetInnerHTML={{
+                                __html: element.content,
+                              }}
+                            ></div>
+                          </div>
+                        ))
+                      : null}
+                  </ul>
+                </div>
+              </div>
+              <div className="float-right mt-2">
+                {question && question.answer && question.answer.length !== 0
+                  ? question.answer.length
+                  : 0}{" "}
+                answers
+              </div>
             </div>
-            <div className="float-right mt-2">
-              {question && question.answer && question.answer.length !== 0
-                ? question.answer.length
-                : 0}{" "}
-              answers
-            </div>
+          ) : null}
 
-            <div className="answers-section">
-              <ul>
-                {question.answer && question.answer.length !== 0
-                  ? question.answer.map((element) => (
-                      <div>
-                        <h2>Answers</h2>
-                        <div
-                          className="mt-5 text-center"
-                          dangerouslySetInnerHTML={{
-                            __html: element.content,
-                          }}
-                        ></div>
-                      </div>
-                    ))
-                  : null}
-              </ul>
-            </div>
+          <div className="d-flex justify-content-around justify-content-center btn-container">
+            <Link to={`/updateMyQuestion/${id}`}>
+              <Button className="register-btn">Update</Button>
+            </Link>
+
+            <Button className="register-btn" onClick={deleteQuestion}>
+              Delete
+            </Button>
           </div>
-        ) : null}
-
-        <div className="d-flex justify-content-around justify-content-center btn-container">
-          <Link to={`/updateMyQuestion/${id}`}>
-            <Button className="register-btn">Update</Button>
-          </Link>
-
-          <Button className="register-btn" onClick={deleteQuestion}>
-            Delete
-          </Button>
+        </Col>
+        <div class="el-date-editor el-input el-input--prefix el-input--suffix el-date-editor--time-select">
+          <label className="text-white">thats my label</label>
+          <input
+            type="text"
+            autocomplete="off"
+            name=""
+            placeholder="Από"
+            class="el-input__inner"
+          />
+          <span class="el-input__prefix">
+            <i class="el-input__icon el-icon-time"></i>
+          </span>
+          <span class="el-input__suffix">
+            <span class="el-input__suffix-inner">
+              <i class="el-input__icon"></i>
+            </span>
+          </span>
         </div>
-      </Col>
-    </Container>
+      </Container>
+    </>
   );
 };
 

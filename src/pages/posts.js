@@ -38,7 +38,7 @@ const Posts = (props) => {
   const submitSignup = async () => {
     try {
       await axios
-        .post("https://kinjals-blog.herokuapp.com/users", userSignup)
+        .post("https://dcidevs-backend.herokuapp.com/users", userSignup)
         .then((response) => {
           myStorage.setItem("token", response.headers.auth);
           myStorage.setItem("user", JSON.stringify(response.data));
@@ -53,7 +53,7 @@ const Posts = (props) => {
   const submitWriteBlogSignin = async () => {
     try {
       const response = await axios.post(
-        "https://kinjals-blog.herokuapp.com/users/login",
+        "https://dcidevs-backend.herokuapp.com/users/login",
         {
           email: userWriteBlogSignIn.email,
           password: userWriteBlogSignIn.password,
@@ -82,7 +82,7 @@ const Posts = (props) => {
   const deletePostsOnClick = async (id) => {
     try {
       axios
-        .delete(`https://kinjals-blog.herokuapp.com/posts/${id}`, {
+        .delete(`https://dcidevs-backend.herokuapp.com/posts/${id}`, {
           headers: {
             auth: localStorage.getItem("token"),
           },

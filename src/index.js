@@ -6,7 +6,6 @@ import "../node_modules/react-quill/dist/quill.snow.css";
 
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
-
 import About from "./pages/about";
 import Blog from "./pages/blog";
 import Forum from "./pages/forum";
@@ -20,6 +19,7 @@ import UserProfile from "./pages/userprofile";
 import News from "./pages/news";
 
 import AddPosts from "./pages/addPosts";
+
 import AddQuestions from "./pages/addQuestions";
 import ShowQuestion from "./pages/showQuestion";
 import MyQuestion from "./pages/myQuestion";
@@ -44,7 +44,6 @@ import UpdateMyBlog from "./pages/updateMyBlog";
 import UpdateMyQuestion from "./pages/updateMyQuestion";
 
 const axios = require("axios").default;
-
 const App = () => {
   const [posts, setPosts] = useState([]);
   const [users, setUsers] = useState([]);
@@ -53,31 +52,31 @@ const App = () => {
   console.log(posts);
   console.log(questions);
   console.log(process.env.REACT_APP_ENV);
-
   useEffect(() => {
     sendGetRequest();
   }, []);
-
   useEffect(() => {
     sendUserGetRequest();
   }, []);
   useEffect(() => {
     sendQuestionsGetRequest();
   }, []);
-
   const sendGetRequest = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/blogs/");
+      const response = await axios.get(
+        "https://dcidevs-backend.herokuapp.com/blogs"
+      );
       setPosts(response.data);
       console.log(response.data);
     } catch (err) {
       console.error(err);
     }
   };
-
   const sendUserGetRequest = async () => {
     try {
-      const resp = await axios.get("http://localhost:3001/users");
+      const resp = await axios.get(
+        "https://dcidevs-backend.herokuapp.com/users"
+      );
       setUsers(resp.data);
       console.log(resp.data);
     } catch (error) {
@@ -87,14 +86,15 @@ const App = () => {
 
   const sendQuestionsGetRequest = async () => {
     try {
-      const questionsresponse = await axios.get("http://localhost:3001/forum");
+      const questionsresponse = await axios.get(
+        "https://dcidevs-backend.herokuapp.com/forum"
+      );
       setQuestions(questionsresponse.data);
       console.log(questionsresponse.data);
     } catch (error) {
       console.log(error);
     }
   };
-
   return (
     <div>
       <Router>
@@ -176,5 +176,4 @@ const App = () => {
     </div>
   );
 };
-
 ReactDOM.render(<App />, document.getElementById("root"));
