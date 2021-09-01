@@ -7,26 +7,27 @@ const About = () => {
     <Container>
       <div className="row about1strow">
         <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 aboutCol about-Text">
-          <h1 className="fw-bold ml-4">About Us</h1>
+          <h1 className="fw-bold ml-4 mt-5">About Us</h1>
           <h2 className="m-4">Who We Are?</h2>
           <p className="m-4">
-            We are WebDevelopment students in DCI , working together in the
-            final project . Our project idea is to help DCI students to have all
-            the information about this course in one webpage
+            We are Web Development Alumni from DCI, working together on our
+            Final Project . The idea is to provide DCI students a place where
+            they can have all the information about the course in one place.
           </p>
           <p className="m-4">
-            The idea was coming after we sow our needs and we want to help the
-            next students to have more structured information in the same place.
+            The idea came after we discovered our needs and we wanted to help
+            future students to have an easier journey achieving our common goal
+            of becoming Web Developers.
           </p>
           <p className="m-4">
             We are coming with a structured platform where all the students
-            which are registered can have access to value information about web
-            development as follows:
+            which are registered can have access to value information about Web
+            Development.
           </p>
         </div>
         <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 about1strowImg1">
-          <div className="row d-flex justify-content-between pt-3">
-            <Zoom duration={2000}>
+          <div className="row d-flex justify-content-around pt-3">
+            <Zoom duration={1500}>
               <div className="col-lg-6 col-md-6 col-sm-12 pictures">
                 <div id="mariana"></div>
                 <div>
@@ -34,7 +35,7 @@ const About = () => {
                 </div>
               </div>
             </Zoom>
-            <Zoom duration={2000} delay={2000}>
+            <Zoom duration={1500} delay={1500}>
               <div className="col-lg-6 col-md-6 col-sm-12 pictures">
                 <div id="kinjal"></div>
                 <div>
@@ -42,7 +43,7 @@ const About = () => {
                 </div>
               </div>
             </Zoom>
-            <Zoom duration={2000} delay={4000}>
+            <Zoom duration={1500} delay={3000}>
               <div className="col-lg-6 col-md-6 col-sm-12 pictures">
                 <div id="sara"></div>
                 <div>
@@ -52,7 +53,7 @@ const About = () => {
             </Zoom>
           </div>
           <div className="row d-flex justify-content-evenly pt-5">
-            <Zoom duration={2000} delay={6000}>
+            <Zoom duration={1500} delay={4500}>
               <div className="col-lg-6 col-md-6 col-sm-12 pictures">
                 <div id="heriberto"></div>
                 <div>
@@ -60,7 +61,7 @@ const About = () => {
                 </div>
               </div>
             </Zoom>
-            <Zoom duration={2000} delay={8000}>
+            <Zoom duration={1500} delay={6000}>
               <div className="col-lg-6 col-md-6 col-sm-12 pictures">
                 <div id="florin"></div>
                 <div className="text-center">
@@ -83,26 +84,26 @@ const About = () => {
         <div className="col-lg-6 col-md-12 col-sm-12 aboutCol about-Text">
           <h2 className="m-4">What we offer?</h2>
 
-          <ul className="m-4">
+          <ul className="m-4 list">
             <li>
-              in Forum page ,they can ask questions and receive answers about
-              different topics related to web development;
+              Forum Page is the place where students can ask questions and
+              receive answers related to web development.
             </li>
             <li>
-              inside Blog Page , they can see , write and like posts from the
-              other users;
+              Blog Page gives the chance to share interesting or funny posts
+              related to Web Development.
             </li>
-            <li>News Page is offering information about programming world;</li>
+            <li>News Page is offering information about programming world.</li>
             <li>
-              in Resources Page the students are able to find websites from
-              where they can learn how to code;
-            </li>
-            <li>
-              Jobs page is offering information about jobs which are available
-              in this domain.
+              Resources Page is providing information about the most useful
+              websites from where they can learn how to code.
             </li>
             <li>
-              User Profile Page offers information about the user, daily agenda
+              Jobs Page provides information about jobs which are available in
+              this domain.
+            </li>
+            <li>
+              User Profile Page shows information about the user, daily agenda
               with option to search by date, my questions and my posts with
               options to update and delete.
             </li>
