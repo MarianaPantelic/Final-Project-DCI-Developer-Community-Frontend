@@ -57,7 +57,7 @@ const Blog = (props) => {
               <Container>
                 <Row className="mt-5">
                   {props.show.map((post, index) => (
-                    <Col lg={6} md={6} sm={12}>
+                    <Col lg={6} md={6} sm={12} key={index}>
                       <Card className="blogCards">
                         <Card.Body>
                           <Card.Title className="blogUser">
