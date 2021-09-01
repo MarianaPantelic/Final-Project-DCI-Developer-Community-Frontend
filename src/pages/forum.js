@@ -37,17 +37,31 @@ const Forum = (props) => {
         <div className="container question-cards-container">
           {props.show.map((question, index) => (
             <div key={index} class="card mt-5 question-cards">
-              <div className="card-header pl-5 question-user">
-                {question.user ? question.user.firstName : ""}
+              <div className="card-header pl-5 question-user d-flex">
+                <div className="align-self-center">
+                  {question.image ? (
+                    <img src={question.image} width={50} />
+                  ) : null}
+                </div>
+                <div className="ml-3 align-self-center">
+                  {question.user ? question.user.firstName : null}
+                </div>
               </div>
               <div className="card-body">
                 <blockquote class="blockquote mb-0 question-title">
-                  <Link
-                    to={`/showQuestion/${question._id}`}
-                    className="question-link"
-                  >
-                    <p className="p-4">{question.title}</p>
-                  </Link>
+                  {localStorage.getItem("user") ? (
+                    <Link
+                      to={`/showQuestion/${question._id}`}
+                      className="question-link"
+                    >
+                      <p className="p-4">{question.title}</p>
+                    </Link>
+                  ) : (
+                    <Link to="/login" className="question-link">
+                      <p className="p-4">{question.title}</p>
+                    </Link>
+                  )}
+
                   <footer className="p-4">
                     <div className="float-left topic">
                       <p className="text-center">{question.topic}</p>
@@ -57,8 +71,8 @@ const Forum = (props) => {
                         {" "}
                         {question && question.answer
                           ? question.answer.length
-                          : 0}
-                        answer{" "}
+                          : 0}{" "}
+                        {question.answer.length > 1 ? "answers" : "answer"}
                       </p>
                     </div>
                   </footer>

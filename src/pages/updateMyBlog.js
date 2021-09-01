@@ -28,9 +28,11 @@ const UpdateMyBlogs = (props) => {
     var data = { title, content };
 
     try {
-      axios.put(`http://localhost:3001/blogs/${id}`, data).then((response) => {
-        props.sendGetRequest();
-      });
+      axios
+        .put(`https://dcidevs-backend.herokuapp.com/blogs/${id}`, data)
+        .then((response) => {
+          props.sendGetRequest();
+        });
     } catch (error) {
       console.log(error);
     }
@@ -38,49 +40,60 @@ const UpdateMyBlogs = (props) => {
 
   return (
     <section className="writeBlogSection">
+        <div>
+        <div className="forum-clip1"></div>
+        <div className="forum-clip2"></div>
+        <div className="forum-clip3"></div>
+        <div className="forum-clip4"></div>
+
       <div className="container">
-        <form>
-          <h1 className="pt-5">
+          <h1 className="welcome-update text-center">
             Welcome{" "}
             {localStorage.getItem("user") &&
-              JSON.parse(localStorage.getItem("user")).firstName}
+              JSON.parse(localStorage.getItem("user")).firstName}!
           </h1>
 
-          <div className="form-group">
-            <label htmlFor="inputTitle">Title</label>
-            <input
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              type="text"
-              className="form-control border border-dark"
-              id="inputTitle"
-              border
-              border-dark
-            />
+          <div className="update-container">
+            <h1 className="text-center pt-5">Update your blog here</h1>
+
+            <form>
+              <div className="form-group pt-5">
+                <label htmlFor="inputTitle">Title</label>
+                <input
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                  type="text"
+                  className="form-control border border-dark"
+                  id="inputTitle"
+                  border
+                  border-dark
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="inputContent">Content</label>
+                <ReactQuill
+                  value={content}
+                  className="border border-dark"
+                  placeholder="write something amazing..."
+                  modules={UpdateMyBlogs.modules}
+                  formats={UpdateMyBlogs.formats}
+                  onChange={handleBody}
+                  id="inputContent"
+                />{" "}
+              </div>
+              <Link to="/userprofile">
+                <button
+                  onClick={() => {
+                    updateBlog(title, content);
+                  }}
+                  className="btn mt-5 postButton"
+                >
+                  <h3>Save</h3>
+                </button>
+              </Link>
+            </form>
           </div>
-          <div className="form-group">
-            <label htmlFor="inputContent">Content</label>
-            <ReactQuill
-              value={content}
-              className="border border-dark"
-              placeholder="write something amazing..."
-              modules={UpdateMyBlogs.modules}
-              formats={UpdateMyBlogs.formats}
-              onChange={handleBody}
-              id="inputContent"
-            />{" "}
-          </div>
-          <Link to="/userprofile">
-            <button
-              onClick={() => {
-                updateBlog(title, content);
-              }}
-              className="btn mt-5 postButton"
-            >
-              <h3>Save</h3>
-            </button>
-          </Link>
-        </form>
+        </div>
       </div>
     </section>
   );

@@ -1,92 +1,112 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import Zoom from "react-reveal/Zoom";
 
 const About = () => {
   return (
     <Container>
-      <div className="row mt-5 about1strow mt-3">
-        <div className="col-lg-6 col-md-6 col-sm-12 aboutCol about-Text">
-          <h1 className="fw-bold">About Us</h1>
-          <h2 className="mt-4 mb-3">Who We Are?</h2>
-          <p className="mt-5 mb-5">
+      <div className="row about1strow">
+        <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 aboutCol about-Text">
+          <h1 className="fw-bold ml-4">About Us</h1>
+          <h2 className="m-4">Who We Are?</h2>
+          <p className="m-4">
             We are WebDevelopment students in DCI , working together in the
             final project . Our project idea is to help DCI students to have all
             the information about this course in one webpage
           </p>
-          <p>
+          <p className="m-4">
             The idea was coming after we sow our needs and we want to help the
             next students to have more structured information in the same place.
           </p>
-        </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 about1strowImg1">
-          <div className="row d-flex justify-content-between pt-3">
-            <div className="col-lg-6 col-md-6 col-sm-12 pictures">
-              <div id="mariana"></div>
-              <div>
-                <h5>Mariana</h5>
-              </div>
-            </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 pictures">
-              <div id="kinjal"></div>
-              <div>
-                <h5>Kinjal</h5>
-              </div>
-            </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 pictures">
-              <div id="sara"></div>
-              <div>
-                <h5>Sara</h5>
-              </div>
-            </div>
-          </div>
-          <div className="row d-flex justify-content-evenly pt-1">
-            <div className="col-lg-6 col-md-6 col-sm-12 pictures">
-              <div id="heriberto"></div>
-              <div>
-                <h5>Heriberto</h5>
-              </div>
-            </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 pictures">
-              <div id="florin"></div>
-              <div className="text-center">
-                <h5>Florin</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="row mt-5 about2strow">
-        <div className="col-lg-6 col-md-6 col-sm-12 about1strowImg2">
-          <div className="row d-flex">
-            <div id="webdev-gif" className="col-lg-6 col-md-6 col-sm-12"></div>
-          </div>
-        </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 aboutCol about-Text">
-          <h2 className="mt-4 mb-3">What we offer?</h2>
-          <p className="mt-5 mb-5">
+          <p className="m-4">
             We are coming with a structured platform where all the students
             which are registered can have access to value information about web
             development as follows:
           </p>
-          <li>
-            in Forum page ,they can ask questions and receive answers about
-            different topics related to web development; In Blog Page , they can
-            see , write and like posts from the other users;
-          </li>
-          <li>
-            inside Blog Page , they can see , write and like posts from the
-            other users;
-          </li>
-          <li>News Page is offering information about programming world</li>
-          <li>
-            {" "}
-            in Resources Page the students are able to find websites from where
-            they can learn how to code{" "}
-          </li>
-          <li>
-            Jobs page is offering information about jobs which are available in
-            this domain
-          </li>
+        </div>
+        <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 about1strowImg1">
+          <div className="row d-flex justify-content-between pt-3">
+            <Zoom duration={2000}>
+              <div className="col-lg-6 col-md-6 col-sm-12 pictures">
+                <div id="mariana"></div>
+                <div>
+                  <h5>Mariana</h5>
+                </div>
+              </div>
+            </Zoom>
+            <Zoom duration={2000} delay={2000}>
+              <div className="col-lg-6 col-md-6 col-sm-12 pictures">
+                <div id="kinjal"></div>
+                <div>
+                  <h5>Kinjal</h5>
+                </div>
+              </div>
+            </Zoom>
+            <Zoom duration={2000} delay={4000}>
+              <div className="col-lg-6 col-md-6 col-sm-12 pictures">
+                <div id="sara"></div>
+                <div>
+                  <h5>Sara</h5>
+                </div>
+              </div>
+            </Zoom>
+          </div>
+          <div className="row d-flex justify-content-evenly pt-5">
+            <Zoom duration={2000} delay={6000}>
+              <div className="col-lg-6 col-md-6 col-sm-12 pictures">
+                <div id="heriberto"></div>
+                <div>
+                  <h5>Heriberto</h5>
+                </div>
+              </div>
+            </Zoom>
+            <Zoom duration={2000} delay={8000}>
+              <div className="col-lg-6 col-md-6 col-sm-12 pictures">
+                <div id="florin"></div>
+                <div className="text-center">
+                  <h5>Florin</h5>
+                </div>
+              </div>
+            </Zoom>
+          </div>
+        </div>
+      </div>
+      <div className="row about2strow">
+        <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 about1strowImg2">
+          <div className="row d-flex">
+            <div
+              id="webdev-gif"
+              className="col-lg-6 col-md-12 col-sm-12 col-xs-12"
+            ></div>
+          </div>
+        </div>
+        <div className="col-lg-6 col-md-12 col-sm-12 aboutCol about-Text">
+          <h2 className="m-4">What we offer?</h2>
+
+          <ul className="m-4">
+            <li>
+              in Forum page ,they can ask questions and receive answers about
+              different topics related to web development;
+            </li>
+            <li>
+              inside Blog Page , they can see , write and like posts from the
+              other users;
+            </li>
+            <li>News Page is offering information about programming world;</li>
+            <li>
+              in Resources Page the students are able to find websites from
+              where they can learn how to code;
+            </li>
+            <li>
+              Jobs page is offering information about jobs which are available
+              in this domain.
+            </li>
+            <li>
+              User Profile Page offers information about the user, daily agenda
+              with option to search by date, my questions and my posts with
+              options to update and delete.
+            </li>
+          </ul>
         </div>
       </div>
     </Container>

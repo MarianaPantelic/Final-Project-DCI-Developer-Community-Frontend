@@ -5,7 +5,7 @@ const Resources = () => {
     <div className="container">
       <div className="main-resources-container">
         <div className="resources-container">
-          <img src="../images/resources.png" />
+          {/* <img src="../images/resources.png" /> */}
           <h1>Resources</h1>
         </div>
         <table className="content-table">

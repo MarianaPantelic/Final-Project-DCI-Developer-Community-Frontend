@@ -12,10 +12,9 @@ const Blog = (props) => {
     const userLocal = JSON.parse(localStorage.getItem("user"));
     tempArray.push(userLocal._id);
 
-
     try {
       axios
-        .put(`http://localhost:3001/blogs/${id}`, {
+        .put(`https://dcidevs-backend.herokuapp.com/blogs/${id}`, {
           likes: foundPost.likes + 1,
           whoClicked: tempArray,
         })
@@ -27,6 +26,9 @@ const Blog = (props) => {
 
   return (
     <section className="showPostsSection">
+      <div>
+        <div className="clip-blog"></div>
+      </div>
       <div className="container">
         {localStorage.getItem("token") ? (
           <Link to="/addPosts" className="link_addPost">
@@ -59,8 +61,15 @@ const Blog = (props) => {
                       <Card className="blogCards">
                         <Card.Body>
                           <Card.Title className="blogUser">
-                            {post.user ? post.user.firstName : ""}
-                            {/* {post.user.firstName} */}
+                            <div className="d-flex">
+                              <div className="align-self-center user-img">
+                                {post.image ? <img src={post.image} /> : null}
+                              </div>
+                              <div className="align-self-center ml-4">
+                                {post.user ? post.user.firstName : ""}
+                                {/* {post.user.firstName} */}
+                              </div>
+                            </div>
                           </Card.Title>
                           <Card.Subtitle className="blogTitle">
                             {post.title}
@@ -73,20 +82,25 @@ const Blog = (props) => {
                               className="card-text"
                             ></p>
                           </Card.Text>
-                          <Card.Footer>
-                            <AiFillLike
-                              onClick={() =>
-                                post.whoClicked.find(
-                                  (element) =>
-                                    element ==
-                                    JSON.parse(localStorage.getItem("user"))._id
-                                )
-                                  ? ""
-                                  : increaseLikes(post._id)
-                              }
-                              className="likeButton"
-                            />
-                            <span className="likesNumber"> {post.likes} </span>
+                          <Card.Footer className="d-flex">
+                            <div className="mt-2">
+                              <AiFillLike
+                                onClick={() =>
+                                  post.whoClicked.find(
+                                    (element) =>
+                                      element ==
+                                      JSON.parse(localStorage.getItem("user"))
+                                        ._id
+                                  )
+                                    ? ""
+                                    : increaseLikes(post._id)
+                                }
+                                className="likeButton"
+                              />
+                            </div>
+                            <div className="likesNumber ">
+                              &nbsp;{post.likes}{" "}
+                            </div>
                           </Card.Footer>
                         </Card.Body>
                       </Card>

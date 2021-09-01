@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
+import { Form } from "react-bootstrap";
 import ReactQuill from "react-quill";
 import { useHistory } from "react-router-dom";
 
 const axios = require("axios").default;
-
 const AddPosts = (props) => {
   const [title, setTitle] = useState("");
   const [errors, setErrors] = useState("");
@@ -18,19 +18,20 @@ const AddPosts = (props) => {
     inputContentRef.current.value = e;
   };
 
-  const addPost = async (postTitle, postContent) => {
-    console.log("add post log" + postContent);
-    // TODO
-    let userName = localStorage.getItem("user");
+  const userLocal = JSON.parse(localStorage.getItem("user"));
+  let userImage = userLocal.image;
+
+  const addPost = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3001/blogs/",
+        "https://dcidevs-backend.herokuapp.com/blogs",
         {
-          title: postTitle,
-          content: postContent,
+          title: inputTitleRef.current.value,
+          content: inputContentRef.current.value,
           clicked: false,
           likes: 0,
           whoClicked: [],
+          image: userImage,
         },
         {
           headers: {
@@ -39,23 +40,10 @@ const AddPosts = (props) => {
         }
       );
       console.log(localStorage.getItem("token"));
-      await props.sendGetRequest({ title });
-      console.log("response is :" + JSON.stringify(response));
-    } catch (error) {
-      console.log(error);
-      throw error;
-    }
-  };
-
-  console.log("user" + localStorage.getItem("user"));
-
-  const addPostsOnClick = async () => {
-    // console.log(inputContentRef.current);
-
-    try {
-      await addPost(inputTitleRef.current.value, inputContentRef.current.value);
+      await props.sendGetRequest();
       setTitle("");
       history.push("/blog");
+      console.log("response is :" + JSON.stringify(response));
     } catch (error) {
       console.log("U need to sign in" + error);
       if (!localStorage.getItem("token")) {
@@ -63,58 +51,61 @@ const AddPosts = (props) => {
         window.location.replace("/");
       }
     }
-    //  setContent("");
   };
+
+  console.log("user" + localStorage.getItem("user"));
 
   return (
     <section className="writeBlogSection">
-    <div>
-      <div className="writeblog-clip-1"></div>
-      <div className="writeblog-clip-2"></div>
-      <div className="writeblog-clip-3"></div>
-      <div className="writeblog-clip-4"></div>
+      <div>
+        <div className="clip-post"></div>
+      </div>
 
-
-    </div>
       <div className="container">
         <div className="row">
-          <form>
-            <h1 className="welcomAddPost">
-              Welcome{" "}
-              {localStorage.getItem("user") &&
-                JSON.parse(localStorage.getItem("user")).firstName}
-            </h1>
-            <div className="form-group mt-5">
-              <label htmlFor="inputTitle">Title</label>
-              <input
-                ref={inputTitleRef}
-                type="text"
-                className="form-control border border-dark"
-                id="inputTitle"
-                border
-                border-dark
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="inputContent">Content</label>
-              <ReactQuill
-                className="border border-dark"
-                placeholder="write something amazing..."
-                modules={AddPosts.modules}
-                formats={AddPosts.formats}
-                onChange={handleBody}
-                id="inputContent"
-                ref={inputContentRef}
-              />
-            </div>
-            <button
-              onClick={() => addPostsOnClick()}
-              type="button"
-              className="btn mt-5 postButton"
-            >
-              <h3>Save</h3>
-            </button>
-          </form>
+          <h1 className="welcomePost text-center">
+            Welcome{" "}
+            {localStorage.getItem("user") &&
+              JSON.parse(localStorage.getItem("user")).firstName}!
+          </h1>
+
+          <div className="blog-container">
+            <form>
+              <h1 className="welcomeAddPost pt-5 text-center">
+                You can post your blogs here!
+              </h1>
+              <div className="form-group mt-5">
+                <label htmlFor="inputTitle">Title</label>
+                <input
+                  ref={inputTitleRef}
+                  type="text"
+                  className="form-control border border-dark"
+                  id="inputTitle"
+                  border
+                  border-dark
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="inputContent">Content</label>
+                <ReactQuill
+                  className="border border-dark"
+                  placeholder="write something amazing..."
+                  modules={AddPosts.modules}
+                  formats={AddPosts.formats}
+                  onChange={handleBody}
+                  id="inputContent"
+                  ref={inputContentRef}
+                />
+              </div>
+              <button
+                onClick={() => addPost()}
+                type="button"
+                className="btn mt-5 postButton"
+              >
+                <h3>Save</h3>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>

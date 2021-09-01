@@ -18,24 +18,32 @@ const AddQuestions = (props) => {
     inputContentRef.current.value = e;
   };
 
-  const addQuestion = async (questionTopic, questionTitle, questionContent) => {
-    console.log("add post log" + questionContent);
+  const userLocal = JSON.parse(localStorage.getItem("user"));
+  let userImage = userLocal.image;
+  console.log(userImage);
 
+  const addQuestion = async () => {
     try {
-
-      const response = await axios.post("http://localhost:3001/forum/", {
-        topic: questionTopic,
-        title: questionTitle,
-        content: questionContent,
-        user: JSON.parse(localStorage.getItem("user"))._id,
-      },
-                                        {
+      const response = await axios.post(
+        "https://dcidevs-backend.herokuapp.com/forum",
+        {
+          topic: inputTopicRef.current.value,
+          title: inputTitleRef.current.value,
+          content: inputContentRef.current.value,
+          user: JSON.parse(localStorage.getItem("user"))._id,
+          image: userImage,
+        },
+        {
           headers: {
             auth: localStorage.getItem("token"),
           },
-      }                                );
+        }
+      );
 
-      await props.sendQuestionsGetRequest({ title });
+      await props.sendQuestionsGetRequest();
+      setTopic("");
+      setTitle("");
+      history.push("/forum");
       console.log("response is :" + JSON.stringify(response));
     } catch (error) {
       console.log(error);
@@ -43,13 +51,14 @@ const AddQuestions = (props) => {
     }
   };
 
-  const AddQuestionsOnClick = async () => {
+  /* const AddQuestionsOnClick = async () => {
     // console.log(inputContentRef.current);
     try {
       await addQuestion(
         inputTopicRef.current.value,
         inputTitleRef.current.value,
-        inputContentRef.current.value
+        inputContentRef.current.value,
+        userImage
       );
       setTopic("");
       setTitle("");
@@ -58,72 +67,75 @@ const AddQuestions = (props) => {
       console.log("error");
     }
   };
-
+ */
   return (
+    <section className="writeQuestionSection">
 
-    
-      <section className="writeQuestionSection">
-
-    <div>
+      <div>
         <div className="first-clip-ask-question"></div>
         <div className="second-clip-ask-question"></div>
         <div className="third-clip-ask-question"></div>
-    </div>
+      </div>
 
       <div>
         <div className="clip-add-question"></div>
       </div>
       <div className="container write-container">
-        <h1 className="pt-3 text-center">
+        <h1 className="text-center">
           Welcome{" "}
           {localStorage.getItem("user") &&
-            JSON.parse(localStorage.getItem("user")).firstName}!
+            JSON.parse(localStorage.getItem("user")).firstName}
+          !
         </h1>
-        <form>
-          <div className="form-group mt-4">
-            <label htmlFor="inputTopic">Topic</label>
-            <input
-              ref={inputTopicRef}
-              type="text"
-              className="form-control border border-dark"
-              id="inputTopic"
-              border
-              border-dark
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="inputTitle">Title</label>
-            <input
-              ref={inputTitleRef}
-              type="text"
-              className="form-control border border-dark"
-              id="inputTitle"
-              border
-              border-dark
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="inputContent">Content</label>
-            <ReactQuill
-              className="border border-dark"
-              placeholder="write something amazing..."
-              modules={AddQuestions.modules}
-              formats={AddQuestions.formats}
-              onChange={handleBody}
-              id="inputContent"
-              ref={inputContentRef}
-            />
-          </div>
-          <Link to="/forum">
-            <button
-              onClick={() => AddQuestionsOnClick()}
-              type="button"
-              className="btn mt-3 postButton"
-            >
-              <h3>Ask</h3>
-            </button>
-          </Link>
-        </form>
+        <div className=" blog-container">
+          <form>
+            <h1 className="pt-5 m-5">Feel free to ask your questions here!</h1>
+
+            <div className="form-group mt-4 pl-5 pr-5">
+              <label htmlFor="inputTopic">Topic</label>
+              <input
+                ref={inputTopicRef}
+                type="text"
+                className="form-control border border-dark"
+                id="inputTopic"
+                border
+                border-dark
+              />
+            </div>
+            <div className="form-group pl-5 pr-5">
+              <label htmlFor="inputTitle">Title</label>
+              <input
+                ref={inputTitleRef}
+                type="text"
+                className="form-control border border-dark"
+                id="inputTitle"
+                border
+                border-dark
+              />
+            </div>
+            <div className="form-group pl-5 pr-5">
+              <label htmlFor="inputContent">Content</label>
+              <ReactQuill
+                className="border border-dark"
+                placeholder="write something amazing..."
+                modules={AddQuestions.modules}
+                formats={AddQuestions.formats}
+                onChange={handleBody}
+                id="inputContent"
+                ref={inputContentRef}
+              />
+            </div>
+            <Link to="/forum" className="pl-5">
+              <button
+                onClick={() => addQuestion()}
+                type="button"
+                className="btn mt-3 postButton"
+              >
+                <h3>Ask</h3>
+              </button>
+            </Link>
+          </form>
+        </div>
       </div>
     </section>
   );

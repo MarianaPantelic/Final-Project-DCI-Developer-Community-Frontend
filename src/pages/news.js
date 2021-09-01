@@ -12,7 +12,7 @@ const News = () => {
   };
   const getArticles = async () => {
     await axios
-      .get(`http://localhost:3001/news/${page}`)
+      .get(`https://dcidevs-backend.herokuapp.com/news/${page}`)
       .then(function (response) {
         setNews(response.data);
       })
@@ -94,7 +94,7 @@ const News = () => {
               <Card.Img className="article-image" src="../images/laptop.jpeg" />
             )}
 
-            <Card.Title className="mt-4 ">
+            <Card.Title className="mt-4">
               <h3>{article.title}</h3>
             </Card.Title>
             <Card.Text className="mt-4">{article.description}</Card.Text>

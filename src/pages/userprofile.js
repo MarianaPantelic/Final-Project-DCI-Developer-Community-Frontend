@@ -1,17 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-//import Calendar from "react-calendar";
-import Calendar from "react-input-calendar";
-import "react-calendar/dist/Calendar.css";
-import {
-  Button,
-  Col,
-  Container,
-  Form,
-  FormControl,
-  Row,
-} from "react-bootstrap";
+
+import { Col, Row } from "react-bootstrap";
 import ProfileImage from "@daym3l/react-profile-image";
 import { Link } from "react-router-dom";
+
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+
 const axios = require("axios").default;
 
 const UserProfile = (props) => {
@@ -55,7 +50,9 @@ const UserProfile = (props) => {
 
   const getUser = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/users/${userId}`);
+      const response = await axios.get(
+        `https://dcidevs-backend.herokuapp.com/users/${userId}`
+      );
       setUser(response.data);
       console.log(response.data);
     } catch (err) {
@@ -66,7 +63,7 @@ const UserProfile = (props) => {
   const getUserBlogs = async () => {
     try {
       const resp = await axios.get(
-        `http://localhost:3001/profile/blog/${userId}`
+        `https://dcidevs-backend.herokuapp.com/profile/blog/${userId}`
       );
       setUserBlogs(resp.data);
       console.log(userBlogs);
@@ -78,7 +75,7 @@ const UserProfile = (props) => {
   const getUserQuestions = async () => {
     try {
       const resp = await axios.get(
-        `http://localhost:3001/profile/question/${userId}`
+        `https://dcidevs-backend.herokuapp.com/profile/question/${userId}`
       );
       setUserQuestions(resp.data);
       console.log(userQuestions);
@@ -91,7 +88,7 @@ const UserProfile = (props) => {
     // Do something with the selected image)
     try {
       await axios
-        .put(`http://localhost:3001/users/${userId}`, {
+        .put(`https://dcidevs-backend.herokuapp.com/users/${userId}`, {
           image: base64Image,
           headers: {
             "Content-Type": "multipart/form-data",
@@ -107,18 +104,11 @@ const UserProfile = (props) => {
     console.log(fileImage);
   };
 
-  /* var today = new Date();
-  var date =
-    today.getDate() + "." + (today.getMonth() + 1) + "." + today.getFullYear();
-  console.log(date); */
-
   function formatDateAsDD_MM_YYYY(date) {
     const regex = /\d{2}\.\d{2}\.\d{4}/;
     if (regex.test(date)) {
-      // console.log("Leave date as it is");
       return date;
     }
-    // console.log("Calculating date");
     date = new Date(date);
     let day = date.getDate();
     let month = date.getMonth() + 1;
@@ -139,7 +129,9 @@ const UserProfile = (props) => {
   console.log("moonLanding:", moonLanding, ":", moonFormat);
   const getAgenda = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/agenda");
+      const response = await axios.get(
+        "https://dcidevs-backend.herokuapp.com/agenda"
+      );
       console.log(response);
       setAgenda(response.data);
       console.log(response.data);
@@ -152,7 +144,9 @@ const UserProfile = (props) => {
   const getDailyAgenda = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3001/agenda/${formatDateAsDD_MM_YYYY(value)}`
+        `https://dcidevs-backend.herokuapp.com/agenda/${formatDateAsDD_MM_YYYY(
+          value
+        )}`
       );
       console.log(response);
       setDailyAgenda(response.data[0]);
@@ -166,7 +160,9 @@ const UserProfile = (props) => {
   const getAgendaByDate = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3001/agenda/${formatDateAsDD_MM_YYYY(value)}`
+        `https://dcidevs-backend.herokuapp.com/agenda/${formatDateAsDD_MM_YYYY(
+          value
+        )}`
       );
       console.log(response);
       setAgendaByDate(response.data[0]);
@@ -184,9 +180,11 @@ const UserProfile = (props) => {
         <div className="third-clip"></div>
       </div>
       <div className="profile-container">
-        <h1 className="text-center">Welcome back {user.firstName}!</h1>
+        <div className="h1-bg">
+          <h1 className="text-center">Welcome back {user.firstName}!</h1>
+        </div>
         <Row>
-          <Col sm={12} md={12} lg={3}>
+          <Col>
             <div className="user-info-container">
               <div className="user-image-container">
                 {user.image ? (
@@ -209,7 +207,7 @@ const UserProfile = (props) => {
                 {user ? (
                   <div>
                     <div className="mt-3 profile-user-name">
-                      {user.userName}
+                      <div>{user.userName}</div>
                     </div>
                     <div className="mt-3">First Name: {user.firstName}</div>
                     <div>Last Name: {user.lastName}</div>
@@ -221,125 +219,33 @@ const UserProfile = (props) => {
             </div>
           </Col>
 
-          <Col sm={12} md={12} lg={5}>
+          <Col>
             <div className="search-container">
-              <h2 className="text-center mt-5">Agenda</h2>
+              <h2 className="text-center mt-5">
+                Agenda <span>{formatDateAsDD_MM_YYYY(value)}</span>
+              </h2>
 
               <div>
                 <div className="calendar">
                   <Calendar
+                    width={200}
+                    height={200}
                     format="DD/MM/YYYY"
-                    date={today}
+                    onClickDay={getAgendaByDate}
                     onChange={onChange}
                     value={value}
                     computableFormat={"DD.MM.YYYY"}
                   />
                 </div>
-                {/* {dailyAgenda ? (
-                  <div>
-                    {dailyAgenda &&
-                    dailyAgenda.topics &&
-                    dailyAgenda.topics.length !== 0 ? (
-                      <h2 className="text-center mt-5">Topics</h2>
-                    ) : null}
-
-                    <ol>
-                      {dailyAgenda && dailyAgenda.topics
-                        ? dailyAgenda.topics.map((topic) => (
-                            <li className="mt-2 ml-5">
-                              {" "}
-                              &nbsp;&nbsp;&nbsp;{topic}
-                            </li>
-                          ))
-                        : null}
-                    </ol>
-                    {dailyAgenda &&
-                    dailyAgenda.resources &&
-                    dailyAgenda.resources.length !== 0 ? (
-                      <h2 className="text-center mt-5">Resources</h2>
-                    ) : null}
-
-                    <ol>
-                      {dailyAgenda && dailyAgenda.resources
-                        ? dailyAgenda.resources.map((resource) => (
-                            <li className="mt-2 ml-5">
-                              {" "}
-                              <a
-                                href={resource}
-                                rel="noreferrer"
-                                target="_blank"
-                              >
-                                {resource}
-                              </a>
-                            </li>
-                          ))
-                        : null}
-                    </ol>
-                    {dailyAgenda &&
-                    dailyAgenda.exercises &&
-                    dailyAgenda.exercises.length !== 0 ? (
-                      <h2 className="text-center mt-5">Exercises</h2>
-                    ) : null}
-
-                    <ol>
-                      {dailyAgenda && dailyAgenda.exercises
-                        ? dailyAgenda.exercises.map((exercise) => (
-                            <li className="mt-2 ml-5">
-                              {" "}
-                              &nbsp;&nbsp;&nbsp;{exercise}
-                            </li>
-                          ))
-                        : null}
-                    </ol>
-                    {dailyAgenda &&
-                    dailyAgenda.questions &&
-                    dailyAgenda.questions.length !== 0 ? (
-                      <h2 className="text-center mt-5">Questions</h2>
-                    ) : null}
-
-                    <ol>
-                      {dailyAgenda && dailyAgenda.questions
-                        ? dailyAgenda.questions.map((question) => (
-                            <li className="mt-2 ml-5">
-                              {" "}
-                              &nbsp;&nbsp;&nbsp;{question}
-                            </li>
-                          ))
-                        : null}
-                    </ol>
-                    {dailyAgenda && dailyAgenda.recording ? (
-                      <h2 className="text-center mt-5">Meeting Recording</h2>
-                    ) : null}
-                    {dailyAgenda && dailyAgenda.recording ? (
-                      <div>
-                        <ul>
-                          <li>
-                            Link:{" "}
-                            <a href={dailyAgenda.recording.link}>
-                              {dailyAgenda.recording.link}
-                            </a>
-                          </li>
-                          <li>Passcode: {dailyAgenda.recording.passcode}</li>
-                        </ul>
-                      </div>
-                    ) : null}
-                  </div>
-                ) : (
-                  <h2 className="text-center mt-5">
-                    There is no info for today!
-                  </h2>
-                )}*/}
               </div>
 
               {console.log(value)}
               <div>
-                {agendaByDate ? (
-                  <div className="text-center mt-3">{agendaByDate.date}</div>
-                ) : (
+                {!agendaByDate ? (
                   <h2 className="text-center mt-5">
                     There is no info for this day!
                   </h2>
-                )}
+                ) : null}
                 {agendaByDate &&
                 agendaByDate.topics &&
                 agendaByDate.topics.length !== 0 ? (
@@ -349,7 +255,7 @@ const UserProfile = (props) => {
                 <ol>
                   {agendaByDate && agendaByDate.topics
                     ? agendaByDate.topics.map((topic) => (
-                        <li className="mt-2 ml-5">
+                        <li className="mt-3 ml-5">
                           {" "}
                           &nbsp;&nbsp;&nbsp;{topic}
                         </li>
@@ -428,79 +334,81 @@ const UserProfile = (props) => {
             </div>
           </Col>
 
-          <Col sm={12} md={12} lg={4}>
-            <div className="myQuestions-container d-flex flex-column justify-content-between">
-              <div>
-                <h2 className="text-center mt-5">My Questions</h2>
+          <Col>
+            <div className="my-stuff-container">
+              <div className="myQuestions-container d-flex flex-column justify-content-between">
+                <div>
+                  <h2 className="text-center mt-5">My Questions</h2>
 
-                <div className="mt-5 links">
-                  {userQuestions.length !== 0 ? (
-                    userQuestions.map((question, idx) => (
-                      <div>
-                        <span>{idx + 1 + "." + " "}</span>
-                        <Link to={`/myQuestion/${question._id}`}>
-                          <span>{question.title}</span>
-                        </Link>
-                      </div>
-                    ))
+                  <div className="mt-5 links">
+                    {userQuestions.length !== 0 ? (
+                      userQuestions.map((question, idx) => (
+                        <div>
+                          <span>{idx + 1 + "." + " "}</span>
+                          <Link to={`/myQuestion/${question._id}`}>
+                            <span>{question.title}</span>
+                          </Link>
+                        </div>
+                      ))
+                    ) : (
+                      <h3 className="text-center mt-5">
+                        You didn't ask any questions yet!
+                      </h3>
+                    )}
+                  </div>
+                </div>
+                <div className="d-flex justify-content-end mx-auto">
+                  {localStorage.getItem("token") ? (
+                    <Link to="/addQuestions">
+                      <button type="button" className="askQuestion-btn mb-3">
+                        Ask Question
+                      </button>
+                    </Link>
                   ) : (
-                    <h3 className="text-center mt-5">
-                      You didn't ask any questions yet!
-                    </h3>
+                    <Link to="/login">
+                      <button type="button" className="askQuestion-btn mb-3">
+                        Ask Question
+                      </button>
+                    </Link>
                   )}
                 </div>
               </div>
-              <div className="d-flex justify-content-end mx-auto">
-                {localStorage.getItem("token") ? (
-                  <Link to="/addQuestions">
-                    <button type="button" className="askQuestion-btn mb-3">
-                      Ask Question
-                    </button>
-                  </Link>
-                ) : (
-                  <Link to="/login">
-                    <button type="button" className="askQuestion-btn mb-3">
-                      Ask Question
-                    </button>
-                  </Link>
-                )}
-              </div>
-            </div>
 
-            <div className="myBlogs-container d-flex flex-column justify-content-between">
-              <div>
-                <h2 className="text-center mt-5">My Blogs</h2>
-                <div className="mt-5 links">
-                  {userBlogs.length !== 0 ? (
-                    userBlogs.map((blog, idx) => (
-                      <div>
-                        <span>{idx + 1 + "." + " "}</span>
-                        <Link to={`/myBlog/${blog._id}`}>
-                          <span>{blog.title}</span>
-                        </Link>
-                      </div>
-                    ))
+              <div className="myBlogs-container d-flex flex-column justify-content-between">
+                <div>
+                  <h2 className="text-center mt-5">My Blogs</h2>
+                  <div className="mt-5 links">
+                    {userBlogs.length !== 0 ? (
+                      userBlogs.map((blog, idx) => (
+                        <div>
+                          <span>{idx + 1 + "." + " "}</span>
+                          <Link to={`/myBlog/${blog._id}`}>
+                            <span>{blog.title}</span>
+                          </Link>
+                        </div>
+                      ))
+                    ) : (
+                      <h3 className="text-center mt-5">
+                        You don't have any blogs yet!
+                      </h3>
+                    )}
+                  </div>
+                </div>
+                <div className="d-flex justify-content-end mx-auto">
+                  {localStorage.getItem("token") ? (
+                    <Link to="/addPosts">
+                      <button type="button" className="askQuestion-btn mb-3">
+                        Add Blog
+                      </button>
+                    </Link>
                   ) : (
-                    <h3 className="text-center mt-5">
-                      You don't have any blogs yet!
-                    </h3>
+                    <Link to="/login">
+                      <button type="button" className="askQuestion-btn mb-3">
+                        Add Blog
+                      </button>
+                    </Link>
                   )}
                 </div>
-              </div>
-              <div className="d-flex justify-content-end mx-auto">
-                {localStorage.getItem("token") ? (
-                  <Link to="/addPosts">
-                    <button type="button" className="askQuestion-btn mb-3">
-                      Add Blog
-                    </button>
-                  </Link>
-                ) : (
-                  <Link to="/login">
-                    <button type="button" className="askQuestion-btn mb-3">
-                      Add Blog
-                    </button>
-                  </Link>
-                )}
               </div>
             </div>
           </Col>
