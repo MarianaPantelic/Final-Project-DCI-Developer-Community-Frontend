@@ -130,7 +130,7 @@ const Jobs = () => {
 
           <div className="Job-box">
             <div className="Job-logo">
-              <a href="https://pult.join.com/" target="_blank"><img src="images/pult-logo-xl.png" width="75"  alt="Pult logo"></img></a>
+              <a href="https://pult.join.com/" target="_blank"><img src="images/pult-logo-xl.png" width="75"  alt="Pult  logo"></img></a>
             </div>
               
                 <div className="Job-data">
