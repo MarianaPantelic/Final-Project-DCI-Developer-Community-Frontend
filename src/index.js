@@ -66,7 +66,7 @@ const App = () => {
       const response = await axios.get(
         "https://dcidevs-backend.herokuapp.com/blogs"
       );
-      setPosts(response.data);
+      setPosts(response.data.reverse());
       console.log(response.data);
     } catch (err) {
       console.error(err);
@@ -89,7 +89,7 @@ const App = () => {
       const questionsresponse = await axios.get(
         "https://dcidevs-backend.herokuapp.com/forum"
       );
-      setQuestions(questionsresponse.data);
+      setQuestions(questionsresponse.data.reverse());
       console.log(questionsresponse.data);
     } catch (error) {
       console.log(error);
