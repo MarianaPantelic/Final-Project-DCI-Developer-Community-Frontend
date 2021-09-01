@@ -50,7 +50,7 @@ const Jobs = () => {
               
                 <div className="Job-data">
                   
-                  <a className="job-title-card" href="https://global-savings-group.com/careers/?gh_jid=3208245" target="_blank">Frontend Engineer (m/f/d)</a>
+                  <a className="job-title-card" href="https://global-savings-group.com/careers/?gh_jid=3407435" target="_blank">Backend Developer (m/f/d)</a>
                   <h3>Global Savings Group (Commerce Content Platform)</h3>
                   <h3>Berlin, Germany</h3>
 
@@ -60,13 +60,13 @@ const Jobs = () => {
         
           <div className="Job-box">
             <div className="Job-logo">
-              <a href="https://www.climatepartner.com" target="_blank"><img src="images/Climate partner logo1619620883677.jpeg" width="75"  alt="Climate Partner logo"></img></a>
+              <a href="https://www.infosys.com/" target="_blank"><img src="images/Infosys logo utypaslbyxwfuwhfdzxd.webp" width="75"  alt="Infosys logo"></img></a>
             </div>
               
                 <div className="Job-data">
                   
-                  <a className="job-title-card" href="https://goodjobs.eu/de/jobs/software-engineer-gn-climate-action-a91f45ec-f56f-4ab3-931f-1dd576c9f99d" target="_blank">Software Engineer - Climate Action</a>
-                  <h3>Climate Partner (Climate Protection)</h3>
+                  <a className="job-title-card" href="https://www.stepstone.de/stellenangebote--Software-Developer-IT-Associate-Duesseldorf-Berlin-Stuttgart-Muenchen-Frankfurt-Erlangen-Braunschweig-INFOSYS-LIMITED--7428218-inline.html?rltr=1_1_25_crl_m_0_0_0_0_0_0&suid=2da5d92c-c2be-4162-9660-85eff27a18ae&cs=true" target="_blank">Software Developer / IT Associate</a>
+                  <h3>Infosys (IT Service Provider)</h3>
                   <h3>Berlin, Germany</h3>
 
                 </div>  
@@ -116,21 +116,21 @@ const Jobs = () => {
 
           <div className="Job-box">
             <div className="Job-logo">
-              <a href="https://www.truckoo.com" target="_blank"><img src="images/truckoo logo 1612875179380.jpeg" width="75"  alt="Truckoo logo"></img></a>
+              <a href="https://www.bringmeister.de/" target="_blank"><img src="images/bringmeister.de index.jpeg" width="75"  alt="Bringmeister logo"></img></a>
             </div>
               
                 <div className="Job-data">
                   
-                  <a className="job-title-card" href="https://www.truckoo.com/careers" target="_blank">Frontend Engineer (f/m/d)</a>
-                  <h3>Truckoo (Purchasing Network for Truckers)</h3>
-                  <h3>Düsseldorf, Germany</h3>
+                  <a className="job-title-card" href="https://jobs.bringmeister.de/job/junior-software-engineer-frontend-f-d-m/" target="_blank">Junior Software Engineer - Frontend (f/d/m)</a>
+                  <h3>Bringmeister GmbH (E-Commerce)</h3>
+                  <h3>Berlin, Germany</h3>
 
                 </div>  
           </div>
 
           <div className="Job-box">
             <div className="Job-logo">
-              <a href="https://pult.join.com/" target="_blank"><img src="images/pult-logo-xl.png" width="75"  alt="Pult logo"></img></a>
+              <a href="https://pult.join.com/" target="_blank"><img src="images/pult-logo-xl.png" width="75"  alt="Pult  logo"></img></a>
             </div>
               
                 <div className="Job-data">

@@ -39,17 +39,6 @@
   font-style: none;
 }
 
-@media only screen and (max-width: 600px) {
-  .Job-list {
-    width: 80vw;
-    margin: 30px;
-  }
-
-  .promoted-applicants {
-    flex-wrap: wrap;
-  }
-}
-
 /*-------Jobs Page renovated-------*/
 
 .Job-box:hover {
@@ -71,7 +60,7 @@
   color: #0a66c2;
 }
 
-.profile-match,
+/* .profile-match,
 .promoted-applicants {
   display: flex;
   direction: row;
@@ -89,12 +78,31 @@
 .applicants {
   color: #057642;
   font-weight: bold;
-}
+} */
 
 .Job-data > h3 {
   font-size: 24px;
   color: #696167;
 }
-.Job-data h4 {
+/* .Job-data h4 {
   font-size: 20px;
+} */
+
+@media only screen and (max-width: 600px) {
+  .Job-list {
+    width: 80vw;
+    margin: 30px;
+  }
+
+  /*  .promoted-applicants {
+    flex-wrap: wrap;
+  } */
+
+  .job-title-card {
+    font-size: 24px;
+  }
+
+  .Job-data > h3 {
+    font-size: 18px;
+  }
 }
