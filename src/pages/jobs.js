@@ -21,7 +21,7 @@ const Jobs = () => {
     <div className="container2">
         
       <div className="Jobs-title">
-        <img src="images/jobs-title-background-desktop.png"/>
+        <img height={180}  src="images/jobs-title-background-desktop.png"/>
         <div className="Jobs-text">Jobs</div>
       </div>
 
