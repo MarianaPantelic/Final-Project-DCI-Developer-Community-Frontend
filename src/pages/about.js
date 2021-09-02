@@ -3,6 +3,12 @@ import { Container } from "react-bootstrap";
 import Zoom from "react-reveal/Zoom";
 
 const About = () => {
+  const displaySource = () => {
+    document.getElementById("source").style.display = "block";
+  };
+  const hideSource = () => {
+    document.getElementById("source").style.display = "none";
+  };
   return (
     <Container>
       <div className="row about1strow">
@@ -77,8 +83,16 @@ const About = () => {
           <div className="row d-flex">
             <div
               id="webdev-gif"
+              onMouseEnter={displaySource}
+              onMouseLeave={hideSource}
               className="col-lg-6 col-md-12 col-sm-12 col-xs-12"
             ></div>
+            <div id="source">
+              Source:{" "}
+              <a href="https://chapicoretech.com/">
+                https://chapicoretech.com/
+              </a>
+            </div>
           </div>
         </div>
         <div className="col-lg-6 col-md-12 col-sm-12 aboutCol about-Text">
