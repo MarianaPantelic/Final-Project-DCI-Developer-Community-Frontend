@@ -57,7 +57,7 @@ const Blog = (props) => {
               <Container>
                 <Row className="mt-5">
                   {props.show.map((post, index) => (
-                    <Col lg={6} md={6} sm={12}>
+                    <Col lg={6} md={6} sm={12} key={index}>
                       <Card className="blogCards">
                         <Card.Body>
                           <Card.Title className="blogUser">
@@ -75,12 +75,14 @@ const Blog = (props) => {
                             {post.title}
                           </Card.Subtitle>
                           <Card.Text className="blogContent">
-                            <p
-                              dangerouslySetInnerHTML={{
-                                __html: post.content,
-                              }}
-                              className="card-text"
-                            ></p>
+                            <div className="blog-flex">
+                              <p
+                                dangerouslySetInnerHTML={{
+                                  __html: post.content,
+                                }}
+                                className="card-text"
+                              ></p>
+                            </div>
                           </Card.Text>
                           <Card.Footer className="d-flex">
                             <div className="mt-2">

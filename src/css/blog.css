@@ -4,11 +4,6 @@
   /* padding-top: 10rem; */
 }
 
-.writeBlogSection {
-  width: 1400px;
-  max-width: 1400px;
-  margin: auto;
-}
 
 .writeBlogSection form {
   width: 85%;
@@ -32,11 +27,12 @@
 }
 
 .blogTitle {
-  padding-top: 0.5rem;
+  padding-top: 1rem;
   font-size: 1.6rem;
   height: 7rem;
   border-bottom: 2px solid gainsboro;
   overflow-y: scroll;
+
 }
 
 .blogContent {
@@ -44,16 +40,29 @@
   border-bottom: 2px solid gainsboro;
   overflow-y: scroll;
   font-size: 1.6rem;
+  padding: 0 1rem;
 }
 
-.showPostsSection img,
-iframe {
-  width: 38rem;
+.blog-flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showPostsSection img
+ {
+   width: 30rem;
   height: 20rem;
 }
+
+.showPostsSection iframe{
+  height: 20rem;
+}
+
 .blogUser img {
-  width: 50px;
+  width: 30px;
   height: auto;
+  max-height: 30px;
 }
 
 .likeButton {

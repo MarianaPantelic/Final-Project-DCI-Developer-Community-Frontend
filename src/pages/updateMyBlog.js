@@ -39,18 +39,20 @@ const UpdateMyBlogs = (props) => {
   };
 
   return (
-    <section className="writeBlogSection">
-        <div>
+    <>
+      <div>
         <div className="forum-clip1"></div>
         <div className="forum-clip2"></div>
         <div className="forum-clip3"></div>
         <div className="forum-clip4"></div>
-
-      <div className="container">
+      </div>
+      <section className="writeBlogSection">
+        <div className="container">
           <h1 className="welcome-update text-center">
             Welcome{" "}
             {localStorage.getItem("user") &&
-              JSON.parse(localStorage.getItem("user")).firstName}!
+              JSON.parse(localStorage.getItem("user")).firstName}
+            !
           </h1>
 
           <div className="update-container">
@@ -94,8 +96,8 @@ const UpdateMyBlogs = (props) => {
             </form>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
