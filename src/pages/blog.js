@@ -75,12 +75,14 @@ const Blog = (props) => {
                             {post.title}
                           </Card.Subtitle>
                           <Card.Text className="blogContent">
-                            <p
-                              dangerouslySetInnerHTML={{
-                                __html: post.content,
-                              }}
-                              className="card-text"
-                            ></p>
+                            <div className="blog-flex">
+                              <p
+                                dangerouslySetInnerHTML={{
+                                  __html: post.content,
+                                }}
+                                className="card-text"
+                              ></p>
+                            </div>
                           </Card.Text>
                           <Card.Footer className="d-flex">
                             <div className="mt-2">
